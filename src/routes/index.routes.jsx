@@ -3,7 +3,7 @@ import Home from "../pages/Home";
 import CadastroGuia from "../pages/CadastroGuia/cadastroguia";
 import CadastroParceiro from "../pages/CadastroParceiro/cadastroparceiro";
 import CadastroTurista from "../pages/CadastroTurista/cadastroturista";
-import CheckoutCartao from "../pages/CheckoutCartao/checkout";
+import CheckoutCartao from "../pages/CheckoutCartao/checkoutCartao";
 import SejaParceiro from "../pages/SejaParceiro/sejaparceiro";
 import TelaGuia from "../pages/TelaGuia/teladoguia";
 import TelaLogin from "../pages/TelaLogin/telalogin";
