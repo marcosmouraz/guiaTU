@@ -1,7 +1,7 @@
 import styled from "styled-components";
 export const Container = styled.section`
   > h1 {
-    font-size: 450%;
+    font-size: 50px;
     position: absolute;
     top: 30%; /* Ajuste a posição conforme necessário */
     left: 50%;
@@ -11,6 +11,7 @@ export const Container = styled.section`
     border-radius: 5px;
     text-align: center;
     z-index: 1; /* Garante que o texto apareça sobre a imagem */
+    font-family: "Poppins", sans-serif;
   }
   > img {
     width: 100%;
@@ -53,4 +54,11 @@ export const Container = styled.section`
     align-items: center;
     gap: 10px;
   }
+
+@media screen and (max-width: 1080px) {
+  > h1{
+    font-size: 45px;
+  }
+}    
+
 `;

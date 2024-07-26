@@ -5,7 +5,7 @@ export default function Header() {
   return (
     <Container>
       <img src={Imagem} alt="" />
-      <h1>Sua liberda de de explorar</h1>
+      <h1>Sua liberdade de explorar</h1>
       <section className="inputs">
         <input
           id="destino"
