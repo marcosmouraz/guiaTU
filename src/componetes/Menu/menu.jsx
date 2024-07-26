@@ -1,5 +1,5 @@
 import LogoMenu from "../../assets/logo guia tu menu.png";
-import IconeBoneco from "../../assets/iconebonecomenu.png"
+import IconeBoneco from "../../assets/vetorUsers.svg"
 import BotaoAjuda from "../../assets/ajudaMenu.png"
 import CarrinhoCompras from "../../assets/carrinhoCompras.png"
 import { Container } from "./menuStyles";
