@@ -21,16 +21,19 @@ export const Container = styled.section`
     padding: 20px;
     border-radius: 8px;
     font-size: 20px;
+    border: none;
   }
   > .inputs #data {
     padding: 20px;
     border-radius: 8px;
     font-size: 20px;
+    border: none;
   }
   > .inputs #nPessoas {
     padding: 20px;
     border-radius: 8px;
     font-size: 20px;
+    border: none;
   }
   > .inputs button {
     padding: 20px;
@@ -39,6 +42,7 @@ export const Container = styled.section`
     border-radius: 8px;
     color: #fff;
     font-size: 20px;
+    border: none;
   }
   > .inputs {
     transform: translate(-50%, -50%);
@@ -55,10 +59,9 @@ export const Container = styled.section`
     gap: 10px;
   }
 
-@media screen and (max-width: 1080px) {
-  > h1{
-    font-size: 45px;
+  @media screen and (max-width: 1080px) {
+    > h1 {
+      font-size: 45px;
+    }
   }
-}    
-
 `;
