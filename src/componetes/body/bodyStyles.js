@@ -15,16 +15,16 @@ export const Container = styled.section`
     flex-direction: column;
     align-items: center;
   }
-  .card h2{
+  .card h2 {
     font-size: 1.2rem;
   }
-  .card p{
+  .card p {
     font-size: 12px;
   }
   img {
     height: 50vh;
   }
-  #destinos h1{
+  #destinos h1 {
     color: #04136e;
     font-family: "Poppins", sans-serif;
     display: flex;
@@ -32,9 +32,8 @@ export const Container = styled.section`
     padding-top: 6vh;
     padding-left: 5vh;
     font-weight: 900;
-
   }
-  .imagensDestinos{
+  .imagensDestinos {
     display: flex;
     justify-content: space-around;
     gap: 5px;
@@ -43,7 +42,5 @@ export const Container = styled.section`
     padding-top: 5vh;
     flex-flow: row nowrap;
     width: 100%;
-
   }
 `;
-

@@ -13,34 +13,38 @@ export default function Menu() {
         <nav className="menu-desktop">
           <ul>
             <li>
-              <a className="textmenu" href="idiomas">Idiomas</a>
+              <a className="textmenu" href="idiomas">
+                Idiomas
+              </a>
             </li>
             <li>
               <button href="">
-              <CaretDown size={20} color="#fafafa" />
+                <CaretDown size={20} color="#fafafa" />
               </button>
             </li>
             <li>
-              <a className="textmenu" href="cifrao">R$</a>
+              <a className="textmenu" href="cifrao">
+                R$
+              </a>
             </li>
             <li>
               <button href="">
-              <CaretDown size={20} color="#fafafa" />
-              </button>
-            </li>
-            <li>
-              <button href="">
-              <User size={20} color="#fafafa" />
-              </button>
-            </li>
-            <li>
-              <button href="">
-              <Info size={20} color="#fafafa" />
+                <CaretDown size={20} color="#fafafa" />
               </button>
             </li>
             <li>
               <button href="">
-              <ShoppingCart size={20} color="#fafafa" />
+                <User size={20} color="#fafafa" />
+              </button>
+            </li>
+            <li>
+              <button href="">
+                <Info size={20} color="#fafafa" />
+              </button>
+            </li>
+            <li>
+              <button href="">
+                <ShoppingCart size={20} color="#fafafa" />
               </button>
             </li>
           </ul>

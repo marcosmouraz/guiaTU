@@ -6,7 +6,6 @@ export const Container = styled.div`
     justify-content: space-between;
     align-items: center;
     padding: 1vh 10%;
-
   }
 
   .menu .menu-desktop ul {
@@ -25,7 +24,7 @@ export const Container = styled.div`
     border: none;
     cursor: pointer;
   }
-  
+
   nav a:hover {
     color: yellow;
     transform: scale(1.05);
@@ -35,13 +34,11 @@ export const Container = styled.div`
     margin-left: 20px;
   }
 
-  .textmenu{
+  .textmenu {
     color: #fff;
   }
 
-
   .menu .logo img {
     height: 38px;
-    
   }
 `;
