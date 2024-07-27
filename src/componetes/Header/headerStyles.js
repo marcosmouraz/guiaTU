@@ -15,7 +15,7 @@ export const Container = styled.section`
   }
   > img {
     width: 100%;
-    height: 45vh;
+    height: 48vh;
   }
   > .inputs #destino {
     padding: 20px;
@@ -46,8 +46,6 @@ export const Container = styled.section`
   }
   > .inputs {
     transform: translate(-50%, -50%);
-    position: absolute;
-    z-index: 1; /* Garante que o texto apareça sobre a imagem */
     position: absolute;
     z-index: 1; /* Garante que o texto apareça sobre a imagem */
     top: 50%; /* Ajuste a posição conforme necessário */

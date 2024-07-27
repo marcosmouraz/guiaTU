@@ -1,9 +1,6 @@
 import LogoMenu from "../../assets/logo guia tu menu.png";
-import IconeBoneco from "../../assets/vetorUsers.svg"
-import BotaoAjuda from "../../assets/ajudaMenu.png"
-import CarrinhoCompras from "../../assets/carrinhoCompras.png"
 import { Container } from "./menuStyles";
-import VetorFiltro from "../../assets/vetorFiltro.png"
+import { CaretDown, Info, ShoppingCart, User } from "@phosphor-icons/react";
 
 export default function Menu() {
   return (
@@ -16,34 +13,34 @@ export default function Menu() {
         <nav className="menu-desktop">
           <ul>
             <li>
-              <a href="">Idiomas</a>
+              <a className="textmenu" href="idiomas">Idiomas</a>
             </li>
             <li>
               <button href="">
-                <img src={VetorFiltro} alt="filtro idioma" />
+              <CaretDown size={20} color="#fafafa" />
               </button>
             </li>
             <li>
-              <a href="">R$</a>
+              <a className="textmenu" href="cifrao">R$</a>
             </li>
             <li>
               <button href="">
-                <img src={VetorFiltro} alt="filtro idioma" />
-              </button>
-            </li>
-            <li>
-              <button href="">
-                <img src={IconeBoneco} alt="boneco" />
+              <CaretDown size={20} color="#fafafa" />
               </button>
             </li>
             <li>
               <button href="">
-                <img src={BotaoAjuda} alt="ajuda" />
+              <User size={20} color="#fafafa" />
               </button>
             </li>
             <li>
               <button href="">
-                <img src={CarrinhoCompras} alt="carrinho de compras" />
+              <Info size={20} color="#fafafa" />
+              </button>
+            </li>
+            <li>
+              <button href="">
+              <ShoppingCart size={20} color="#fafafa" />
               </button>
             </li>
           </ul>

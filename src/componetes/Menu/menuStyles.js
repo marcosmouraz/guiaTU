@@ -5,32 +5,43 @@ export const Container = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1% 10%;
+    padding: 1vh 10%;
+
   }
 
   .menu .menu-desktop ul {
     list-style-type: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
-  .menu li a {
+  .menu li button {
     color: #fff;
     font-size: 18px;
     text-decoration: none;
     transition: 0.2s;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
   }
-
+  
   nav a:hover {
-    color: white;
+    color: yellow;
     transform: scale(1.05);
   }
 
   .menu li {
-    display: inline-block;
     margin-left: 20px;
   }
 
+  .textmenu{
+    color: #fff;
+  }
+
+
   .menu .logo img {
-    height: 55px;
+    height: 38px;
     
   }
 `;
