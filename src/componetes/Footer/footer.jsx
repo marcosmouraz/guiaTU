@@ -18,7 +18,7 @@ export default function Footer(){
   return(
 
       <Container>
-       <section className="footer-list">
+       <footer className="footer-list">
         <ul>
           <h3>guiaTÚ</h3>
           <li>
@@ -112,13 +112,14 @@ export default function Footer(){
 
         <img src={Cadastur} alt="" />
 
-        <div className="barralogo">
+       </footer>
 
-        <img src={Logo} alt="" />
-        <h6>Politica de privacidade-Cookies-LGPD</h6>
-        </div>
+        <footer className="barralogo">
 
-       </section>
+          <img src={Logo} alt="" />
+          <h6>Politica de privacidade-Cookies-LGPD</h6>
+        </footer>
+
       </Container>
   )
 }
