@@ -23,6 +23,10 @@ export const Container = styled.section`
   }
   img {
     height: 50vh;
+    padding-bottom: 40px;
+    justify-content:center;
+  
+    
   }
   #destinos h1 {
     color: #04136e;
@@ -41,6 +45,8 @@ export const Container = styled.section`
     padding: 10px, 20px;
     padding-top: 5vh;
     flex-flow: row nowrap;
-    width: 100%;
+    
+
+    
   }
 `;

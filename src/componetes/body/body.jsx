@@ -1,5 +1,10 @@
 import { Container } from "./bodyStyles";
-import { CalendarCheck, MapPinArea, ShieldCheck, UserCircleCheck,} from "@phosphor-icons/react";
+import {
+  CalendarCheck,
+  MapPinArea,
+  ShieldCheck,
+  UserCircleCheck,
+} from "@phosphor-icons/react";
 import Bonito from "../../assets/bonitope.svg";
 import Brenand from "../../assets/brenand.svg";
 import Campo from "../../assets/campo.svg";
@@ -38,17 +43,15 @@ export default function Body() {
       </div>
 
       <section className="imagensDestinos">
-        <img src={Bomjesus} alt="cardBOMJESUS" />
-
         <img src={Campo} alt="cardCampo" />
+
+        <img src={Noronha} alt="cardNoronha" />
 
         <img src={Brenand} alt="cardBrenand" />
 
         <img src={Bonito} alt="cardBonito" />
 
         <img src={Olinda} alt="cardOlinda" />
-
-        <img src={Noronha} alt="cardNoronha" />
       </section>
     </Container>
   );

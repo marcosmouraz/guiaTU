@@ -1,28 +1,28 @@
-import { Container } from "./footerStyles";
-import Atendente from "../../assets/Vectoratendimento.svg"
-import { AndroidLogo, AppleLogo} from "@phosphor-icons/react";
-import Americanex from "../../assets/American.svg"
-import Googlepay from "../../assets/google.svg"
-import Master from "../../assets/masterard.svg"
-import Visacar from "../../assets/visa.svg"
-import Applepay from "../../assets/apple.svg"
-import Cadastur from "../../assets/logoCadastur.svg"
-import Recpatcha from "../../assets/recptcha.svg"
-import Logo from "../../assets/logo guia tu menu.png"
-import Facebook from "../../assets/logos_facebook.svg"
-import Instagram from "../../assets/icons_instagram.svg"
-import Linkedin from "../../assets/icons_linkedin.svg"
-import Twitter from "../../assets/Xvector.svg"
+import { Container, Copyright, Footerlist } from "./footerStyles";
+import Atendente from "../../assets/Vectoratendimento.svg";
+import { AndroidLogo, AppleLogo } from "@phosphor-icons/react";
+import Americanex from "../../assets/American.svg";
+import Googlepay from "../../assets/google.svg";
+import Master from "../../assets/masterard.svg";
+import Visacar from "../../assets/visa.svg";
+import Applepay from "../../assets/apple.svg";
+import Cadastur from "../../assets/logoCadastur.svg";
+import Logo from "../../assets/logo guia tu menu.png";
+import Facebook from "../../assets/logos_facebook.svg";
+import Instagram from "../../assets/icons_instagram.svg";
+import Linkedin from "../../assets/icons_linkedin.svg";
+import Twitter from "../../assets/Xvector.svg";
 
-export default function Footer(){
-  return(
-
-      <Container>
-       <footer className="footer-list">
+export default function Footer() {
+  return (
+    <Container>
+      <Footerlist>
         <ul>
-          <h3>guiaTÚ</h3>
+          <h5>GuiaTÚ</h5>
           <li>
-          <a href="" class>Quem somos</a>
+            <a href="" class>
+              Quem somos
+            </a>
           </li>
 
           <li>
@@ -35,22 +35,22 @@ export default function Footer(){
         </ul>
 
         <ul>
-          <h3>Inspiração</h3>
+          <h5>Inspiração</h5>
           <li>
             <a href="">Destinos</a>
           </li>
 
           <li>
-             <a href="">Pernambuco</a> 
+            <a href="">Pernambuco</a>
           </li>
 
           <li>
-             <a href="">Guias Nativos</a> 
+            <a href="">Guias Nativos</a>
           </li>
         </ul>
 
         <ul>
-          <h3>Trabaho conosco</h3>
+          <h5>Trabalhe Conosco</h5>
           <li>
             <a href="">Parcerias</a>
           </li>
@@ -58,68 +58,66 @@ export default function Footer(){
           <li>
             <a href="">Torne-se nosso parceiro</a>
           </li>
-
         </ul>
 
         <ul>
-          <h3>Ajuda</h3>
-          <li>
+          <h5>Ajuda</h5>
+          <li className="ajuda">
             <img src={Atendente} alt="" />
-            <h3>Entrar em contato com o guiaTÚ</h3>
-            <p>(81)X XXX - XXXX</p>
+            <div>
+              <h5>Entrar em contato com o guiaTÚ</h5>
+              <p>(81)X XXX - XXXX</p>
+            </div>
           </li>
         </ul>
 
+        <ul></ul>
+
         <ul>
-          <h3>Baixe nosso APP </h3>
-          <AppleLogo size={22} color="#b8b7b7" weight="fill" />
-          <li>
+          <h5>Baixe nosso APP </h5>
+
+          <li className="app">
+            <AppleLogo size={22} color="#b8b7b7" weight="fill" />
             <p>IOS APP</p>
           </li>
-
-          <AndroidLogo size={22} color="#b8b7b7" weight="fill" />
-          <p>Android APP</p>
-
+          <li className="app">
+            <AndroidLogo size={22} color="#b8b7b7" weight="fill" />
+            <p>Android APP</p>
+          </li>
         </ul>
 
         <ul>
-          <h3>Formas de pagamento</h3>
+          <h5>Formas de pagamento</h5>
+          <div className="imgfp">
             <img src={Americanex} alt="" />
             <img src={Googlepay} alt="" />
             <img src={Master} alt="" />
             <img src={Visacar} alt="" />
             <img src={Applepay} alt="" />
+          </div>
         </ul>
 
-        <ul className="redesSociais" >
-          <h3>Siga-nos</h3>
+        <ul className="redesSociais">
+          <h5>Siga-nos</h5>
+          <div className="imgsg">
+            <img src={Facebook} alt="" />
 
-         <img src={Facebook} alt="" />
+            <img src={Instagram} alt="" />
 
-         <img src={Instagram} alt="" />
-         
-         <img src={Linkedin} alt="" />
+            <img src={Linkedin} alt="" />
 
-         <img src={Twitter} alt="" />
-
+            <img src={Twitter} alt="" />
+          </div>
         </ul>
+        <div className="imgcd" >
+          <img src={Cadastur} alt="" />
+        </div>
+      </Footerlist>
 
-        <ul>
-
-        <img src={Recpatcha} alt="" />
-
-        </ul>
-
-        <img src={Cadastur} alt="" />
-
-       </footer>
-
-        <footer className="barralogo">
-
-          <img src={Logo} alt="" />
-          <h6>Politica de privacidade-Cookies-LGPD</h6>
-        </footer>
-
-      </Container>
-  )
+      <Copyright>
+        <img src={Logo} alt="" />
+        <h6>Politica de privacidade-Cookies-LGPD</h6>
+      </Copyright>
+    </Container>
+  );
 }
