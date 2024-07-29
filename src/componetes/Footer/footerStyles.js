@@ -52,7 +52,7 @@ export const Footerlist = styled.footer`
 `;
 
 export const Copyright = styled.div`
-  background-color: black;
+  background-color: #212020;
   width: 100%;
   display: flex;
   flex-direction: row;

@@ -10,7 +10,6 @@ import Brenand from "../../assets/brenand.svg";
 import Campo from "../../assets/campo.svg";
 import Noronha from "../../assets/noronha.svg";
 import Olinda from "../../assets/olindacard.svg";
-import Bomjesus from "../../assets/bomjesus.svg";
 
 export default function Body() {
   return (
