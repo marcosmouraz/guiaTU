@@ -36,6 +36,7 @@ export const Container = styled.div`
 
   .textmenu {
     color: #fff;
+    text-decoration: none;
   }
 
   .menu .logo img {

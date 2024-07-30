@@ -22,31 +22,35 @@ export const Container = styled.section`
     font-size: 12px;
   }
   img {
-    height: 50vh;
+    height: 43vh;
     padding-bottom: 40px;
-    justify-content:center;
-  
-    
+    justify-content: center;
   }
   #destinos h1 {
     color: #04136e;
     font-family: "Poppins", sans-serif;
     display: flex;
     justify-content: space-between;
-    padding-top: 6vh;
-    padding-left: 5vh;
-    font-weight: 900;
+    padding-top: 2rem;
+    padding-left: 1rem;
+    font-weight: 800;
   }
   .imagensDestinos {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    flex-wrap: wrap;
     justify-content: space-around;
     gap: 5px;
     align-items: center;
-    padding: 10px, 20px;
-    padding-top: 5vh;
+    /* padding: 10px, 20px; */
+    padding-top: 25px;
     flex-flow: row nowrap;
-    
-
-    
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  @media screen and (max-width: 800px) {
+    .imagensDestinos {
+      grid-template-columns: repeat(3, 1fr);
+    }
   }
 `;

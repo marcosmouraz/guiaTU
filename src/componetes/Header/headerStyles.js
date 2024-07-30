@@ -57,7 +57,7 @@ export const Container = styled.section`
     gap: 10px;
   }
 
-  @media screen and (max-width: 1080px) {
+  @media screen and (max-width: 1300px) {
     > h1 {
       font-size: 45px;
     }
