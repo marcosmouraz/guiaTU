@@ -1,13 +1,13 @@
 /* eslint-disable react/jsx-no-undef */
-import Header from "../../componetes/Header/header";
-import Menu from "../../componetes/Menu/menu";
+import Header from "../../components/Header/header";
+import Menu from "../../components/Menu/menu";
 import { Container } from "./filtroStyles";
 import vetorCampos from "../../assets/vetorCampos.svg";
 import vetorPraia from "../../assets/vetorPraias.svg";
 import vetorMuseus from "../../assets/vetorMuseus.svg";
 import vetorTrilhas from "../../assets/vetorTrilhas.svg";
 import vetorUrbanas from "../../assets/vetorUrbanas.svg";
-import FrameRotas from "../../componetes/FrameRotas/framerotas";
+import FrameRotas from "../../components/FrameRotas/framerotas";
 
 export default function TelaFiltro() {
   return (
