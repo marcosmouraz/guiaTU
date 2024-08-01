@@ -9,39 +9,31 @@ export const Container = styled.div`
     gap: 2.3rem;
     margin-top: 1.5rem;
   }
-  .body button {
-    border-radius: 20px;
-    padding:10px;
-    background-color: #fff;
-    color: black;
-    flex-direction: row;
+  .body .buttonSugestao {
+    padding: 0 20px 0 0;
     display: flex;
     align-items: center;
-    white-space: nowrap;
-    justify-content: end;
-    z-index: 3;
-    height: 7vh;
-    width: 10vw;
+    border-radius: 28px;
+    gap: 10px;
+    border: 1px #afafaf solid;
+    font-size: 16px;
+    background-color: transparent;
+    font-family: "Poppins", sans-serif;
+    cursor: pointer;
   }
-  .body .trilhas {
-    width: 14vw;
-  
-  }
-
   h3 {
-    display: flex;;
+    display: flex;
     font-family: "Poppins", sans-serif;
     font-size: 18px;
     font-weight: 100;
   }
 
-.titulodestinos h3 {
-  color: #04136f;
-  font-size: 25px;
-  font-weight: 550;
-  margin-top: 40px;
-}
-
-
-
+  .buttonSugestao h3 {
+    color: #04136f;
+    font-size: 25px;
+    font-weight: 550;
+    margin-top: 55px;
+    margin-left: 300px;
+    
+  }
 `;

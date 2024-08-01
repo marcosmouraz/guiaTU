@@ -7,6 +7,7 @@ import vetorPraia from "../../assets/vetorPraias.svg";
 import vetorMuseus from "../../assets/vetorMuseus.svg";
 import vetorTrilhas from "../../assets/vetorTrilhas.svg";
 import vetorUrbanas from "../../assets/vetorUrbanas.svg";
+import FrameRotas from "../../componetes/FrameRotas/framerotas";
 
 export default function TelaFiltro() {
   return (
@@ -14,35 +15,34 @@ export default function TelaFiltro() {
       <Menu />
       <Header />
       <div className="body">
-        <button className="campos">
+        <button className="buttonSugestao">
           <img src={vetorCampos} alt="vetorcampo" />
-          <h3>Campos</h3>
+          Campos
         </button>
-        <button className="praias">
+        <button className="buttonSugestao">
           <img src={vetorPraia} alt="vetorpraia" />
-          <h3>Praias</h3>
+          Praias
         </button>
-        <button className="museus">
+        <button className="buttonSugestao">
           <img src={vetorMuseus} alt="vetorMuseus" />
-          <h3>Museus</h3>
+          Museus
         </button>
-        <button className="trilhas">
+        <button className="buttonSugestao">
           <img src={vetorTrilhas} alt="vetorTrilhas" />
-          <h3>Trilhas e Cachoeiras</h3>
+          Trilhas e Cachoeiras
         </button>
-        <button className="Urbanas">
+        <button className="buttonSugestao">
           <img src={vetorUrbanas} alt="vetorUrbanas" />
-          <h3>Urbanas</h3>
+          Urbanas
         </button>
       </div>
-      <div className="titulodestinos">
+      <div className="buttonSugestao">
         <h3>Rotas ofertadas por nossos Guias:</h3>
       </div>
       <section className="framePasseio">
         <img src="" alt="" />
-
-
       </section>
+      <FrameRotas/>
     </Container>
   );
 }
