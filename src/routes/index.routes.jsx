@@ -9,6 +9,7 @@ import TelaGuia from "../pages/TelaGuia/teladoguia";
 import TelaLogin from "../pages/TelaLogin/telalogin";
 import TelaPagamento from "../pages/TelaPagamento/telapagamento";
 import TelaRoteiro from "../pages/TelaRoteiro/telaroteiro";
+import TelaFiltro from "../pages/TelaFiltro/telafiltro"
 
 export const router = createBrowserRouter([
   {
@@ -51,4 +52,8 @@ export const router = createBrowserRouter([
     path: "/telaroteiro",
     element: <TelaRoteiro />,
   },
+  {
+    path: "/telafiltro",
+    element: <TelaFiltro />
+  }
 ]);

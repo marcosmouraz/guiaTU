@@ -37,20 +37,18 @@ export default function Body() {
         </div>
       </section>
 
-      <div id="destinos">
-        <h1>Destinos mais procurados</h1>
-      </div>
+      <section className="container">
+        <div id="destinos">
+          <h1>Destinos mais procurados</h1>
+        </div>
 
-      <section className="imagensDestinos">
-        <img src={Campo} alt="cardCampo" />
-
-        <img src={Noronha} alt="cardNoronha" />
-
-        <img src={Brenand} alt="cardBrenand" />
-
-        <img src={Bonito} alt="cardBonito" />
-
-        <img src={Olinda} alt="cardOlinda" />
+        <section className="imagensDestinos">
+          <img src={Campo} alt="cardCampo" />
+          <img src={Noronha} alt="cardNoronha" />
+          <img src={Brenand} alt="cardBrenand" />
+          <img src={Bonito} alt="cardBonito" />
+          <img src={Olinda} alt="cardOlinda" />
+        </section>
       </section>
     </Container>
   );

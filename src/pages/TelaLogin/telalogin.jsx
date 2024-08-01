@@ -1,7 +1,5 @@
-export default function TelaLogin() {
-  return (
-    <>
+export default function TelaLogin(){
+  return{
     
-    </>
-  )
+  }
 }

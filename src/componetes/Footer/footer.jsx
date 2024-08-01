@@ -23,11 +23,9 @@ export default function Footer() {
             <li>
               <a href="">Quem somos</a>
             </li>
-
             <li>
               <a href="">Imprensa</a>
             </li>
-
             <li>
               <a href="">Sustentabilidade</a>
             </li>
@@ -40,11 +38,9 @@ export default function Footer() {
             <li>
               <a href="">Destinos</a>
             </li>
-
             <li>
               <a href="">Pernambuco</a>
             </li>
-
             <li>
               <a href="">Guias Nativos</a>
             </li>
@@ -57,7 +53,6 @@ export default function Footer() {
             <li>
               <a href="">Parcerias</a>
             </li>
-
             <li>
               <a href="">Torne-se nosso parceiro</a>
             </li>
@@ -77,22 +72,21 @@ export default function Footer() {
           </div>
         </ul>
 
-
         <ul className="bloco-5-footer">
           <h4>Baixe nosso APP</h4>
           <div className="info-bloco-5">
-          <a href="">
-            <li className="app">
-              <AppleLogo size={22} color="#b8b7b7" weight="fill" />
-              <p>IOS APP</p>
-            </li>
-          </a>
-          <a href="">
-            <li className="app">
-              <AndroidLogo size={22} color="#b8b7b7" weight="fill" />
-              <p>Android APP</p>
-            </li>
-          </a>
+            <a href="">
+              <li className="app">
+                <AppleLogo size={22} color="#b8b7b7" weight="fill" />
+                <p>IOS APP</p>
+              </li>
+            </a>
+            <a href="">
+              <li className="app">
+                <AndroidLogo size={22} color="#b8b7b7" weight="fill" />
+                <p>Android APP</p>
+              </li>
+            </a>
           </div>
         </ul>
 
@@ -131,8 +125,10 @@ export default function Footer() {
       </Footerlist>
 
       <Copyright>
-        <img src={Logo} alt="" />
-        <h6>Politica de privacidade-Cookies-LGPD</h6>
+        <div className="copyright-content">
+          <img src={Logo} alt="" />
+          <h6>Política de privacidade-Cookies-LGPD</h6>
+        </div>
       </Copyright>
     </Container>
   );
