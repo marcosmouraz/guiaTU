@@ -21,11 +21,13 @@ export const Footerlist = styled.footer`
   padding-bottom: 2rem;
   padding-top: 3rem;
   align-items: start;
+  color: #fff;
 
   .bloco-1-footer,
   .bloco-2-footer,
   .bloco-3-footer,
-  .bloco-4-footer {
+  .bloco-4-footer,
+  .bloco-5-footer {
     display: flex;
     flex-direction: column;
     gap: 5px;
@@ -35,7 +37,8 @@ export const Footerlist = styled.footer`
   .info-bloco-1,
   .info-bloco-2,
   .info-bloco-3,
-  .info-bloco-4 {
+  .info-bloco-4,
+  .info-bloco-5 {
     display: flex;
     flex-direction: column;
     gap: 5px;
@@ -54,7 +57,8 @@ export const Footerlist = styled.footer`
   .info-bloco-1 a:hover,
   .info-bloco-2 a:hover,
   .info-bloco-3 a:hover,
-  .info-bloco-4 li:hover {
+  .info-bloco-4 li:hover,
+  .info-bloco-5 a:hover {
     color: yellow;
   }
 
@@ -62,12 +66,13 @@ export const Footerlist = styled.footer`
     display: flex;
     gap: 10px;
   }
-
   .app {
     display: flex;
-    gap: 10px;
+    gap: 8px;
+    color: #fff;
+    list-style-type: none;
+    text-decoration: none;
   }
-
   .imgsg,
   .imgfp {
     display: flex;
@@ -100,7 +105,6 @@ export const Copyright = styled.div`
   padding: 1.5rem 0;
   height: 3.5rem; /* Ajustado para maior altura */
   box-sizing: border-box; /* Garante que o padding não aumente a altura total */
-
   .copyright-content {
     width: 100%;
     max-width: 70.25rem;
@@ -112,8 +116,7 @@ export const Copyright = styled.div`
   img {
     height: 35px;
   }
-
-  h6 {
+    h6 {
     color: #ffffff;
     font-size: 14px;
   }`;

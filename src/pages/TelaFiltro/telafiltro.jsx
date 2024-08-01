@@ -1,6 +1,7 @@
 /* eslint-disable react/jsx-no-undef */
 import Header from "../../components/Header/header";
 import Menu from "../../components/Menu/menu";
+import Footer from '../../components/Footer/footer'
 import { Container } from "./filtroStyles";
 import vetorCampos from "../../assets/vetorCampos.svg";
 import vetorPraia from "../../assets/vetorPraias.svg";
@@ -43,6 +44,7 @@ export default function TelaFiltro() {
         <img src="" alt="" />
       </section>
       <FrameRotas/>
+      <Footer/>
     </Container>
   );
 }
