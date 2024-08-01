@@ -33,7 +33,7 @@ export const Container = styled.div`
     font-size: 25px;
     font-weight: 550;
     margin-top: 55px;
-    margin-left: 300px;
+    margin-left: 210px;
     
   }
 `;
