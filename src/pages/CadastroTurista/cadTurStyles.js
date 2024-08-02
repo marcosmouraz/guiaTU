@@ -20,22 +20,46 @@ export const Container = styled.body`
     font-size: 30px;
     color: #04136e;
   }
-  .inputEmail {
-    display: grid;
-    width: 70%;
-    padding-left: 20rem;
-    height: 12vh;
-    gap: 1rem;
 
-    .email {
-      border-radius: 4px;
-      padding: 10px;
-      border-style: groove;
-      align-items: baseline;
+
+  .inputfoto{
+    display: flex;
+    justify-content: end;
+    flex-direction: column;
+    width: 65rem;
+    padding-bottom: 8rem;
+    margin-left: 1rem;
+
+  }
+
+  
+  .inputnome {
+    display: flex;
+    position: relative;
+    /* justify-content: center; */
+    flex-direction: row;
+    gap: 10px;
+    width: 50%;
+    left: 16rem;
+    padding-left: 4rem;
+    top: -2.9rem;
+
+    .nome{
+      width: 100%;
       height: 5vh;
+      border-style: groove;
+      border-radius: 4px;
+      padding: 1rem;
+    }
+    .sobrenome {
+      width: 100%;
+      height: 5vh;
+      border-style: groove;
+      border-radius: 4px;
+      padding: 1rem;
     }
   }
-  .inputSenhas {
+  .inputDataCpf {
     display: flex;
     position: relative;
     /* justify-content: center; */
@@ -46,7 +70,7 @@ export const Container = styled.body`
     padding-left: 4rem;
     top: -1.5rem;
     
-    .senha {
+    .dataNascimento {
       width: 100%;
       height: 5vh;
       border-style: groove;
@@ -54,7 +78,7 @@ export const Container = styled.body`
       padding: 1rem;
       /* margin-right: 1rem; */
     }
-    .confirme {
+    .Cpf {
       width: 100%;
       height: 5vh;
       border-style: groove;
@@ -73,7 +97,7 @@ export const Container = styled.body`
     left: 16rem;
     padding-left: 4rem;
 
-    .telefone {
+    .Pais {
       width: 100%;
       height: 5vh;
       border-style: groove;
@@ -81,7 +105,7 @@ export const Container = styled.body`
       padding: 1rem;
       /* margin-right: 1rem; */
     }
-    .idade {
+    .estado {
       width: 100%;
       height: 5vh;
       border-style: groove;
