@@ -48,7 +48,6 @@ export const Container = styled.section`
     align-items: center;
     gap: 10px;
     z-index: 3;
-    flex-wrap: wrap; /*Permite que os itens se movam para a linha seguinte em telas menores*/
     padding: 0 10px;
   }
 
