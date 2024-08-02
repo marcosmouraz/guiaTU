@@ -23,42 +23,27 @@ export const Footerlist = styled.footer`
   align-items: start;
   color: #fff;
 
-  .bloco-1-footer,
-  .bloco-2-footer,
-  .bloco-3-footer,
-  .bloco-4-footer,
-  .bloco-5-footer {
+  .bloco-footer {
     display: flex;
     flex-direction: column;
     gap: 5px;
     list-style-type: none;
   }
 
-  .info-bloco-1,
-  .info-bloco-2,
-  .info-bloco-3,
-  .info-bloco-4,
-  .info-bloco-5 {
+  .info-bloco {
     display: flex;
     flex-direction: column;
     gap: 5px;
     padding-bottom: 30px;
   }
 
-  .info-bloco-1 a,
-  .info-bloco-2 a,
-  .info-bloco-3 a,
-  .info-bloco-4 li {
+  .info-bloco a {
     text-decoration: none;
     font-size: 16px;
     color: #cccccc;
   }
 
-  .info-bloco-1 a:hover,
-  .info-bloco-2 a:hover,
-  .info-bloco-3 a:hover,
-  .info-bloco-4 li:hover,
-  .info-bloco-5 a:hover {
+  .info-bloco a:hover {
     color: yellow;
   }
 
@@ -72,6 +57,9 @@ export const Footerlist = styled.footer`
     color: #fff;
     list-style-type: none;
     text-decoration: none;
+  }
+  .app:hover {
+    color: yellow;
   }
   .imgsg,
   .imgfp {
@@ -116,7 +104,8 @@ export const Copyright = styled.div`
   img {
     height: 35px;
   }
-    h6 {
+  h6 {
     color: #ffffff;
     font-size: 14px;
-  }`;
+  }
+`;

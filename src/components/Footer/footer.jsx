@@ -17,9 +17,9 @@ export default function Footer() {
   return (
     <Container>
       <Footerlist>
-        <ul className="bloco-1-footer">
+        <ul className="bloco-footer">
           <h4>GuiaTÚ</h4>
-          <div className="info-bloco-1">
+          <div className="info-bloco">
             <li>
               <a href="">Quem somos</a>
             </li>
@@ -32,9 +32,9 @@ export default function Footer() {
           </div>
         </ul>
 
-        <ul className="bloco-2-footer">
+        <ul className="bloco-footer">
           <h4>Inspiração</h4>
-          <div className="info-bloco-2">
+          <div className="info-bloco">
             <li>
               <a href="">Destinos</a>
             </li>
@@ -47,9 +47,9 @@ export default function Footer() {
           </div>
         </ul>
 
-        <ul className="bloco-3-footer">
+        <ul className="bloco-footer">
           <h4>Trabalhe Conosco</h4>
-          <div className="info-bloco-3">
+          <div className="info-bloco">
             <li>
               <a href="">Parcerias</a>
             </li>
@@ -59,9 +59,9 @@ export default function Footer() {
           </div>
         </ul>
 
-        <ul className="bloco-4-footer">
+        <ul className="bloco-footer">
           <h4>Ajuda</h4>
-          <div className="info-bloco-4">
+          <div className="info-bloco">
             <div className="ajuda">
               <img src={Atendente} alt="" />
               <li>
@@ -72,9 +72,9 @@ export default function Footer() {
           </div>
         </ul>
 
-        <ul className="bloco-5-footer">
+        <ul className="bloco-footer">
           <h4>Baixe nosso APP</h4>
-          <div className="info-bloco-5">
+          <div className="info-bloco">
             <a href="">
               <li className="app">
                 <AppleLogo size={22} color="#b8b7b7" weight="fill" />

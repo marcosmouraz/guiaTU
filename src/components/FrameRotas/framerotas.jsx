@@ -18,7 +18,7 @@ export default function FrameRotas(){
           <div className="nomeGuia">
             <h5>Jailton Silva</h5>
 
-            <Star className="estrela" size={12} color="#f1f500" weight="fill" />
+            <Star className="estrela" size={16  } color="#f1f500" weight="fill" />
 
             <div className="nota">
               <p>4.2</p>

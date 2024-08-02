@@ -52,7 +52,7 @@ export const Container = styled.section`
 
   .imagensDestinos {
     display: flex; /* Usando flexbox para rolagem horizontal */
-    overflow-x: auto; /* Permite rolagem horizontal */
+    overflow-x: scroll; /* Permite rolagem horizontal */
     white-space: nowrap; /* Impede quebra de linha dos itens */
     gap: 5px;
     padding-top: 25px;

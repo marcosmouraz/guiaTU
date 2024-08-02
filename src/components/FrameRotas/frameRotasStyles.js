@@ -1,6 +1,10 @@
 import styled from "styled-components";
 export const Container = styled.div`
   padding-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
+
 
   .frame {
     position:relative;
@@ -79,7 +83,7 @@ export const Container = styled.div`
   top: 80px;
   position: relative;
   left: 5%;
-  font-size: 17px;y
+  font-size: 17px;
 }
 .valor{
 color: #04136F;
