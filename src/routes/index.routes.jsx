@@ -3,6 +3,7 @@ import Home from "../pages/Home";
 import CadastroGuia from "../pages/CadastroGuia/cadastroguia";
 import CadastroParceiro from "../pages/CadastroParceiro/cadastroparceiro";
 import CadastroTurista from "../pages/CadastroTurista/cadastroturista";
+import CadastroTuristaDois from "../pages/CadastroTuristaDois/cadastroturistaDois";
 import CheckoutCartao from "../pages/CheckoutCartao/checkoutCartao";
 import SejaParceiro from "../pages/SejaParceiro/sejaparceiro";
 import TelaGuia from "../pages/TelaGuia/teladoguia";
@@ -27,6 +28,10 @@ export const router = createBrowserRouter([
   {
     path: "/cadastroturista",
     element: <CadastroTurista />,
+  },
+  {
+    path: "/cadastroturistaDois",
+    element: <CadastroTuristaDois />,
   },
   {
     path: "/checkoutcartao",

@@ -145,7 +145,7 @@ export const Container = styled.body`
     border: none;
     text-align: center;
     display: flex;
-    padding: 8px 6rem;
+    padding: 8px 5rem;
   }
 
   .buttonProximo:hover {
@@ -162,9 +162,10 @@ export const Container = styled.body`
     align-items: center;
     gap: 1rem;
     top: 4.5rem;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
     width: 75rem;
     padding-bottom: 2rem;
+    padding-left: 6rem;
   }
   .linha h5 {
     font-weight: 600;
@@ -179,7 +180,7 @@ export const Container = styled.body`
     gap: 45px;
     justify-content: center;
     padding-top: 2.5rem;
-    padding-right: 2.5rem;
+    padding-right: 3rem;
     padding-bottom: 3rem;
     align-items: center;
   }
