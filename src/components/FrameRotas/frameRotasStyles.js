@@ -32,7 +32,7 @@ export const Container = styled.div`
 .imagem-sobreposta {
   display: flex;
   position: absolute;
-  height: 65px; /* Mantém a proporção da imagem sobreposta */
+  height: 50px; /* Mantém a proporção da imagem sobreposta */
   top: 20px;
   left: 188px;
 
