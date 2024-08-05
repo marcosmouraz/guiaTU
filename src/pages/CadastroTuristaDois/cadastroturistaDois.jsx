@@ -1,9 +1,5 @@
 import Menu from "../../components/Menu/menu";
 import { Container } from "./cadasturisDoisStyles.js";
-import Linha from "../../assets/vetorLinha.svg";
-import Google from "../../assets/iconGoogle.svg";
-import Facebook from "../../assets/iconFacebook.svg";
-import Apple from "../../assets/iconApple.svg";
 import Footer from "../../components/Footer/footer";
 
 export default function CadastroTuristaDois() {
@@ -21,7 +17,7 @@ export default function CadastroTuristaDois() {
 
         <div className="inputUm">
           <input type="text" placeholder="E-mail" />
-          <input type="text" placeholder="  (xx) x xxxx-xxxx" />
+          <input type="text" placeholder="DDD + Telefone" />
         </div>
 
         <div className="inputUm">
@@ -32,7 +28,7 @@ export default function CadastroTuristaDois() {
         <div className="checkContainer">
           <div className="inputscheckum">
             <input type="checkbox" name="" id="" />
-            <label class="custom-checkbox">
+            <label className="custom-checkbox">
               Quero receber as últimas novidades da Guiatú e as melhores dicas
               para minhas próximas visitas guiadas{" "}
             </label>
@@ -40,7 +36,7 @@ export default function CadastroTuristaDois() {
 
           <div className="inputscheckum">
             <input type="checkbox" name="" id="" />
-            <label class="custom-checkbox">
+            <label className="custom-checkbox">
               Aceito <a href="">politica de privacidade</a>  e <a href="">condições gerais</a>{" "}
             </label>
           </div>

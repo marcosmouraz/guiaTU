@@ -71,6 +71,7 @@ export const Container = styled.section`
     background-color: #04136e;
     color: #fff;
     font-size: 16px;
+    cursor: pointer
   }
 
   @media screen and (max-width: 1300px) {
