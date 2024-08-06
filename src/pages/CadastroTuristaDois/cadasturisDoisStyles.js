@@ -121,6 +121,24 @@ export const Container = styled.body`
       width: 70%;
     }
   }
+  @media (max-width: 1366px) {
+    .titulo {
+      width: 90%;
+    }
+
+    .inputUm input {
+      max-width: 20rem;
+    }
+
+    .buttonFinalizar {
+      width: 30%;
+    }
+
+    .inputscheckum,
+    .inputtext {
+      width: 46.5%;
+    }
+  }
 
   @media (max-width: 1200px) {
     .titulo {
