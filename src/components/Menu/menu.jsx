@@ -44,8 +44,8 @@ export default function Menu() {
                   <User size={20} color="#fafafa" />
                 </button>
                 <div className="dropdown-content3">
-                  <a href="#">Entrar</a>
-                  <a href="#">Cadastre-se</a>
+                  <a href="/telalogin">Entrar</a>
+                  <a href="/cadastroturista">Cadastre-se</a>
                 </div>
               </div>
             </li>
