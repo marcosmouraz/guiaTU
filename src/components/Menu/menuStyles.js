@@ -15,6 +15,7 @@ export const Container = styled.div`
     font-size: 16px;
     border: none;
     cursor: pointer;
+    border-radius: 4px;
   }
 
   /* The container <div> - needed to position the dropdown content */
@@ -32,6 +33,7 @@ export const Container = styled.div`
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;
     font-size: 18px;
+    border-radius: 4px;
   }
 
   /* Links inside the dropdown */
@@ -46,6 +48,7 @@ export const Container = styled.div`
   .dropdown-content a:hover {
     background-color: #f1f1f1;
     color: #04136f;
+    border-radius: 4px;
   }
 
   /* Show the dropdown menu on hover */
@@ -61,6 +64,7 @@ export const Container = styled.div`
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;
     font-size: 18px;
+    border-radius: 4px;
   }
 
   /* Links inside the dropdown */
@@ -69,6 +73,7 @@ export const Container = styled.div`
     padding: 12px 16px;
     text-decoration: none;
     display: block;
+    border-radius: 4px;
   }
 
   /* Change color of dropdown links on hover */
@@ -93,6 +98,7 @@ export const Container = styled.div`
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;
     font-size: 18px;
+    border-radius: 4px;
   }
 
   /* Links inside the dropdown */
@@ -101,12 +107,14 @@ export const Container = styled.div`
     padding: 12px 16px;
     text-decoration: none;
     display: block;
+    border-radius: 4px;
   }
 
   /* Change color of dropdown links on hover */
   .dropdown-content3 a:hover {
     background-color: #f1f1f1;
     color: #04136f;
+    border-radius: 4px;
   }
 
   /* Show the dropdown menu on hover */
@@ -119,6 +127,7 @@ export const Container = styled.div`
   .dropdown:hover .dropbtn {
     background-color: #fff;
     color: #04136f;
+    border-radius: 4px;
   }
   .menu .menu-desktop ul {
     list-style-type: none;
