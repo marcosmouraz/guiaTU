@@ -7,10 +7,10 @@ import { Container } from "./cadGuiaStyles";
 
 export default function CadastroGuia() {
   return (
-
-  
-    <Container>
+   <>
     <Menu />
+    <Container>
+    
 
       
       <div className="titulo">
@@ -37,9 +37,6 @@ export default function CadastroGuia() {
         <input className="dataNascimento"  type="text" placeholder="Data de nascimento"/>
         <input className="cpf" type="text" placeholder="CPF"/>
         <input className="pais" type="text" placeholder="País"/>
-      </div>
-
-      <div className="inputDois">
         <input className="estado" type="text" placeholder="Estado"/>
         <input className="credencial" type="text" placeholder="Credencial"/>
         <input className="email" type="text" placeholder="E-mail"/>
@@ -47,13 +44,13 @@ export default function CadastroGuia() {
       <input className="confirmeSenha"  type="text" placeholder="Confirme sua senha"/>
       </div>
 
-
       <div className="checkbox">
+          <div className="ContentC">
           <input type="checkbox" name="" id="" />
             <label className="custom-checkbox">
               Aceito <a href="">politica de privacidade</a>  e <a href="">condições gerais</a>{" "}
             </label>
-        
+            </div>
 
           <label className="inputtext">
             Este site está protegido por reCAPTCHA e se aplicam à <a href="">politica de
@@ -62,13 +59,13 @@ export default function CadastroGuia() {
       </div>
 
       <div className="buttonContainer">
-          <button className="buttonFinalizar">Finalizar Cadastro</button>
+          <button className="buttonFinalizar">Cadastrar</button>
         </div>
         
-      <Footer />
+      
 
     </Container>
-
-
+    <Footer />
+  </>
   )
 }

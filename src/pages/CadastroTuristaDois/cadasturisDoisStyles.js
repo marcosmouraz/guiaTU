@@ -83,10 +83,10 @@ export const Container = styled.body`
     font-weight: lighter;
   }
 
-  @media (max-width: 2327px) {
+  @media (max-width: 2172px) {
     .titulo {
-      width: 90%;
-      padding-left: 24rem;
+      width: 100%;
+      padding-left: 33rem;
     }
 
     .inputUm input {
@@ -95,17 +95,46 @@ export const Container = styled.body`
 
     .buttonFinalizar {
       width: 25%;
+      margin-top: 2rem;
     }
 
+    .checkContainer,
     .inputscheckum,
     .inputtext {
-      width: 60%;
+      width: 100%;
+      padding-left: 16.5rem;
+    }
+  }
+
+  @media (max-width: 1929px) {
+    .titulo {
+      width: 100%;
+      padding-left: 42rem;
+    }
+
+    .inputUm input {
+      max-width: 18rem;
+      justify-content: center;
+    }
+
+    .buttonFinalizar {
+      width: 25%;
+      margin-top: 2rem;
+      justify-content: center;
+    }
+
+    .checkContainer,
+    .inputscheckum,
+    .inputtext {
+      width: 80%;
+      padding-left: 17rem;
     }
   }
 
   @media (max-width: 1600px) {
     .titulo {
-      width: 85%;
+      width: 70%;
+      padding-left: 3rem;
     }
 
     .inputUm input {
@@ -140,28 +169,35 @@ export const Container = styled.body`
     }
   }
 
-  @media (max-width: 1200px) {
+  @media (max-width: 1318px) {
     .titulo {
-      width: 90%;
+      width: 100%;
+      padding-left: 26rem;
     }
 
     .inputUm input {
-      max-width: 14rem;
+      max-width: 15rem;
     }
 
     .buttonFinalizar {
       width: 35%;
+      justify-content: center;
     }
 
-    .inputscheckum,
-    .inputtext {
-      width: 80%;
+    .checkContainer {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      justify-content: center;
+      align-items: center;
+      padding: 10px;
     }
   }
 
   @media (max-width: 992px) {
     .titulo {
-      width: 95%;
+      width: 100%;
+
     }
 
     .inputUm input {
@@ -172,10 +208,14 @@ export const Container = styled.body`
       width: 40%;
     }
 
+    .checkContainer,
     .inputscheckum,
     .inputtext {
-      width: 85%;
+      gap: 10px;
+      width: 100%;
+      padding-left:9.5rem;
     }
+
   }
 
   @media (max-width: 768px) {

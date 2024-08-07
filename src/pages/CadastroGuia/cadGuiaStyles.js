@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
 export const Container = styled.body`
- width: 100%;
-  height: 70vh;
+  width: 100%;
+  height: 80%;
   max-width: 100%;
   margin: 0 auto;
 
@@ -10,11 +10,11 @@ export const Container = styled.body`
     display: flex;
     align-items: center;
     justify-content: center;
-    overflow-wrap: break-word;
     width: 50%;
-    height: 30vh;
+    height: 35vh;
     margin: 0 auto;
-    padding-left: 1rem;
+    padding-left: 5rem;
+  
 
     h2 {
       font-size: 32px;
@@ -22,30 +22,33 @@ export const Container = styled.body`
     }
   }
 
+
   .DadosPessoais {
-  display: flex;
-
-  justify-content: first baseline;
-  
-  
-  h4 {
+    display: flex;
+    justify-content: center;
+    padding-right: 36rem;
+    height: 5vh;
+    
+    h4 {
     color: #04136e;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: normal;
  
+    }
+  }
 
-  }
-  }
   .inputfoto {
-    position: relative;
     display: flex;
     justify-content: center;
     flex-direction: column;
     width: 7rem;
-    padding-bottom: 2rem;
+    padding-bottom: 1rem;
     margin: 0 auto;
     text-align: center;
     align-items: center;
     gap: 5px;
-    top: -2.5rem;
+    padding-right: 80px;
 
     .vetor {
       border: #1e1e1e;
@@ -65,9 +68,51 @@ export const Container = styled.body`
       font-size: 16px;
       font-weight: 600;
     }
+    
+ 
   }
+  .inputUm{
+    display: grid;
+    justify-items: center;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    padding-left: 20rem;
+    
+  }
+  .inputUm input {
+    width: 150vw;
+    max-width: 20rem;
+    height: 5vh;
+    border-style: groove;
+    border-radius: 4px;
+    padding: 1rem;
 
   
+  }
+  .checkbox{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .ContentC{
+    width: 53%;
+    display: flex;
+    gap: 10px;
+    align-items: start;
+    
+  }
+  .inputtext{
+    padding-right: 110px;
+  }
+  .buttonContainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+  }
 
   .buttonFinalizar {
     display: flex;
@@ -75,16 +120,18 @@ export const Container = styled.body`
     align-items: center;
     width: 15%;
     margin: 2.5rem auto 0 auto;
-    background-color: #04136e;
+    background-color: #3F58EE;
     color: #fff;
     border-radius: 8px;
+    border: none;
     cursor: pointer;
     transition: background-color 0.2s;
     padding: 8px 1rem;
     text-align: center;
+  
 
     &:hover {
-      background-color: #1e1e1e;
+      background-color: #04136e;
       border: none;
     }
   }
