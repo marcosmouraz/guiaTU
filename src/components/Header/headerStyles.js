@@ -1,15 +1,52 @@
-import styled from "styled-components";
-
+import styled, { keyframes } from "styled-components";
+import Imagem1 from "../../assets/marcozero.svg";
+import Imagem2 from "../../assets/altodase.svg";
+import Imagem3 from "../../assets/parqescultura.svg";
+import Imagem4 from "../../assets/saobentoolinda.svg";
+import Imagem5 from "../../assets/ruadosol.svg";
+import Imagem6 from "../../assets/misericordia.svg";
+import Imagem7 from "../../assets/marcozero.svg";
+const backgroundChange = keyframes`
+  0% {
+    background-image: url(${Imagem1}); /* ou URL externa */
+  }
+  16.67% {
+    background-image: url(${Imagem2});
+  }
+  33.33% {
+    background-image: url(${Imagem3});
+  }
+  50% {
+    background-image: url(${Imagem4});
+  }
+  66.67% {
+    background-image: url(${Imagem5});
+  }
+  83.33% {
+    background-image: url(${Imagem6});
+  }
+  100% {
+    background-image: url(${Imagem7});
+  }
+`;
+  export const BackgroundContainer = styled.div`
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    animation: ${backgroundChange} 60s infinite;
+  `;
 export const Container = styled.section`
   position: relative;
-  width: 100vw;
+  width: 100%;
   height: 70vh; /* Ajuste a altura conforme necessário */
   overflow: hidden;
 
   > h1 {
-    font-size: 80px;
+    font-size: 400px;
     position: absolute;
-    top: 95%; /* Ajuste a posição conforme necessário */
+    top: 89%; /* Ajuste a posição conforme necessário */
     left: 50%;
     transform: translate(-50%, -50%);
     color: white; /* Cor do texto */
@@ -19,20 +56,10 @@ export const Container = styled.section`
     text-align: center;
     z-index: 1; /* Garante que o texto apareça sobre a imagem */
     font-family: "Poppins", sans-serif;
-    max-width: 90%; /* Garante que o título não fique muito largo */
+    max-width: 100%;
     white-space: nowrap; /* Impede a quebra de linha no título */
     overflow: hidden;
     text-overflow: ellipsis; /* Adiciona reticências se o texto for muito longo */
-  }
-
-  > img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Garante que a imagem cubra a área sem distorção */
-    z-index: -1; /* Coloca a imagem atrás do conteúdo */
   }
 
   > .inputs {

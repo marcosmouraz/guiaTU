@@ -1,20 +1,21 @@
 import styled from "styled-components";
 
-import Background from "../../assets/wallpaperlogin.svg";
+import Background from "../../assets/terminalmaritimo.svg";
 
 export const Container = styled.body`
   width: 100%;
   height: 100vh;
 
   .conta h2 {
+    padding-top: 140px;
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     top: 8.5rem;
     color: #04136e;
-    text-shadow: 2px 2px 4px #1e1e1e;
-    font-size: 30px;
+    text-shadow: 2px 2px 4px #d9d9d9;
+    font-size: 40px;
   }
 
   .conta h6 {
@@ -22,11 +23,10 @@ export const Container = styled.body`
     display: flex;
     justify-content: center;
     align-items: center;
-    top: 9.5rem;
+    top: 9rem;
     color: black;
-    font-weight: 200;
-    font-size: 15px;
-
+    font-weight: 300;
+    font-size: 17px;
   }
   .inputs {
     background-color: transparent;
@@ -37,7 +37,7 @@ export const Container = styled.body`
     top: 10.6rem;
     width: 25%;
     box-sizing: border-box;
-    gap: 0.8rem;
+    gap: 1.8rem;
     transform: translate(37vw, 0.5vh);
     color: #000;
     .email {
@@ -46,8 +46,9 @@ export const Container = styled.body`
       color: #04136e;
       border-color: #5f6368;
       border-style: groove;
-      height: 2rem;
+      height: 3rem;
       border-radius: 8px;
+      padding: 1rem;
     }
     .email::placeholder {
       color: #fff;
@@ -59,8 +60,9 @@ export const Container = styled.body`
       color: #04136e;
       border-color: #5f6368;
       border-style: groove;
-      height: 2rem;
+      height: 3rem;
       border-radius: 8px;
+      padding: 1rem;
     }
     .senha::placeholder {
       color: #fff;
@@ -73,13 +75,14 @@ export const Container = styled.body`
     align-items: center;
     justify-content: center;
     width: 25%;
-    transform: translate(45.2vw, 0.5vh);
+    padding-left: 47.7rem;
+    white-space: nowrap;
     position: relative;
   }
   .esqueciasenha h6 {
     position: relative;
     font-weight: 200;
-    padding-top: 11rem;
+    padding-top: 11.5rem;
   }
   .clickEsqueci {
     text-decoration: none;
@@ -92,7 +95,9 @@ export const Container = styled.body`
     align-items: center;
     top: 1rem;
     width: 25%;
-    background-color: #04136e;
+    background-color: #0f2ff0;
+    font-size: 17px;
+    font-weight: 700;
     color: #fff;
     border-radius: 8px;
     cursor: pointer;
@@ -104,8 +109,8 @@ export const Container = styled.body`
     padding: 8px 6rem;
   }
   .buttonEntrar:hover {
-    color: #04136e;
-    background-color: #fff;
+    color: #fff;
+    background-color: #04136e;
     border-style: groove;
     border-color: #04136e;
   }
@@ -119,8 +124,14 @@ export const Container = styled.body`
     margin-bottom: 1rem;
   }
   .linha h5 {
-    font-weight: 500;
-    color: #636363;
+    font-weight: 700;
+    color: #000;
+  }
+  h6{
+    gap: 10px;
+  }
+  .span{
+    color: #fff;
   }
   .linha img {
     width: 14%;
@@ -140,7 +151,7 @@ export const Container = styled.body`
     width: 25%;
 
     #turista {
-      background-color: #04136e;
+      background-color: #0f2ff0;
       color: #fff;
       border-radius: 8px;
       height: 2rem;
@@ -151,13 +162,13 @@ export const Container = styled.body`
       border: none;
     }
     #turista:hover {
-      color: #04136e;
-      background-color: #fff;
+      color: #fff;
+      background-color: #04136e;
       border-style: groove;
       border-color: #04136e;
     }
     #guia {
-      background-color: #04136e;
+      background-color: #0f2ff0;
       color: #fff;
       border-radius: 8px;
       height: 2rem;
@@ -168,13 +179,13 @@ export const Container = styled.body`
       border: none;
     }
     #guia:hover {
-      color: #04136e;
-      background-color: #fff;
+      color: #fff;
+      background-color: #04136e;
       border-style: groove;
       border-color: #04136e;
     }
     #parceiro {
-      background-color: #04136e;
+      background-color: #0f2ff0;
       color: #fff;
       border-radius: 8px;
       height: 2rem;
@@ -185,8 +196,8 @@ export const Container = styled.body`
       border: none;
     }
     #parceiro:hover {
-      color: #04136e;
-      background-color: #fff;
+      color: #fff;
+      background-color: #04136e;
       border-style: groove;
       border-color: #04136e;
     }

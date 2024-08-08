@@ -16,22 +16,22 @@ export default function Body() {
     <Container>
       <section className="cards">
         <div className="card">
-          <MapPinArea size={42} color="#04136f" />
+          <MapPinArea size={70} color="#04136f" />
           <h2>Presença ampla</h2>
           <p>+ de 5 cidades incluindo interior</p>
         </div>
         <div className="card">
-          <UserCircleCheck size={42} color="#04136f" />
+          <UserCircleCheck size={70} color="#04136f" />
           <h2>Guias locais</h2>
           <p>+ de 100 guias credenciados parceiros</p>
         </div>
         <div className="card">
-          <CalendarCheck size={42} color="#04136f" />
+          <CalendarCheck size={70} color="#04136f" />
           <h2>Cancelamento gratuito</h2>
           <p>Até 10 dias antes do passeio</p>
         </div>
         <div className="card">
-          <ShieldCheck size={42} color="#04136f" />
+          <ShieldCheck size={70} color="#04136f" />
           <h2>Segurança e suporte</h2>
           <p>Privacidade e Comunicação</p>
         </div>
@@ -43,11 +43,26 @@ export default function Body() {
         </div>
 
         <section className="imagensDestinos">
-          <img src={Campo} alt="cardCampo" />
-          <img src={Noronha} alt="cardNoronha" />
-          <img src={Brenand} alt="cardBrenand" />
-          <img src={Bonito} alt="cardBonito" />
-          <img src={Olinda} alt="cardOlinda" />
+          <div className="imgUm">
+            <img src={Campo} alt="cardCampo" />
+            <h2 className="gravata">Gravatá - PE</h2>
+          </div>
+          <div className="imgDois">
+            <img src={Noronha} alt="cardNoronha" />
+            <h2 className="fernando">Fernando de Noronha - PE</h2>
+          </div>
+          <div className="imgTres">
+            <img src={Brenand} alt="cardBrenand" />
+            <h2 className="brennand">I. Ricardo Brennand - PE</h2>
+          </div>
+          <div className="imgQuatro">
+            <img src={Bonito} alt="cardBonito" />
+            <h2 className="bonito">Bonito - PE</h2>
+          </div>
+          <div className="imgCinco">
+            <img src={Olinda} alt="cardOlinda" />
+            <h2 className="olinda">Olinda - PE</h2>
+          </div>
         </section>
       </section>
     </Container>

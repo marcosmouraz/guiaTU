@@ -1,10 +1,12 @@
-import Imagem from "../../assets/bannerSlogan.png";
-import { Container } from "./headerStyles";
+import { BackgroundContainer, Container } from "./headerStyles";
+import { useNavigate } from "react-router-dom";
 
 export default function Header() {
+  const navigation = useNavigate()
   return (
     <Container>
-      <img src={Imagem} alt="" />
+
+      <BackgroundContainer/>
       <h1>Sua liberdade de explorar</h1>
 
       <section className="inputs">
@@ -21,7 +23,7 @@ export default function Header() {
           placeholder="Num. de Pessoas"
           name="nPessoas"
         />
-        <button>Procurar</button>
+        <button onClick={() => navigation("/telafiltro")}>Procurar</button>
       </section>
     </Container>
   );

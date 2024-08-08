@@ -6,7 +6,7 @@ import { CaretDown, Info, ShoppingCart, User } from "@phosphor-icons/react";
 export default function Menu() {
   return (
     <Container>
-      <div className="menu">
+      <section className="menu">
         <div className="logo">
           <img src={LogoMenu} alt="logoMenu" />
         </div>
@@ -44,8 +44,8 @@ export default function Menu() {
                   <User size={20} color="#fafafa" />
                 </button>
                 <div className="dropdown-content3">
-                  <a href="#">Entrar</a>
-                  <a href="#">Cadastre-se</a>
+                  <a href="/telalogin">Entrar</a>
+                  <a href="/cadastroturista">Cadastre-se</a>
                 </div>
               </div>
             </li>
@@ -61,7 +61,7 @@ export default function Menu() {
             </li>
           </ul>
         </nav>
-      </div>
+      </section>
     </Container>
   );
 }
