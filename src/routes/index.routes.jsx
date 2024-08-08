@@ -2,15 +2,15 @@ import { createBrowserRouter } from "react-router-dom";
 import Home from "../pages/Home";
 import CadastroGuia from "../pages/CadastroGuia/cadastroguia";
 import CadastroParceiro from "../pages/CadastroParceiro/cadastroparceiro";
+import CadastroParceiroDois from "../pages/CadastroParceiroDois/cadastroparceirodois"
 import CadastroTurista from "../pages/CadastroTurista/cadastroturista";
 import CadastroTuristaDois from "../pages/CadastroTuristaDois/cadastroturistaDois";
 import CheckoutCartao from "../pages/CheckoutCartao/checkoutCartao";
-import SejaParceiro from "../pages/SejaParceiro/sejaparceiro";
-import TelaGuia from "../pages/TelaGuia/teladoguia";
 import TelaLogin from "../pages/TelaLogin/telalogin";
 import TelaPagamento from "../pages/TelaPagamento/telapagamento";
 import TelaRoteiro from "../pages/TelaRoteiro/telaroteiro";
-import TelaFiltro from "../pages/TelaFiltro/telafiltro"
+import TelaFiltro from "../pages/TelaFiltro/telafiltro";
+import TelaGuia from "../pages/TelaGuia/telaGuia";
 
 export const router = createBrowserRouter([
   {
@@ -26,6 +26,10 @@ export const router = createBrowserRouter([
     element: <CadastroParceiro />,
   },
   {
+    path: "/cadastroParceirodois",
+    element: <CadastroParceiroDois />,
+  },
+  {
     path: "/cadastroturista",
     element: <CadastroTurista />,
   },
@@ -38,11 +42,7 @@ export const router = createBrowserRouter([
     element: <CheckoutCartao />,
   },
   {
-    path: "/sejaparceiro",
-    element: <SejaParceiro />,
-  },
-  {
-    path: "/telaguia",
+    path: "/telaGuia",
     element: <TelaGuia />,
   },
   {
@@ -59,6 +59,6 @@ export const router = createBrowserRouter([
   },
   {
     path: "/telafiltro",
-    element: <TelaFiltro />
-  }
+    element: <TelaFiltro />,
+  },
 ]);

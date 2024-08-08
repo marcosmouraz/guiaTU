@@ -42,7 +42,7 @@ export const Container = styled.section`
   }
 
   img {
-    height: 43vh;
+    height: 50vh;
     padding-bottom: 40px;
     justify-content: center;
   }
@@ -80,4 +80,8 @@ export const Container = styled.section`
     font-family: Arial, Helvetica, sans-serif;
     white-space: nowrap;
   }
+.imagensDestinos h2{
+  font-size: 15px;
+  
+}
 `;

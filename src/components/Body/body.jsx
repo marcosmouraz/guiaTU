@@ -45,23 +45,23 @@ export default function Body() {
         <section className="imagensDestinos">
           <div className="imgUm">
             <img src={Campo} alt="cardCampo" />
-            <h2 className="gravata">Gravatá - PE</h2>
+            <h2 className="gravata">Gravatá-PE</h2>
           </div>
           <div className="imgDois">
             <img src={Noronha} alt="cardNoronha" />
-            <h2 className="fernando">Fernando de Noronha - PE</h2>
+            <h2 className="fernando">Fernando de Noronha-PE</h2>
           </div>
           <div className="imgTres">
             <img src={Brenand} alt="cardBrenand" />
-            <h2 className="brennand">I. Ricardo Brennand - PE</h2>
+            <h2 className="brennand">Ricardo Brennand-PE</h2>
           </div>
           <div className="imgQuatro">
             <img src={Bonito} alt="cardBonito" />
-            <h2 className="bonito">Bonito - PE</h2>
+            <h2 className="bonito">Bonito-PE</h2>
           </div>
           <div className="imgCinco">
             <img src={Olinda} alt="cardOlinda" />
-            <h2 className="olinda">Olinda - PE</h2>
+            <h2 className="olinda">Olinda-PE</h2>
           </div>
         </section>
       </section>
