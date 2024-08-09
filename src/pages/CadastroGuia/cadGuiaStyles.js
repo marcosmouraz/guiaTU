@@ -7,17 +7,14 @@ export const Container = styled.body`
   margin: 0 auto;
 
   .titulo {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     width: 50%;
-    height: 35vh;
     margin: 0 auto;
-    padding-left: 5rem;
+    padding: 50px 0;
 
     h2 {
       font-size: 32px;
       color: #04136e;
+    
     }
   }
 
@@ -39,7 +36,6 @@ export const Container = styled.body`
     display: flex;
     justify-content: center;
     flex-direction: column;
-    width: 7rem;
     padding-bottom: 1rem;
     margin: 0 auto;
     text-align: center;
@@ -64,6 +60,7 @@ export const Container = styled.body`
       color: #04136e;
       font-size: 16px;
       font-weight: 600;
+      width: 7rem;
     }
   }
   .inputUm {
@@ -103,15 +100,16 @@ export const Container = styled.body`
     justify-content: center;
     align-items: center;
     margin-bottom: 50px;
+    padding: 30px 0;
   }
 
   .buttonFinalizar {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 15%;
-    margin: 2.5rem auto 0 auto;
-    background-color: #3f58ee;
+    width: 25%;
+    margin:  0 ;
+    background-color: #04136e;
     color: #fff;
     border-radius: 8px;
     border: none;
@@ -121,17 +119,12 @@ export const Container = styled.body`
     text-align: center;
 
     &:hover {
-      background-color: #04136e;
+      background-color: #3F58EE;
       border: none;
     }
   }
 
   @media (max-width: 2327px) {
-    .titulo {
-      width: 60%;
-      padding-right: 43rem;
-    }
-
     .inputfoto {
       width: 43rem;
       padding-left: 36rem;
@@ -157,9 +150,7 @@ export const Container = styled.body`
   }
 
   @media (max-width: 1600px) {
-    .titulo {
-      width: 65%;
-    }
+
 
     .inputfoto {
       width: 4.5rem;
@@ -183,9 +174,7 @@ export const Container = styled.body`
   }
 
   @media (max-width: 1200px) {
-    .titulo {
-      width: 75%;
-    }
+
 
     .inputfoto {
       width: 4rem;
@@ -209,9 +198,6 @@ export const Container = styled.body`
   }
 
   @media (max-width: 992px) {
-    .titulo {
-      width: 80%;
-    }
 
     .inputfoto {
       width: 3.5rem;
@@ -236,9 +222,7 @@ export const Container = styled.body`
   }
 
   @media (max-width: 768px) {
-    .titulo {
-      width: 90%;
-    }
+
 
     .inputfoto {
       width: 3rem;
@@ -263,11 +247,7 @@ export const Container = styled.body`
   }
 
   @media (max-width: 576px) {
-    .titulo {
-      width: 100%;
-      padding-left: 0;
-      justify-content: center;
-    }
+
 
     .inputfoto {
       width: 2.5rem;
@@ -292,10 +272,6 @@ export const Container = styled.body`
   }
 
   @media (max-width: 480px) {
-    .titulo {
-      width: 100%;
-      padding-left: 0;
-    }
 
     .inputfoto {
       width: 2rem;

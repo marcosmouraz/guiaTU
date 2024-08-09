@@ -14,8 +14,7 @@ export default function CadastroGuia() {
 
       
       <div className="titulo">
-        <h2>Olá, Guia 
-        Cadastre sua conta. </h2>
+        <h2>Olá, Guia <br />Cadastre sua conta. </h2>
       </div>
 
       <section className="inputfoto">

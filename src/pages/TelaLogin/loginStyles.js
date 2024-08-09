@@ -164,6 +164,7 @@ export const Container = styled.body`
     text-decoration: none;
     color: inherit;
     color: #000;
+    padding-bottom: 300px;
   }
 `;
 
