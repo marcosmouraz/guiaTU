@@ -1,3 +1,4 @@
+import { Image } from "@phosphor-icons/react";
 import Footer from "../../components/Footer/footer";
 import Menu from "../../components/Menu/menu";
 import {Container} from "../../pages/CadastroParceiroDois/cadParDoisStyles"
@@ -41,8 +42,10 @@ import {Container} from "../../pages/CadastroParceiroDois/cadParDoisStyles"
         </div>
 
         <div>
-          <h5> Adcione uma foto do seu estabelecimento</h5>
+          <h5 className=""> Adcione uma foto do seu estabelecimento</h5>
+          <Image size={32} color="#5a5858" weight="light" />
         </div>
+        
 
         <div className="checkbox">
           <div className="ContentC">
