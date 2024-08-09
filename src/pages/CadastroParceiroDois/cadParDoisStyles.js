@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Container = styled.body`
-    width: 100%;
+  width: 100%;
   height: 80%;
   max-width: 100%;
   display: flex;
@@ -21,10 +21,8 @@ export const Container = styled.body`
       color: #04136e;
       overflow-wrap: break-word;
       white-space: normal;
-      
     }
   }
-
 
   .inputfoto {
     display: flex;
@@ -56,33 +54,45 @@ export const Container = styled.body`
       width: 8rem;
     }
   }
-  .DadosPessoais {
+  .DadosEstabelecimento {
     display: flex;
     justify-content: center;
     padding-right: 520px;
     height: 5vh;
-    
+
     h4 {
-    color: #04136e;
-    font-family: "Poppins", sans-serif;
-    font-weight: 600;
-    font-style: normal;
-   
+      color: #04136e;
+      font-family: "Poppins", sans-serif;
+      font-weight: 600;
+      font-style: normal;
     }
   }
+  .checkbox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
 
-  .inputs{
+  .ContentC {
+    width: 53%;
+    display: flex;
+    gap: 10px;
+    align-items: start;
+  }
+  .inputtext {
+    padding-right: 110px;
+  }
+  .inputs {
     display: flex;
     justify-items: center;
     align-items: center;
-    gap: 1rem ;
-   
+    gap: 1rem;
   }
-  .inputContainer{
-    display: flex; 
+  .inputContainer {
+    display: flex;
     flex-direction: column;
     gap: 10px;
-
   }
 
   input {
@@ -92,9 +102,8 @@ export const Container = styled.body`
     border-style: groove;
     border-radius: 4px;
     padding: 0.5rem;
-
   }
-  .detalhesSenha{
+  .detalhesSenha {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -102,28 +111,26 @@ export const Container = styled.body`
     padding-top: 30px;
     padding-right: 410px;
 
-    
-    h5{
+    h5 {
       padding-right: 60px;
       font-weight: 700;
     }
   }
 
-
-  .button {
-    width: 100%;
+  .buttonContainer {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-bottom: 50px;
+    padding: 30px 0;
   }
 
-  .buttonproximo {
+  .buttonCadastrar {
+    width: 25vh;
     display: flex;
+    text-align: center;
     justify-content: center;
-    align-items: center;
-    width: 15%;
-    margin: 2.5rem auto 0 auto;
+    margin: 20px 10px;
     background-color: #04136e;
     color: #fff;
     border-radius: 8px;
@@ -132,10 +139,9 @@ export const Container = styled.body`
     transition: background-color 0.2s;
     padding: 8px 1rem;
     text-align: center;
-  
 
     &:hover {
-      background-color: #3F58EE;
+      background-color: #3f58ee;
       border: none;
     }
   }

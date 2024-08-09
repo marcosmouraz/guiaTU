@@ -9,8 +9,10 @@ import Footer from "../../components/Footer/footer";
 
 export default function CadastroTurista() {
   return (
+    <>
+    <Menu/>
     <Container>
-      <Menu />
+      
 
       <div className="titulo">
         <h2>Olá Turista, realize seu cadastro...</h2>
@@ -64,5 +66,6 @@ export default function CadastroTurista() {
       </section>
       <Footer />
     </Container>
+    </>
   );
 }
