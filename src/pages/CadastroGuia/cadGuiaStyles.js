@@ -18,19 +18,17 @@ export const Container = styled.body`
     }
   }
 
-
   .DadosPessoais {
     display: flex;
     justify-content: center;
     padding-right: 36rem;
     height: 5vh;
-    
+
     h4 {
-    color: #04136e;
-    font-family: "Poppins", sans-serif;
-    font-weight: 600;
-    font-style: normal;
- 
+      color: #04136e;
+      font-family: "Poppins", sans-serif;
+      font-weight: 600;
+      font-style: normal;
     }
   }
 
@@ -64,16 +62,13 @@ export const Container = styled.body`
       font-weight: 600;
       width: 7rem;
     }
-    
- 
   }
-  .inputUm{
+  .inputUm {
     display: grid;
     justify-items: center;
     grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
     padding-left: 20rem;
-    
   }
   .inputUm input {
     width: 150vw;
@@ -82,24 +77,21 @@ export const Container = styled.body`
     border-style: groove;
     border-radius: 4px;
     padding: 1rem;
-
-  
   }
-  .checkbox{
+  .checkbox {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 10px;
   }
 
-  .ContentC{
+  .ContentC {
     width: 53%;
     display: flex;
     gap: 10px;
     align-items: start;
-    
   }
-  .inputtext{
+  .inputtext {
     padding-right: 110px;
   }
   .buttonContainer {
@@ -125,15 +117,12 @@ export const Container = styled.body`
     transition: background-color 0.2s;
     padding: 8px 1rem;
     text-align: center;
-  
 
     &:hover {
       background-color: #3F58EE;
       border: none;
     }
   }
-
- 
 
   @media (max-width: 2327px) {
     .inputfoto {
@@ -167,8 +156,7 @@ export const Container = styled.body`
       width: 4.5rem;
     }
 
-    .inputUm
-    .inputDois {
+    .inputUm .inputDois {
       width: 65%;
     }
 
@@ -192,8 +180,7 @@ export const Container = styled.body`
       width: 4rem;
     }
 
-    .inputUm
-    .inputDois {
+    .inputUm .inputDois {
       width: 70%;
     }
 
@@ -307,5 +294,4 @@ export const Container = styled.body`
       font-size: 18px;
     }
   }
-
-`
+`;

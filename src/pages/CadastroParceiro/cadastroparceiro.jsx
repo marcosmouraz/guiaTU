@@ -8,9 +8,8 @@ export default function CadastroParceiro() {
     <>
       <Menu />
       <Container>
-      <div className="titulo">
-          <h2>Olá, Empreendedor <br/>
-          Cadastre seu estabelecimento. </h2>
+     <div className="titulo">
+          <h2>Olá, Empreendedor <br/> Cadastre seu estabelecimento. </h2>
         </div>
 
         <div className="inputfoto">
