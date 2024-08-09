@@ -9,7 +9,8 @@ export default function CadastroParceiro() {
       <Menu />
       <Container>
       <div className="titulo">
-          <h2>Olá, Empreendedor Cadastre seu estabelecimento: </h2>
+          <h2>Olá, Empreendedor <br/>
+          Cadastre seu estabelecimento. </h2>
         </div>
 
         <div className="inputfoto">
@@ -25,27 +26,36 @@ export default function CadastroParceiro() {
           <h4>Dados pessoais</h4>
         </div>
         
-      <div className="inputs">
-        <input className="nome" type="text" placeholder="Nome"/>
-        <input className="sobrenome"  type="text" placeholder="Sobrenome"/>
-        <input className="data"  type="text" placeholder="Data de nascimento"/>
-        <input className="emailf" type="text" placeholder="E-mail"/>
-        <input className="pais" type="text" placeholder="País"/>
-        <input className="estado" type="text" placeholder="Estado"/>
-        <input className="senha" type="text" placeholder="Senha"/>
-      <input className="confirmeSenha"  type="text" placeholder="Confirme sua senha"/>
+        <div className="inputs">
+      <div className="inputContainer">
+        <input className="nome" type="text" placeholder="Nome" />
+        <input className="data" type="text" placeholder="Data de nascimento" />
+        <input className="pais" type="text" placeholder="País" />
+        <input className="senha" type="text" placeholder="Senha" />
       </div>
 
+      <div className="inputContainer">
+        <input className="sobrenome" type="text" placeholder="Sobrenome" />
+        <input className="emailf" type="text" placeholder="E-mail" />
+        <input className="estado" type="text" placeholder="Estado" />
+        <input
+          className="confirmeSenha"
+          type="text"
+          placeholder="Confirme sua senha"
+        />
+      </div>
+    </div>
+
       <div className="detalhesSenha">
-        <h5>Sua senha deve possuir:</h5>
+        <h5>SUA SENHA DEVE POSSUIR:</h5>
         <ul>
           <li>No mínimo 8 caracteres: </li>
           <li>Um caracter especial(ex:*,@)</li>
-          <li>Pelo menos um número</li>
+         
         </ul>
       </div>
       
-      <div className="">
+      <div className="button">
           <button className="buttonproximo">Proximo</button>
       </div>
       </Container>

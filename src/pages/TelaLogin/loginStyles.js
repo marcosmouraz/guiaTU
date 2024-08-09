@@ -7,7 +7,6 @@ export const Container = styled.body`
   height: 100vh;
 
   .conta h2 {
-    padding-top: 140px;
     position: relative;
     display: flex;
     justify-content: center;
@@ -218,6 +217,7 @@ export const Container = styled.body`
     text-decoration: none;
     color: inherit;
     color: #000;
+    padding-bottom: 300px;
   }
 `;
 export const Section = styled.section`
