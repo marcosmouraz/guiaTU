@@ -12,8 +12,8 @@ export default function FrameRotas() {
     <Container>
       <section className="frame">
         <div className="cardCidade">
-          <img src={CardRecife} alt="" class="imagem-fundo" />
-          <img src={PerfilGuia} alt="" class="imagem-sobreposta" />
+          <img src={CardRecife} alt="" className="imagem-fundo" />
+          <img src={PerfilGuia} alt="" className="imagem-sobreposta" />
         </div>
 
         <div className="textosFrame">
@@ -56,8 +56,8 @@ export default function FrameRotas() {
 
       <section className="frame">
         <div className="cardCidade">
-          <img src={cardOlinda} alt="" class="imagem-fundo" />
-          <img src={PerfilGuia2} alt="" class="imagem-sobreposta" />
+          <img src={cardOlinda} alt="" className="imagem-fundo" />
+          <img src={PerfilGuia2} alt="" className="imagem-sobreposta" />
         </div>
 
         <div className="textosFrame">
@@ -100,8 +100,8 @@ export default function FrameRotas() {
 
       <section className="frame">
         <div className="cardCidade">
-          <img src={cardMuseu} alt="" class="imagem-fundo" />
-          <img src={PerfilGuia3} alt="" class="imagem-sobreposta" />
+          <img src={cardMuseu} alt="" className="imagem-fundo" />
+          <img src={PerfilGuia3} alt="" className="imagem-sobreposta" />
         </div>
 
         <div className="textosFrame">

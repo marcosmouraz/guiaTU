@@ -1,62 +1,67 @@
 import Footer from "../../components/Footer/footer";
 import Menu from "../../components/Menu/menu";
 import { Container, Section } from "./loginStyles";
-import Linha from "../../assets/vetorLinha.svg"
+import { useNavigate } from "react-router-dom";
+
 
 export default function TelaLogin() {
+  const navigation = useNavigate()
   return (
-    <Container>
+    <>
       <Menu />
-
       <Section>
-        <section className="frame">
-          <div className="conta">
+        <Container>
+          <div className="textUm">
             <h2>Acesse sua conta</h2>
             <h6>Bem vindo ao GuiaTÚ</h6>
           </div>
-          <section className="inputs">
+          <div className="inputs">
             <input className="email" type="text" placeholder="Email" />
-            <input className="senha" type="text" placeholder="Senha" />
-          </section>
-          <div className="esqueciasenha">
-            <a href="" className="clickEsqueci">
-              <h6>Esqueci minha senha</h6>
+            <input className="senha" type="password" placeholder="Senha" />
+            <a href="" className="esqueciSenha">
+              Esqueci minha senha
             </a>
           </div>
 
-          <a href="">
-            <button className="buttonEntrar">Entrar</button>
-          </a>
+          <button className="buttonEntrar">Entrar</button>
 
-          <section className="linha">
-            <img src={Linha} alt="" />
-            <h5>OU</h5>
-            <img src={Linha} alt="" />
+          <section className="textDois">
+            <div className="linha">
+              <hr />
+              <h5>OU</h5>
+              <hr />
+            </div>
+            <div className="cadastrarAgora">
+              <a href="" className="cadastrar">
+                <h6>
+                  Não possui conta? <span>Cadastre-se agora!</span>
+                </h6>
+              </a>
+            </div>
+            <section className="buttons">
+              <button
+                onClick={() => navigation("/cadastroturista")}
+                className="buttonPerfil"
+              >
+                SOU TURISTA
+              </button>
+              <button
+                onClick={() => navigation("/cadastroguia")}
+                className="buttonPerfil"
+              >
+                SOU GUIA
+              </button>
+              <button
+                onClick={() => navigation("/cadastroparceiro")}
+                className="buttonPerfil"
+              >
+                SOU PARCEIRO(A)
+              </button>
+            </section>
           </section>
-
-          <div className="cadastrarAgora">
-            <a href="" className="cadastrar">
-              <h6>
-                Não possui conta? <span className="span">Cadastre-se agora!</span>
-              </h6>
-            </a>
-          </div>
-
-          <section className="buttons">
-            <a href="">
-              <button id="turista">SOU TURISTA</button>
-            </a>
-            <a href="">
-              <button id="guia">SOU GUIA</button>
-            </a>
-            <a href="">
-              <button id="parceiro">SOU PARCEIRO(A)</button>
-            </a>
-          </section>
-        </section>
+        </Container>
       </Section>
-
       <Footer />
-    </Container>
+    </>
   );
 }
