@@ -1,13 +1,15 @@
 import Footer from "../../components/Footer/footer";
 import Menu from "../../components/Menu/menu";
-import { Container } from "../../pages/CadastroParceiroDois/cadParDoisStyles";
+import {Container} from "../../pages/CadastroParceiroDois/cadParDoisStyles"
+
 
  export default function CadastroParceiroDois() {
   return (
     <>
       <Menu />
+
       <Container>
-        <div className="titulo">
+      <div className="titulo">
           <h2>Olá, empreendedor cadastre seu estabelecimento. </h2>
         </div>
 
@@ -15,7 +17,7 @@ import { Container } from "../../pages/CadastroParceiroDois/cadParDoisStyles";
           <h4>Dados Estabelecimento</h4>
         </div>
 
-        <div className="inputs">
+        <div className="Inputs">
           <input
             className="nomeestabelecimento"
             type="text"
@@ -42,22 +44,24 @@ import { Container } from "../../pages/CadastroParceiroDois/cadParDoisStyles";
           <h5> Adcione uma foto do seu estabelecimento</h5>
         </div>
 
-        <div className="inputscheck">
+        <div className="checkbox">
+          <div className="ContentC">
           <input type="checkbox" name="" id="" />
-          <label className="custom-checkbox">
-            Aceito <a href="">politica de privacidade</a> e{" "}
-            <a href="">condições gerais</a>{" "}
-          </label>
+            <label className="custom-checkbox">
+              Aceito <a href="">politica de privacidade</a>  e <a href="">condições gerais</a>{" "}
+            </label>
+            </div>
         </div>
         <label className="inputtext">
           Este site está protegido por reCAPTCHA e se aplicam à{" "}
           <a href="">politica de privacidade</a> e aos <br />{" "}
           <a href="">termos e serviços do google</a>.
         </label>
-        <div className="">
+        <div className="ButtonCadastrar">
           <button className="buttonCadastrar">Cadastrar</button>
         </div>
       </Container>
+  
       <Footer />
     </>
   );

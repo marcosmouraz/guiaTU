@@ -14,7 +14,6 @@ export const Container = styled.body`
     height: 35vh;
     margin: 0 auto;
     padding-left: 5rem;
-  
 
     h2 {
       font-size: 32px;
@@ -22,19 +21,17 @@ export const Container = styled.body`
     }
   }
 
-
   .DadosPessoais {
     display: flex;
     justify-content: center;
     padding-right: 36rem;
     height: 5vh;
-    
+
     h4 {
-    color: #04136e;
-    font-family: "Poppins", sans-serif;
-    font-weight: 600;
-    font-style: normal;
- 
+      color: #04136e;
+      font-family: "Poppins", sans-serif;
+      font-weight: 600;
+      font-style: normal;
     }
   }
 
@@ -68,16 +65,13 @@ export const Container = styled.body`
       font-size: 16px;
       font-weight: 600;
     }
-    
- 
   }
-  .inputUm{
+  .inputUm {
     display: grid;
     justify-items: center;
     grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
     padding-left: 20rem;
-    
   }
   .inputUm input {
     width: 150vw;
@@ -86,24 +80,21 @@ export const Container = styled.body`
     border-style: groove;
     border-radius: 4px;
     padding: 1rem;
-
-  
   }
-  .checkbox{
+  .checkbox {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 10px;
   }
 
-  .ContentC{
+  .ContentC {
     width: 53%;
     display: flex;
     gap: 10px;
     align-items: start;
-    
   }
-  .inputtext{
+  .inputtext {
     padding-right: 110px;
   }
   .buttonContainer {
@@ -120,7 +111,7 @@ export const Container = styled.body`
     align-items: center;
     width: 15%;
     margin: 2.5rem auto 0 auto;
-    background-color: #3F58EE;
+    background-color: #3f58ee;
     color: #fff;
     border-radius: 8px;
     border: none;
@@ -128,15 +119,12 @@ export const Container = styled.body`
     transition: background-color 0.2s;
     padding: 8px 1rem;
     text-align: center;
-  
 
     &:hover {
       background-color: #04136e;
       border: none;
     }
   }
-
- 
 
   @media (max-width: 2327px) {
     .titulo {
@@ -177,8 +165,7 @@ export const Container = styled.body`
       width: 4.5rem;
     }
 
-    .inputUm
-    .inputDois {
+    .inputUm .inputDois {
       width: 65%;
     }
 
@@ -204,8 +191,7 @@ export const Container = styled.body`
       width: 4rem;
     }
 
-    .inputUm
-    .inputDois {
+    .inputUm .inputDois {
       width: 70%;
     }
 
@@ -332,5 +318,4 @@ export const Container = styled.body`
       font-size: 18px;
     }
   }
-
-`
+`;
