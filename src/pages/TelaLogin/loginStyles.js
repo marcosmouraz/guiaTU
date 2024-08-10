@@ -13,6 +13,7 @@ export const Section = styled.section`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 10px 0;
 `;
 export const Container = styled.body`
   max-width: 100%;
@@ -21,10 +22,11 @@ export const Container = styled.body`
   justify-content: center;
   align-items: center;
   gap: 25px;
-  height: 500px;
-  width: 700px;
-  background-color: rgba(0, 0, 0, 0.4);
+  height: 37rem;
+  width: 50rem;
+  background-color: rgba(0, 0, 0, 0.6);
   border-radius: 10px;
+  backdrop-filter: blur(5px);
 
   .textUm {
     display: flex;
@@ -34,8 +36,7 @@ export const Container = styled.body`
     gap: 10px;
   }
   .textUm h2 {
-    color: #04136e;
-    text-shadow: 2px 2px 4px #d9d9d9;
+    color: #d9d9d9;
     font-size: 40px;
   }
   .textUm h6 {
@@ -85,7 +86,8 @@ export const Container = styled.body`
   }
   .buttonEntrar {
     padding: 10px 10px;
-    width: 68%;
+    width: 100%;
+    max-width: 30rem;
     background-color: #04136e;
     border-radius: 8px;
     cursor: pointer;
@@ -167,4 +169,5 @@ export const Container = styled.body`
     padding-bottom: 300px;
   }
 `;
+
 

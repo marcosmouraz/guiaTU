@@ -12,7 +12,7 @@ export const Container = styled.body`
     justify-content: center;
     overflow-wrap: break-word;
     width: 50%;
-    height: 30vh;
+    height: 18rem;
     margin: 0 auto;
     padding-left: 1rem;
 

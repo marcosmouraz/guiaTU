@@ -11,54 +11,46 @@ export const Container = styled.body`
   .titulo {
     display: flex;
     align-items: center;
-    justify-content: center;
-    width: 50%;
+    width: 51%;
     height: 35vh;
-    padding-right: 200px;
 
     h2 {
       font-size: 32px;
       color: #04136e;
       overflow-wrap: break-word;
-      white-space: normal;
     }
   }
 
-  .inputfoto {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
+  .inputFoto {
+    display: grid;
+    padding: 15px 0;
     padding-bottom: 1rem;
-    text-align: center;
     align-items: center;
     gap: 5px;
-    padding-left: 500px;
-
-    .vetor {
-      border: #1e1e1e;
-      background-color: aliceblue;
-      border-style: groove;
-      border-radius: 10px;
-      transition: background-color 0.2s;
+    width: 51%;
+    flex-direction: column;
+    h5 {
+      font-weight: 200;
     }
-
-    .vetor:hover {
-      border-color: #04136e;
-      background-color: #04136e;
-    }
-
-    .p {
-      color: #04136e;
-      font-size: 16px;
-      font-weight: 600;
-      width: 8rem;
-    }
+  }
+  .imagem{
+    padding-left: 10rem;
+  }
+  .alterafoto {
+    border: #1e1e1e;
+    background-color: aliceblue;
+    border-style: groove;
+    border-radius: 10px;
+    transition: background-color 0.2s;
+  }
+  .alterafoto:hover {
+    border-color: #04136e;
+    background-color: #04136e;
   }
   .DadosEstabelecimento {
     display: flex;
-    justify-content: center;
-    padding-right: 520px;
     height: 5vh;
+    width: 51%;
 
     h4 {
       color: #04136e;
@@ -68,10 +60,14 @@ export const Container = styled.body`
     }
   }
   .checkbox {
-    display: flex;
+    display: grid;
     flex-direction: column;
     align-items: center;
     gap: 10px;
+    justify-content: center;
+    width: 62%;
+    padding-left: 3.5rem;
+    padding-top: 1rem;
   }
 
   .ContentC {
@@ -82,6 +78,7 @@ export const Container = styled.body`
   }
   .inputtext {
     padding-right: 110px;
+    padding-bottom: 2rem;
   }
   .inputs {
     display: flex;
@@ -94,8 +91,7 @@ export const Container = styled.body`
     flex-direction: column;
     gap: 10px;
   }
-
-  input {
+  .inputContainer input {
     width: 150vw;
     max-width: 20rem;
     height: 5vh;
@@ -121,11 +117,12 @@ export const Container = styled.body`
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 50px;
-    padding: 30px 0;
+    padding-bottom: 1rem;
   }
 
   .buttonCadastrar {
+    font-size: 18px;
+    white-space: nowrap;
     width: 25vh;
     display: flex;
     text-align: center;
@@ -139,6 +136,7 @@ export const Container = styled.body`
     transition: background-color 0.2s;
     padding: 8px 1rem;
     text-align: center;
+    margin-bottom: 4rem;
 
     &:hover {
       background-color: #3f58ee;

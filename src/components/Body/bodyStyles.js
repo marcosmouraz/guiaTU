@@ -1,6 +1,8 @@
 import styled from "styled-components";
 
 export const Container = styled.section`
+  max-width: 100%;
+
   .cards {
     display: flex;
     padding: 10px 20px; /* Corrigido o uso das vírgulas */
@@ -17,7 +19,6 @@ export const Container = styled.section`
 
   .container {
     margin: 0 auto; /* Centraliza o bloco horizontalmente */
-    max-width: 1200px; /* Define uma largura máxima para o conteúdo */
     padding: 0 20px; /* Adiciona padding lateral para evitar overflow */
   }
 
@@ -61,13 +62,15 @@ export const Container = styled.section`
     display: flex; /* Usando flexbox para rolagem horizontal */
     overflow-x: scroll; /* Permite rolagem horizontal */
     white-space: nowrap; /* Impede quebra de linha dos itens */
-    gap: 5px;
     padding-top: 25px;
     padding-left: 1rem;
     padding-right: 1rem;
     padding-bottom: 25px;
   }
-
+  .swiper-wrapper {
+    display: flex;
+    gap: 10px;
+  }
   .imagensDestinos img {
     display: inline-block; /* Para que as imagens fiquem na mesma linha */
     flex: 0 0 auto; /* Assegura que as imagens não redimensionem*/
@@ -80,8 +83,36 @@ export const Container = styled.section`
     font-family: Arial, Helvetica, sans-serif;
     white-space: nowrap;
   }
-.imagensDestinos h2{
-  font-size: 15px;
-  
-}
+  .imagensDestinos h2 {
+    font-size: 15px;
+  }
+  .textCarrossel {
+    position: absolute;
+    top: 30rem;
+    font-size: 30px;
+    left: 2rem;
+    color: #fff;
+    text-shadow: 2px 2px 0 #000;
+  }
+  .imgCarrossel {
+    height: 40rem;
+    width: 28rem;
+  }
+  .swiper-button-next,
+  .swiper-button-prev {
+    border: 2px solid #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 80px;
+    border-radius: 100%;
+    color: #fff;
+    font-weight: 800;
+    background-color: #04136e;
+  }
+
+  .swiper-pagination-bullet {
+    background-color: #04136e;
+  }
 `;

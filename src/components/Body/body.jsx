@@ -5,11 +5,27 @@ import {
   ShieldCheck,
   UserCircleCheck,
 } from "@phosphor-icons/react";
-import Bonito from "../../assets/bonitope.svg";
-import Brenand from "../../assets/brenand.svg";
-import Campo from "../../assets/campo.svg";
-import Noronha from "../../assets/noronha.svg";
-import Olinda from "../../assets/olindacard.svg";
+// import Bonito from "../../assets/bonitope.svg";
+// import Brenand from "../../assets/brenand.svg";
+// import Campo from "../../assets/campo.svg";
+// import Noronha from "../../assets/noronha.svg";
+// import Olinda from "../../assets/olindacard.svg";
+
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "swiper/css/scrollbar";
+
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination, Scrollbar} from "swiper/modules";
+
+const data = [
+  { id: 1, img: "/bonitope.svg", text: "Bonito - PE" },
+  { id: 2, img: "/brenand.svg", text: "Brennand - Recife" },
+  { id: 3, img: "/campo.svg", text: "Gravatá - PE" },
+  { id: 4, img: "/noronha.svg", text: "Fernando de Noronha - PE" },
+  { id: 5, img: "/olindacard.svg", text: "Olinda - PE" },
+];
 
 export default function Body() {
   return (
@@ -42,7 +58,7 @@ export default function Body() {
           <h1>Destinos mais procurados</h1>
         </div>
 
-        <section className="imagensDestinos">
+        {/* <section className="imagensDestinos">
           <div className="imgUm">
             <img src={Campo} alt="cardCampo" />
             <h2 className="gravata">Gravatá-PE</h2>
@@ -63,7 +79,21 @@ export default function Body() {
             <img src={Olinda} alt="cardOlinda" />
             <h2 className="olinda">Olinda-PE</h2>
           </div>
-        </section>
+        </section> */}
+
+        <Swiper
+        modules={[Navigation, Pagination, Scrollbar]}
+          slidesPerView={4}
+          navigation
+          pagination={{ clickable: true }} 
+        >
+          {data.map((iten) => (
+            <SwiperSlide key={iten.id}>
+              <h2 className="textCarrossel">{iten.text}</h2>
+              <img className="imgCarrossel" src={iten.img} alt="" />
+            </SwiperSlide>
+          ))}
+        </Swiper>
       </section>
     </Container>
   );

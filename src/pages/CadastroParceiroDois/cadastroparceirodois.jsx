@@ -11,7 +11,11 @@ import {Container} from "../../pages/CadastroParceiroDois/cadParDoisStyles"
 
       <Container>
         <div className="titulo">
-          <h2>Olá, empreendedor cadastre seu estabelecimento. </h2>
+          <h2>
+            Olá, Parceiro(a)
+            <br />
+            finalize seu cadastro.{" "}
+          </h2>
         </div>
 
         <div className="DadosEstabelecimento">
@@ -45,16 +49,21 @@ import {Container} from "../../pages/CadastroParceiroDois/cadParDoisStyles"
           </div>
         </div>
 
-        <div className="fotoEstabelecimento">
-          <h5 className="textFoto">
-            {" "}
-            Adicione uma foto do seu estabelecimento
-          </h5>
-          <a href="">
-            <div className="alterafoto">
-              <Image size={32} color="#5a5858" weight="light" />
-            </div>
-          </a>
+        <div className="inputFoto">
+          <h5> Adicione fotos do seu estabelecimento, produto ou serviço: </h5>
+        </div>
+
+        <div className="imagem">
+          <div className="alterafoto">
+            <a href="">
+              <Image
+                className="vetor"
+                size={90}
+                color="#5a5858"
+                weight="light"
+              />
+            </a>
+          </div>
         </div>
 
         <div className="checkbox">
@@ -74,7 +83,7 @@ import {Container} from "../../pages/CadastroParceiroDois/cadParDoisStyles"
         </div>
 
         <div className="ButtonCadastrar">
-          <button className="buttonCadastrar">Cadastrar</button>
+          <button className="buttonCadastrar">Finalizar Cadastro</button>
         </div>
       </Container>
 
