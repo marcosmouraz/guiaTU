@@ -12,6 +12,10 @@ export const Container = styled.body`
   margin: auto;
   justify-content: space-between;
 
+.frameTextoRota{
+  width: 50%;
+}
+
 .paragrafo{
   display: flex;
   flex-direction: row;
@@ -29,11 +33,10 @@ export const Container = styled.body`
 } 
   .ava{
     display: flex;
-  flex-direction: row;
-  gap: 30px;
-  color: #04136F;
-  font-weight: lighter;
-  padding-top: 10px;
+    flex-direction: row;
+    gap: 30px;
+    color: #04136F;
+    padding-top: 10px;
   
   .nota{
     font-weight: bolder;
@@ -62,12 +65,12 @@ export const Container = styled.body`
   .itinerario{
     color: #04136F;
     width: 50%;
-   
+   z-index: -1;
   }
 
-  .Titulo{
+  h4{
     font-size: 30px;
-    padding-top: 50px;
+    padding-top: 5rem;
 
   }
   .parteUm{
@@ -75,18 +78,54 @@ export const Container = styled.body`
     display: flex;
     /* flex-direction: row; */
     flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
     
   }
   .pUm{
-    
+    padding-top: 1rem;
   } 
+
+  .pUm p span{
+    font-weight: bold;
+   }
 
   .img{
     padding-left: 23rem;
    position: relative;
    top: -10rem;
+   z-index: -1;
+  }
+  .paragrafos{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    color: #04136F;
+    gap: 15px;
+    padding-bottom: 3%;
+  }
+  .paragrafos p span{
+    font-weight: bold;
   }
   
+  .tituloDetalhes{
+    width: 50%;
+    font-size: 170%;
+    color: #04136F;
+    padding-bottom: 1%;
+
+  }
+  .Detalhes{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    color: #04136F;
+
+    
+  }
+  .detalhes{
+    
+  }
+  .detalhes p{
+    margin: 0;
+  }
+
 ` 

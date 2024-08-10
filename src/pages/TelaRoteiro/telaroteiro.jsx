@@ -51,41 +51,51 @@ export default function TelaRoteiro() {
 
       <section className="itinerario">
 
-      
-        <h4 className="Titulo">Itenerário</h4>
+        <div className="titulo">
+        <h4>Itenerário</h4>
+        </div>
 
           <div className="parteUm">
           <p className="pUm">Você começará o seu roteiro pelo Recife antigo com um passeio panorâmico
-           pelo dique de Brennand até o parque das esculturas um dos parques mais
-           famosos do Brasil. Se você quiser, poderá subir a bordo de um catamarã 
+           pelo <span> dique de Brennand até o parque das esculturas um dos parques mais
+           famosos do Brasil</span>. Se você quiser, poderá subir a bordo de um catamarã 
            que o levará pelo rio Capibaribe e você saberá o porquê dessa zona ser 
-           chamada de“Veneza Brasileira”.
+           chamada de <span>“Veneza Brasileira”</span>.
            </p>
+          </div>
+
            
            <div className="img"> 
            <img  src={Itinerario} alt="" />
             </div>
-          </div>
+            </section>
 
-          <p className="pDois">Se você preferir continuar o roteiro por terra seguirá a rota pela rodovia
-             até chegar ao Marco Zero, onde termina o passeio de catamarã. De lá, 
-             o itinerário continua a pé. Atravessaremos a Rua do Bom Jesus, onde ficam 
-             a Sinagoga Kahal Zur Israel, a Embaixada dos Bonecos Gigantes e o Museu a Céu Aberto.
+            
+            <div className="paragrafos">
+            <p className="pDois">Se você preferir continuar o roteiro por terra seguirá a rota pela rodovia
+             até chegar ao <span>Marco Zero</span>, onde termina o passeio de catamarã. De lá, 
+             o itinerário continua a pé. Atravessaremos a <span>Rua do Bom Jesus</span>, onde ficam 
+             a <span>Sinagoga Kahal Zur Israel, a Embaixada dos Bonecos Gigantes e o Museu a Céu Aberto.</span>
              </p>
 
              <p className="pTres">
-             Em seguida, neste roteiro tem a visita a Casa da Cultura, um edifício de meados do século XIX
+             Em seguida, neste roteiro tem a visita a <span>Casa da Cultura</span>, um edifício de meados do século XIX
              que funcionava como prisão e que hoje em dia é um centro cultural. Conheceremos os lugares imprescindíveis da cidade,
-             incluindo as ilhas do Recife, Santo Antônio e Boa Vista, que formam um autêntico paraíso natural. 
-             Passaremos também junto à Ponte Maurício de Nassau e iremos à Praça da República,
-             onde veremos o Palácio do Governo, o Teatro de Santa Isabel e o Palácio da Justiça
+             incluindo as <span>ilhas do Recife</span>, <span>Santo Antônio e Boa Vista</span>, que formam um autêntico paraíso natural. 
+             Passaremos também junto à <span>Ponte Maurício de Nassau</span> e iremos à <span>Praça da República</span>,
+             onde veremos o <span>Palácio do Governo</span>, o <span>Teatro de Santa Isabel</span> e o <span>Palácio da Justiça</span>
              </p>
 
-      
+             </div>
 
-        <div className="detalhes">
-          <h3>Detalhes</h3>
+             <div className="tituloDetalhes"> 
+             <h3>Detalhes</h3>
+             </div>
 
+
+        <div className="Detalhes">
+        
+          <div className="detalhes">
           <Clock size={22} color="#04136e" />
           <p>5 horas.</p>
 
@@ -95,6 +105,9 @@ export default function TelaRoteiro() {
           <XSquare size={22} color="#04136e" />
           <p>Não inclusos: Alimentação, Taxas de entrada.</p>
 
+          </div>
+
+          <div className="detalhes">
           <Wheelchair size={22} color="#04136e" />
           <p>Acessibilidade: Não é acessível para cadeirantes.</p>
 
@@ -103,16 +116,9 @@ export default function TelaRoteiro() {
 
           <PawPrint size={22} color="#04136e" />
           <p>Pets não permitidos.</p>
+          </div> 
+
         </div>
-
-
-
-
-      </section>
-
-
-
-
     </Container>
 
     </>
