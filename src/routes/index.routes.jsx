@@ -34,7 +34,7 @@ export const router = createBrowserRouter([
     element: <CadastroTurista />,
   },
   {
-    path: "/cadastroturistaDois",
+    path: "/cadastroturistadois",
     element: <CadastroTuristaDois />,
   },
   {
@@ -42,7 +42,7 @@ export const router = createBrowserRouter([
     element: <CheckoutCartao />,
   },
   {
-    path: "/telaGuia",
+    path: "/telaguia",
     element: <TelaGuia />,
   },
   {
