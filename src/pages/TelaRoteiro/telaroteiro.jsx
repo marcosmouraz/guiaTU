@@ -1,7 +1,10 @@
+
 import Menu from "../../components/Menu/menu"
+import Footer from "../../components/Footer/footer"
 import { Container } from "../../pages/TelaRoteiro/roteiroStyles"
 import  Itinerario from "../../assets/itinerariofoto.svg"
 import { Clock, Info, PawPrint, Plant, Wheelchair, XSquare } from "@phosphor-icons/react"
+
 
 export default function TelaRoteiro() {
   return (
@@ -93,34 +96,41 @@ export default function TelaRoteiro() {
              </div>
 
 
-        <div className="Detalhes">
+        <div className="Infos">
         
           <div className="detalhes">
           <Clock size={22} color="#04136e" />
-          <p>5 horas.</p>
-
+        
           <Info size={22} color="#04136e" />
-          <p>Guia em português.</p>
-
+          
           <XSquare size={22} color="#04136e" />
-          <p>Não inclusos: Alimentação, Taxas de entrada.</p>
+          
+          <Wheelchair size={22} color="#04136e" /> 
+
+          <Plant size={22} color="#04136e" />
+
+          <PawPrint size={22} color="#04136e" />
 
           </div>
 
           <div className="detalhes">
-          <Wheelchair size={22} color="#04136e" />
+          <p>5 horas.</p>
+
+          <p>Guia em português.</p>
+
+          <p>Não inclusos: Alimentação, Taxas de entrada.</p>
+
           <p>Acessibilidade: Não é acessível para cadeirantes.</p>
 
-          <Plant size={22} color="#04136e" />
+          
           <p>Sustentabilidade: Todos os serviços cumprem o nosso Código de Sustentabilidade.</p>
 
-          <PawPrint size={22} color="#04136e" />
           <p>Pets não permitidos.</p>
           </div> 
 
         </div>
     </Container>
-
+      <Footer />
     </>
   )
 }

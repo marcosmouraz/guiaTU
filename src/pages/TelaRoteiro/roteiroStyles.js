@@ -113,19 +113,20 @@ export const Container = styled.body`
     padding-bottom: 1%;
 
   }
-  .Detalhes{
+  .Infos{
+    position: relative;
     display: flex;
-    flex-direction: column;
-    width: 50%;
-    color: #04136F;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+    width: 100%;
 
-    
   }
   .detalhes{
+    display: flex;
+    flex-direction: column;
     
-  }
-  .detalhes p{
-    margin: 0;
   }
 
 ` 
