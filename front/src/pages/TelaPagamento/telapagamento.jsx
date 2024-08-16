@@ -1,7 +1,10 @@
+import { Container } from "../../pages/TelaPagamento/pagamentoStyles"
+
+
 export default function TelaPagamento() {
   return (
     <>
-    <h1>teste</h1>
+    <Container/>
     </>
   )
 }

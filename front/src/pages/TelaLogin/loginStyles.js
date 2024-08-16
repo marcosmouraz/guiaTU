@@ -8,7 +8,7 @@ export const Section = styled.section`
   background-repeat: no-repeat;
   background-size: cover;
   max-width: 100%;
-  height: 70vh;
+  height: 140vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -22,7 +22,7 @@ export const Container = styled.body`
   justify-content: center;
   align-items: center;
   gap: 25px;
-  height: 37rem;
+  height: 80vh;
   width: 50rem;
   background-color: rgba(0, 0, 0, 0.6);
   border-radius: 10px;
