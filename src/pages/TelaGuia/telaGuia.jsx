@@ -12,36 +12,35 @@ export default function TelaGuia() {
   const mapRef = useRef(null);
 
   useEffect(() => {
-    if (!mapRef.current) {
-      const marcoZero = [-8.0645, -34.8711];
-      const mercadoCultura = [-8.0539, -34.8823];
+    const marcoZero = [-8.0645, -34.8711];
+    const mercadoCultura = [-8.0539, -34.8823];
 
+    if (mapRef.current === null) {
       // Inicializar o mapa
-      mapRef.current = L.map("map").setView(marcoZero, 14);
+      const map = L.map("map").setView(marcoZero, 14);
+      mapRef.current = map;
 
       // Adicionar camada do OpenStreetMap
-      L.tileLayer(
-        "https://{s}.tile.openstreetmap.org/%7Bz%7D/%7Bx%7D/%7By%7D.png",
-        {
-          attribution:
-            '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
-        }
-      ).addTo(mapRef.current);
+      L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+        attribution:
+          '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+      }).addTo(map);
 
       // Adicionar rota
       L.Routing.control({
         waypoints: [L.latLng(marcoZero), L.latLng(mercadoCultura)],
         routeWhileDragging: true,
-      }).addTo(mapRef.current);
+      }).addTo(map);
     }
 
     return () => {
-      if (mapRef.current) {
+      if (mapRef.current !== null) {
         mapRef.current.remove(); // Destrói o mapa se o componente for desmontado
-        mapRef.current = null; // Reseta a referência
+        mapRef.current = null;
       }
     };
   }, []);
+
   return (
     <>
       <Menu />
