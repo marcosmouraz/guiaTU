@@ -69,7 +69,8 @@ export default function TelaGuia() {
           <div className="infoGuia">
             <p className="credencial">
               Credencial: 17.551568.72-8 <br />
-              Atuação: Olinda, Paulista, Recife - PE
+              Atuação: Olinda, Paulista,<br />
+               Recife - PE
             </p>
           </div>
         </div>
