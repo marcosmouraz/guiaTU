@@ -72,7 +72,7 @@ export default function TelaGuia() {
         <div className="blocoTres"></div>
         <div className="blocoQuatro">
           <div className="infoRota">
-            <h4 className="data">Qua. 03 jul</h4>
+            <h4 className="data">Qua. 04 jul</h4>
           </div>
           <div className="valor">
             <h4>
