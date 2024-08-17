@@ -54,7 +54,7 @@ export default function TelaGuia() {
               <img className="fotoPerfil" src={Perfil} alt="Perfil do Guia" />
                 <h2>Rogerio Marques</h2>
                 <p className="credencial">
-                  Credencial: 17.551568.72-8 <br />
+                  Credencial: 17.551568.72-7 <br />
                   Atuação: Olinda, Paulista, Recife - PE
                 </p>
           </div>
