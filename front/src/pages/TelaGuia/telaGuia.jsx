@@ -63,7 +63,7 @@ export default function TelaGuia() {
               <div id="map" style={{ height: "350px", width: "100%" }}></div>
             <div className="fraseGuia">
               <p className="frase">
-                “Guia local há mais de 20 anos, conheça as belezas de Recife
+                “Guia local há mais de 12 anos, conheça as belezas de Recife
                 comigo.“
               </p>
             </div>
