@@ -29,14 +29,14 @@ export const Container = styled.body`
   .header {
     display: flex;
     justify-content: center;
-    gap: 10rem;
+    gap: 13rem;
     align-items: center;
   }
   .blocoGuia {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap:0.5rem;
+    gap: 0.5rem;
     h2 {
       color: #04136e;
     }
@@ -45,6 +45,9 @@ export const Container = styled.body`
     display: flex;
     flex-direction: column;
     width: 50%;
+  }
+  #map {
+    border-radius: 8px;
   }
 
   .blocoUm {
@@ -55,17 +58,6 @@ export const Container = styled.body`
 
   .fotoPerfil {
     height: 17rem;
-  }
-
-  .fotoCidade {
-    height: 17.5rem;
-  }
-
-  .blocoDois {
-    display: flex;
-    width: 77%;
-    align-items: center;
-    gap: 3rem;
   }
 
   .nomeGuia {
@@ -80,12 +72,6 @@ export const Container = styled.body`
     margin-top: 1rem;
   }
 
-  .blocoTres {
-    display: flex;
-    padding-left: 7rem;
-    margin-top: 1.5rem;
-  }
-
   .infoGuia {
     width: 100%;
     padding-right: 20rem;
@@ -98,17 +84,47 @@ export const Container = styled.body`
     right: 5rem;
   }
 
-  .blocoQuatro {
+  .body {
     display: flex;
-    justify-content: space-around;
-    margin-top: 3rem;
-    white-space: nowrap;
-    margin: 100px;
+    justify-content: center;
+    gap: 13rem;
+    align-items: center;
+    margin-top: 5rem;
   }
-
+  .infoRota {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+  }
   .data {
     font-size: 20px;
     color: #04136e;
+  }
+
+  .horario {
+    flex-direction: row;
+    display: flex;
+    align-items: center;
+  }
+  .linhas {
+    width: 1px; /* Largura da linha */
+    height: 2.5rem; /* Altura da linha */
+    background-color: black; /* Cor da linha */
+    flex-direction:column;
+    display: flex;
+  }
+  .buttonInfo{
+    button{
+      background-color: #04136e;
+      color: #fff;
+      width: 100%;
+      height: 3rem;
+      border-radius: 4px;
+      padding: 10px;
+      font-size: 18px;
+      cursor: pointer;
+    }
   }
 
   .valor {

@@ -26,8 +26,33 @@ export default function TelaLogin() {
       })
     }  else if (turista === 'guia'){
 
+      await api
+        .post("/guia/login", {
+          username: username,
+          senha_hash: senha_hash,
+        })
+        .then((response) => {
+          localStorage.setItem("token", response.data.token);
+          navigation("/telafiltro");
+        })
+        .catch((error) => {
+          console.log(error.response.data.message);
+        });
+
     } else if (turista === 'empreendedor'){
 
+      await api.post('/empreendedores/login', {
+        'username': username, 
+        'senha_hash': senha_hash,
+      }).then((response) => {
+        localStorage.setItem('token', response.data.token)
+        navigation('/telafiltro')
+      }).catch((error) => {
+        console.log(error.response.data.message)
+      })
+
+
+      
     } else {
       return console.log('error')
     }
