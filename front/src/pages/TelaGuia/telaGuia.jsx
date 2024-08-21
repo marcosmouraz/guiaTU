@@ -95,10 +95,18 @@ export default function TelaGuia() {
               </a>
             </div>
           </div>
-          <div className="valor">
-            <h4>
-              Preço: <span>R$200,00 / 2 pessoas</span>
-            </h4>
+          <div className="infoValores">
+            <div className="valor">
+              <h4>
+                Preço: <span>R$200,00 / 2 pessoas</span>
+              </h4>
+              <div className="inclusos">
+                <p className="paragrafo">
+                  Inclusos: <br /> -Guia de Turismo (CADASTUR) <br /> -Taxas de
+                  visitação.
+                </p>
+              </div>
+            </div>
           </div>
           <section className="reserva">
             <div className="textoReserva">
@@ -129,6 +137,9 @@ export default function TelaGuia() {
               <a href="">
                 <button>Reservar via Whatssap</button>
               </a>
+            </div>
+            <div className="cancelamento">
+              <p>Cancelamento gratuito até 10 dias antes da data escolhida.*</p>
             </div>
           </section>
         </section>

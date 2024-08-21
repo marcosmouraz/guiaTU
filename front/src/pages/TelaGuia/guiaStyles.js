@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Container = styled.body`
   width: 100%;
-  height: 180vh;
+  height: 140vh;
   max-width: 100%;
   margin: 0 auto;
 
@@ -26,12 +26,14 @@ export const Container = styled.body`
     font-weight: 200;
     color: #04136e;
   }
+
   .header {
     display: flex;
     justify-content: center;
     gap: 13rem;
     align-items: center;
   }
+
   .blocoGuia {
     display: flex;
     flex-direction: column;
@@ -41,17 +43,18 @@ export const Container = styled.body`
       color: #04136e;
     }
   }
+
   .blocoMapa {
     display: flex;
     flex-direction: column;
     width: 50%;
   }
+
   #map {
     border-radius: 8px;
   }
 
   .blocoUm {
-    /* justify-content: space-around; */
     display: flex;
     align-items: center;
   }
@@ -63,7 +66,6 @@ export const Container = styled.body`
   .nomeGuia {
     color: #04136e;
     font-size: 16px;
-    /* margin: auto; */
   }
 
   .frase {
@@ -87,16 +89,18 @@ export const Container = styled.body`
   .body {
     display: flex;
     justify-content: center;
-    gap: 13rem;
+    gap: 7rem;
     align-items: center;
     margin-top: 5rem;
   }
+
   .infoRota {
     display: flex;
     flex-direction: column;
     gap: 1rem;
     align-items: center;
   }
+
   .data {
     font-size: 20px;
     color: #04136e;
@@ -107,15 +111,17 @@ export const Container = styled.body`
     display: flex;
     align-items: center;
   }
+
   .linhas {
-    width: 1px; /* Largura da linha */
-    height: 2.5rem; /* Altura da linha */
-    background-color: black; /* Cor da linha */
-    flex-direction:column;
+    width: 1px;
+    height: 2.5rem;
+    background-color: black;
+    flex-direction: column;
     display: flex;
   }
-  .buttonInfo{
-    button{
+
+  .buttonInfo {
+    button {
       background-color: #04136e;
       color: #fff;
       width: 100%;
@@ -124,12 +130,30 @@ export const Container = styled.body`
       padding: 10px;
       font-size: 18px;
       cursor: pointer;
+      white-space: nowrap;
     }
+  }
+
+  .infoValores {
+    display: flex;
   }
 
   .valor {
     font-size: 20px;
     color: #04136e;
+    white-space: nowrap;
+    margin-bottom: 12.5rem;
+    span {
+      color: #000;
+      font-weight: 300;
+    }
+    gap: 5px;
+  }
+
+  .inclusos {
+    font-size: 14px;
+    color: #000;
+    margin-top: 1rem;
   }
 
   .reserva {
@@ -141,22 +165,23 @@ export const Container = styled.body`
     border-radius: 20px;
     text-align: start;
     padding: 1rem;
-    flex-direction: column; /* Garante que as divs fiquem em coluna (uma abaixo da outra) */
-    justify-content: flex-start; /* Alinha os elementos ao topo do container */
+    flex-direction: column;
+    justify-content: flex-start;
   }
 
   .textoReserva {
-    margin-bottom: 1rem; /* Adiciona espaço entre o texto e os inputs */
+    margin-bottom: 1rem;
     color: #04136e;
     h4 {
       font-size: 20px;
       font-weight: 600;
     }
   }
+
   .selecioneData {
-    display: flex; /* Define que os h4 dentro desta div fiquem lado a lado */
-    justify-content: space-between; /* Distribui espaço uniformemente entre os h4 */
-    width: 100%; /* Ajusta a largura para ocupar todo o espaço do container */
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
     font-size: 14px;
     color: #04136e;
     margin-bottom: 0.5rem;
@@ -164,28 +189,29 @@ export const Container = styled.body`
 
   .inputsReserva {
     display: flex;
-    justify-content: space-between; /* Mantém os inputs lado a lado */
+    justify-content: space-between;
     width: 100%;
   }
 
   input[type="date"],
   select {
     width: 48%;
-    height: 2rem; /* Ajusta a largura para que os inputs caibam lado a lado */
+    height: 2rem;
     background-color: #9b9b9b9b;
     color: #04136e;
     font-size: 12px;
     font-weight: 400;
-    padding: 0.5rem; /* Adiciona espaçamento interno */
-    border-radius: 4px;
-    border: 2px solid #04136e; /* Define uma borda de 2px de espessura, cor preta */
-    border-radius: 5px; /* Adiciona cantos arredondados */
+    padding: 0.5rem;
+    border: 2px solid #04136e;
+    border-radius: 5px;
   }
+
   input[type="date"]:focus,
   select:focus {
-    outline: none; /* Remove o outline padrão */
-    border-color: yellow; /* Altera a cor da borda ao focar no campo */
+    outline: none;
+    border-color: yellow;
   }
+
   .buttonReservar {
     display: flex;
     width: 100%;
@@ -204,6 +230,7 @@ export const Container = styled.body`
       cursor: pointer;
     }
   }
+
   .buttonWhats {
     display: flex;
     width: 100%;
@@ -222,6 +249,9 @@ export const Container = styled.body`
       border-style: solid;
       cursor: pointer;
     }
+  }
+  .cancelamento{
+    margin-top: 1rem;
   }
 
   /* Responsividade para telas ultra-wide */

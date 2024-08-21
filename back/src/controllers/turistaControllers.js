@@ -5,7 +5,7 @@ const bcrypt = require("bcrypt")
 module.exports =  class turistaControllers {  
     static async createTurista(request, response){
         const {  nome, sobrenome, data_nascimento, cpf, pais, estado, username, senha_hash } = request.body
-
+        
         try {
             const salt = await bcrypt.genSalt(12);
             const encryptPass = await bcrypt.hash(senha_hash, parseInt(salt));

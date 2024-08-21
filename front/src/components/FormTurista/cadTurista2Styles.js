@@ -1,23 +1,6 @@
 import styled from "styled-components";
 
-export const Container = styled.body`
-  width: 100%;
-  height: 70vh;
-  max-width: 100%;
-
-  .titulo {
-    color: #04136e;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    padding: 30px 0;
-    width: 100%;
-    padding-left: 1rem;
-
-    h2 {
-      font-size: 30px;
-    }
-  }
+export const ContainerFormTab2 = styled.div`
 
   .inputUm {
     display: flex;
