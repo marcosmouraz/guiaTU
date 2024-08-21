@@ -1,5 +1,6 @@
 import { createBrowserRouter } from "react-router-dom";
 import Home from "../pages/Home";
+import CadastroInicial  from "../pages/CadastroInicial/cadinicial"
 import CadastroGuia from "../pages/CadastroGuia/cadastroguia";
 import CadastroParceiro from "../pages/CadastroParceiro/cadastroparceiro";
 import CadastroParceiroDois from "../pages/CadastroParceiroDois/cadastroparceirodois"
@@ -16,6 +17,11 @@ export const router = createBrowserRouter([
     path: "/",
     element: <Home />,
   },
+  {
+    path: "/cadastroinicial",
+    element: <CadastroInicial/>,
+  },
+
   {
     path: "/cadastroguia",
     element: <CadastroGuia />,
