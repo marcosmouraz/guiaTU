@@ -1,5 +1,4 @@
-import styled from "styled-components"
-
+import styled from "styled-components";
 
 export const Container = styled.body`
   width: 100%;
@@ -8,22 +7,147 @@ export const Container = styled.body`
   margin: 0 auto;
 
   .titulo {
-    flex-direction: column;
+    display: flex;
     color: #04136e;
     font-size: 18px;
-    width: 50%;
-    margin-top: 3rem;
+    width: 70%;
+    margin-top: 7rem;
     gap: 8px;
-    
-    p{
-      font-size: 14px;
-      font-weight: 200;
-    }
+    justify-content: center;
+  }
+
+  .paragrafo {
+    margin-top: 10px;
+    display: flex;
+    font-size: 14px;
+    font-weight: 200;
+    width: 65%;
+    justify-content: center;
   }
 
   .header {
+    width: 100%;
+    display: flex;
+    justify-content: center; /* Centraliza o conteúdo da seção .header */
+    position: relative;
+  }
+
+  .opcoes {
+    display: flex;
+    margin-top: 4rem;
+    flex-direction: column; /* Organiza as opções em uma coluna */
+    gap: 25px; /* Espaço entre as opções */
+    width: 50%;
+  }
+  .pix,
+  .cartaoSalvo,
+  .cartao,
+  .dinheiro {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .cartaoSalvo {
+    display: flex;
+    flex-direction: column; /* Coloca o label e o texto do cartão em colunas */
+    align-items: flex-start; /* Alinha os elementos à esquerda */
+    margin-left: 15rem;
+  }
+
+  .radioLabel {
+    display: flex;
+    align-items: center; /* Alinha o rádio e o label no centro verticalmente */
+    margin-top: 50px;
+  }
+
+  .radioLabel input[type="radio"] {
+    margin-right: 8px; /* Espaçamento entre o botão de rádio e o label */
+  }
+
+  .cartaoUtilizado {
+    margin-left: 24px; /* Indenta o texto para alinhar com o label */
+    margin-top: 8px; /* Espaçamento entre o label e o texto do cartão */
+  }
+
+  .opcoes input[type="radio"] {
+    margin-right: 10px; /* Espaçamento entre o botão de rádio e o label */
+  }
+
+  .pix input[type="radio"] {
+    margin-right: 10px;
+  }
+  .novoCartao {
+    input {
+      background-color: #04136e;
+      color: #fff;
+      padding: 10px;
+      font-size: 14px;
+      font-weight: 600;
+      border-radius: 4px;
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.3s, color 0.3s;
+    }
+  }
+  .novoCartao input:hover {
+    background-color: yellow; /* Cor de fundo quando o mouse passa sobre o botão (amarelo escuro) */
+    color: #04136e; /* Cor da fonte quando o mouse passa sobre o botão (azul) */
+  }
+  .linhas {
+    margin-top: 20px; /* Espaço acima da linha, se necessário */
+    margin-bottom: 20px; /* Espaço abaixo da linha, se necessário */
+    width: 100%; /* Certifique-se de que a linha ocupa toda a largura disponível */
+  }
+
+  .linhas hr {
+    border: 1px solid #ccc; /* Cor e espessura da linha */
+    margin: 0; /* Remover margens padrão do hr */
+  }
+
+  .body {
+    width: 100%;
+    display: flex;
+    justify-content: center; /* Centraliza o conteúdo da seção .header */
+  }
+  .textos {
+    width: 43%;
+    h2 {
+      font-size: 20px;
+      font-weight: 600;
+    }
+    p {
+      font-size: 12px;
+    }
+  }
+  .lock {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding-top: 10px;
+  }
+  .footer {
+    width: 100%;
+    display: flex;
+    justify-content: center; /* Centraliza o conteúdo da seção .header */
+  }
+  .concluir {
+    padding-top: 3rem;
+    width: 100%;
     display: flex;
     justify-content: center;
+
+    input {
+      background-color: #04136e;
+      color: #fff;
+      padding: 10px;
+      font-size: 14px;
+      font-weight: 600;
+      border-radius: 4px;
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.3s, color 0.3s;
+      width: 20%;
+    }
   }
 `;
-;
