@@ -7,6 +7,8 @@ import L from "leaflet";
 import "leaflet-routing-machine";
 import "leaflet/dist/leaflet.css";
 import "leaflet-routing-machine/dist/leaflet-routing-machine.css";
+import { ClockCountdown, Infinity } from "@phosphor-icons/react";
+
 
 export default function TelaGuia() {
   const mapRef = useRef(null);
@@ -40,7 +42,7 @@ export default function TelaGuia() {
       }
     };
   }, []);
-
+  
   return (
     <>
       <Menu />
@@ -51,16 +53,16 @@ export default function TelaGuia() {
         </div>
         <section className="header">
           <div className="blocoGuia">
-              <img className="fotoPerfil" src={Perfil} alt="Perfil do Guia" />
-                <h2>Rogerio Marques</h2>
-                <p className="credencial">
-                  Credencial: 17.551568.72-7 <br />
-                  Atuação: Olinda, Paulista, Recife - PE
-                </p>
+            <img className="fotoPerfil" src={Perfil} alt="Perfil do Guia" />
+            <h2>Rogerio Marques</h2>
+            <p className="credencial">
+              Credencial: 17.551568.72-7 <br />
+              Atuação: Olinda, Paulista, Recife - PE
+            </p>
           </div>
           <div className="blocoMapa">
-              {/* Mapa interativo substituindo a imagem */}
-              <div id="map" style={{ height: "350px", width: "100%" }}></div>
+            {/* Mapa interativo substituindo a imagem */}
+            <div id="map" style={{ height: "350px", width: "100%" }}></div>
             <div className="fraseGuia">
               <p className="frase">
                 “Guia local há mais de 12 anos, conheça as belezas de Recife
@@ -69,10 +71,29 @@ export default function TelaGuia() {
             </div>
           </div>
         </section>
-        <div className="blocoTres"></div>
-        <div className="blocoQuatro">
+        <section className="body">
           <div className="infoRota">
             <h4 className="data">Qua. 04 jul</h4>
+            <div className="horario">
+              <ClockCountdown size={15} />
+              <p>14:00</p>
+            </div>
+            <div className="linhas">
+              <hr />
+            </div>
+            <Infinity size={14} />
+            <div className="linhas">
+              <hr />
+            </div>
+            <div className="horario">
+              <ClockCountdown size={15} />
+              <p>17:00</p>
+            </div>
+            <div className="buttonInfo">
+              <a href="/telaroteiro">
+                <button type="submit">Mais informações e intinerário</button>
+              </a>
+            </div>
           </div>
           <div className="valor">
             <h4>
@@ -100,7 +121,7 @@ export default function TelaGuia() {
               </select>
             </div>
             <div className="buttonReservar">
-              <a href="">
+              <a href="/telapagamento">
                 <button>Reservar agora</button>
               </a>
             </div>
@@ -110,7 +131,7 @@ export default function TelaGuia() {
               </a>
             </div>
           </section>
-        </div>
+        </section>
       </Container>
       <Footer />
     </>

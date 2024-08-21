@@ -32,7 +32,7 @@ export const router = createBrowserRouter([
     element: <CadastroParceiro />,
   },
   {
-    path: "/cadastroParceirodois",
+    path: "/cadastroparceirodois",
     element: <CadastroParceiroDois />,
   },
   {

@@ -13,4 +13,6 @@ router.post("/empreendedores/create", empreendedoresControllers.createEmpreended
 
 router.post("/turista/login", authControllers.turistaLogin)
 
+router.post("/empreendedores/login", authControllers.empreendedoresLogin)
+
 module.exports = router 
