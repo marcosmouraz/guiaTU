@@ -89,12 +89,12 @@ export default function TelaLogin() {
            </div>
            
            <div className="radioGui">
-            <input type="radio" name="turista" id="" onChange={() => setTurista('guia') }/>
+            <input type="radio" name="guia" id="" onChange={() => setTurista('guia') }/>
             <label htmlFor="">Guia</label>
            </div>
 
            <div className="radioEmp">
-            <input type="radio" name="turista" id="" onChange={() => setTurista('empreendedor') }/>
+            <input type="radio" name="empreendedor" id="" onChange={() => setTurista('empreendedor') }/>
             <label htmlFor="">Empreendedor</label>
            </div>
           </div>

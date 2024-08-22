@@ -6,6 +6,9 @@ export const Container = styled.div`
     justify-content: space-between;
     align-items: center;
     padding: 1vh 10%;
+    position: fixed;
+    width: 100vw;
+    z-index: 2;
   }
 
   .dropbtn {

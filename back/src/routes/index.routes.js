@@ -9,10 +9,14 @@ router.post('/turista/create', turistaControllers.createTurista)
 
 router.post('/guia/create', guiaControllers.createGuia)
 
-router.post("/empreendedores/create", empreendedoresControllers.createEmpreendedores);
+router.post("/empreendedor/create", empreendedoresControllers.createEmpreendedores);
 
 router.post("/turista/login", authControllers.turistaLogin)
 
 router.post("/empreendedores/login", authControllers.empreendedoresLogin)
+
+router.post("/guia/login", authControllers.guiaLogin);
+
+
 
 module.exports = router 

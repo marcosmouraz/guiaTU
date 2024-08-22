@@ -3,7 +3,7 @@ import Home from "../pages/Home";
 import CadastroInicial  from "../pages/CadastroInicial/cadinicial"
 import CadastroGuia from "../pages/CadastroGuia/cadastroguia";
 import CadastroParceiro from "../pages/CadastroParceiro/cadastroparceiro";
-import CadastroParceiroDois from "../pages/CadastroParceiroDois/cadastroparceirodois"
+
 import CadastroTurista from "../pages/CadastroTurista/cadastroturista";
 import CheckoutCartao from "../pages/CheckoutCartao/checkoutCartao";
 import TelaLogin from "../pages/TelaLogin/telalogin";
@@ -29,10 +29,6 @@ export const router = createBrowserRouter([
   {
     path: "/cadastroparceiro",
     element: <CadastroParceiro />,
-  },
-  {
-    path: "/cadastroparceirodois",
-    element: <CadastroParceiroDois />,
   },
   {
     path: "/cadastroturista",
