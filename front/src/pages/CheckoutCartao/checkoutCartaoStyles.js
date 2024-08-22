@@ -1,0 +1,196 @@
+import styled, { keyframes } from "styled-components";
+
+// Animação para girar o cartão
+const flipCard = keyframes`
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(180deg);
+  }
+`;
+
+// Animação para o modal
+const fadeIn = keyframes`
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+`;
+
+export const Container = styled.div`
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex; /* Adiciona o layout flex */
+  justify-content: space-between; /* Espaça os itens igualmente */
+  gap: 20px; /* Adiciona um espaço entre o formulário e o cartão */
+`;
+
+export const FormWrapper = styled.div`
+  flex: 1; /* Permite que o formulário ocupe o máximo de espaço disponível */
+  max-width: 600px; /* Limita a largura máxima do formulário */
+`;
+
+export const CardWrapper = styled.div`
+  flex: 1; /* Permite que o cartão ocupe o máximo de espaço disponível */
+  max-width: 400px; /* Limita a largura máxima do cartão */
+`;
+
+export const FormTitle = styled.h2`
+  text-align: center;
+  margin-bottom: 20px;
+`;
+
+export const FormField = styled.div`
+  margin-bottom: 15px;
+`;
+
+export const Label = styled.label`
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+`;
+
+export const Input = styled.input`
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+`;
+
+export const Button = styled.button`
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 10px;
+
+  &:hover {
+    background-color: #0056b3;
+  }
+`;
+
+export const CardContainer = styled.div`
+  perspective: 1000px; /* Para aplicar a perspectiva de 3D */
+  margin-top: 20px;
+`;
+
+export const Card = styled.div`
+  position: relative;
+  width: 100%;
+  height: 200px;
+  transform-style: preserve-3d;
+  transition: transform 0.6s;
+
+  &.flipped {
+    animation: ${flipCard} 0.6s forwards;
+  }
+`;
+
+export const CardFront = styled.div`
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: url("/card-placeholder.png") no-repeat center center;
+  background-size: cover; /* Garante que a imagem cubra o fundo */
+  border-radius: 8px;
+  backface-visibility: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
+
+export const CardBack = styled.div`
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #333;
+  color: white;
+  border-radius: 8px;
+  backface-visibility: hidden;
+  transform: rotateY(180deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
+
+export const CardDetails = styled.div`
+  position: absolute;
+  top: 15%;
+  left: 5%;
+  width: 90%;
+  color: white;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
+  font-family: "Arial", sans-serif;
+`;
+
+export const CardDetail = styled.div`
+  font-size: 14px;
+
+  &.card-number {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+
+  &.card-name {
+    margin-bottom: 10px;
+  }
+
+  &.card-expiration {
+    font-size: 14px;
+  }
+
+  &.card-cvv {
+    font-size: 18px;
+  }
+`;
+
+// Estilos do modal
+export const Modal = styled.div`
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: ${fadeIn} 0.3s ease-in;
+`;
+
+export const ModalContent = styled.div`
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  max-width: 500px;
+  width: 100%;
+`;
+
+export const ModalButton = styled.button`
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 10px;
+
+  &:hover {
+    background-color: #0056b3;
+  }
+`;

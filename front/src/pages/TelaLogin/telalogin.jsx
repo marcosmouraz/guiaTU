@@ -105,7 +105,7 @@ export default function TelaLogin() {
           <section className="textDois">
            
             <div className="cadastrarAgora">
-              <a href="" className="cadastrar">
+              <a href="/cadastroinicial" className="cadastrar">
                 <h6>
                   Não possui conta? <span>Cadastre-se</span> agora!
                 </h6>

@@ -45,7 +45,7 @@ export default function Menu() {
                 </button>
                 <div className="dropdown-content3">
                   <a href="/telalogin">Entrar</a>
-                  <a href="/cadastroturista">Cadastre-se</a>
+                  <a href="/cadastroinicial">Cadastre-se</a>
                 </div>
               </div>
             </li>

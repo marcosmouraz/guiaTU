@@ -1,25 +1,37 @@
+import { Link } from "react-router-dom";
 import Menu from "../../components/Menu/menu";
 import Footer from "../../components/Footer/footer";
-import { Container } from "./cadinicialstyles";
+import { Container, Section } from "./cadinicialstyles";
 
-export default function cadinicial() {
+export default function CadInicial() {
   return (
     <>
       <Menu />
       <Container>
-        <div className="titulo">
-          <h2>Olá, selecione seu perfil e realize seu cadastro!</h2>
-        </div>
-        <section className="buttons">
-              <button className="buttonPerfil"> SOU TURISTA </button>
-              <button className="buttonPerfil"> SOU GUIA  </button>
-              <button className="buttonPerfil" > SOU PARCEIRO(A) </button>
-            </section>
-        {/* <div className="button">
-          <button>SOU TURISTA</button>
-          <button>SOU GUIA</button>
-          <button>SOU PARCEIRO</button>
-        </div> */}
+        <Section>
+          <section className="blocoPrincipal">
+            <div className="bloco1">
+              <h2>Bem vindo(a) ao GuiaTÚ!</h2>
+            </div>
+            <div className="bloco2">
+              <div className="cadastre">
+                <h1>Cadastre-se</h1>
+                <p>Escolha seu perfil nas opções abaixo.</p>
+              </div>
+              <div className="buttons">
+                <Link to="/cadastroguia">
+                  <button type="button">SOU GUIA</button>
+                </Link>
+                <Link to="/cadastroturista">
+                  <button type="button">SOU TURISTA</button>
+                </Link>
+                <Link to="/cadastroparceiro">
+                  <button type="button">SOU EMPREENDEDOR</button>
+                </Link>
+              </div>
+            </div>
+          </section>
+        </Section>
       </Container>
       <Footer />
     </>
