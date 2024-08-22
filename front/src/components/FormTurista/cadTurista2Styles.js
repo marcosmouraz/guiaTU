@@ -50,14 +50,16 @@ export const ContainerFormTab2 = styled.div`
     gap: 10px;
     justify-content: center;
     align-items: center;
-    padding: 10px 0;
+    
   }
 
   .inputscheckum {
+    display: flex;
+    flex-direction: row;
     font-size: 13px;
     display: flex;
     gap: 1rem;
-    width: 50%;
+    width: 100%;
   }
 
   .inputtext {
@@ -253,4 +255,32 @@ export const ContainerFormTab2 = styled.div`
       width: 70%;
     }
   }
+  .buttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px; 
+    border-radius: 5%;
+    
+  }
+  .enviar{
+    background-color: #04136e;
+    color: #fff;
+    display: flex;
+    width: 5rem;
+    height: 1.5rem;
+    border-radius: 5px;
+    text-align: center;
+  }
+ 
+
+  .voltar{
+    display: flex;
+    background-color: #04136e;
+    color: #fff;
+    width: 5rem;
+    height: 1.5rem;
+    border-radius: 5px;
+  }
+
 `;

@@ -75,18 +75,25 @@ export default function TelaLogin() {
             </a>
           </div>
 
-          <div>
-           <div>
+          <div className="linha">
+              <hr />
+              <h5>Selecione seu perfil</h5>
+              <hr />
+            </div>
+
+          <div className="radios">
+
+           <div className="radioTu" >
             <input type="radio" name="turista" id="" onChange={() => setTurista('turista') }/>
             <label htmlFor="">Turista</label>
            </div>
            
-           <div>
+           <div className="radioGui">
             <input type="radio" name="turista" id="" onChange={() => setTurista('guia') }/>
             <label htmlFor="">Guia</label>
            </div>
 
-           <div>
+           <div className="radioEmp">
             <input type="radio" name="turista" id="" onChange={() => setTurista('empreendedor') }/>
             <label htmlFor="">Empreendedor</label>
            </div>
@@ -96,38 +103,15 @@ export default function TelaLogin() {
           <button className="buttonEntrar"  onClick={() =>handleLogin() }>Entrar</button>
  
           <section className="textDois">
-            <div className="linha">
-              <hr />
-              <h5>OU</h5>
-              <hr />
-            </div>
+           
             <div className="cadastrarAgora">
               <a href="" className="cadastrar">
                 <h6>
-                  Não possui conta? <span>Cadastre-se agora!</span>
+                  Não possui conta? <span>Cadastre-se</span> agora!
                 </h6>
               </a>
             </div>
-            <section className="buttons">
-              <button
-                onClick={() => navigation("/cadastroturista")}
-                className="buttonPerfil"
-              >
-                SOU TURISTA
-              </button>
-              <button
-                onClick={() => navigation("/cadastroguia")}
-                className="buttonPerfil"
-              >
-                SOU GUIA
-              </button>
-              <button
-                onClick={() => navigation("/cadastroparceiro")}
-                className="buttonPerfil"
-              >
-                SOU PARCEIRO(A)
-              </button>
-            </section>
+            
           </section>
         </Container>
       </Section>

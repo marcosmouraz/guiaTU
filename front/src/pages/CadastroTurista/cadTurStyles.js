@@ -55,7 +55,7 @@ export const Container = styled.body`
     }
   }
 
-  .inputnome,
+  /* .inputnome,
   .inputDataCpf,
   .inputsInfos {
     display: flex;
@@ -99,34 +99,6 @@ export const Container = styled.body`
     }
   }
 
-  .linha {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-    width: 75rem;
-    margin: 4.5rem auto 2rem auto;
-    padding: 0 1rem;
-
-    h5 {
-      font-weight: 600;
-      color: #000;
-    }
-
-    img {
-      width: 20%;
-      color: black;
-    }
-  }
-
-  .sociais {
-    display: flex;
-    gap: 45px;
-    justify-content: center;
-    padding: 2.5rem 0 3rem 0;
-    align-items: center;
-  }
-
   @media (max-width: 2327px) {
     .titulo {
       width: 60%;
@@ -156,7 +128,7 @@ export const Container = styled.body`
     .titulo h2 {
       font-size: 30px;
     }
-  }
+  } */
 
   @media (max-width: 1600px) {
     .titulo {

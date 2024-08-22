@@ -45,8 +45,10 @@ export default function CadastroTurista2({register, setTabForm}) {
         </label>
       </div>
 
-      <button type="submit">Enviar</button>
-      <button onClick={() => setTabForm(0)} type="submit">Voltar</button>
+       <div className="buttons" > 
+      <button type="submit" className="enviar">Enviar</button>
+      <button onClick={() => setTabForm(0)} type="submit" className="voltar">Voltar</button>
+      </div>
     </ContainerFormTab2>
   );
 }
