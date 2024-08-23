@@ -75,7 +75,7 @@ export const Container = styled.div`
 
   .email.error,
   .senha.error {
-    border-color: #ff4d4d; // Borda vermelha para erros
+    border-color: #ff4d4d; 
   }
 
   .esqueciSenha {
@@ -86,9 +86,9 @@ export const Container = styled.div`
     font-weight: lighter;
     font-size: 11px;
     text-align: right;
-    width: 30rem; // Mesma largura que o input
+    width: 30rem; 
     padding-right: 2%;
-    align-self: flex-end; // Alinha o texto à direita
+    align-self: flex-end; 
   }
 
   .radios {
@@ -202,7 +202,7 @@ export const Container = styled.div`
   }
 
   .error {
-    color: #ff4d4d; // Cor vermelha para mensagens de erro
+    color: #ff4d4d; 
     font-size: 14px;
     margin-top: 10px;
     text-align: center;

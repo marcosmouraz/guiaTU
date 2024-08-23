@@ -55,9 +55,11 @@ export default function Menu() {
               </button>
             </li>
             <li>
-              <button href="">
-                <ShoppingCart size={20} color="#fafafa" />
-              </button>
+              <a href="/telapagamento">
+                <button href="">
+                  <ShoppingCart size={20} color="#fafafa" />
+                </button>
+              </a>
             </li>
           </ul>
         </nav>
