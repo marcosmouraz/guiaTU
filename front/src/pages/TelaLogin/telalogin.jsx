@@ -47,7 +47,6 @@ export default function TelaLogin() {
       }).then((response) => {
         localStorage.setItem('token', response.data.token)
         navigation('/telafiltro')
-      }).catch((error) => {
         console.log(error.response.data.message)
       })
 
@@ -84,17 +83,17 @@ export default function TelaLogin() {
           <div className="radios">
 
            <div className="radioTu" >
-            <input type="radio" name="turista" id="" onChange={() => setTurista('turista') }/>
+            <input type="radio" name="perfil" id="" onChange={() => setTurista('turista') }/>
             <label htmlFor="">Turista</label>
            </div>
            
            <div className="radioGui">
-            <input type="radio" name="guia" id="" onChange={() => setTurista('guia') }/>
+            <input type="radio" name="perfil" id="" onChange={() => setTurista('guia') }/>
             <label htmlFor="">Guia</label>
            </div>
 
            <div className="radioEmp">
-            <input type="radio" name="empreendedor" id="" onChange={() => setTurista('empreendedor') }/>
+            <input type="radio" name="perfil" id="" onChange={() => setTurista('empreendedor') }/>
             <label htmlFor="">Empreendedor</label>
            </div>
           </div>
