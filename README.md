@@ -83,4 +83,4 @@ Este projeto está licenciado sob a [Licença MIT](LICENSE).
 
 ## Contato
 
-Para mais informações, entre em contato com [seu-email@example.com](mailto:seu-email@example.com).
+Para mais informações, entre em contato com Marcos, Karen ou Saulo.
