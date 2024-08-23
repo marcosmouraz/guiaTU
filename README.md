@@ -83,8 +83,16 @@ Este projeto está licenciado sob a [Licença MIT](LICENSE).
 
 ## Contato
 
-Para mais informações, entre em contato com Marcos, Karen e Saulo. (DESENVOLVEDORES)
+Para mais informações, entre em contato com os desenvolvedores: Marcos, Karen e Saulo.
 
 ## Observações
 
-Este é um projeto acadêmico desenvolvido para fins de estudo e aprendizado. 
+Este é um projeto acadêmico desenvolvido para fins de estudo e aprendizado.
+
+## Alinhamento com os ODS
+
+### ODS 08: Trabalho Decente e Crescimento Econômico
+Este projeto promove o crescimento econômico sustentável ao criar uma plataforma que facilita a conexão entre guias turísticos, empreendedores e turistas. A plataforma oferece oportunidades de trabalho para guias e empreendedores, ajudando-os a se estabelecer e crescer em um setor de turismo em expansão. Além disso, contribui para a criação de empregos e o desenvolvimento econômico local.
+
+### ODS 10: Redução das Desigualdades
+O GuiaTu está alinhado com o ODS 10 ao oferecer uma plataforma inclusiva que permite a todos os usuários, independentemente de sua origem, participar e se beneficiar das oportunidades de turismo. Através da criação de uma rede acessível e diversificada, o projeto busca reduzir as desigualdades no acesso a serviços turísticos e promover a inclusão.
