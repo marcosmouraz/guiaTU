@@ -12,6 +12,7 @@ GuiaTU é uma aplicação web desenvolvida como um projeto acadêmico para geren
 - **API de Mapas**: StreetMap
 - **Pagamentos Online**: [Nome do serviço de pagamento utilizado, ex: Stripe]
 - **API de Endereços**: ViaCEP
+- **Contêinerização**: Docker
 
 ## Funcionalidades
 
@@ -25,6 +26,8 @@ GuiaTU é uma aplicação web desenvolvida como um projeto acadêmico para geren
 - **Busca de Endereços**: Utiliza a API do ViaCEP para buscar e preencher automaticamente informações de endereço.
 
 ## Instalação
+
+### Sem Docker
 
 1. Clone o repositório:
     ```bash
@@ -67,11 +70,34 @@ GuiaTU é uma aplicação web desenvolvida como um projeto acadêmico para geren
     npm run dev
     ```
 
+### Com Docker
+
+1. Clone o repositório:
+    ```bash
+    git clone https://github.com/usuario/guiatu.git
+    ```
+
+2. Navegue até o diretório do projeto:
+    ```bash
+    cd guiatu
+    ```
+
+3. Construa e inicie os contêineres Docker:
+    ```bash
+    docker-compose up --build
+    ```
+
+    Este comando irá construir as imagens Docker para o frontend e o backend e iniciar os contêineres necessários.
+
+4. Acesse a aplicação em `http://localhost:3000` para o frontend e `http://localhost:5000` para o backend (ajuste as portas conforme a configuração do `docker-compose.yml`).
+
 ## Estrutura do Projeto
 
 - **frontend/**: Contém o código do frontend da aplicação.
 - **backend/**: Contém o código do backend da aplicação.
 - **config/**: Arquivos de configuração do banco de dados, API de mapas, pagamento e outras configurações.
+- **Dockerfile**: Arquivo de configuração do Docker para o frontend e backend.
+- **docker-compose.yml**: Arquivo de configuração do Docker Compose para orquestrar os contêineres.
 
 ## Contribuição
 
