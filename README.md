@@ -1,6 +1,6 @@
 # GuiaTU
 
-GuiaTu é uma aplicação web desenvolvida como um projeto acadêmico para gerenciar e facilitar o cadastro e a autenticação de guias turísticos, empreendedores e turistas. A aplicação permite que guias turísticos se cadastrem e atualizem suas informações, enquanto turistas e empreendedores podem criar contas e acessar as funcionalidades da plataforma. Além disso, a plataforma oferece personalização de rotas de passeios, integração com pagamento online e busca de endereços usando a API do ViaCEP.
+GuiaTÚ é uma aplicação web desenvolvida como um projeto acadêmico para gerenciar e facilitar o cadastro e a autenticação de guias turísticos, empreendedores e turistas. A aplicação permite que guias turísticos se cadastrem e atualizem suas informações, enquanto turistas e empreendedores podem criar contas e acessar as funcionalidades da plataforma. Além disso, a plataforma oferece personalização de rotas de passeios, integração com pagamento online e busca de endereços usando a API do ViaCEP.
 
 ## Tecnologias Utilizadas
 
