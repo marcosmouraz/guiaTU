@@ -37,14 +37,8 @@ export default function FormTurista() {
       });
   };
 
-  const [tabForm, setTabForm] = useState(1);
-  const [username, setUsername] = useState("");
-  const [senha_hash, setSenha_hash] = useState("");
-
-  async function handleCadastro() {
-    
-  }
-
+  const [tabForm, setTabForm] = useState(0);
+ 
   return (
     <>
       <form onSubmit={handleSubmit(onSubmit)}>

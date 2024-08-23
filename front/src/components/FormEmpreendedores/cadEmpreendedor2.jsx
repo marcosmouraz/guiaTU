@@ -4,7 +4,6 @@ import { Container } from "./cadParDoisStyles";
 export default function CadastroEmpreendedores2({ register, setTabForm }) {
   return (
     <Container>
-    
       <div className="inputs">
         <div className="inputContainer">
           <input
@@ -76,24 +75,24 @@ export default function CadastroEmpreendedores2({ register, setTabForm }) {
         <div className="ContentC">
           <input type="checkbox" name="" id="" />
           <label className="custom-checkbox">
-            Aceito <a href="">politica de privacidade</a> e{" "}
+            Aceito <a href="">política de privacidade</a> e{" "}
             <a href="">condições gerais</a>{" "}
           </label>
         </div>
 
         <label className="inputtext">
           Este site está protegido por reCAPTCHA e se aplicam à{" "}
-          <a href="">politica de privacidade</a> e aos <br />{" "}
-          <a href="">termos e serviços do google</a>.
+          <a href="">política de privacidade</a> e aos <br />{" "}
+          <a href="">termos e serviços do Google</a>.
         </label>
       </div>
 
-      <div className="ButtonCadastrar">
+      <div className="buttonContainer">
+        <button onClick={() => setTabForm(0)} className="voltar">
+          Voltar
+        </button>
         <button type="submit" className="buttonCadastrar">
           Finalizar Cadastro
-        </button>
-        <button onClick={() => setTabForm(0)} type="submit" className="voltar">
-          Voltar
         </button>
       </div>
     </Container>

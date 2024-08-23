@@ -15,7 +15,8 @@ export const Section = styled.section`
   align-items: center;
   padding: 10px 0;
 `;
-export const Container = styled.body`
+
+export const Container = styled.div`
   max-width: 100%;
   display: flex;
   flex-direction: column;
@@ -35,15 +36,18 @@ export const Container = styled.body`
     align-items: center;
     gap: 10px;
   }
+
   .textUm h2 {
     color: #d9d9d9;
     font-size: 40px;
   }
+
   .textUm h6 {
     color: #fff;
     font-weight: 300;
     font-size: 17px;
   }
+
   .inputs {
     background-color: transparent;
     color: #000;
@@ -51,33 +55,29 @@ export const Container = styled.body`
     display: flex;
     flex-direction: column;
   }
-  .email {
-    background-color: #fff;
-    opacity: 70%;
-    border-color: #5f6368;
-    border-style: groove;
-    height: 3rem;
-    width: 30rem;
-    border-radius: 8px;
-    padding: 1rem;
-  }
-  .email placeholder {
-    color: #5f6368;
-    font-weight: 500;
-  }
+
+  .email,
   .senha {
     background-color: #fff;
     opacity: 70%;
-    border-color: #5f6368;
     border-style: groove;
     height: 3rem;
     border-radius: 8px;
     padding: 1rem;
+    border-color: #5f6368;
   }
+
+  .email::placeholder,
   .senha::placeholder {
     color: #5f6368;
     font-weight: 500;
   }
+
+  .email.error,
+  .senha.error {
+    border-color: #ff4d4d; // Borda vermelha para erros
+  }
+
   .esqueciSenha {
     display: flex;
     justify-content: end;
@@ -91,22 +91,23 @@ export const Container = styled.body`
     align-self: flex-end; // Alinha o texto à direita
   }
 
-  .radios{
+  .radios {
     display: flex;
     flex-direction: row;
     gap: 6rem;
     color: #d9d9d9;
     width: 100%;
     justify-content: center;
-    
   }
+
   .linha {
     align-items: center;
     display: flex;
     justify-content: center;
     gap: 10px;
   }
-  .linha h5{
+
+  .linha h5 {
     color: #d9d9d9;
     font-size: medium;
   }
@@ -115,23 +116,25 @@ export const Container = styled.body`
     width: 8rem;
     border-color: #fff;
   }
-  .tituloRadio{
+
+  .tituloRadio {
     display: flex;
     justify-content: start;
     width: 60%;
     color: #d9d9d9;
   }
+
   .radioTu {
-    display: flex;
-    gap:10px;
-
-  }
-
-  .radioGui{
     display: flex;
     gap: 10px;
   }
-  .radioEmp{
+
+  .radioGui {
+    display: flex;
+    gap: 10px;
+  }
+
+  .radioEmp {
     display: flex;
     gap: 10px;
   }
@@ -150,6 +153,7 @@ export const Container = styled.body`
     font-size: 17px;
     font-weight: 700;
   }
+
   .buttonEntrar:hover {
     color: #fff;
     background-color: #0f2ff0;
@@ -172,11 +176,12 @@ export const Container = styled.body`
     justify-content: center;
     align-items: center;
     gap: 20px;
-
   }
+
   .cadastrarAgora {
     margin: 20px 0;
   }
+
   .cadastrarAgora h6 {
     font-weight: 200;
     font-size: larger;
@@ -184,15 +189,22 @@ export const Container = styled.body`
     font-size: 18px;
     color: #fff;
   }
+
   .cadastrarAgora h6 span {
-    color: #FFE30E;
+    color: #ffe30e;
   }
+
   .cadastrar {
     text-decoration: none;
     color: inherit;
     color: #000;
     padding-bottom: 300px;
   }
+
+  .error {
+    color: #ff4d4d; // Cor vermelha para mensagens de erro
+    font-size: 14px;
+    margin-top: 10px;
+    text-align: center;
+  }
 `;
-
-

@@ -5,55 +5,48 @@ import { Container, Section } from "./loginStyles";
 import { useNavigate } from "react-router-dom";
 import { api } from "../../service/api";
 
-
 export default function TelaLogin() {
-  const [turista, setTurista] = useState('')
-  const [username, setUsername] = useState('')
-  const [senha_hash, setSenha_hash] = useState('')
+  const [turista, setTurista] = useState("");
+  const [username, setUsername] = useState("");
+  const [senha_hash, setSenha_hash] = useState("");
+  const [error, setError] = useState(""); // Para armazenar mensagens de erro
 
-  const navigation = useNavigate()
+  const navigation = useNavigate();
 
   async function handleLogin() {
-    if (turista === 'turista') {
-      await api.post('/turista/login', {
-        'username': username, 
-        'senha_hash': senha_hash,
-      }).then((response) => {
-        localStorage.setItem('token', response.data.token)
-        navigation('/telafiltro')
-      }).catch((error) => {
-        console.log(error.response.data.message)
-      })
-    }  else if (turista === 'guia'){
+    // Verificar se todos os campos estão preenchidos
+    if (!username || !senha_hash || !turista) {
+      setError("Todos os campos são obrigatórios.");
+      return;
+    }
 
-      await api
-        .post("/guia/login", {
-          username: username,
-          senha_hash: senha_hash,
-        })
-        .then((response) => {
-          localStorage.setItem("token", response.data.token);
-          navigation("/telafiltro");
-        })
-        .catch((error) => {
-          console.log(error.response.data.message);
+    // Resetar mensagem de erro
+    setError("");
+
+    try {
+      let response;
+      if (turista === "turista") {
+        response = await api.post("/turista/login", { username, senha_hash });
+      } else if (turista === "guia") {
+        response = await api.post("/guia/login", { username, senha_hash });
+      } else if (turista === "empreendedor") {
+        response = await api.post("/empreendedores/login", {
+          username,
+          senha_hash,
         });
+      } else {
+        setError("Selecione um perfil.");
+        return;
+      }
 
-    } else if (turista === 'empreendedor'){
-
-      await api.post('/empreendedores/login', {
-        'username': username, 
-        'senha_hash': senha_hash,
-      }).then((response) => {
-        localStorage.setItem('token', response.data.token)
-        navigation('/telafiltro')
-        console.log(error.response.data.message)
-      })
-
-
-      
-    } else {
-      return console.log('error')
+      localStorage.setItem("token", response.data.token);
+      navigation("/telafiltro");
+    } catch (error) {
+      // Tratar erro de login
+      setError(
+        error.response?.data?.message ||
+          "Ocorreu um erro ao tentar fazer login."
+      );
     }
   }
 
@@ -67,42 +60,62 @@ export default function TelaLogin() {
             <h6>Bem vindo ao GuiaTÚ</h6>
           </div>
           <div className="inputs">
-            <input className="email" type="text" placeholder="Email" onChange={(e) => setUsername(e.target.value)} />
-            <input className="senha" type="password" placeholder="Senha" onChange={(e) => setSenha_hash(e.target.value)} />
+            <input
+              className="email"
+              type="text"
+              placeholder="Email"
+              onChange={(e) => setUsername(e.target.value)}
+            />
+            <input
+              className="senha"
+              type="password"
+              placeholder="Senha"
+              onChange={(e) => setSenha_hash(e.target.value)}
+            />
             <a href="" className="esqueciSenha">
               Esqueci minha senha
             </a>
           </div>
-
           <div className="linha">
-              <hr />
-              <h5>Selecione seu perfil</h5>
-              <hr />
-            </div>
-
-          <div className="radios">
-
-           <div className="radioTu" >
-            <input type="radio" name="perfil" id="" onChange={() => setTurista('turista') }/>
-            <label htmlFor="">Turista</label>
-           </div>
-           
-           <div className="radioGui">
-            <input type="radio" name="perfil" id="" onChange={() => setTurista('guia') }/>
-            <label htmlFor="">Guia</label>
-           </div>
-
-           <div className="radioEmp">
-            <input type="radio" name="perfil" id="" onChange={() => setTurista('empreendedor') }/>
-            <label htmlFor="">Empreendedor</label>
-           </div>
+            <hr />
+            <h5>Selecione seu perfil</h5>
+            <hr />
           </div>
-
-          
-          <button className="buttonEntrar"  onClick={() =>handleLogin() }>Entrar</button>
- 
+          <div className="radios">
+            <div className="radioTu">
+              <input
+                type="radio"
+                name="perfil"
+                id="turista"
+                onChange={() => setTurista("turista")}
+              />
+              <label htmlFor="turista">Turista</label>
+            </div>
+            <div className="radioGui">
+              <input
+                type="radio"
+                name="perfil"
+                id="guia"
+                onChange={() => setTurista("guia")}
+              />
+              <label htmlFor="guia">Guia</label>
+            </div>
+            <div className="radioEmp">
+              <input
+                type="radio"
+                name="perfil"
+                id="empreendedor"
+                onChange={() => setTurista("empreendedor")}
+              />
+              <label htmlFor="empreendedor">Empreendedor</label>
+            </div>
+          </div>
+          {error && <div className="error">{error}</div>}{" "}
+          {/* Exibir mensagem de erro */}
+          <button className="buttonEntrar" onClick={handleLogin}>
+            Entrar
+          </button>
           <section className="textDois">
-           
             <div className="cadastrarAgora">
               <a href="/cadastroinicial" className="cadastrar">
                 <h6>
@@ -110,7 +123,6 @@ export default function TelaLogin() {
                 </h6>
               </a>
             </div>
-            
           </section>
         </Container>
       </Section>

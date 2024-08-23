@@ -1,3 +1,5 @@
+import React from "react";
+import "../../pages/CadastroParceiro/cadParStyles"; // Adicione a importação do arquivo CSS
 
 export default function CadastroEmpreendedores({ register, setTabForm }) {
   return (
@@ -62,11 +64,15 @@ export default function CadastroEmpreendedores({ register, setTabForm }) {
         <h5>SUA SENHA DEVE POSSUIR:</h5>
         <ul>
           <li>No mínimo 8 caracteres: </li>
-          <li>Um caracter especial(ex:*,@)</li>
+          <li>Um caracter especial (ex: *, @)</li>
         </ul>
       </div>
 
-      <button onClick={() => setTabForm(1)}>Próximo</button>
+      <div className="buttonContainer">
+        <button className="buttonproximo" onClick={() => setTabForm(1)}>
+          Próximo
+        </button>
+      </div>
     </>
   );
 }

@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
-export const Container = styled.body`
+export const Container = styled.div`
+  /* Use div em vez de body para compatibilidade com styled-components */
   width: 100%;
   height: 80%;
   max-width: 100%;
@@ -33,9 +34,11 @@ export const Container = styled.body`
       font-weight: 200;
     }
   }
-  .imagem{
+
+  .imagem {
     padding-left: 10rem;
   }
+
   .alterafoto {
     border: #1e1e1e;
     background-color: aliceblue;
@@ -43,10 +46,12 @@ export const Container = styled.body`
     border-radius: 10px;
     transition: background-color 0.2s;
   }
+
   .alterafoto:hover {
     border-color: #04136e;
     background-color: #04136e;
   }
+
   .DadosEstabelecimento {
     display: flex;
     height: 5vh;
@@ -59,11 +64,12 @@ export const Container = styled.body`
       font-style: normal;
     }
   }
+
   .checkbox {
     display: grid;
     flex-direction: column;
     align-items: center;
-    gap: 10px;
+    gap: 5px; /* Reduzido para compactar o espaço */
     justify-content: center;
     width: 62%;
     padding-left: 3.5rem;
@@ -71,26 +77,41 @@ export const Container = styled.body`
   }
 
   .ContentC {
-    width: 53%;
+    width: auto; /* Ajustado para que o conteúdo se ajuste */
     display: flex;
     gap: 10px;
-    align-items: start;
+    align-items: center; /* Alinhado verticalmente */
   }
+
+  .ContentC input[type="checkbox"] {
+    width: 16px; /* Ajustado para um tamanho menor */
+    height: 16px; /* Ajustado para um tamanho menor */
+  }
+
+  .custom-checkbox {
+    font-size: 14px; /* Ajustado para um tamanho menor */
+    margin: 0; /* Remover margem para compactar */
+  }
+
   .inputtext {
     padding-right: 110px;
     padding-bottom: 2rem;
+    font-size: 12px; /* Ajustado para um tamanho menor */
   }
+
   .inputs {
     display: flex;
     justify-items: center;
     align-items: center;
     gap: 1rem;
   }
+
   .inputContainer {
     display: flex;
     flex-direction: column;
     gap: 10px;
   }
+
   .inputContainer input {
     width: 150vw;
     max-width: 20rem;
@@ -99,25 +120,13 @@ export const Container = styled.body`
     border-radius: 4px;
     padding: 0.5rem;
   }
-  .detalhesSenha {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-    padding-top: 30px;
-    padding-right: 410px;
-
-    h5 {
-      padding-right: 60px;
-      font-weight: 700;
-    }
-  }
 
   .buttonContainer {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-bottom: 1rem;
+    gap: 1rem;
+    padding: 2rem 0; /* Ajuste conforme necessário */
   }
 
   .buttonCadastrar {
@@ -127,7 +136,6 @@ export const Container = styled.body`
     display: flex;
     text-align: center;
     justify-content: center;
-    margin: 20px 10px;
     background-color: #04136e;
     color: #fff;
     border-radius: 8px;
@@ -136,11 +144,32 @@ export const Container = styled.body`
     transition: background-color 0.2s;
     padding: 8px 1rem;
     text-align: center;
-    margin-bottom: 4rem;
 
     &:hover {
       background-color: #3f58ee;
       border: none;
     }
   }
+
+  .voltar {
+    font-size: 16px;
+    white-space: nowrap;
+    width: 20vh; /* Ajuste conforme necessário */
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    background-color: #cccccc; /* Ajuste a cor de fundo conforme necessário */
+    color: #000;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    padding: 8px 1rem;
+    text-align: center;
+
+    &:hover {
+      background-color: #999999; /* Ajuste a cor de fundo ao passar o mouse conforme necessário */
+    }
+  }
+  
 `;

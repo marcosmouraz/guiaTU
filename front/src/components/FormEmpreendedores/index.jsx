@@ -44,7 +44,7 @@ export default function FormEmpreendedor() {
       });
   };
 
-  const [tabForm, setTabForm] = useState(1);
+  const [tabForm, setTabForm] = useState(0);
 
   return (
     <>

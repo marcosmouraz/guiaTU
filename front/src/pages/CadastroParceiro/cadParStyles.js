@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
-export const Container = styled.body`
-
+export const Container = styled.div`
+  /* Use div em vez de body para compatibilidade com styled-components */
   width: 100%;
   height: 80%;
   max-width: 100%;
@@ -22,10 +22,8 @@ export const Container = styled.body`
       color: #04136e;
       overflow-wrap: break-word;
       white-space: normal;
-      
     }
   }
-
 
   .inputfoto {
     display: flex;
@@ -57,33 +55,32 @@ export const Container = styled.body`
       width: 8rem;
     }
   }
+
   .DadosPessoais {
     display: flex;
     justify-content: center;
     padding-right: 520px;
     height: 5vh;
-    
+
     h4 {
-    color: #04136e;
-    font-family: "Poppins", sans-serif;
-    font-weight: 600;
-    font-style: normal;
-   
+      color: #04136e;
+      font-family: "Poppins", sans-serif;
+      font-weight: 600;
+      font-style: normal;
     }
   }
 
-  .inputs{
+  .inputs {
     display: flex;
     justify-items: center;
     align-items: center;
-    gap: 1rem ;
-   
+    gap: 1rem;
   }
-  .inputContainer{
-    display: flex; 
+
+  .inputContainer {
+    display: flex;
     flex-direction: column;
     gap: 10px;
-
   }
 
   input {
@@ -93,9 +90,9 @@ export const Container = styled.body`
     border-style: groove;
     border-radius: 4px;
     padding: 0.5rem;
-
   }
-  .detalhesSenha{
+
+  .detalhesSenha {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -103,41 +100,32 @@ export const Container = styled.body`
     padding-top: 30px;
     padding-right: 410px;
 
-    
-    h5{
+    h5 {
       padding-right: 60px;
       font-weight: 700;
     }
   }
 
-
-  .button {
-    width: 100%;
+  .buttonContainer {
     display: flex;
     justify-content: center;
-    align-items: center;
-    margin-bottom: 50px;
+    width: 100%;
+    margin-top: 2rem; /* Ajuste o valor conforme necessário */
   }
 
   .buttonproximo {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 15%;
-    margin: 2.5rem auto 0 auto;
     background-color: #04136e;
     color: #fff;
     border-radius: 8px;
     border: none;
     cursor: pointer;
     transition: background-color 0.2s;
-    padding: 8px 1rem;
+    padding: 10px 2rem; /* Ajuste o padding conforme necessário */
     text-align: center;
-  
+    font-size: 16px; /* Ajuste o tamanho da fonte conforme necessário */
 
     &:hover {
-      background-color: #3F58EE;
-      border: none;
+      background-color: #3f58ee;
     }
   }
 
@@ -247,5 +235,4 @@ export const Container = styled.body`
       width: 40%;
     }
   }
-
-`
+`;
