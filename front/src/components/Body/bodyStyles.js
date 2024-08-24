@@ -5,13 +5,13 @@ export const Container = styled.section`
 
   .cards {
     display: flex;
-    padding: 20px 20px; /* Corrigido o uso das vírgulas */
+    padding: 10px 20px; /* Corrigido o uso das vírgulas */
     gap: 80px;
     justify-content: space-around;
     color: #04136e;
     flex-direction: row;
-    padding-top: 200px;
-    padding-bottom: 200px;
+    padding-top: 300px;
+    padding-bottom: 300px;
     font-family: Arial, Helvetica, sans-serif;
     margin: 0 auto; /* Centraliza o bloco horizontalmente */
     max-width: 1200px; /* Define uma largura máxima para o conteúdo */
@@ -30,18 +30,17 @@ export const Container = styled.section`
     flex-direction: column;
     align-items: center;
     text-align: center;
-    height: 200px;
   }
 
   .card h2 {
     padding-top: 15px;
-    font-size: 30px;
+    font-size: 25px;
     white-space: nowrap;
   }
 
   .card p {
     padding-top: 10px;
-    font-size: 14px;
+    font-size: 20px;
     white-space: nowrap;
   }
 

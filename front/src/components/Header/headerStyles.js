@@ -40,13 +40,13 @@ const backgroundChange = keyframes`
 export const Container = styled.section`
   position: relative;
   width: 100%;
-  height: 70vh; /* Ajuste a altura conforme necessário */
+  height: 90vh; /* Ajuste a altura conforme necessário */
   overflow: hidden;
 
   > h1 {
     font-size: 400px;
     position: absolute;
-    top: 89%; /* Ajuste a posição conforme necessário */
+    top: 115%; /* Ajuste a posição conforme necessário */
     left: 50%;
     transform: translate(-50%, -50%);
     color: white; /* Cor do texto */
