@@ -5,21 +5,23 @@ export const Container = styled.section`
 
   .cards {
     display: flex;
-    padding: 10px 20px; /* Corrigido o uso das vírgulas */
+    padding: 20px 20px; /* Corrigido o uso das vírgulas */
     gap: 80px;
     justify-content: space-around;
     color: #04136e;
     flex-direction: row;
-    padding-top: 65px;
-    padding-bottom: 65px;
+    padding-top: 200px;
+    padding-bottom: 200px;
     font-family: Arial, Helvetica, sans-serif;
     margin: 0 auto; /* Centraliza o bloco horizontalmente */
     max-width: 1200px; /* Define uma largura máxima para o conteúdo */
+
   }
 
   .container {
     margin: 0 auto; /* Centraliza o bloco horizontalmente */
     padding: 0 20px; /* Adiciona padding lateral para evitar overflow */
+   
   }
 
   .card {
@@ -28,11 +30,12 @@ export const Container = styled.section`
     flex-direction: column;
     align-items: center;
     text-align: center;
+    height: 200px;
   }
 
   .card h2 {
     padding-top: 15px;
-    font-size: 25px;
+    font-size: 30px;
     white-space: nowrap;
   }
 
