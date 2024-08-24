@@ -1,10 +1,7 @@
-import styled from "styled-components"
+import styled from "styled-components";
 
-
-
-export const Container = styled.body`
+export const Container = styled.div`
   width: 100%;
-  height: 80%;
   max-width: 100%;
   display: flex;
   flex-direction: column;
@@ -12,108 +9,132 @@ export const Container = styled.body`
   margin: auto;
   justify-content: space-between;
 
-.frameTextoRota{
-  width: 50%;
-}
+  .frameTextoRota {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
 
-.paragrafo{
-  display: flex;
-  flex-direction: row;
-  gap: 7%;
-  padding-top: 5%;
-  color: #04136F;
-  font-weight: lighter;
-}
-.tituloPagina{
-  padding-top: 3%;
-  font-size: 30px;
-  font-weight: 900;
-  color: #04136F;
+  .paragrafo {
+    display: flex;
+    flex-direction: row;
+    gap: 7%;
+    padding-top: 5%;
+    color: #04136f;
+    font-weight: lighter;
+  }
 
-} 
-  .ava{
+  .tituloPagina {
+    padding-top: 3%;
+    font-size: 30px;
+    font-weight: 900;
+    color: #04136f;
+    width: 100%;
+    text-align: left;
+    margin-bottom: 1rem;
+  }
+
+  .infoRoteiro {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .ava {
     display: flex;
     flex-direction: row;
     gap: 30px;
-    color: #04136F;
+    color: #04136f;
     padding-top: 10px;
-  
-  .nota{
-    font-weight: bolder;
-  }
-    
+
+    .nota {
+      font-weight: bolder;
+    }
   }
 
-  .descritivoDesc{
+  .descritivoDesc {
     display: flex;
     flex-direction: row;
     gap: 30px;
     padding-top: 20px;
-    color: #04136F;
+    color: #04136f;
     font-size: 20px;
   }
 
-  .descricao p{
-   padding-top: 30px;
-   color: #04136F;
-    
+  .descricao p {
+    padding-top: 30px;
+    color: #04136f;
   }
-  .descricao p span{
+
+  .descricao p span {
     font-weight: bolder;
   }
 
-  .itinerario{
-    color: #04136F;
+  .itinerario {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 3rem;
+  }
+
+  .itinerarioContent {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 1000px; /* Ajuste conforme necessário */
+    justify-content: space-between;
+  }
+
+  .parteUm {
     width: 50%;
-   z-index: -1;
+    padding-right: 2rem;
   }
 
-  h4{
-    font-size: 30px;
-    padding-top: 5rem;
-
+  .pUm {
+    padding-top: 1rem;
+    z-index: 1;
   }
-  .parteUm{
+
+  .pUm p span {
+    font-weight: bold;
+  }
+
+  .img {
     width: 50%;
     display: flex;
-    /* flex-direction: row; */
-    flex-wrap: wrap;
-    
-  }
-  .pUm{
-    padding-top: 1rem;
-  } 
+    justify-content: center;
 
-  .pUm p span{
-    font-weight: bold;
-   }
-
-  .img{
-    padding-left: 23rem;
-   position: relative;
-   top: -10rem;
-   z-index: -1;
+    img {
+      max-width: 100%;
+      height: auto;
+    }
   }
-  .paragrafos{
+
+  .paragrafos {
     width: 50%;
     display: flex;
     flex-direction: column;
-    color: #04136F;
+    color: #04136f;
     gap: 15px;
     padding-bottom: 3%;
   }
-  .paragrafos p span{
+
+  .paragrafos p span {
     font-weight: bold;
   }
-  
-  .tituloDetalhes{
+
+  .tituloDetalhes {
     width: 50%;
     font-size: 170%;
-    color: #04136F;
+    color: #04136f;
     padding-bottom: 1%;
-
   }
-  .Infos{
+
+  .Infos {
     position: relative;
     display: flex;
     flex-direction: row;
@@ -121,12 +142,10 @@ export const Container = styled.body`
     gap: 10px;
     justify-content: center;
     width: 100%;
-
   }
-  .detalhes{
+
+  .detalhes {
     display: flex;
     flex-direction: column;
-    
   }
-
-` 
+`;

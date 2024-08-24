@@ -19,7 +19,8 @@ import {
   ModalButton,
   FormWrapper,
   CardWrapper,
-} from "./checkoutCartaoStyles"; // Importando os componentes estilizados
+  FormCont,
+} from "./checkoutCartaoStyles"; 
 
 const CheckoutCartao = () => {
   const [formData, setFormData] = useState({
@@ -77,8 +78,9 @@ const CheckoutCartao = () => {
       <Menu />
       <Container>
         <FormWrapper>
-          <FormTitle>Cadastrar um novo cartão:</FormTitle>
           <form onSubmit={handleSubmit}>
+            <FormTitle>Cadastrar um novo cartão:</FormTitle>
+
             <FormField>
               <Label htmlFor="name">Nome do cartão:</Label>
               <Input
@@ -102,56 +104,62 @@ const CheckoutCartao = () => {
                 maxLength="19" // Limita a entrada a 16 dígitos, incluindo espaços
               />
             </FormField>
-            <FormField>
-              <Label htmlFor="expirationDate">Data de Validade (MM/AA)</Label>
-              <Input
-                type="text"
-                id="expirationDate"
-                name="expirationDate"
-                value={formData.expirationDate}
-                onChange={handleChange}
-                required
-                maxLength="5" // Limita a entrada a "MM/AA"
-              />
-            </FormField>
-            <FormField>
-              <Label htmlFor="cvv">CVV</Label>
-              <Input
-                type="text"
-                id="cvv"
-                name="cvv"
-                value={formData.cvv}
-                onChange={handleChange}
-                required
-                maxLength="3" // Limita o CVV a 3 dígitos
-              />
-            </FormField>
+            <FormCont>
+              <div className="bloco">
+                <Label htmlFor="expirationDate">Data de Validade (MM/AA)</Label>
+                <Input
+                  type="text"
+                  id="expirationDate"
+                  name="expirationDate"
+                  value={formData.expirationDate}
+                  onChange={handleChange}
+                  required
+                  maxLength="5" // Limita a entrada a "MM/AA"
+                />
+              </div>
+              <div className="bloco">
+                <Label htmlFor="cvv">CVV</Label>
+                <Input
+                  type="text"
+                  id="cvv"
+                  name="cvv"
+                  value={formData.cvv}
+                  onChange={handleChange}
+                  required
+                  maxLength="3" // Limita o CVV a 3 dígitos
+                />
+              </div>
+            </FormCont>
+            <FormField></FormField>
             <Button type="submit">Cadastrar agora.</Button>
           </form>
+          <CardWrapper>
+            <CardContainer>
+              <Card className={formData.cvv ? "flipped" : ""}>
+                <CardFront>
+                  <img src="/card-placeholder.png" alt="Cartão de Crédito" />
+                  <CardDetails>
+                    <CardDetail className="card-number">
+                      {formatCardNumber(formData.cardNumber)}
+                    </CardDetail>
+                    <CardDetail className="card-name">
+                      {formData.name}
+                    </CardDetail>
+                    <CardDetail className="card-expiration">
+                      {formData.expirationDate}
+                    </CardDetail>
+                  </CardDetails>
+                </CardFront>
+                <CardBack>
+                  <img src="/card-placeholder.png" alt="Cartão de Crédito" />
+                  <CardDetails>
+                    <CardDetail className="card-cvv">{formData.cvv}</CardDetail>
+                  </CardDetails>
+                </CardBack>
+              </Card>
+            </CardContainer>
+          </CardWrapper>
         </FormWrapper>
-        <CardWrapper>
-          <CardContainer>
-            <Card className={formData.cvv ? "flipped" : ""}>
-              <CardFront>
-                <img src="/card-placeholder.png" alt="Cartão de Crédito" />
-                <CardDetails>
-                  <CardDetail className="card-number">
-                    {formatCardNumber(formData.cardNumber)}
-                  </CardDetail>
-                  <CardDetail className="card-name">{formData.name}</CardDetail>
-                  <CardDetail className="card-expiration">
-                    {formData.expirationDate}
-                  </CardDetail>
-                </CardDetails>
-              </CardFront>
-              <CardBack>
-                <CardDetails>
-                  <CardDetail className="card-cvv">{formData.cvv}</CardDetail>
-                </CardDetails>
-              </CardBack>
-            </Card>
-          </CardContainer>
-        </CardWrapper>
       </Container>
       <Footer />
 

@@ -9,21 +9,24 @@ export const Container = styled.div`
   margin: 0 auto;
 
   .titulo {
-    margin-bottom: 20px;
-    text-align: center;
+    margin-bottom: 80px;
+    margin-top: 30px;
+    text-align: start;
+    display: flex;
+    width: 90%;
 
     h2 {
-      font-size: 24px;
-      color: #333;
+      font-size: 30px;
+      color: #04136F;
+      font-weight: 700;
     }
   }
 
   .main-content {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     width: 100%;
     max-width: 1200px;
-    gap: 20px;
   }
 
   .inputArea {
@@ -149,6 +152,9 @@ export const Container = styled.div`
 
     .inputfoto {
       text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
 
       .p {
         margin-bottom: 10px;

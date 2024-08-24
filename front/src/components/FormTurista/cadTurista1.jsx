@@ -1,4 +1,5 @@
 import { useForm } from "react-hook-form";
+import { UserFocus } from "phosphor-react";
 
 export default function CadastroTurista1({ setTabForm }) {
   const {
@@ -19,9 +20,11 @@ export default function CadastroTurista1({ setTabForm }) {
   };
 
   return (
+
+      
     <div className="container">
       <div className="formSection">
-        <h1>Cadastro do Turista</h1> {/* Adiciona um título */}
+        <h1>Preencha os campos abaixo:</h1>
         <form className="form">
           <div className="inputColumn">
             <input
@@ -98,17 +101,14 @@ export default function CadastroTurista1({ setTabForm }) {
       </div>
 
       <div className="photoSection">
-        <div className="photoWrapper">
-          <img
-            src="path/to/default-avatar.png"
-            alt="Avatar"
-            className="avatar"
-          />
-          <div className="photoUpload">
-            <p>Escolha sua foto</p>
-            {/* Adicione o componente de upload de foto aqui */}
-          </div>
-        </div>
+        <section className="inputfoto">
+          <p className="p">Escolha sua Foto de Perfil</p>
+          <a href="#">
+            <div className="alterafoto">
+              <UserFocus className="vetor" size={90} color="#636363" />
+            </div>
+          </a>
+        </section>
       </div>
     </div>
   );

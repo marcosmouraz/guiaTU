@@ -12,20 +12,13 @@ export default function CadastroTurista() {
     <>
       <Menu />
       <Container>
-        <div className="titulo">
-          <h2>Olá Turista, realize seu cadastro...</h2>
-        </div>
-
-        <section className="inputfoto">
-          <p className="p">Escolha sua Foto de Perfil</p>
-          <a href="">
-            <div className="alterafoto">
-              <UserFocus className="vetor" size={90} color="#636363" />
-            </div>
-          </a>
+        <section className="all">
+          <div className="titulo">
+            <h2>Olá Turista, realize seu cadastro...</h2>
+          </div>
         </section>
 
-          <FormTurista/>
+        <FormTurista />
         <Footer />
       </Container>
     </>

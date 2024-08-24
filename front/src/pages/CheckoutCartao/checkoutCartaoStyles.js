@@ -21,20 +21,27 @@ const fadeIn = keyframes`
 `;
 
 export const Container = styled.div`
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px;
-  background-color: #f9f9f9;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   display: flex; /* Adiciona o layout flex */
-  justify-content: space-between; /* Espaça os itens igualmente */
-  gap: 20px; /* Adiciona um espaço entre o formulário e o cartão */
+  align-items: center;
+  justify-content: center;
+  height: 51.2vh;
 `;
 
 export const FormWrapper = styled.div`
-  flex: 1; /* Permite que o formulário ocupe o máximo de espaço disponível */
-  max-width: 600px; /* Limita a largura máxima do formulário */
+  background-color: transparent;
+  display: flex;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 50%;
+  border-radius: 8px;
+  border: 2px solid blue;
+  height: 90%;
+  align-items: center;
+  justify-content: space-between;
+
+  form{
+    width: 50%;
+  }
 `;
 
 export const CardWrapper = styled.div`
@@ -51,6 +58,15 @@ export const FormField = styled.div`
   margin-bottom: 15px;
 `;
 
+
+export const FormCont = styled.div`
+display: flex;
+justify-content: space-between;
+
+.bloco{
+  width: 46%;
+}
+`
 export const Label = styled.label`
   display: block;
   margin-bottom: 5px;
@@ -60,7 +76,7 @@ export const Label = styled.label`
 export const Input = styled.input`
   width: 100%;
   padding: 10px;
-  border: 1px solid #ddd;
+  border: 1px solid blue;
   border-radius: 4px;
   box-sizing: border-box;
 `;
@@ -103,8 +119,6 @@ export const CardFront = styled.div`
   position: absolute;
   width: 100%;
   height: 100%;
-  background: url("/card-placeholder.png") no-repeat center center;
-  background-size: cover; /* Garante que a imagem cubra o fundo */
   border-radius: 8px;
   backface-visibility: hidden;
   display: flex;
@@ -116,7 +130,6 @@ export const CardBack = styled.div`
   position: absolute;
   width: 100%;
   height: 100%;
-  background: #333;
   color: white;
   border-radius: 8px;
   backface-visibility: hidden;
@@ -154,7 +167,12 @@ export const CardDetail = styled.div`
 
   &.card-cvv {
     font-size: 18px;
-  }
+    margin-top: 100px;
+    display: flex;
+    padding: 0 30px;
+    justify-content: end;
+}
+
 `;
 
 // Estilos do modal
