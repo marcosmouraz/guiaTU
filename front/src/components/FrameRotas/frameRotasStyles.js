@@ -3,16 +3,17 @@ export const Container = styled.div`
   padding-bottom: 30px;
   display: flex;
   flex-direction: column;
-  row-gap: 15px;
+  gap: 50px;
+  align-items: center;
 
 
   .frame {
     position:relative;
     display: flex;
     background-color: #E2DFDF;
-    width: 950px;
-    height: 240px;
-    padding: 15px 25px 50px 35px;
+    width: 1100px;
+    height: 230px;
+    padding: 15px 25px 50px 1px;
     margin: 0 300px 0 210px; 
     /* align-items: center; */
     border-radius: 7px;
@@ -24,17 +25,17 @@ export const Container = styled.div`
   display: flex; /* Remove espaços em branco em torno da imagem */
   align-items: center;
   width:auto;
-  height: 30vh;
-  bottom: 10px;
-  top: 4px;
+  height: 25vh;
+  bottom: 20px;
+  top: px;
 }
 
 .imagem-sobreposta {
   display: flex;
   position: absolute;
   height: 50px; /* Mantém a proporção da imagem sobreposta */
-  top: 20px;
-  left: 188px;
+  top: 5px;
+  left: 200px;
 
 }
 .textosFrame h3 {
@@ -43,8 +44,8 @@ export const Container = styled.div`
   /* text-overflow: ellipsis; */
   width: 200px;
   position: absolute;
-  top: 40px;
-  left: 31%; 
+  top: 30px;
+  left: 25%; 
   color: #04136F;
   font-weight: bold;
   font-size: 20px;
@@ -100,7 +101,7 @@ top: 32px;
   font-size: 11px;
   max-width: 100%;
   gap: 20px;
-  left: -255px;
+  left: 20px;
   bottom: -30px;
 }
 `

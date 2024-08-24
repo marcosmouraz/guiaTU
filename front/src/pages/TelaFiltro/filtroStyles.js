@@ -14,9 +14,9 @@ export const Container = styled.div`
     display: flex;
     align-items: center;
     border-radius: 28px;
-    gap: 10px;
+    gap: 30px;
     border: 1px #afafaf solid;
-    font-size: 16px;
+    font-size: 28px;
     background-color: transparent;
     font-family: "Poppins", sans-serif;
     cursor: pointer;
@@ -33,7 +33,8 @@ export const Container = styled.div`
     font-size: 25px;
     font-weight: 550;
     margin-top: 55px;
-    margin-left: 210px;
+    margin-left: 180px;
+    margin-bottom: 20px;
     
   }
 `;

@@ -34,7 +34,7 @@ export default function FrameRotas() {
           <div className="paragrafo">
             <p>
               Conheça a historia de Recife essa cidade com a terceira rua mais
-              belas do Mundo, conhecendo suas origens e evolução enquanto
+              belas do Mundo, <br /> conhecendo suas origens e evolução enquanto
               exploramos as ruas dessa cidade maravilhosa.
             </p>
 
@@ -78,8 +78,8 @@ export default function FrameRotas() {
           <div className="paragrafo">
             <p>
               Conheça a historia de Olinda essa cidade linda e alegre onde sedia
-              os templos e igrejas mais antigas do Brasil, conheça suas origens
-              enquanto exploramos as ruas e igrejas dessa cidade maravilhosa.
+              os templos <br /> e igrejas mais antigas do Brasil, conheça suas origens
+              enquanto exploramos as  <br /> ruas e igrejas dessa cidade maravilhosa.
             </p>
 
             <div className="valor">
@@ -105,7 +105,7 @@ export default function FrameRotas() {
         </div>
 
         <div className="textosFrame">
-          <h3>Tour pelos museus Recife e Olinda.</h3>
+          <h3>Tour Personalizada.</h3>
 
           <div className="nomeGuia">
             <h5>João Pedro</h5>
@@ -121,13 +121,15 @@ export default function FrameRotas() {
 
           <div className="paragrafo">
             <p>
-              Conheça a historia de Recife, Olinda e até parte da história da
-              história Judaica, conhecendo suas origens e evolução enquanto
-              exploramos as ruas das cidades irmães maravilhosas. 
+              Quer explorar o destino de uma forma única e totalmente adaptada
+              aos seus interesses? <br />Com nosso tour personalizado, você tem a
+              liberdade de criar o percurso dos seus sonhos.  Escolha os pontos
+              turísticos que deseja visitar, defina a duração de cada parada e
+              ajuste o itinerário conforme seu ritmo e preferências.
             </p>
 
             <div className="valor">
-              <h2>R$ 150</h2>
+              <h2>R$ 300</h2>
             </div>
 
             <div className="detalheIcones">

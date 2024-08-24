@@ -1,129 +1,39 @@
-import styled from 'styled-components' 
+import styled from "styled-components";
 
 export const Container = styled.div`
-  max-width: 100%;
-  height: 140vh;
+  padding-bottom: 30px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  gap: 20px;
 
-  .header{
-    display: flex;
-    color: #04136F;
-    white-space: nowrap;
-    padding-top: 15%;
-  
+  .titulopagina {
+    color: #04136f;
+    font-size: 25px;
+    padding-top: 50px;
   }
-  .tituloPagina{
-    display: flex;
-    flex-direction: row;
-    font-size: large;
-  
-  }
-  .buttonTitulo{
+  .buttonTitulo {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    width: 100%;
-    gap: 50%;
-    padding-top: 20%;
-    
+    margin-top: 50px;
+    gap: 250px;
+    font-family: "Poppins", sans-serif;
+    margin-right: 400px;
   }
-  .Frames{
-    gap:2rem;
-  }
-  .frameUm {
-    position:relative;
+  .Frame {
     display: flex;
-    background-color: #E2DFDF;
+    background-color: #e2dfdf;
     width: 950px;
     height: 240px;
-    padding: 15px 25px 50px 35px;
-    margin: 0 300px 0 210px; 
+    /* padding: 15px 25px 50px 35px; */
+    margin: 0 300px 0 210px;
     /* align-items: center; */
     border-radius: 7px;
   }
-  .cardCidade{
-    position: relative;
-  display: flex; /* Remove espaços em branco em torno da imagem */
-  align-items: center;
-  width:auto;
-  height: 30vh;
-  bottom: 10px;
-  top: 4px;
+  .cardCidade {
+    display: flex; /* Remove espaços em branco em torno da imagem */
+    align-items: center;
+    height:25vh;
   }
-  .textosFrame h3 {
-  display: flex;
-  white-space: nowrap;
-  color: #04136F;
-  font-weight: bold;
-  font-size: 20px;
-  padding-left: 2rem;
-  
-  }
-  .nomeGuia{
-  display: flex;
-  flex-direction: row;
-  color:#000;
-  position: relative;
-  top: 10px;
-  left: 5%;
-  gap: 1%;
-  font-size: small;
-}
-.nomeGuia .guia p{
-  font-weight: bold;
-  font-size: larger;
-}
-.paragrafo p{
-  display: flex;
-
-}
- 
-.frameDois{
-  position:relative;
-    display: flex;
-    background-color: #E2DFDF;
-    width: 950px;
-    height: 240px;
-    padding: 15px 25px 50px 35px;
-    margin: 0 300px 0 210px; 
-    border-radius: 7px;
-  
-  }
-  .cardCidade{
-    position: relative;
-  display: flex; /* Remove espaços em branco em torno da imagem */
-  align-items: center;
-  width:auto;
-  height: 30vh;
-  bottom: 10px;
-  top: 4px;
-  }
-  .textosFrame h3 {
-  display: flex;
-  white-space: nowrap;
-  color: #04136F;
-  font-weight: bold;
-  font-size: 20px;
-  padding-left: 2rem;
-  
-  }
-  .nomeGuia{
-  display: flex;
-  flex-direction: row;
-  color:#000;
-  position: relative;
-  top: 10px;
-  left: 5%;
-  gap: 1%;
-  font-size: small;
-}
-.nomeGuia .guia p{
-  font-weight: bold;
-  font-size: larger;
-}
-
-
-`
+`;
