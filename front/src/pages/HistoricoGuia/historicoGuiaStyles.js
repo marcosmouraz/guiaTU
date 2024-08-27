@@ -1,39 +1,71 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  padding-bottom: 30px;
   display: flex;
+  width: 100%;
   flex-direction: column;
-  align-items: center;
-  gap: 20px;
 
   .titulopagina {
+    display: flex;
     color: #04136f;
     font-size: 25px;
-    padding-top: 50px;
+    width: 50%;
+    justify-content: center;
+    margin-top: 2rem;
   }
-  .buttonTitulo {
+  .blocos{
     display: flex;
-    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    height:100vh;
+  }
+  .blocoLeft {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    align-items: center;
+    margin-left: 5rem;
+    
+  }
+  .buttonPasseios {
+    display: flex;
+    width: 90%;
     justify-content: space-between;
     margin-top: 50px;
-    gap: 250px;
     font-family: "Poppins", sans-serif;
-    margin-right: 400px;
+    margin-bottom: 1rem;
   }
   .Frame {
     display: flex;
     background-color: #e2dfdf;
-    width: 950px;
-    height: 240px;
-    /* padding: 15px 25px 50px 35px; */
-    margin: 0 300px 0 210px;
-    /* align-items: center; */
     border-radius: 7px;
+    gap: 20px;
+    padding: 10px;
   }
   .cardCidade {
     display: flex; /* Remove espaços em branco em torno da imagem */
     align-items: center;
-    height:25vh;
+    height: 25vh;
+  }
+  .blocoRight {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    align-items: center;
+   
+  }
+  .frameRight {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+  }
+  .Frame2{
+    display: flex;
+    background-color: #e2dfdf;
+    border-radius: 7px;
+    gap: 20px;
+    padding: 10px;
+    height: 80vh;
   }
 `;

@@ -24,6 +24,7 @@ module.exports = class authControllers {
     const token = jwt.sign(
       {
         id: turista.id,
+        type: "turista"
       },
       "secret"
     );
@@ -51,6 +52,7 @@ module.exports = class authControllers {
     const token = jwt.sign(
       {
         id: empreendedores.id,
+        type: "empreendedor",
       },
       "secret"
     );
@@ -63,6 +65,7 @@ module.exports = class authControllers {
 
     const guias = await Guias.findOne({
       where: { username: username },
+      
     });
 
     const validatePassword = await bcrypt.compare(
@@ -78,6 +81,7 @@ module.exports = class authControllers {
     const token = jwt.sign(
       {
         id: guias.id,
+        type: "guia",
       },
       "secret"
     );

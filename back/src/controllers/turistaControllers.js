@@ -20,4 +20,19 @@ module.exports =  class turistaControllers {
         
         }
     }
+
+    static async getOneTurista(request, response){
+        const { id } = request.params
+
+        const turista = await Turista.findByPk(id)
+
+        if(!turista) {
+            response.status(422).json({ message: "Turista não encontrado" })
+            return
+        }
+
+        response.status(200).json({ turista: turista })
+    }
+        
+    
 }

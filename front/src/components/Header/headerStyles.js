@@ -46,7 +46,7 @@ export const Container = styled.section`
   > h1 {
     font-size: 400px;
     position: absolute;
-    top: 115%; /* Ajuste a posição conforme necessário */
+    top: 80vh; /* Ajuste a posição conforme necessário */
     left: 50%;
     transform: translate(-50%, -50%);
     color: white; /* Cor do texto */
@@ -67,12 +67,10 @@ export const Container = styled.section`
     top: 91%; /* Ajuste a posição conforme necessário */
     left: 50%;
     width: 100%;
-    height: 100%;
     transform: translate(-50%, -50%);
     max-width: 1200px; /* Ajuste o max-width conforme necessário */
     display: flex;
     justify-content: center;
-    align-items: center;
     gap: 10px;
     z-index: 3;
     padding: 0 10px;

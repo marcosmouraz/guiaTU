@@ -1,6 +1,7 @@
 import {ContainerFormTab2} from "./cadTurista2Styles";
 
 export default function CadastroTurista2({register, setTabForm}) {
+  
   return (
     <ContainerFormTab2>
       <div className="inputUm">
@@ -17,7 +18,7 @@ export default function CadastroTurista2({register, setTabForm}) {
         <input
           type="text"
           placeholder="Confirme sua senha"
-          {...register("confirmarSenha")}
+          {...register("confirmarsenha")}
         />
       </div>
 
@@ -45,9 +46,13 @@ export default function CadastroTurista2({register, setTabForm}) {
         </label>
       </div>
 
-       <div className="buttons" > 
-      <button type="submit" className="enviar">Enviar</button>
-      <button onClick={() => setTabForm(0)} type="submit" className="voltar">Voltar</button>
+      <div className="buttons">
+        <button type="submit" className="enviar">
+          Enviar
+        </button>
+        <button onClick={() => setTabForm(0)} type="submit" className="voltar">
+          Voltar
+        </button>
       </div>
     </ContainerFormTab2>
   );

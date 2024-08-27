@@ -45,9 +45,27 @@ module.exports = class empreendedoresControllers {
 
       response
         .status(201)
-        .json({ message: "Empreendedor cadastrado com SUCESSO!", empreendedores: empreendedores });
+        .json({
+          message: "Empreendedor cadastrado com SUCESSO!",
+          empreendedores: empreendedores,
+        });
     } catch (error) {
-      response.status(422).json({ message: "ERROR AO CADASTRAR EMPREENDEDOR", error });
+      response
+        .status(422)
+        .json({ message: "ERROR AO CADASTRAR EMPREENDEDOR", error });
     }
+  }
+
+  static async getOneEmpreendedor(request, response) {
+    const { id } = request.params;
+
+    const empreendedor = await Empreendedores.findByPk(id);
+
+    if (!empreendedor) {
+      response.status(422).json({ message: "Empreendedor não encontrado" });
+      return;
+    }
+
+    response.status(200).json({ empreendedor: empreendedor });
   }
 };

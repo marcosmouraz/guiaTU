@@ -30,7 +30,7 @@ export default function TelaLogin() {
       } else if (turista === "guia") {
         response = await api.post("/guia/login", { username, senha_hash });
       } else if (turista === "empreendedor") {
-        response = await api.post("/empreendedores/login", {
+        response = await api.post("/empreendedor/login", {
           username,
           senha_hash,
         });
