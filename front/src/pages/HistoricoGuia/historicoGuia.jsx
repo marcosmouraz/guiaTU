@@ -110,7 +110,7 @@ export default function HistoricoGuia() {
               <h3>Turistas Confirmados:</h3>
             </div>
             <section className="FrameRight">
-              {/* 01 /////////////////////////////////////////////// */}
+              {/* TURISTA 01 /////////////////////////////////////////////// */}
               <div className="chatSelecionado">
                 <div className="frameFoto">
                   <div className="fotoUm">
@@ -141,7 +141,7 @@ export default function HistoricoGuia() {
                 </div>
               </div>
 
-              {/* 02 //////////////////////////////////////////////////////// */}
+              {/* TURISTA 02 //////////////////////////////////////////////////////// */}
               <div className="chatUm">
                 <div className="frameFoto">
                   <div className="fotoUm">
@@ -171,7 +171,7 @@ export default function HistoricoGuia() {
                   </div>
                 </div>
               </div>
-              {/* 03 ///////////////////////////////////////////////////////// */}
+              {/* TURISTA 03 ///////////////////////////////////////////////////////// */}
               <div className="chatUm">
                 <div className="frameFoto">
                   <div className="fotoUm">
@@ -201,7 +201,7 @@ export default function HistoricoGuia() {
                   </div>
                 </div>
               </div>
-              {/* 04 /////////////////////////////////////////////////////////////////// */}
+              {/* TURISTA 04 /////////////////////////////////////////////////////////////////// */}
               <div className="chatUm">
                 <div className="frameFoto">
                   <div className="fotoUm">
@@ -231,7 +231,7 @@ export default function HistoricoGuia() {
                   </div>
                 </div>
               </div>
-              {/* 05 //////////////////////////////////////////////////////////////////// */}
+              {/* TURISTA 05 //////////////////////////////////////////////////////////////////// */}
               <div className="chatUm">
                 <div className="frameFoto">
                   <div className="fotoUm">

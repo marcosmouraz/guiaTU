@@ -11,20 +11,15 @@ export default function HistoricoTurista() {
       <Menu />
       <Container>
         <div className="titulopagina">
-          <h2>Gerênciador de passeios</h2>
+          <h2>Historico de passeios</h2>
         </div>
 
         <div className="blocos">
-          <div className="blocoLeft">
+          <div className="bloco">
             <div className="buttonPasseios">
               <a href="">
                 <h3 className="ativos" onClick={1}>
-                  Solicitacoes de passeios
-                </h3>
-              </a>
-              <a href="">
-                <h3 className="ativos" onClick={1}>
-                  Passeios Ativos
+                  Reserva de passeios
                 </h3>
               </a>
               <a href="">
@@ -32,6 +27,9 @@ export default function HistoricoTurista() {
                   Passeios Encerrados
                 </h3>
               </a>
+            </div>
+            <div className="linha">
+              <hr />
             </div>
             <section className="Frame">
               <div className="cardCidade">
@@ -97,21 +95,6 @@ export default function HistoricoTurista() {
                     Conheça o maior acervo de artes da América do Sul do
                     instituto Brennand .
                   </p>
-                </div>
-              </div>
-            </section>
-          </div>
-
-          <div className="blocoRight">
-            <section className="Frame2">
-              <div className="foto">
-                <img src={CardRecife} alt="" className="imagem-fundo" />
-              </div>
-
-              <div className="textosFrame">
-                <h3>Tour pelo Recife antigo.</h3>
-                <div className="nomeGuia">
-                  <p>Rogerio Marques</p>
                 </div>
               </div>
             </section>

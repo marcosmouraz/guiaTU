@@ -9,23 +9,25 @@ export const Container = styled.div`
     display: flex;
     color: #04136f;
     font-size: 25px;
-    width: 50%;
+    width: 90%;
     justify-content: center;
-    margin-top: 2rem;
+    margin-top: 4rem;
   }
   .blocos {
     display: flex;
-    width: 100%;
     align-items: center;
     justify-content: center;
-    height: 100vh;
+    height: 80vh;
   }
-  .blocoLeft {
+  .bloco {
     display: flex;
     flex-direction: column;
     width: 50%;
     align-items: center;
     margin-left: 5rem;
+  }
+  .linha{
+    width: 100%;
   }
   .buttonPasseios {
     display: flex;
@@ -33,7 +35,6 @@ export const Container = styled.div`
     justify-content: space-between;
     margin-top: 50px;
     font-family: "Poppins", sans-serif;
-    margin-bottom: 1rem;
   }
   .Frame {
     display: flex;
