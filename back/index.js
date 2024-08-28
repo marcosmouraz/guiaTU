@@ -11,5 +11,5 @@ app.use(cors())
 app.use(router)
 
 app.listen(8080, () => {
-    console.log("Olá, Mundo!")
+    console.log("Servidor ativo com sucesso!")
 }) 

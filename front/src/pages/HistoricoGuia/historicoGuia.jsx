@@ -4,6 +4,12 @@ import Menu from "../../components/Menu/menu";
 import { Container } from "./historicoGuiaStyles";
 import CardRecife from "../../assets/cardRecifeFrame.svg";
 import Museu from "../../assets/brennand.svg";
+import PerfilUm from "../../assets/perfil_menu.svg"
+import PerfilDois from "../../assets/perfilTurista1.svg";
+import PerfilTres from "../../assets/perfilTurista2.svg";
+import PerfilQuatro from "../../assets/perfilTurista3.svg";
+import PerfilCinco from "../../assets/perfilTurista4.svg";
+import Chat from "../../assets/vetorChat.svg";
 
 export default function HistoricoGuia() {
   return (
@@ -18,8 +24,8 @@ export default function HistoricoGuia() {
           <div className="blocoLeft">
             <div className="buttonPasseios">
               <a href="">
-                <h3 className="ativos" onClick={1}>
-                  Solicitacoes de passeios
+                <h3 className="solicitacoes" onClick={1}>
+                  Solicitações de Passeios
                 </h3>
               </a>
               <a href="">
@@ -33,28 +39,27 @@ export default function HistoricoGuia() {
                 </h3>
               </a>
             </div>
-            <section className="Frame">
+            {/* FRAME 01 /////////////////////////////// */}
+            <section className="Frame1">
               <div className="cardCidade">
                 <img src={CardRecife} alt="" className="imagem-fundo" />
               </div>
 
               <div className="textosFrame">
-                <h3>Tour pelo Recife antigo.</h3>
+                <div className="titulo">
+                  <h3>Tour pelo Recife antigo.</h3>
+                  <p>Editar</p>
+                </div>
 
-                <div className="nomeGuia">
-                  <p>Rogerio Marques</p>
-
+                <div className="infoGuia">
                   <Star
                     className="estrela"
                     size={16}
                     color="#f1f500"
                     weight="fill"
                   />
-
                   <p className="nota">4.2</p>
-
                   <p className="avaliacao">83 avaliações</p>
-                  <div></div>
                 </div>
 
                 <div className="paragrafo">
@@ -67,29 +72,27 @@ export default function HistoricoGuia() {
               </div>
             </section>
 
-            <section className="Frame">
+            {/* FRAME 02 /////////////////////////////// */}
+            <section className="Frame2">
               <div className="cardCidade">
                 <img src={Museu} alt="" className="imagem-fundo" />
               </div>
 
               <div className="textosFrame">
-                <h3>Conheça Int. Ricardo Brennand.</h3>
+                <div className="titulo">
+                  <h3>Int. Ricardo Brennand.</h3>
+                  <p>Editar</p>
+                </div>
 
-                <div className="nomeGuia">
-                  <p className="guia">Rogerio Marques</p>
-
-                  <div className="nota">
-                    <p>4.2</p>
-
-                    <Star
-                      className="estrela"
-                      size={16}
-                      color="#f1f500"
-                      weight="fill"
-                    />
-
-                    <p className="avaliacao">83 avaliações</p>
-                  </div>
+                <div className="infoGuia">
+                  <Star
+                    className="estrela"
+                    size={16}
+                    color="#f1f500"
+                    weight="fill"
+                  />
+                  <p className="nota">4.2</p>
+                  <p className="avaliacao">83 avaliações</p>
                 </div>
 
                 <div className="paragrafo">
@@ -103,15 +106,159 @@ export default function HistoricoGuia() {
           </div>
 
           <div className="blocoRight">
-            <section className="Frame2">
-              <div className="foto">
-                <img src={CardRecife} alt="" className="imagem-fundo" />
+            <div className="tituloRight">
+              <h3>Turistas Confirmados:</h3>
+            </div>
+            <section className="FrameRight">
+              {/* 01 /////////////////////////////////////////////// */}
+              <div className="chatSelecionado">
+                <div className="frameFoto">
+                  <div className="fotoUm">
+                    <img src={PerfilUm} alt="" className="imagem-fundo" />
+                  </div>
+                </div>
+
+                <div className="infoTurista">
+                  <div className="nomeTurista">
+                    <p>Karen Albuquerque</p>
+                  </div>
+                  <div className="data">
+                    <p>25/08/2024</p>
+                  </div>
+                  <div className="qntPessoas">
+                    <p>02 pessoas</p>
+                  </div>
+                </div>
+                <div className="final">
+                  <div className="iconChat">
+                    <img src={Chat} alt="" />
+                  </div>
+                  <div className="cancelar">
+                    <a href="">
+                      <p>Cancelar</p>
+                    </a>
+                  </div>
+                </div>
               </div>
 
-              <div className="textosFrame">
-                <h3>Tour pelo Recife antigo.</h3>
-                <div className="nomeGuia">
-                  <p>Rogerio Marques</p>
+              {/* 02 //////////////////////////////////////////////////////// */}
+              <div className="chatUm">
+                <div className="frameFoto">
+                  <div className="fotoUm">
+                    <img src={PerfilDois} alt="" className="imagem-fundo" />
+                  </div>
+                </div>
+
+                <div className="infoTurista">
+                  <div className="nomeTurista">
+                    <p>Marcos Moura</p>
+                  </div>
+                  <div className="data">
+                    <p>02/08/2024</p>
+                  </div>
+                  <div className="qntPessoas">
+                    <p>01 pessoas</p>
+                  </div>
+                </div>
+                <div className="final">
+                  <div className="iconChat">
+                    <img src={Chat} alt="" />
+                  </div>
+                  <div className="cancelar">
+                    <a href="">
+                      <p>Cancelar</p>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              {/* 03 ///////////////////////////////////////////////////////// */}
+              <div className="chatUm">
+                <div className="frameFoto">
+                  <div className="fotoUm">
+                    <img src={PerfilTres} alt="" className="imagem-fundo" />
+                  </div>
+                </div>
+
+                <div className="infoTurista">
+                  <div className="nomeTurista">
+                    <p>Saulo Botelho</p>
+                  </div>
+                  <div className="data">
+                    <p>07/09/2024</p>
+                  </div>
+                  <div className="qntPessoas">
+                    <p>03 pessoas</p>
+                  </div>
+                </div>
+                <div className="final">
+                  <div className="iconChat">
+                    <img src={Chat} alt="" />
+                  </div>
+                  <div className="cancelar">
+                    <a href="">
+                      <p>Cancelar</p>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              {/* 04 /////////////////////////////////////////////////////////////////// */}
+              <div className="chatUm">
+                <div className="frameFoto">
+                  <div className="fotoUm">
+                    <img src={PerfilQuatro} alt="" className="imagem-fundo" />
+                  </div>
+                </div>
+
+                <div className="infoTurista">
+                  <div className="nomeTurista">
+                    <p>Heloisa Morais</p>
+                  </div>
+                  <div className="data">
+                    <p>02/10/2024</p>
+                  </div>
+                  <div className="qntPessoas">
+                    <p>02 pessoas</p>
+                  </div>
+                </div>
+                <div className="final">
+                  <div className="iconChat">
+                    <img src={Chat} alt="" />
+                  </div>
+                  <div className="cancelar">
+                    <a href="">
+                      <p>Cancelar</p>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              {/* 05 //////////////////////////////////////////////////////////////////// */}
+              <div className="chatUm">
+                <div className="frameFoto">
+                  <div className="fotoUm">
+                    <img src={PerfilCinco} alt="" className="imagem-fundo" />
+                  </div>
+                </div>
+
+                <div className="infoTurista">
+                  <div className="nomeTurista">
+                    <p>Marcelo Castro</p>
+                  </div>
+                  <div className="data">
+                    <p>31/08/2024</p>
+                  </div>
+                  <div className="qntPessoas">
+                    <p>04 pessoas</p>
+                  </div>
+                </div>
+                <div className="final">
+                  <div className="iconChat">
+                    <img src={Chat} alt="" />
+                  </div>
+                  <div className="cancelar">
+                    <a href="">
+                      <p>Cancelar</p>
+                    </a>
+                  </div>
                 </div>
               </div>
             </section>

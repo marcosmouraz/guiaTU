@@ -12,6 +12,7 @@ import TelaRoteiro from "../pages/TelaRoteiro/telaroteiro";
 import TelaFiltro from "../pages/TelaFiltro/telafiltro";
 import TelaGuia from "../pages/TelaGuia/telaGuia";
 import HistoricoGuia from "../pages/HistoricoGuia/historicoGuia";
+import HistoricoTurista from "../pages/HistoricoTurista/historicoTurista";
 
 export const router = createBrowserRouter([
   {
@@ -20,7 +21,7 @@ export const router = createBrowserRouter([
   },
   {
     path: "/cadastroinicial",
-    element: <CadastroInicial/>,
+    element: <CadastroInicial />,
   },
 
   {
@@ -62,5 +63,9 @@ export const router = createBrowserRouter([
   {
     path: "/historicoguia",
     element: <HistoricoGuia />,
+  },
+  {
+    path: "/historicoturista",
+    element: <HistoricoTurista/>,
   },
 ]);
