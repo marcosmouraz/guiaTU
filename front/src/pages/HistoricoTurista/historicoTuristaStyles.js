@@ -3,68 +3,75 @@ import styled from "styled-components";
 export const Container = styled.div`
   display: flex;
   width: 100%;
+  height: 100vh;
   flex-direction: column;
+  align-items: center;
 
   .titulopagina {
-    display: flex;
     color: #04136f;
-    font-size: 25px;
-    width: 90%;
-    justify-content: center;
-    margin-top: 4rem;
-  }
-  .blocos {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 80vh;
-  }
-  .bloco {
-    display: flex;
-    flex-direction: column;
+    margin-top: 20px;
     width: 50%;
-    align-items: center;
-    margin-left: 5rem;
+
   }
-  .linha{
-    width: 100%;
-  }
-  .buttonPasseios {
+
+  .subtitulo {
+    color: #04136f;
     display: flex;
-    width: 90%;
-    justify-content: space-between;
-    margin-top: 50px;
-    font-family: "Poppins", sans-serif;
-  }
-  .Frame {
-    display: flex;
-    background-color: #e2dfdf;
-    border-radius: 7px;
-    gap: 20px;
-    padding: 10px;
-  }
-  .cardCidade {
-    display: flex; /* Remove espaços em branco em torno da imagem */
-    align-items: center;
-    height: 25vh;
-  }
-  .blocoRight {
-    display: flex;
-    flex-direction: column;
+    justify-content: space-around;
+    margin-top: 100px;
     width: 50%;
-    align-items: center;
+    font-size: large;
+    font-size: 1.5rem;
   }
-  .frameRight {
-    display: flex;
-    width: 100%;
-    flex-direction: column;
-  }
-  .Frame2 {
-    display: flex;
+  .frame {
     background-color: #e2dfdf;
-    border-radius: 7px;
-    gap: 20px;
-    padding: 10px;
-    height: 80vh;
+    display: flex;
+    width: 50%;
+    height: 28vh;
+    border-radius: 10px;
+    margin-top: 2rem;
   }
+  .cardcidade{
+    padding:10px  ;
+  }
+  .imgguia {
+    display: flex;
+    position: absolute;
+    margin-top: 0.5rem;
+    margin-left: 9rem;
+  }
+  .rodapeframe{
+    
+   
+  }
+  .titulo{
+    color: #04136f;
+    display: flex;
+    margin-top: 2rem;
+    font-size: 20px;
+
+  }
+
+  .paragrafo {
+    display: flex;
+    margin-top: 1rem;
+    font-size: 20px;
+    width: 80%;
+  }
+
+.textos{
+  display: flex;
+  flex-direction: column;
+  gap: 23vh;
+  text-align: end;
+  margin-left: 2rem;
+  
+}
+.right{
+  display: flex;
+  margin-left: 2rem;
+
+}
+  
 `;

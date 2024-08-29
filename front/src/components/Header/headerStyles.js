@@ -82,6 +82,7 @@ export const Container = styled.section`
     border-radius: 8px;
     font-size: 16px;
     border: none;
+    
     max-width: 100%; /* Garante que os elementos não ultrapassem o max-width do container */
   }
 

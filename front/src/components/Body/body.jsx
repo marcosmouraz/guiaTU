@@ -32,22 +32,22 @@ export default function Body() {
     <Container>
       <section className="cards">
         <div className="card">
-          <MapPinArea size={130} color="#04136f" />
+          <MapPinArea size={80} color="#04136f" />
           <h2>Presença ampla</h2>
           <p>+ de 5 cidades incluindo interior</p>
         </div>
         <div className="card">
-          <UserCircleCheck size={130} color="#04136f" />
+          <UserCircleCheck size={80} color="#04136f" />
           <h2>Guias locais</h2>
           <p>+ de 100 guias credenciados parceiros</p>
         </div>
         <div className="card">
-          <CalendarCheck size={130} color="#04136f" />
+          <CalendarCheck size={80} color="#04136f" />
           <h2>Cancelamento gratuito</h2>
           <p>Até 10 dias antes do passeio</p>
         </div>
         <div className="card">
-          <ShieldCheck size={130} color="#04136f" />
+          <ShieldCheck size={80} color="#04136f" />
           <h2>Segurança e suporte</h2>
           <p>Privacidade e Comunicação</p>
         </div>

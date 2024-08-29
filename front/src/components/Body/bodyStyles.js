@@ -10,8 +10,8 @@ export const Container = styled.section`
     justify-content: space-around;
     color: #04136e;
     flex-direction: row;
-    padding-top: 150px;
-    padding-bottom: 150px;
+    padding-top: 50px;
+    padding-bottom: 50px;
     font-family: Arial, Helvetica, sans-serif;
     margin: 0 auto; /* Centraliza o bloco horizontalmente */
     max-width: 1200px; /* Define uma largura máxima para o conteúdo */
