@@ -12,7 +12,6 @@ export const Container = styled.div`
     display: flex;
     margin-top: 20px;
     width: 50%;
-
   }
 
   .subtitulo {
@@ -21,8 +20,17 @@ export const Container = styled.div`
     justify-content: space-around;
     margin-top: 100px;
     width: 50%;
+    font-family: "Poppins", sans-serif;
     font-size: large;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
+    a {
+      text-decoration: none; /* Remove o sublinhado */
+      color: #04136f; /* Usa a cor do texto ao redor ou defina uma cor específica */
+    }
+
+  .Reservas{
+    color: #fbbc04;
+  }
   }
   .frame {
     background-color: #e2dfdf;
@@ -41,9 +49,16 @@ export const Container = styled.div`
     margin-top: 0.5rem;
     margin-left: 9rem;
   }
+
+  .infoGuia{
+    display: flex;
+    gap:10px;
+    padding-top:20px ;
+  }
   .rodapeframe{
-    
-   
+    display: flex;
+  
+       
   }
   .titulo{
     color: #04136f;
@@ -57,21 +72,52 @@ export const Container = styled.div`
     display: flex;
     margin-top: 1rem;
     font-size: 20px;
-    width: 80%;
+    /* width: 80%;  */
   }
 
 .textos{
   display: flex;
   flex-direction: column;
   gap: 23vh;
-  text-align: end;
-  margin-left: 2rem;
+  /* text-align: end; */
   
+}
+
+.textos p{
+  color: red;
+
 }
 .right{
   display: flex;
-  margin-left: 2rem;
+  /* margin-left: 2rem; */
+  padding-right: 15px;
 
 }
+
+.frame2 {
+    background-color: #e2dfdf;
+    display: flex;
+    width: 50%;
+    height: 28vh;
+    border-radius: 10px;
+    margin-top: 2rem;
+  }
+/* .imgguia2 {
+    display: flex;
+    position: absolute;
+    margin-top: 0.5rem;
+    margin-left: 24rem;
+  } */
+
+.rigth2{
+  display: flex;
+  flex-direction: column;
+  gap: 23vh;
+  padding-right: 20px;
+
+
+}   
+
+
   
 `;
