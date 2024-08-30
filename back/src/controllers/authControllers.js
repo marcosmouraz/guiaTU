@@ -1,3 +1,5 @@
+//Autenticação de login ao banco de dados.
+
 const Turista = require('../model/Turista')
 const Empreendedores = require('../model/Empreendedores')
 const Guias = require("../model/Guia");
