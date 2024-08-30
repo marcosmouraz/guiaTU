@@ -6,11 +6,22 @@ import PerfilGuia2 from "../../assets/perfilGuia2.svg";
 import cardMuseu from "../../assets/cardMuseu.svg";
 import PerfilGuia3 from "../../assets/perfilGuia3.svg";
 import { Clock, FlagPennant, Star, UserSound } from "@phosphor-icons/react";
+import { useNavigate } from "react-router-dom";
 
 export default function FrameRotas() {
+
+  const navigation = useNavigate()
+
+
   return (
     <Container>
-      <section className="frame">
+      
+
+      <section className="frame" onClick={() => navigation("/telaguia", {
+        state: {
+          value: 100
+        }
+      })}>
         <div className="cardCidade">
           <img src={CardRecife} alt="" className="imagem-fundo" />
           <img src={PerfilGuia} alt="" className="imagem-sobreposta" />
@@ -39,7 +50,7 @@ export default function FrameRotas() {
             </p>
 
             <div className="valor">
-              <h2>R$ 98</h2>
+              <h2>R$ 100</h2>
             </div>
 
             <div className="detalheIcones">

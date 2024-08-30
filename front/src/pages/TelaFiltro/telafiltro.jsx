@@ -12,39 +12,42 @@ import FrameRotas from "../../components/FrameRotas/framerotas";
 
 export default function TelaFiltro() {
   return (
-    <Container>
+    <>
       <Menu />
       <Header />
-      <div className="body">
-        <button className="buttonSugestao">
-          <img src={vetorCampos} alt="vetorcampo" />
-          Campos
-        </button>
-        <button className="buttonSugestao">
-          <img src={vetorPraia} alt="vetorpraia" />
-          Praias
-        </button>
-        <button className="buttonSugestao">
-          <img src={vetorMuseus} alt="vetorMuseus" />
-          Museus
-        </button>
-        <button className="buttonSugestao">
-          <img src={vetorTrilhas} alt="vetorTrilhas" />
-          Trilhas e Cachoeiras
-        </button>
-        <button className="buttonSugestao">
-          <img src={vetorUrbanas} alt="vetorUrbanas" />
-          Urbanas
-        </button>
-      </div>
-      <div className="buttonSugestao">
-        <h3>Rotas ofertadas por nossos Guias:</h3>
-      </div>
-      <section className="framePasseio">
-        <img src="" alt="" />
-      </section>
-      <FrameRotas/>
-      <Footer/>
-    </Container>
+
+      <Container>
+        <div className="body">
+          <button className="buttonSugestao">
+            <img src={vetorCampos} alt="vetorcampo" />
+            Campos
+          </button>
+          <button className="buttonSugestao">
+            <img src={vetorPraia} alt="vetorpraia" />
+            Praias
+          </button>
+          <button className="buttonSugestao">
+            <img src={vetorMuseus} alt="vetorMuseus" />
+            Museus
+          </button>
+          <button className="buttonSugestao">
+            <img src={vetorTrilhas} alt="vetorTrilhas" />
+            Trilhas e Cachoeiras
+          </button>
+          <button className="buttonSugestao">
+            <img src={vetorUrbanas} alt="vetorUrbanas" />
+            Urbanas
+          </button>
+        </div>
+        <div className="buttonSugestao">
+          <h3>Rotas ofertadas por nossos Guias:</h3>
+        </div>
+        <section className="framePasseio">
+          <img src="" alt="" />
+        </section>
+        <FrameRotas />
+      </Container>
+      <Footer />
+    </>
   );
 }
