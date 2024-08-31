@@ -14,9 +14,9 @@ export default function CadastroTurista2({register, setTabForm}) {
       </div>
 
       <div className="inputUm">
-        <input type="text" placeholder="Senha" {...register("senha_hash")} />
+        <input type="password" placeholder="Senha" {...register("senha_hash")} />
         <input
-          type="text"
+          type="password"
           placeholder="Confirme sua senha"
           {...register("confirmarsenha")}
         />

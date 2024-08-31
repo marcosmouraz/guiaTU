@@ -16,7 +16,7 @@ export const Container = styled.body`
   text-align: start;
   width: 60%;
   justify-content: center;
-  color: #0416fe;
+  color: #04136f;
 }
 .container {
   display: flex;

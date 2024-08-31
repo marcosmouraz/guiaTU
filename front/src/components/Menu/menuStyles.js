@@ -132,12 +132,12 @@ export const Container = styled.div`
     background-color: #f9f9f9;
     min-width: 140px;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    z-index: 1;
+    z-index: 3;
     font-size: 18px;
     border-radius: 4px;
     cursor: pointer;
     width: 300px;
-    height: 55vh;
+    height: 75vh;
     right: -150px;
     top: 25px;
   }

@@ -81,7 +81,9 @@ export default function Menu() {
     <Container>
       <section className="menu">
         <div className="logo">
-          <img src={LogoMenu} alt="logoMenu" />
+          <a href="/">
+            <img src={LogoMenu} alt="logoMenu" />
+          </a>
         </div>
 
         <nav className="menu-desktop">
@@ -133,8 +135,8 @@ export default function Menu() {
                           <hr />
                         </div>
                         <div className="contLinks">
-                          <a href="">
-                            <p>Histórico de passeios</p>
+                          <a href="/historicoguia">
+                            <p>Gerênciador de passeios</p>
                           </a>
                           <a href="">
                             <p>Suporte</p>
@@ -149,8 +151,8 @@ export default function Menu() {
                       </div>
                     </div>
                   </li>
-                  //ate aqui é guia
                 ) : (
+                  //ate aqui é guia
                   //daqui pra baixo é turista
                   <li className="dropdownContainer">
                     <div className="dropdown">
@@ -172,10 +174,10 @@ export default function Menu() {
                           <hr />
                         </div>
                         <div className="contLinks">
-                          <a href="">
+                          <a href="/telapagamento">
                             <p>Pagamentos</p>
                           </a>
-                          <a href="">
+                          <a href="/historicoturista">
                             <p>Histórico de passeios</p>
                           </a>
                           <a href="">

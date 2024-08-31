@@ -7,7 +7,7 @@ export const Container = styled.section`
     display: flex;
     padding: 10px 20px; /* Corrigido o uso das vírgulas */
     gap: 80px;
-    justify-content: space-around;
+    justify-content: center;
     color: #04136e;
     flex-direction: row;
     padding-top: 50px;
@@ -15,13 +15,11 @@ export const Container = styled.section`
     font-family: Arial, Helvetica, sans-serif;
     margin: 0 auto; /* Centraliza o bloco horizontalmente */
     max-width: 1200px; /* Define uma largura máxima para o conteúdo */
-
   }
 
   .container {
     margin: 0 auto; /* Centraliza o bloco horizontalmente */
     padding: 0 20px; /* Adiciona padding lateral para evitar overflow */
-   
   }
 
   .card {
@@ -59,7 +57,7 @@ export const Container = styled.section`
     padding-left: 1rem;
     font-size: 35px;
   }
-
+  
   .imagensDestinos {
     display: flex; /* Usando flexbox para rolagem horizontal */
     overflow-x: scroll; /* Permite rolagem horizontal */
@@ -69,6 +67,7 @@ export const Container = styled.section`
     padding-right: 1rem;
     padding-bottom: 25px;
   }
+
   .swiper-wrapper {
     display: flex;
     gap: 10px;

@@ -58,39 +58,16 @@ export default function Body() {
           <h1>Destinos mais procurados</h1>
         </div>
 
-        {/* <section className="imagensDestinos">
-          <div className="imgUm">
-            <img src={Campo} alt="cardCampo" />
-            <h2 className="gravata">Gravatá-PE</h2>
-          </div>
-          <div className="imgDois">
-            <img src={Noronha} alt="cardNoronha" />
-            <h2 className="fernando">Fernando de Noronha-PE</h2>
-          </div>
-          <div className="imgTres">
-            <img src={Brenand} alt="cardBrenand" />
-            <h2 className="brennand">Ricardo Brennand-PE</h2>
-          </div>
-          <div className="imgQuatro">
-            <img src={Bonito} alt="cardBonito" />
-            <h2 className="bonito">Bonito-PE</h2>
-          </div>
-          <div className="imgCinco">
-            <img src={Olinda} alt="cardOlinda" />
-            <h2 className="olinda">Olinda-PE</h2>
-          </div>
-        </section> */}
-
         <Swiper
-        modules={[Navigation, Pagination, Scrollbar]}
+          modules={[Navigation, Pagination, Scrollbar]}
           slidesPerView={4}
           navigation
-          pagination={{ clickable: true }} 
+          pagination={{ clickable: true }}
         >
           {data.map((iten) => (
             <SwiperSlide key={iten.id}>
-              <h2 className="textCarrossel">{iten.text}</h2>
-              <img className="imgCarrossel" src={iten.img} alt="" />
+                <h2 className="textCarrossel">{iten.text}</h2>
+                <img className="imgCarrossel" src={iten.img} alt="" />
             </SwiperSlide>
           ))}
         </Swiper>

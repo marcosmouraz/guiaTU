@@ -39,12 +39,8 @@ export default function TelaFiltro() {
             Urbanas
           </button>
         </div>
-        <div className="buttonSugestao">
-          <h3>Rotas ofertadas por nossos Guias:</h3>
-        </div>
-        <section className="framePasseio">
-          <img src="" alt="" />
-        </section>
+        
+        
         <FrameRotas />
       </Container>
       <Footer />
