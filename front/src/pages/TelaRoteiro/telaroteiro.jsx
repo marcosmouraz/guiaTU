@@ -2,6 +2,7 @@ import Menu from "../../components/Menu/menu";
 import Footer from "../../components/Footer/footer";
 import { Container } from "../../pages/TelaRoteiro/roteiroStyles";
 import Itinerario from "../../assets/itinerariofoto.svg";
+import Jesus from "../../assets/jesus.svg"
 import {
   Clock,
   Info,
@@ -56,9 +57,10 @@ export default function TelaRoteiro() {
 
         <section className="itinerario">
           <div className="titulo">
-            <h4>Itinerário</h4>
+            <h4 className="tituloitineraio">Itinerário</h4>
           </div>
 
+         
           <div className="itinerarioContent">
             <div className="parteUm">
               <p className="pUm">
@@ -69,11 +71,17 @@ export default function TelaRoteiro() {
                 dessa zona ser chamada de <span>“Veneza Brasileira”</span>.
               </p>
             </div>
-
-            <div className="img">
-              <img src={Itinerario} alt="Itinerário" />
-            </div>
           </div>
+
+
+          <div className="imgs">
+
+            <img src={Jesus} alt="" className="bomjesus" />
+
+            <img src={Itinerario} alt="" className="marcozero" />
+
+          </div>
+        
         </section>
 
         <div className="paragrafos">
@@ -98,6 +106,7 @@ export default function TelaRoteiro() {
           <h3>Detalhes</h3>
         </div>
 
+        <div className="partefinal">
         <div className="Infos">
           <div className="detalhes">
             <Clock size={22} color="#04136e" />
@@ -119,6 +128,7 @@ export default function TelaRoteiro() {
             </p>
             <p>Pets não permitidos.</p>
           </div>
+        </div>
         </div>
       </Container>
       <Footer />

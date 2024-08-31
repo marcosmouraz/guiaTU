@@ -77,21 +77,25 @@ export const Container = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 3rem;
+  
   }
-
-  .itinerarioContent {
+  .tituloitinerario h4{
     display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    width: 100%;
-    max-width: 1000px; /* Ajuste conforme necessário */
-    justify-content: space-between;
+    justify-content: baseline;
+    color: #04136f;
+    
   }
-
+  .itinerarioContent{
+    display: flex;
+    justify-content: center;
+  }
+  
   .parteUm {
-    width: 50%;
-    padding-right: 2rem;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-wrap: wrap;
+   width: 50%;
   }
 
   .pUm {
@@ -103,14 +107,19 @@ export const Container = styled.div`
     font-weight: bold;
   }
 
-  .img {
-    width: 50%;
+  .imgs {
     display: flex;
+    flex-direction: row;
     justify-content: center;
+    gap: 2rem;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
 
-    img {
-      max-width: 100%;
-      height: auto;
+   .bomjesus{
+      height: 40vh;
+    }
+    .marcozero{
+      height: 40vh;
     }
   }
 
@@ -149,3 +158,4 @@ export const Container = styled.div`
     flex-direction: column;
   }
 `;
+
