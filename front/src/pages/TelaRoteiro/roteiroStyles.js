@@ -8,6 +8,7 @@ export const Container = styled.div`
   align-items: center;
   margin: auto;
   justify-content: space-between;
+  font-family: "Outfit", sans-serif;
 
   .frameTextoRota {
     width: 50%;
@@ -57,45 +58,50 @@ export const Container = styled.div`
   .descritivoDesc {
     display: flex;
     flex-direction: row;
+    align-items: center;
     gap: 30px;
     padding-top: 20px;
     color: #04136f;
     font-size: 20px;
+
+    hr {
+      border: #04136f 1px solid;
+      border-radius: 20px;
+      height: 20px; /* Define a altura da linha */
+    }
   }
 
   .descricao p {
     padding-top: 30px;
     color: #04136f;
-  }
-
-  .descricao p span {
-    font-weight: bolder;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
   }
 
   .itinerario {
-    width: 100%;
+    width: 50%;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-  
   }
-  .tituloitinerario h4{
+
+  .titulo h4 {
     display: flex;
     justify-content: baseline;
     color: #04136f;
-    
+    font-size: 2rem;
   }
-  .itinerarioContent{
+
+  .itinerarioContent {
     display: flex;
     justify-content: center;
+    color: #04136f;
   }
-  
+
   .parteUm {
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   flex-wrap: wrap;
-   width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 50%;
   }
 
   .pUm {
@@ -111,14 +117,16 @@ export const Container = styled.div`
     display: flex;
     flex-direction: row;
     justify-content: center;
+    flex-wrap: wrap;
     gap: 2rem;
     padding-top: 3rem;
     padding-bottom: 3rem;
 
-   .bomjesus{
+    .bomjesus {
       height: 40vh;
     }
-    .marcozero{
+
+    .marcozero {
       height: 40vh;
     }
   }
@@ -144,18 +152,97 @@ export const Container = styled.div`
   }
 
   .Infos {
-    position: relative;
     display: flex;
-    flex-direction: row;
-    align-items: center;
+    flex-direction: column;
     gap: 10px;
     justify-content: center;
-    width: 100%;
+    padding-bottom: 5rem;
+    width: 50%;
+    color: #04136f;
   }
 
   .detalhes {
     display: flex;
-    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
+
+  /* Media Queries */
+  @media (max-width: 1200px) {
+    .frameTextoRota,
+    .itinerario,
+    .parteUm,
+    .paragrafos,
+    .tituloDetalhes,
+    .Infos {
+      width: 80%;
+    }
+
+    .tituloPagina {
+      font-size: 24px;
+    }
+
+    .descritivoDesc {
+      font-size: 18px;
+    }
+
+    .imgs .bomjesus,
+    .imgs .marcozero {
+      height: 30vh;
+    }
+  }
+
+  @media (max-width: 900px) {
+    .frameTextoRota,
+    .itinerario,
+    .parteUm,
+    .paragrafos,
+    .tituloDetalhes,
+    .Infos {
+      width: 90%;
+    }
+
+    .tituloPagina {
+      font-size: 20px;
+    }
+
+    .descritivoDesc {
+      font-size: 16px;
+    }
+
+    .imgs .bomjesus,
+    .imgs .marcozero {
+      height: 25vh;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .frameTextoRota,
+    .itinerario,
+    .parteUm,
+    .paragrafos,
+    .tituloDetalhes,
+    .Infos {
+      width: 100%;
+    }
+
+    .tituloPagina {
+      font-size: 18px;
+    }
+
+    .descritivoDesc {
+      font-size: 14px;
+      flex-direction: column;
+    }
+
+    .imgs {
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .imgs .bomjesus,
+    .imgs .marcozero {
+      height: 20vh;
+    }
   }
 `;
-

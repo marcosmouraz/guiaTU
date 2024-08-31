@@ -39,17 +39,19 @@ export default function TelaRoteiro() {
             <div className="descricao">
               <div className="descritivoDesc">
                 <p>Descrição</p>
+                <hr />
                 <p>Detalhes</p>
+                <hr />
                 <p>Cancelamentos</p>
+                <hr />
                 <p>Opinões</p>
               </div>
               <p>
                 Conheça a história do Recife onde a cidade começou a criar forma,
-                com muitas histórias e belos patrimônios. <br />
-                <span>
-                  Com este tour, conheceremos sua origem e evolução enquanto
-                  passeamos por suas ruas.
-                </span>
+                com muitas histórias e belos patrimônios.
+                Com este tour, conheceremos sua origem e evolução enquanto
+                passeamos por suas ruas.
+               
               </p>
             </div>
           </div>
@@ -59,7 +61,7 @@ export default function TelaRoteiro() {
           <div className="titulo">
             <h4 className="tituloitineraio">Itinerário</h4>
           </div>
-
+        </section>
          
           <div className="itinerarioContent">
             <div className="parteUm">
@@ -82,7 +84,7 @@ export default function TelaRoteiro() {
 
           </div>
         
-        </section>
+        
 
         <div className="paragrafos">
           <p className="pDois">
@@ -106,30 +108,40 @@ export default function TelaRoteiro() {
           <h3>Detalhes</h3>
         </div>
 
-        <div className="partefinal">
         <div className="Infos">
           <div className="detalhes">
             <Clock size={22} color="#04136e" />
-            <Info size={22} color="#04136e" />
-            <XSquare size={22} color="#04136e" />
-            <Wheelchair size={22} color="#04136e" />
-            <Plant size={22} color="#04136e" />
-            <PawPrint size={22} color="#04136e" />
-          </div>
-
-          <div className="detalhes">
             <p>5 horas.</p>
+            </div>
+
+            <div className="detalhes">
+            <Info size={22} color="#04136e" />
             <p>Guia em português.</p>
+            </div>
+
+            <div className="detalhes">
+            <XSquare size={22} color="#04136e" />
             <p>Não inclusos: Alimentação, Taxas de entrada.</p>
+            </div>
+
+            <div className="detalhes">
+            <Wheelchair size={22} color="#04136e" />
             <p>Acessibilidade: Não é acessível para cadeirantes.</p>
+            </div>
+
+            <div className="detalhes">
+            <Plant size={22} color="#04136e" />
             <p>
-              Sustentabilidade: Todos os serviços cumprem o nosso Código de
-              Sustentabilidade.
+              Sustentabilidade: Todos os serviços cumprem o nosso Código de Sustentabilidade.
             </p>
+            </div>
+
+            <div className="detalhes">
+            <PawPrint size={22} color="#04136e" />
             <p>Pets não permitidos.</p>
-          </div>
+            </div>
         </div>
-        </div>
+        
       </Container>
       <Footer />
     </>
