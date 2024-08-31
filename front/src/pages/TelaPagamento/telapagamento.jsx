@@ -1,7 +1,11 @@
 import { CreditCard, Money,LockKey, PixLogo } from "@phosphor-icons/react";
 import Menu from "../../components/Menu/menu";
-import { Container } from "./pagamentoStyles";
+import { Container, Modal, ModalContent, ModalButton } from "./pagamentoStyles";
 import Footer from "../../components/Footer/footer";
+import { useLocation } from "react-router-dom";
+import { useState } from "react";
+import Qrcod from "../../assets/qrcode.svg"
+
 
 export default function TelaPagamento() {
   const handleRedirect = () => {
@@ -11,7 +15,28 @@ export default function TelaPagamento() {
     window.location.href = "/";
   };
 
+
+  const location = useLocation()
+  const { valor } = location.state || {}
+
+const [modalVisible, setModalVisible] = useState(false);
   
+const closeModal = () => setModalVisible(false);
+
+const handleSubmit = () => {
+  setModalVisible(true);
+};
+
+// OUTRO MODAL //////////////////////////
+
+const [modalPix, setModalPix] = useState(false);
+
+const closeModalPix = () => setModalPix(false);
+
+const handleSubmitPix = () => {
+  console.log("Pix")
+  setModalPix(true);
+};
 
   return (
     <>
@@ -26,12 +51,17 @@ export default function TelaPagamento() {
         <section className="header">
           <div className="opcoes">
             <div className="pix">
-              <input type="radio" name="pagamento" id="pix" />
+              <input
+                type="radio"
+                name="pagamento"
+                id="pix"
+                onClick={handleSubmitPix}
+              />
               <label htmlFor="pix">Pix</label>
               <PixLogo />
               <div className="cartaoSalvo">
                 <div className="radioLabel">
-                  <input type="radio" name="cartaoSalvo" id="cartaoSalvo" />
+                  <input type="radio" name="pagamento" id="cartaoSalvo" />
                   <label htmlFor="cartaoSalvo">Utilizar Cartão Salvo</label>
                 </div>
                 <div className="cartaoUtilizado">
@@ -72,16 +102,43 @@ export default function TelaPagamento() {
             </div>
           </div>
           <div className="valor">
-            <h2>R$ 200,00</h2>
+            <h2>R$ {valor}</h2>
           </div>
         </section>
         <section className="footer">
           <div className="concluir">
-            <input type="button" value="Concluir pagamento" onClick={handleRedirect2} />
+            <input
+              type="button"
+              value="Concluir pagamento"
+              onClick={handleSubmit}
+            />
           </div>
         </section>
       </Container>
       <Footer />
+
+      {modalVisible && (
+        <Modal>
+          <ModalContent>
+            <h3>Pagamento realizado com sucesso!</h3>
+            <ModalButton onClick={closeModal}>Fechar</ModalButton>
+          </ModalContent>
+        </Modal>
+      )}
+
+      {/* OUTRO MODAL /////////// */}
+
+      {modalPix && (
+        <Modal>
+          <ModalContent>
+            <h3>Escanei o QR COD</h3>
+            <div className="qrcod">
+              <img src={Qrcod} alt="" />
+            </div>
+            <ModalButton onClick={closeModalPix}>Fechar</ModalButton>
+          </ModalContent>
+        </Modal>
+      )}
     </>
   );
 }

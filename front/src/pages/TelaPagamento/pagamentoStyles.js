@@ -1,4 +1,14 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
+
+// Animação para girar o cartão
+const flipCard = keyframes`
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(180deg);
+  }
+`;
 
 export const Container = styled.body`
   width: 100%;
@@ -150,4 +160,54 @@ export const Container = styled.body`
       width: 20%;
     }
   }
+`;
+// Animação para o modal
+const fadeIn = keyframes`
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+`;
+// Estilos do modal
+export const Modal = styled.div`
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: ${fadeIn} 0.3s ease-in;
+`;
+
+export const ModalContent = styled.div`
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  max-width: 500px;
+  width: 100%;
+  img{
+    height: 45vh;
+  }
+`;
+
+export const ModalButton = styled.button`
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 10px;
+
+  &:hover {
+    background-color: #0056b3;
+  }
+  
 `;

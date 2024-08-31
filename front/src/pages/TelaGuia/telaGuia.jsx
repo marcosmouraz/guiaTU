@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import Menu from "../../components/Menu/menu";
 import { Container } from "../TelaGuia/guiaStyles";
 import Perfil from "../../assets/perfilguia.svg";
@@ -8,6 +8,7 @@ import "leaflet-routing-machine";
 import "leaflet/dist/leaflet.css";
 import "leaflet-routing-machine/dist/leaflet-routing-machine.css";
 import { ClockCountdown, Infinity } from "@phosphor-icons/react";
+import { useLocation, useNavigate } from "react-router-dom";
 
 
 export default function TelaGuia() {
@@ -42,7 +43,20 @@ export default function TelaGuia() {
       }
     };
   }, []);
-  
+
+  const location = useLocation()
+  const { value } = location.state || {}
+
+  const [pessoas, setPessoas] = useState(1)
+
+  const handleChange = (event) => {
+    setPessoas(Number(event.target.value))
+  }
+
+  const res = value * pessoas
+
+  const navigation = useNavigate()
+
   return (
     <>
       <Menu />
@@ -98,7 +112,7 @@ export default function TelaGuia() {
           <div className="infoValores">
             <div className="valor">
               <h4>
-                Preço: <span>R$200,00 / 2 pessoas</span>
+                Preço: <span>{res} / {pessoas} pessoas</span>
               </h4>
               <div className="inclusos">
                 <p className="paragrafo">
@@ -110,7 +124,7 @@ export default function TelaGuia() {
           </div>
           <section className="reserva">
             <div className="textoReserva">
-              <h4>A partir de R$100,00/pessoa</h4>
+              <h4>A partir de {value}/pessoa</h4>
               <p>Em até 3x sem juros*</p>
             </div>
             <div className="selecioneData">
@@ -119,19 +133,21 @@ export default function TelaGuia() {
             </div>
             <div className="inputsReserva">
               <input type="date" name="calendario" id="data" />
-              <select name="" id="qntPessoas">
-                <option value="">1</option>
-                <option value="">2</option>
-                <option value="">3</option>
-                <option value="">4</option>
-                <option value="">5</option>
-                <option value="">10</option>
+              <select name="" id="qntPessoas" value={pessoas} onChange={handleChange}>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="10">10</option>
               </select>
             </div>
             <div className="buttonReservar">
-              <a href="/telapagamento">
-                <button>Reservar agora</button>
-              </a>
+                <button onClick={() => navigation("/telapagamento", {
+                  state: {
+                    valor: res
+                  }
+                })}>Reservar agora</button>
             </div>
             <div className="buttonWhats">
               <a href="">
