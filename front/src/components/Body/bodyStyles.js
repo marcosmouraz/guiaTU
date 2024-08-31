@@ -5,16 +5,13 @@ export const Container = styled.section`
 
   .cards {
     display: flex;
-    padding: 10px 20px; /* Corrigido o uso das vírgulas */
-    gap: 80px;
+    flex-wrap: wrap;
+    gap: 30px;
     justify-content: center;
     color: #04136e;
-    flex-direction: row;
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding-top: 60px;
+    padding-bottom: 60px;
     font-family: Arial, Helvetica, sans-serif;
-    margin: 0 auto; /* Centraliza o bloco horizontalmente */
-    max-width: 1200px; /* Define uma largura máxima para o conteúdo */
   }
 
   .container {
@@ -56,6 +53,7 @@ export const Container = styled.section`
     padding-top: 30px;
     padding-left: 1rem;
     font-size: 35px;
+    
   }
   
   .imagensDestinos {
@@ -70,7 +68,8 @@ export const Container = styled.section`
 
   .swiper-wrapper {
     display: flex;
-    gap: 10px;
+    gap: 20px;
+    
   }
   .imagensDestinos img {
     display: inline-block; /* Para que as imagens fiquem na mesma linha */
