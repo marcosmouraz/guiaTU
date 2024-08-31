@@ -5,6 +5,7 @@ export const Container = styled.section`
 
   .cards {
     display: flex;
+    flex-wrap: wrap;
     padding: 10px 20px; /* Corrigido o uso das vírgulas */
     gap: 80px;
     justify-content: space-around;
@@ -13,8 +14,6 @@ export const Container = styled.section`
     padding-top: 50px;
     padding-bottom: 50px;
     font-family: Arial, Helvetica, sans-serif;
-    margin: 0 auto; /* Centraliza o bloco horizontalmente */
-    max-width: 1200px; /* Define uma largura máxima para o conteúdo */
 
   }
 

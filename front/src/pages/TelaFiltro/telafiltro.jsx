@@ -38,7 +38,7 @@ export default function TelaFiltro() {
         </button>
       </div>
       <div className="buttonSugestao">
-        <h3>Rotas ofertadas por nossos Guias:</h3>
+        <h3>Destinos recomendados  por nossos guias:</h3>
       </div>
       <section className="framePasseio">
         <img src="" alt="" />

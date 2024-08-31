@@ -11,7 +11,7 @@ export const Container = styled.div`
     position:relative;
     display: flex;
     background-color: #E2DFDF;
-    width: 1100px;
+    width: 60%;
     height: 230px;
     padding: 15px 25px 50px 1px;
     margin: 0 300px 0 210px; 
@@ -84,7 +84,7 @@ export const Container = styled.div`
   top: 80px;
   position: relative;
   left: 5%;
-  font-size: 17px;
+  font-size: 10;
 }
 .valor{
 color: #04136F;
