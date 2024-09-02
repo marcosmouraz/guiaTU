@@ -14,6 +14,8 @@ import HistoricoGuia from "../pages/HistoricoGuia/historicoGuia";
 import HistoricoTurista from "../pages/HistoricoTurista/historicoTurista";
 import RotaPersonalizada from "../pages/RotaPersonalizada/rotaPersonalizada"
 
+
+
 export const router = createBrowserRouter([
   {
     path: "/",
@@ -71,7 +73,7 @@ export const router = createBrowserRouter([
 
   {
     path: "/rotapersonalizada",
-    element: <RotaPersonalizada />,
+    element: <RotaPersonalizada/>,
   },
 
 ]);

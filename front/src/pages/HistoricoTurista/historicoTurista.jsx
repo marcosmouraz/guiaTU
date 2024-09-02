@@ -98,14 +98,22 @@ export default function HistoricoTurista() {
               <p className="avaliacao">83 avaliações</p>
             </div>
 
-            <div className="paragrafo"></div>
+            <div className="estrelas">
+              <Star size={32} weight="thin" />
+              <Star size={32} weight="thin" />
+              <Star size={32} weight="thin" />
+              <Star size={32} weight="thin" />
+              <Star size={32} weight="thin" />
+            </div>
           </div>
 
           <div className="right2">
-            <div className="imgguia2">
-              <img src={PerfilGuia2} alt="" className="perfilguia" />
+            <div className="elementos">
+              <div className="imgguia2">
+                <img src={PerfilGuia2} alt="" className="perfilguia" />
+              </div>
+              <h3>R$200,00</h3>
             </div>
-            <h3>R$200,00</h3>
           </div>
         </div>
       </Container>

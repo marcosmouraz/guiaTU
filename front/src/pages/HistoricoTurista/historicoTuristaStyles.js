@@ -102,21 +102,27 @@ export const Container = styled.div`
     border-radius: 10px;
     margin-top: 2rem;
   }
-/* .imgguia2 {
-    display: flex;
-    position: absolute;
-    margin-top: 0.5rem;
-    margin-left: 24rem;
-  } */
 
-.rigth2{
+.elementos{
   display: flex;
   flex-direction: column;
-  gap: 23vh;
-  padding-right: 20px;
+  gap: 18vh;
 
+}
 
-}   
+.right2{
+  display: flex;
+  /* margin-left: 2rem; */
+  padding-left: 22rem;
+
+}
+
+.estrelas{
+  display: flex;
+  padding-top: 1.5rem;
+  padding-left: 10px;
+}
+ 
 
 
   
