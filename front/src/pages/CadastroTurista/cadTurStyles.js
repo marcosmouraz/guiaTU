@@ -6,20 +6,21 @@ export const Container = styled.body`
   display:flex;
   justify-content: center;
   margin-top: 50px;
-  padding-bottom: 10%;
+  padding-bottom: 5rem;
   font-family: "Outfit", system-ui;
   
 }
-.titulo h2{
+.titulo {
+  width: 100%;
+  h2{
   font-size: 30px;
   display: flex;
   text-align: start;
-  justify-content: center;
-  padding-left: 100%;
-  width: 200%;
   color: #04136f;
-  flex-wrap: wrap;
-
+  justify-content: center;
+  white-space: nowrap;
+  padding-right: 32rem;
+}
 }
 .container {
   display: flex;
