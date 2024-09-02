@@ -21,10 +21,10 @@ const fadeIn = keyframes`
 `;
 
 export const Container = styled.div`
-  display: flex; /* Adiciona o layout flex */
+  display: flex;
   align-items: center;
   justify-content: center;
-  height: 51.2vh;
+  height: 80.2vh;
 `;
 
 export const FormWrapper = styled.div`
@@ -32,21 +32,36 @@ export const FormWrapper = styled.div`
   display: flex;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   padding: 20px;
-  width: 50%;
+  width: 80%;
   border-radius: 8px;
-  border: 2px solid blue;
+  border: 2px solid #04136e;
   height: 90%;
   align-items: center;
   justify-content: space-between;
 
-  form{
+  form {
     width: 50%;
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    height: auto;
+    padding: 10px;
+
+    form {
+      width: 100%;
+      margin-top: 20px;
+    }
   }
 `;
 
 export const CardWrapper = styled.div`
-  flex: 1; /* Permite que o cartão ocupe o máximo de espaço disponível */
-  max-width: 400px; /* Limita a largura máxima do cartão */
+  flex: 1;
+  max-width: 400px;
+
+  @media (max-width: 768px) {
+    max-width: 100%;
+  }
 `;
 
 export const FormTitle = styled.h2`
@@ -58,15 +73,24 @@ export const FormField = styled.div`
   margin-bottom: 15px;
 `;
 
-
 export const FormCont = styled.div`
-display: flex;
-justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 
-.bloco{
-  width: 46%;
-}
-`
+  .bloco {
+    width: 46%;
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+
+    .bloco {
+      width: 100%;
+      margin-bottom: 15px;
+    }
+  }
+`;
+
 export const Label = styled.label`
   display: block;
   margin-bottom: 5px;
@@ -76,7 +100,7 @@ export const Label = styled.label`
 export const Input = styled.input`
   width: 100%;
   padding: 10px;
-  border: 1px solid blue;
+  border: 1px solid;
   border-radius: 4px;
   box-sizing: border-box;
 `;
@@ -99,7 +123,7 @@ export const Button = styled.button`
 `;
 
 export const CardContainer = styled.div`
-  perspective: 1000px; /* Para aplicar a perspectiva de 3D */
+  perspective: 1000px;
   margin-top: 20px;
 `;
 
@@ -141,16 +165,16 @@ export const CardBack = styled.div`
 
 export const CardDetails = styled.div`
   position: absolute;
-  top: 15%;
+  top: 25%;
   left: 5%;
-  width: 90%;
+  width: 95%;
   color: white;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
   font-family: "Arial", sans-serif;
 `;
 
 export const CardDetail = styled.div`
-  font-size: 14px;
+  font-size: 20px;
 
   &.card-number {
     font-size: 18px;
@@ -171,8 +195,7 @@ export const CardDetail = styled.div`
     display: flex;
     padding: 0 30px;
     justify-content: end;
-}
-
+  }
 `;
 
 // Estilos do modal

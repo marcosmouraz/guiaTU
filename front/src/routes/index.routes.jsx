@@ -13,6 +13,7 @@ import TelaFiltro from "../pages/TelaFiltro/telafiltro";
 import TelaGuia from "../pages/TelaGuia/telaGuia";
 import HistoricoGuia from "../pages/HistoricoGuia/historicoGuia";
 import HistoricoTurista from "../pages/HistoricoTurista/historicoTurista";
+import TelaCampos from "../pages/TelaCampos/telacampos";
 
 export const router = createBrowserRouter([
   {
@@ -66,6 +67,6 @@ export const router = createBrowserRouter([
   },
   {
     path: "/historicoturista",
-    element: <HistoricoTurista/>,
+    element: <HistoricoTurista />,
   },
 ]);

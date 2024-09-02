@@ -63,7 +63,7 @@ export const Container = styled.div`
 
   .perfil {
     position: absolute;
-    padding-left: 8rem;
+    padding-left: 7.5rem;
     padding-top: 8px;
 
     @media (max-width: 768px) {
@@ -73,7 +73,7 @@ export const Container = styled.div`
   }
 
   .imagemCidade {
-    height: 25vh;
+    height: 23.5vh;
     display: flex;
 
     @media (max-width: 768px) {
@@ -83,7 +83,7 @@ export const Container = styled.div`
   }
 
   .imagemCidade2 {
-    height: 22.5vh;
+    height: 23vh;
     display: flex;
 
     @media (max-width: 768px) {
@@ -91,7 +91,7 @@ export const Container = styled.div`
       width: 100%;
     }
   }
-  .cidade{
+  .cidade {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -128,7 +128,7 @@ export const Container = styled.div`
 
     .paragrafo {
       display: flex;
-      width: 90%;
+      width: 95%;
 
       @media (max-width: 768px) {
         width: 100%;

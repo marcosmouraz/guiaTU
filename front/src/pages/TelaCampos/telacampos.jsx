@@ -1,36 +1,24 @@
-
 import Header from "../../components/Header/header";
 import Menu from "../../components/Menu/menu";
-import Footer from '../../components/Footer/footer'
-import { Container } from "./filtroStyles";
+import Footer from "../../components/Footer/footer";
+import { Container } from "./camposStyles";
+import FrameCampos from "../../components/FrameCampos/framecampos";
 import vetorCampos from "../../assets/vetorCampos.svg";
 import vetorPraia from "../../assets/vetorPraias.svg";
 import vetorMuseus from "../../assets/vetorMuseus.svg";
 import vetorTrilhas from "../../assets/vetorTrilhas.svg";
 import vetorUrbanas from "../../assets/vetorUrbanas.svg";
-import FrameRotas from "../../components/FrameRotas/framerotas";
-import { useNavigate } from "react-router-dom";
 
-export default function TelaFiltro() {
 
-  const navigation = useNavigate();
-  
+export default function TelaCampos() {
+
   return (
     <>
       <Menu />
       <Header />
       <Container>
         <div className="body">
-          <button
-            className="buttonSugestao"
-            onClick={() =>
-              navigation("/telacampos", {
-                state: {
-                  value: 100,
-                },
-              })
-            }
-          >
+          <button className="buttonSugestao">
             <img src={vetorCampos} alt="vetorcampo" />
             Campos
           </button>
@@ -52,7 +40,7 @@ export default function TelaFiltro() {
           </button>
         </div>
 
-        <FrameRotas />
+        <FrameCampos />
         <Footer />
       </Container>
     </>

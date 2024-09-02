@@ -1,63 +1,84 @@
 import { Image } from "@phosphor-icons/react";
 import { Container } from "./cadParDoisStyles";
 
+
 export default function CadastroEmpreendedores2({ register, setTabForm }) {
+
+  // //////////////////////////////////////////////////////
+const checkCEP = (e) => {
+  const cep = e.target.value.replace(/\D/g, "");
+  console.log(cep);
+  fetch(`https://viacep.com.br/ws/${cep}/json/`)
+    .then((res) => res.json())
+    .then((data) => {
+      console.log(data);
+      // register({ name: 'address', value: data.logradouro });
+      setValue("rua", data.rua);
+      setValue("bairro", data.bairro);
+      setValue("municipio", data.municipio);
+      setValue("estado", data.estado);
+      setFocus("numero_estabelecimento");
+    });
+};
+// ///////////////////////////////////////////////////////////
+
   return (
     <Container>
-      <div className="inputs">
-        <div className="inputContainer">
-          <input
-            className="nomeestabelecimento"
-            type="text"
-            placeholder="Nome Estabelecimento"
-            {...register("nome_estabelecimento")}
-          />
-          <input
-            className="cep"
-            type="text"
-            placeholder="CEP"
-            {...register("cep")}
-          />
-          <input
-            className="rua"
-            type="text"
-            placeholder="Rua"
-            {...register("rua")}
-          />
-          <input
-            className="numero"
-            type="text"
-            placeholder="Nº do estabelecimento"
-            {...register("numero_estabelecimento")}
-          />
+        <div className="inputs">
+          <div className="inputContainer">
+            <input
+              className="nomeestabelecimento"
+              type="text"
+              placeholder="Nome Estabelecimento"
+              {...register("nome_estabelecimento")}
+            />
+            <input
+              className="cep"
+              type="text"
+              placeholder="CEP"
+              {...register("cep")}
+              onBlur={checkCEP}
+            />
+            <input
+              className="rua"
+              type="text"
+              placeholder="Rua"
+              {...register("rua")}
+            />
+            <input
+              className="numero"
+              type="text"
+              placeholder="Nº do estabelecimento"
+              {...register("numero_estabelecimento")}
+            />
+          </div>
+          <div className="inputContainer">
+            <input
+              className="bairro"
+              type="text"
+              placeholder="Bairro"
+              {...register("bairro")}
+            />
+            <input
+              className="municipio"
+              type="text"
+              placeholder="Municipio"
+              {...register("municipio")}
+            />
+            <input
+              className="cnpj"
+              type="text"
+              placeholder="CNPJ"
+              {...register("cnpj")}
+            />
+            <input
+              className="numerotelefone"
+              type="text"
+              placeholder="(DDD)+telefone "
+              {...register("telefone")}
+            />
+          </div>
         </div>
-        <div className="inputContainer">
-          <input
-            className="bairro"
-            type="text"
-            placeholder="Bairro"
-            {...register("bairro")}
-          />
-          <input
-            className="municipio"
-            type="text"
-            placeholder="Municipio"
-            {...register("municipio")}
-          />
-          <input
-            className="cnpj"
-            type="text"
-            placeholder="CNPJ"
-            {...register("cnpj")}
-          />
-          <input
-            className="numerotelefone"
-            type="text"
-            placeholder="(DDD)+telefone "
-            {...register("telefone")}
-          />
-        </div>
-      </div>
 
       <div className="inputFoto">
         <h5> Adicione fotos do seu estabelecimento, produto ou serviço: </h5>

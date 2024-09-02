@@ -1,15 +1,13 @@
-import { Container } from "./frameRotasStyles";
-import CardRecife from "../../assets/cardRecifeFrame.svg";
+import { Container } from "./frameCamposStyles";
+import CardCampo1 from "../../assets/cardGravata.svg";
 import PerfilGuia from "../../assets/fotoPerfilGuia.svg";
-import cardOlinda from "../../assets/cardOlinda.svg";
-import PerfilGuia2 from "../../assets/perfilGuia2.svg";
-import LogoAzul from "../../assets/logoazul.svg"
+import cardCampo2 from "../../assets/cardGaranhuns.svg";
+import LogoAzul from "../../assets/logoazul.svg";
 import { Clock, FlagPennant, Star, UserSound } from "@phosphor-icons/react";
 import { useNavigate } from "react-router-dom";
 
-export default function FrameRotas() {
-
-  const navigation = useNavigate()
+export default function FrameCampos() {
+  const navigation = useNavigate();
 
   return (
     <Container>
@@ -32,14 +30,14 @@ export default function FrameRotas() {
               <img src={PerfilGuia} alt="" className="imagemPerfil" />
             </div>
             <div className="cidade">
-              <img src={CardRecife} alt="" className="imagemCidade" />
+              <img src={CardCampo1} alt="" className="imagemCidade" />
             </div>
             <div className="mid">
               <div className="rota">
-                <h2>Tour pelo Recife antigo</h2>
+                <h2>Charme da Serra - Gravatá</h2>
               </div>
               <div className="infoGuia">
-                <p className="nomeGuia">Rogerio Marques</p>
+                <p className="nomeGuia">Mário Albuquerque</p>
                 <div className="avaliacao">
                   <Star
                     className="estrela"
@@ -54,9 +52,11 @@ export default function FrameRotas() {
               </div>
               <div className="paragrafo">
                 <p>
-                  Conheça a história de Recife essa cidade com a terceira rua
-                  mais belas do Mundo. Conhecendo suas origens e evolução
-                  enquanto exploramos as ruas dessa cidade maravilhosa.
+                  Descubra, essa joia de Pernambuco com charme rústico e ruas
+                  encantadoras. A cidade preserva sua arquitetura colonial e
+                  tradições culturais vibrantes. Com um clima ameno e festas
+                  típicas, Gravatá é um destino perfeito para explorar a rica
+                  herança do interior pernambucano.
                 </p>
               </div>
             </div>
@@ -72,7 +72,7 @@ export default function FrameRotas() {
               <p className="infoBottom">Visitas guiadas</p>
             </div>
             <div className="valor">
-              <h2>R$ 100,00</h2>
+              <h2>R$ 150,00</h2>
             </div>
           </div>
         </div>
@@ -91,17 +91,17 @@ export default function FrameRotas() {
         >
           <div className="left">
             <div className="perfil">
-              <img src={PerfilGuia2} alt="" className="imagemPerfil" />
+              <img src={PerfilGuia} alt="" className="imagemPerfil" />
             </div>
             <div className="cidade">
-              <img src={cardOlinda} alt="" className="imagemCidade2" />
+              <img src={cardCampo2} alt="" className="imagemCidade2" />
             </div>
             <div className="mid">
               <div className="rota">
-                <h2>Olinda Franciscana</h2>
+                <h2>Garanhuns - História, Mágia e Tradição</h2>
               </div>
               <div className="infoGuia">
-                <p className="nomeGuia">Patricia Ferreira</p>
+                <p className="nomeGuia">Mário Albuquerque</p>
                 <div className="avaliacao">
                   <Star
                     className="estrela"
@@ -116,10 +116,11 @@ export default function FrameRotas() {
               </div>
               <div className="paragrafo">
                 <p>
-                  Conheça a historia de Olinda essa cidade linda e alegre onde
-                  sedia os templos e igrejas mais antigas do Brasil, conheça
-                  suas origens enquanto exploramos as ruas e igrejas dessa
-                  cidade maravilhosa.
+                  Explore a cidade das flores, a Suiça Pernambucana,
+                  conhecida por seu clima ameno e rica herança cultural.
+                  Garanhuns destaca-se por suas praças arborizadas,
+                  arquitetura histórica e festivais vibrantes, como o Festival
+                  de Inverno.
                 </p>
               </div>
             </div>
@@ -135,7 +136,7 @@ export default function FrameRotas() {
               <p className="infoBottom">Visitas guiadas</p>
             </div>
             <div className="valor">
-              <h2>R$ 70,00</h2>
+              <h2>R$ 220,00</h2>
             </div>
           </div>
         </div>
@@ -151,7 +152,7 @@ export default function FrameRotas() {
         <div
           className="frame"
           onClick={() =>
-            navigation("/rotapersonalizada", {
+            navigation("/telaguia", {
               state: {
                 value: 100,
               },
@@ -159,7 +160,6 @@ export default function FrameRotas() {
           }
         >
           <div className="left">
-            
             <div className="cidade">
               <img src={LogoAzul} alt="" className="logoGuiaTu" />
             </div>
@@ -183,11 +183,11 @@ export default function FrameRotas() {
               </div>
               <div className="paragrafo">
                 <p>
-                  Personalizar sua rota escolhendo o local de
-                  partida, paradas intermediárias e o destino final.
-                  Além disso, é possível visualizar o valor total do serviço de
-                  forma clara e transparente, proporcionando uma experiência de
-                  passeio flexível e adaptada às suas necessidades.
+                  Personalizar sua rota escolhendo o local de partida, paradas
+                  intermediárias e o destino final. Além disso, é possível
+                  visualizar o valor total do serviço de forma clara e
+                  transparente, proporcionando uma experiência de passeio
+                  flexível e adaptada às suas necessidades.
                 </p>
               </div>
             </div>

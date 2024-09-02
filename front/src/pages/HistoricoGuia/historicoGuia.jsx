@@ -69,6 +69,9 @@ export default function HistoricoGuia() {
                     enquanto exploramos as ruas dessa cidade maravilhosa.
                   </p>
                 </div>
+                <div className="status">
+                  <h3>Ativo</h3>
+                </div>
               </div>
             </section>
 
@@ -100,6 +103,9 @@ export default function HistoricoGuia() {
                     Conheça o maior acervo de artes da América do Sul do
                     instituto Brennand .
                   </p>
+                </div>
+                <div className="status">
+                  <h3>Ativo</h3>
                 </div>
               </div>
             </section>

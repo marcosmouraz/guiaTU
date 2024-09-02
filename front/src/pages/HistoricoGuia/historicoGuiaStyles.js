@@ -23,7 +23,7 @@ export const Container = styled.div`
   .blocoLeft {
     display: flex;
     flex-direction: column;
-    width: 50%;
+    width: 60%;
     align-items: center;
     margin-left: 5rem;
     gap: 1rem;
@@ -59,17 +59,18 @@ export const Container = styled.div`
     border: #fbbc04 solid;
     cursor: pointer;
     align-items: center;
-    height: 23vh;
+    height: 25vh;
   }
   .textosFrame {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 10px;
+    text-align: start;
   }
   .titulo {
     display: flex;
-    gap: 12rem;
     align-items: center;
+    justify-content: space-between;
 
     h3 {
       white-space: nowrap;
@@ -82,6 +83,9 @@ export const Container = styled.div`
   .infoGuia {
     display: flex;
     gap: 10px;
+    .paragrafo {
+      width: 50%;
+    }
   }
   .cardCidade {
     display: flex; /* Remove espaços em branco em torno da imagem */
@@ -89,6 +93,15 @@ export const Container = styled.div`
     img {
       height: 15vh;
     }
+  }
+  .status {
+    display: flex;
+    align-items: end;
+    justify-content: end;
+    width: 100%;
+    color: green;
+    padding-left: 10px;
+    height: 20px;
   }
   .Frame2 {
     display: flex;
@@ -99,7 +112,7 @@ export const Container = styled.div`
     border: #04136f solid;
     cursor: pointer;
     align-items: center;
-    height: 23vh;
+    height: 25vh;
     width: 100%;
   }
   .blocoRight {
@@ -112,7 +125,12 @@ export const Container = styled.div`
     display: flex;
     width: 65%;
     padding-bottom: 10px;
-    color: #04136f;
+    color: #fff;
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+    background-color: #04136f;
+    justify-content: center;
+    padding-top: 10px;
   }
   .FrameRight {
     display: flex;

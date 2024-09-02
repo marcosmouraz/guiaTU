@@ -5,11 +5,7 @@ import {
   ShieldCheck,
   UserCircleCheck,
 } from "@phosphor-icons/react";
-// import Bonito from "../../assets/bonitope.svg";
-// import Brenand from "../../assets/brenand.svg";
-// import Campo from "../../assets/campo.svg";
-// import Noronha from "../../assets/noronha.svg";
-// import Olinda from "../../assets/olindacard.svg";
+
 
 import "swiper/css";
 import "swiper/css/navigation";
