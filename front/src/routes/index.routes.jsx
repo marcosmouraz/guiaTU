@@ -3,7 +3,6 @@ import Home from "../pages/Home";
 import CadastroInicial  from "../pages/CadastroInicial/cadinicial"
 import CadastroGuia from "../pages/CadastroGuia/cadastroguia";
 import CadastroParceiro from "../pages/CadastroParceiro/cadastroparceiro";
-
 import CadastroTurista from "../pages/CadastroTurista/cadastroturista";
 import CheckoutCartao from "../pages/CheckoutCartao/checkoutCartao";
 import TelaLogin from "../pages/TelaLogin/telalogin";
@@ -13,6 +12,7 @@ import TelaFiltro from "../pages/TelaFiltro/telafiltro";
 import TelaGuia from "../pages/TelaGuia/telaGuia";
 import HistoricoGuia from "../pages/HistoricoGuia/historicoGuia";
 import HistoricoTurista from "../pages/HistoricoTurista/historicoTurista";
+import RotaPersonalizada from "../pages/RotaPersonalizada/rotaPersonalizada"
 
 export const router = createBrowserRouter([
   {
@@ -68,4 +68,10 @@ export const router = createBrowserRouter([
     path: "/historicoturista",
     element: <HistoricoTurista/>,
   },
+
+  {
+    path: "/rotapersonalizada",
+    element: <RotaPersonalizada />,
+  },
+
 ]);
