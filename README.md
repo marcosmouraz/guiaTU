@@ -10,19 +10,19 @@ GuiaTU é uma aplicação web desenvolvida como um projeto acadêmico para geren
 - **Autenticação**: JWT, bcrypt
 - **Bundler**: Vite
 - **API de Mapas**: StreetMap
-- **Pagamentos Online**: [Simulação de pagamento online via formulário, ex: Stripe]
-- **API de Endereços**: ViaCEP (ainda em implementação)
-- **Contêinerização**: Docker (implementação prevista ao final dos ajustes tecnicos)
+- **Pagamentos Online**: [Nome do serviço de pagamento utilizado, ex: Stripe]
+- **API de Endereços**: ViaCEP
+- **Contêinerização**: Docker
 
 ## Funcionalidades
 
 - Cadastro e autenticação de diferentes tipos de usuários (Turistas, Empreendedores, Guias)
-- Edição de perfil, incluindo foto de perfil e nome.
-- Formulários de cadastro com validação e tratamento de erros.
+- Edição de perfil, incluindo foto de perfil
+- Formulários de cadastro com validação e tratamento de erros
 - Navegação entre páginas usando `react-router-dom`
 - **Personalização de Rota**: Turistas podem criar e personalizar rotas de passeios com guias cadastrados na plataforma.
 - **Mapas**: Integração com a API de StreetMap para visualização de rotas e pontos turísticos.
-- **Pagamentos Online**: Integração com serviço de pagamento online (pix e cartão) para facilitar transações seguras.
+- **Pagamentos Online**: Integração com serviço de pagamento online para facilitar transações seguras.
 - **Busca de Endereços**: Utiliza a API do ViaCEP para buscar e preencher automaticamente informações de endereço.
 
 ## Instalação
