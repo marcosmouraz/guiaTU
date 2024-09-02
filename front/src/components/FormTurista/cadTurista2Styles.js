@@ -1,286 +1,144 @@
 import styled from "styled-components";
 
 export const ContainerFormTab2 = styled.div`
+ height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-  .inputUm {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-    padding: 10px 0;
-    width: 100%;
-    padding-left: 1rem;
-  }
+.formDois{
+  display: flex;
+  justify-content: center;
+  gap: 4rem;  
+  margin-bottom: 2rem;
+}
 
-  .inputUm input {
-    width: 100%;
-    max-width: 20rem;
-    height: 5vh;
-    border-style: groove;
-    border-radius: 4px;
-    padding: 1rem;
-  }
+.formsection {
+  flex: 2; /* Aumenta a largura da seção do formulário */
+  max-width: 600px; /* Aumenta o limite máximo de largura */
+  margin-right: 20px;
+  background-color: white;
+  padding: 30px; /* Aumenta o padding para preencher mais espaço */
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 
-  .buttonContainer {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 20px;
-  }
+}
 
-  .buttonFinalizar {
-    justify-content: center;
-    align-items: center;
-    width: 20%;
-    height: 5vh;
-    background-color: #04136e;
-    color: #fff;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background-color 0.2s;
-    border: none;
-    text-align: center;
-    display: flex;
-  }
+.formsection h1 {
+  font-size: 20px; /* Aumenta o tamanho do título */
+  color: #333;
+  margin-bottom: 25px;
+  font-family: "Outfit", system-ui;
+}
 
-  .checkContainer {
-    display: flex;
+/* Estilo do formulário */
+.inputUm {
+  display: flex;
+  flex-direction: column;
+  font-family: "Outfit", system-ui;
+}
+
+.inputUm {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+  font-family: "Outfit", system-ui;
+}
+
+/* Estilo dos inputs */
+.inputUm input {
+  padding: 12px; /* Aumenta o padding dos inputs */
+  margin-bottom: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 18px; /* Aumenta o tamanho da fonte dos inputs */
+  transition: border-color 0.3s ease;
+}
+
+/* Input em estado de erro */
+.inputUm input.error {
+  border-color: #ff4d4d;
+  background-color: #ffe6e6;
+}
+
+.inputUm input:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+/* Estilo das mensagens de erro */
+.error {
+  color: #ff4d4d;
+  font-size: 14px;
+  margin-top: -8px;
+  margin-bottom: 8px;
+}
+.checkContainer{
+    display: grid;
     flex-direction: column;
-    gap: 10px;
-    justify-content: center;
     align-items: center;
+    gap: 5px; /* Reduzido para compactar o espaço */
+    justify-content: center;
+    
+  }
+  .checkbox{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+  .inputscheckum {
+    display: flex;
+    gap: 10px;
+    align-items: center; /* Alinhado verticalmente */
     
   }
 
-  .inputscheckum {
+  .ContentC input[type="checkbox"] {
+    width: 16px; /* Ajustado para um tamanho menor */
+    height: 16px; /* Ajustado para um tamanho menor */
+    
+  }
+  .checkbox{
     display: flex;
-    flex-direction: row;
-    font-size: 13px;
-    display: flex;
-    gap: 1rem;
-    width: 100%;
+    align-items: center;
+  }
+  .custom-checkbox {
+    font-size: 14px; /* Ajustado para um tamanho menor */
+    gap: 50%;
   }
 
   .inputtext {
-    font-size: 13px;
-    width: 50%;
-    font-weight: lighter;
+    padding-right: 110px;
+    padding-bottom: 2rem;
+    font-size: 12px; /* Ajustado para um tamanho menor */
   }
 
-  @media (max-width: 2172px) {
-    .titulo {
-      width: 100%;
-      padding-left: 33rem;
-    }
-
-    .inputUm input {
-      max-width: 18rem;
-    }
-
-    .buttonFinalizar {
-      width: 25%;
-      margin-top: 2rem;
-    }
-
-    .checkContainer,
-    .inputscheckum,
-    .inputtext {
-      width: 100%;
-      padding-left: 16.5rem;
-    }
-  }
-
-  @media (max-width: 1929px) {
-    .titulo {
-      width: 100%;
-      padding-left: 42rem;
-    }
-
-    .inputUm input {
-      max-width: 18rem;
-      justify-content: center;
-    }
-
-    .buttonFinalizar {
-      width: 25%;
-      margin-top: 2rem;
-      justify-content: center;
-    }
-
-    .checkContainer,
-    .inputscheckum,
-    .inputtext {
-      width: 80%;
-      padding-left: 17rem;
-    }
-  }
-
-  @media (max-width: 1600px) {
-    .titulo {
-      width: 70%;
-      padding-left: 3rem;
-    }
-
-    .inputUm input {
-      max-width: 16rem;
-    }
-
-    .buttonFinalizar {
-      width: 30%;
-    }
-
-    .inputscheckum,
-    .inputtext {
-      width: 70%;
-    }
-  }
-  @media (max-width: 1366px) {
-    .titulo {
-      width: 90%;
-    }
-
-    .inputUm input {
-      max-width: 20rem;
-    }
-
-    .buttonFinalizar {
-      width: 30%;
-    }
-
-    .inputscheckum,
-    .inputtext {
-      width: 46.5%;
-    }
-  }
-
-  @media (max-width: 1318px) {
-    .titulo {
-      width: 100%;
-      padding-left: 26rem;
-    }
-
-    .inputUm input {
-      max-width: 15rem;
-    }
-
-    .buttonFinalizar {
-      width: 35%;
-      justify-content: center;
-    }
-
-    .checkContainer {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-      justify-content: center;
-      align-items: center;
-      padding: 10px;
-    }
-  }
-
-  @media (max-width: 992px) {
-    .titulo {
-      width: 100%;
-
-    }
-
-    .inputUm input {
-      max-width: 12rem;
-    }
-
-    .buttonFinalizar {
-      width: 40%;
-    }
-
-    .checkContainer,
-    .inputscheckum,
-    .inputtext {
-      gap: 10px;
-      width: 100%;
-      padding-left:9.5rem;
-    }
-
-  }
-
-  @media (max-width: 768px) {
-    .titulo {
-      width: 100%;
-    }
-
-    .inputUm input {
-      max-width: 10rem;
-    }
-
-    .buttonFinalizar {
-      width: 50%;
-    }
-
-    .inputscheckum,
-    .inputtext {
-      width: 90%;
-    }
-  }
-
-  @media (max-width: 576px) {
-    .inputUm {
-      flex-direction: column;
-      align-items: flex-start;
-    }
-
-    .inputUm input {
-      max-width: 100%;
-    }
-
-    .buttonFinalizar {
-      width: 60%;
-    }
-
-    .inputscheckum,
-    .inputtext {
-      width: 100%;
-    }
-  }
-
-  @media (max-width: 480px) {
-    .titulo h2 {
-      font-size: 24px;
-    }
-
-    .inputUm input {
-      max-width: 100%;
-    }
-
-    .buttonFinalizar {
-      width: 70%;
-    }
-  }
-  .buttons{
+  .inputs {
     display: flex;
-    justify-content: center;
+    justify-items: center;
     align-items: center;
-    gap: 20px; 
-    border-radius: 5%;
-    
-  }
-  .enviar{
-    background-color: #04136e;
-    color: #fff;
-    display: flex;
-    width: 5rem;
-    height: 1.5rem;
-    border-radius: 5px;
-    text-align: center;
-  }
- 
-
-  .voltar{
-    display: flex;
-    background-color: #04136e;
-    color: #fff;
-    width: 5rem;
-    height: 1.5rem;
-    border-radius: 5px;
+    gap: rem;
   }
 
-`;
+/* Botão de próxima etapa */
+.buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 18px; /* Aumenta o tamanho da fonte do botão */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  gap: 3rem;
+  padding: 5%;
+}
+
+button:hover {
+  background-color: #0056b3;
+  gap:50%;
+}
+
+`

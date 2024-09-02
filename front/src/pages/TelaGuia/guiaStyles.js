@@ -2,9 +2,9 @@ import styled from "styled-components";
 
 export const Container = styled.body`
   width: 100%;
-  height: 140vh;
+  height: 160vh;
   max-width: 100%;
-  margin: 0 auto;
+  font-family: "Outfit", sans-serif;
 
   .titulo {
     color: #04136e;
@@ -33,15 +33,23 @@ export const Container = styled.body`
     gap: 13rem;
     align-items: center;
   }
-
+  
   .blocoGuia {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 0.5rem;
+    color: #04136e;
     h2 {
       color: #04136e;
     }
+    .estrela{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10%;  
+  }
   }
 
   .blocoMapa {
@@ -84,6 +92,7 @@ export const Container = styled.body`
     font-size: 14px;
     padding-top: 10px;
     right: 5rem;
+    color: #636363;
   }
 
   .body {
@@ -97,22 +106,39 @@ export const Container = styled.body`
   .infoRota {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
     align-items: center;
+    flex-wrap: nowrap;
+    margin-right: 2rem;
+    height: 50vh;
+    
   }
 
   .data {
     font-size: 20px;
     color: #04136e;
-  }
+  
 
+  }
+  .inicioPartida{
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    padding-left: 5%;
+  }
   .horario {
     flex-direction: row;
     display: flex;
     align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+    /* gap: 5%; */
+    color: #04136f;
+    font-weight: bolder;
   }
 
   .linhas {
+    border: #04136f 1px solid;
+    border-radius: 20px;
     width: 1px;
     height: 2.5rem;
     background-color: black;
@@ -152,7 +178,7 @@ export const Container = styled.body`
 
   .inclusos {
     font-size: 14px;
-    color: #000;
+    color: #636363;
     margin-top: 1rem;
   }
 

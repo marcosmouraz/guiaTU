@@ -4,6 +4,10 @@ export default function CadastroTurista2({register, setTabForm}) {
   
   return (
     <ContainerFormTab2>
+
+      <div className="formDois">
+        <div className="formsection">
+          <h1>Estamos concluindo seu Cadastro ..</h1>
       <div className="inputUm">
         <input type="text" placeholder="E-mail" {...register("username")} />
         <input
@@ -47,12 +51,14 @@ export default function CadastroTurista2({register, setTabForm}) {
       </div>
 
       <div className="buttons">
-        <button type="submit" className="enviar">
-          Enviar
-        </button>
         <button onClick={() => setTabForm(0)} type="submit" className="voltar">
           Voltar
         </button>
+        <button type="submit" className="enviar">
+          Enviar
+        </button>
+      </div>
+      </div>
       </div>
     </ContainerFormTab2>
   );

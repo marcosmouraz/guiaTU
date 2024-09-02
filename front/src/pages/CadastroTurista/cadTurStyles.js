@@ -2,27 +2,30 @@ import styled from "styled-components";
 
 export const Container = styled.body`
 .all{
-  width:50%;
+  width:100%;
   display:flex;
   justify-content: center;
   margin-top: 50px;
-  margin-bottom: 50px;
-  margin-left: 20rem;
+  padding-bottom: 10%;
+  font-family: "Outfit", system-ui;
   
 }
-.titulo{
+.titulo h2{
   font-size: 30px;
   display: flex;
   text-align: start;
-  width: 60%;
   justify-content: center;
+  padding-left: 100%;
+  width: 200%;
   color: #04136f;
+  flex-wrap: wrap;
+
 }
 .container {
   display: flex;
   justify-content: center;
   gap: 4rem;  
-  font-family: Arial, sans-serif;
+  font-family: "Outfit", system-ui;
   margin-bottom: 2rem;
 }
 
@@ -87,7 +90,7 @@ export const Container = styled.body`
 /* Botão de próxima etapa */
 button {
   padding: 12px 18px; /* Aumenta o padding do botão */
-  background-color: #007bff;
+  background-color: #04136f;
   color: white;
   border: none;
   border-radius: 4px;

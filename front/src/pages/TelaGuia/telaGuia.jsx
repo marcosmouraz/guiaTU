@@ -7,7 +7,7 @@ import L from "leaflet";
 import "leaflet-routing-machine";
 import "leaflet/dist/leaflet.css";
 import "leaflet-routing-machine/dist/leaflet-routing-machine.css";
-import { ClockCountdown, Infinity } from "@phosphor-icons/react";
+import { Clock, ClockCountdown, Infinity, Star } from "@phosphor-icons/react";
 import { useLocation, useNavigate } from "react-router-dom";
 
 
@@ -62,13 +62,17 @@ export default function TelaGuia() {
       <Menu />
       <Container>
         <div className="titulo">
-          <h1>Confira seu guia e detalhes do passeio:</h1>
+          <h1>Confira informações do passeio:</h1>
           <h2 className="nomeRota">Tour pelo Recife Antigo</h2>
         </div>
         <section className="header">
           <div className="blocoGuia">
+            <h3>Detalhes do guia :</h3>
             <img className="fotoPerfil" src={Perfil} alt="Perfil do Guia" />
             <h2>Rogerio Marques</h2>
+            <div className="estrela">
+            <Star size={20} color="#fae100" weight="fill" /> <p>4.8</p>
+            </div>
             <p className="credencial">
               Credencial: 17.551568.72-7 <br />
               Atuação: Olinda, Paulista, Recife - PE
@@ -89,20 +93,29 @@ export default function TelaGuia() {
           <div className="infoRota">
             <h4 className="data">Qua. 04 jul</h4>
             <div className="horario">
-              <ClockCountdown size={15} />
+            <Clock size={17} color="#04136f" />
               <p>14:00</p>
+              <div className="inicioPartida">
+                Início: Paço Alfândega
+              </div>     
             </div>
             <div className="linhas">
               <hr />
             </div>
-            <Infinity size={14} />
+            <Infinity size={14} color="#04136f" />
             <div className="linhas">
               <hr />
             </div>
             <div className="horario">
-              <ClockCountdown size={15} />
+            <Clock size={17} color="#04136f" />
               <p>17:00</p>
+              <div className="fimPartida">
+                <p>Fim: Palácio das Princesas</p>
+              </div>
             </div>
+
+              
+
             <div className="buttonInfo">
               <a href="/telaroteiro">
                 <button type="submit">Mais informações e intinerário</button>
@@ -112,11 +125,11 @@ export default function TelaGuia() {
           <div className="infoValores">
             <div className="valor">
               <h4>
-                Preço: <span>{res} / {pessoas} pessoas</span>
+                Preço: <span>R${res} / {pessoas} pessoas</span>
               </h4>
               <div className="inclusos">
                 <p className="paragrafo">
-                  Inclusos: <br /> -Guia de Turismo (CADASTUR) <br /> -Taxas de
+                  Inclusos: <br /> - Guia de Turismo (CADASTUR) <br /> - Taxas de
                   visitação.
                 </p>
               </div>
@@ -124,7 +137,7 @@ export default function TelaGuia() {
           </div>
           <section className="reserva">
             <div className="textoReserva">
-              <h4>A partir de {value}/pessoa</h4>
+              <h4>A partir de R${value}/ por pessoa</h4>
               <p>Em até 3x sem juros*</p>
             </div>
             <div className="selecioneData">

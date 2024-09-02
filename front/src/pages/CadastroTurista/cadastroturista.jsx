@@ -14,7 +14,7 @@ export default function CadastroTurista() {
       <Container>
         <section className="all">
           <div className="titulo">
-            <h2>Olá Turista, realize seu cadastro...</h2>
+            <h2>Olá Turista, <br />realize seu cadastro...</h2>
           </div>
         </section>
 

@@ -6,7 +6,7 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: auto;
+  /* margin: auto; */
   justify-content: space-between;
   font-family: "Outfit", sans-serif;
 
