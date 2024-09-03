@@ -3,11 +3,11 @@ import styled from "styled-components";
 export const Container = styled.div`
   /* Use div em vez de body para compatibilidade com styled-components */
   width: 100%;
-  height: 80%;
-  max-width: 100%;
+  height: 136vh;
   display: flex;
   flex-direction: column;
   align-items: center;
+  font-family: "Outfit", system-ui;
 
   .titulo {
     display: flex;
@@ -58,16 +58,25 @@ export const Container = styled.div`
 
   .DadosPessoais {
     display: flex;
-    justify-content: center;
-    padding-right: 520px;
-    height: 5vh;
+    justify-content: start;
 
     h4 {
-      color: #04136e;
+      color: rgba(0, 0, 0, 0.6);
       font-family: "Poppins", sans-serif;
-      font-weight: 600;
-      font-style: normal;
+      font-weight: bolder;
+      font-size: 20px;
     }
+  }
+
+  .form {
+    height: 98%;
+    width: 100%;
+    margin-right: 20%;
+    background-color: white;
+    padding: 30px; /* Aumenta o padding para preencher mais espaço */
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    font-family: "Outfit", system-ui;
   }
 
   .inputs {
@@ -81,28 +90,41 @@ export const Container = styled.div`
     display: flex;
     flex-direction: column;
     gap: 10px;
+    padding-top: 6%;
   }
 
   input {
-    width: 150vw;
-    max-width: 20rem;
+    width: 100%; /* Ajusta a largura para 100% do container pai */
+    max-width: 30rem;
     height: 5vh;
     border-style: groove;
     border-radius: 4px;
     padding: 0.5rem;
+    font-family: "Outfit", system-ui;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 18px; /* Aumenta o tamanho da fonte dos inputs */
+    transition: border-color 0.3s ease;
   }
 
   .detalhesSenha {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: start;
     gap: 10px;
+    padding-bottom: 20px;
     padding-top: 30px;
-    padding-right: 410px;
+   
 
     h5 {
-      padding-right: 60px;
       font-weight: 700;
+    }
+
+    ul {
+      font-weight: normal;
+      font-size: 13px;
+      color: #1e1e1e;
+      padding-left: 3%;
     }
   }
 
@@ -129,110 +151,82 @@ export const Container = styled.div`
     }
   }
 
+  /* Media Queries para telas menores */
   @media (max-width: 1200px) {
     .titulo {
-      width: 60%;
-      padding-left: 2rem;
-      h2 {
-        font-size: 24px;
-      }
+      width: 70%;
+      padding-right: 100px;
     }
 
     .inputfoto {
-      padding-right: 40px;
-      width: 5rem;
+      padding-left: 300px;
     }
 
-    .DadosPessoais {
-      padding-right: 20rem;
+    .form {
+      width: 650px;
+    }
+  }
+
+  @media (max-width: 992px) {
+    .titulo {
+      width: 90%;
+      padding-right: 50px;
     }
 
-    .inputs {
-      padding-left: 10rem;
+    .inputfoto {
+      padding-left: 150px;
     }
 
-    input {
-      width: 100vw;
-    }
-
-    .detalhesSenha {
-      padding-right: 150px;
-    }
-
-    .buttonproximo {
-      width: 20%;
+    .form {
+      width: 100%;
+      padding: 20px;
     }
   }
 
   @media (max-width: 768px) {
+    height: auto;
     .titulo {
-      width: 80%;
-      padding-left: 1rem;
-      h2 {
-        font-size: 20px;
-      }
+      width: 100%;
+      padding-right: 0;
+      height: auto;
+      text-align: center;
     }
 
     .inputfoto {
-      padding-right: 20px;
-      width: 4rem;
+      padding-left: 0;
     }
 
-    .DadosPessoais {
-      padding-right: 10rem;
-    }
-
-    .inputs {
-      padding-left: 5rem;
-      grid-template-columns: 1fr;
-    }
-
-    input {
-      width: 90vw;
+    .form {
+      width: 100%;
+      padding: 15px;
     }
 
     .detalhesSenha {
-      padding-right: 60px;
+      padding-right: 0;
+      h5 {
+        padding-right: 0;
+      }
     }
 
-    .buttonproximo {
-      width: 30%;
+    input {
+      max-width: 100%;
+      font-size: 16px;
     }
   }
 
   @media (max-width: 480px) {
-    .titulo {
-      width: 90%;
-      padding-left: 0;
-      h2 {
-        font-size: 18px;
-      }
+    .titulo h2 {
+      font-size: 24px;
     }
 
-    .inputfoto {
-      padding-right: 10px;
-      width: 3rem;
-    }
-
-    .DadosPessoais {
-      padding-right: 5rem;
-    }
-
-    .inputs {
-      padding-left: 2rem;
-      grid-template-columns: 1fr;
-    }
-
-    input {
-      width: 80vw;
-    }
-
-    .detalhesSenha {
-      padding-right: 20px;
+    .inputfoto .p {
+      font-size: 14px;
+      width: auto;
     }
 
     .buttonproximo {
-      width: 40%;
+      font-size: 14px;
+      padding: 8px 1.5rem;
     }
   }
 `;

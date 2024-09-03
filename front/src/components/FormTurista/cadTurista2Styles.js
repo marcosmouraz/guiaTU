@@ -5,6 +5,7 @@ export const ContainerFormTab2 = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  
 
 .formDois{
   display: flex;
@@ -20,7 +21,7 @@ export const ContainerFormTab2 = styled.div`
   background-color: white;
   padding: 30px; /* Aumenta o padding para preencher mais espaço */
   border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
 
 }
 

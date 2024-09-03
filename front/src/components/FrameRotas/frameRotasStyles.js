@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Container = styled.div`
   display: flex;
   width: 100%;
-  height: 144vh;
+  height: 150vh;
   flex-direction: column;
   align-items: center;
 
@@ -38,12 +38,14 @@ export const Container = styled.div`
     display: flex;
     background-color: #e2dfdf;
     flex-direction: column;
-    height: 35vh;
+    height: 36vh;
     align-items: center;
     justify-content: center;
     border-radius: 7px;
     padding: 10px;
     cursor: pointer;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
 
     @media (max-width: 768px) {
       height: auto;
@@ -61,7 +63,17 @@ export const Container = styled.div`
     }
   }
 
-  .perfil {
+  .perfilum {
+    position: absolute;
+    padding-left: 7.5rem;
+    padding-top: 8px;
+
+    @media (max-width: 768px) {
+      position: static;
+      padding-left: 0;
+    }
+  }
+  .perfildois {
     position: absolute;
     padding-left: 8rem;
     padding-top: 8px;
@@ -71,7 +83,6 @@ export const Container = styled.div`
       padding-left: 0;
     }
   }
-
   .imagemCidade {
     height: 25vh;
     display: flex;
@@ -83,7 +94,7 @@ export const Container = styled.div`
   }
 
   .imagemCidade2 {
-    height: 22.5vh;
+    height: 24vh;
     display: flex;
 
     @media (max-width: 768px) {
@@ -190,9 +201,8 @@ export const Container = styled.div`
   .titulo2 {
     display: flex;
     justify-content: center;
-    padding-top: 30px;
     padding-bottom: 10px;
-    width: 40%;
+    width: 37%;
     white-space: nowrap;
 
     h1 {

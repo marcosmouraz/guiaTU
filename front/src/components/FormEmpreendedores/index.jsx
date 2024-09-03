@@ -49,9 +49,6 @@ export default function FormEmpreendedor() {
 
   return (
     <>
-      <div className="DadosPessoais">
-        <h4>Dados pessoais</h4>
-      </div>
       ;
       <form onSubmit={handleSubmit(onSubmit)}>
         {tabForm === 0 ? (

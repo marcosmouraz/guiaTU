@@ -5,15 +5,14 @@ export const Container = styled.div`
   flex-direction: column;
   align-items: center;
   padding: 20px;
-  max-width: 1200px;
-  margin: 0 auto;
+  height: 110vh;
 
   .titulo {
     margin-bottom: 80px;
     margin-top: 30px;
     text-align: start;
     display: flex;
-    width: 90%;
+    width: 80%;
 
     h2 {
       font-size: 30px;
@@ -33,7 +32,15 @@ export const Container = styled.div`
     width: 50%;
     display: flex;
     flex-direction: column;
-
+    font-family: "Outfit", system-ui;
+    flex: 2; /* Aumenta a largura da seção do formulário */
+    max-width: 600px; /* Aumenta o limite máximo de largura */
+    margin-right: 20px;
+    background-color: white;
+    padding: 30px; /* Aumenta o padding para preencher mais espaço */
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    
     .DadosPessoais {
       margin-bottom: 20px;
 
@@ -47,13 +54,14 @@ export const Container = styled.div`
       display: flex;
       flex-direction: column;
       width: 100%;
+     
 
       .inputContainer {
         display: flex;
         justify-content: space-between;
         gap: 20px;
         width: 100%;
-
+        
         .inputLeft,
         .inputRight {
           display: flex;
@@ -123,7 +131,7 @@ export const Container = styled.div`
 
         .buttonFinalizar {
           padding: 10px 20px;
-          background-color: #28a745;
+          background-color: #04136F;
           color: white;
           border: none;
           border-radius: 4px;

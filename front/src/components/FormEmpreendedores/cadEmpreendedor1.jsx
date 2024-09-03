@@ -4,6 +4,10 @@ import "../../pages/CadastroParceiro/cadParStyles"; // Adicione a importação d
 export default function CadastroEmpreendedores({ register, setTabForm }) {
   return (
     <>
+      <div className="form">
+      <div className="DadosPessoais">
+        <h4>Dados pessoais</h4>
+      </div>
       <div className="inputs">
         <div className="inputContainer">
           <input
@@ -72,6 +76,7 @@ export default function CadastroEmpreendedores({ register, setTabForm }) {
         <button className="buttonproximo" onClick={() => setTabForm(1)}>
           Próximo
         </button>
+      </div>
       </div>
     </>
   );

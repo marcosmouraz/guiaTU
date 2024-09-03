@@ -27,6 +27,14 @@ export default function CadastroTurista1({ register ,setTabForm }) {
               })}
             />
             
+            <input
+              className={`genero `}
+              type="text"
+              placeholder="Genero"
+              {...register("Genero", {
+                required: "Genero é obrigatório",
+              })}
+            />
 
             <input
               className={`dataNascimento`}
@@ -46,7 +54,14 @@ export default function CadastroTurista1({ register ,setTabForm }) {
               placeholder="CPF"
               {...register("cpf", { required: "CPF é obrigatório" })}
             />
-           
+           <input
+              className={`cep `}
+              type="text"
+              placeholder="CEP"
+              {...register("CEP", {
+                required: "CEP é obrigatório",
+              })}
+            />
 
             <input
               className={`Pais `}

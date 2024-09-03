@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Container = styled.div`
   display: flex;
   width: 100%;
-  height: 140vh;
+  height: 150vh;
   flex-direction: column;
   align-items: center;
 
@@ -26,7 +26,7 @@ export const Container = styled.div`
     justify-content: center;
     flex-direction: column;
     width: 65%;
-    gap: 20px;
+    gap: 30px;
     height: 50vh;
 
     @media (max-width: 768px) {
@@ -38,12 +38,13 @@ export const Container = styled.div`
     display: flex;
     background-color: #e2dfdf;
     flex-direction: column;
-    height: 30vh;
     align-items: center;
     justify-content: center;
     border-radius: 7px;
     padding: 10px;
     cursor: pointer;
+    border-radius: 8px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
 
     @media (max-width: 768px) {
       height: auto;
@@ -190,7 +191,6 @@ export const Container = styled.div`
   .titulo2 {
     display: flex;
     justify-content: center;
-    padding-top: 30px;
     padding-bottom: 10px;
     width: 50%;
     white-space: nowrap;

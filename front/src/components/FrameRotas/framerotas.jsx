@@ -28,7 +28,7 @@ export default function FrameRotas() {
           }
         >
           <div className="left">
-            <div className="perfil">
+            <div className="perfilum">
               <img src={PerfilGuia} alt="" className="imagemPerfil" />
             </div>
             <div className="cidade">
@@ -90,7 +90,7 @@ export default function FrameRotas() {
           }
         >
           <div className="left">
-            <div className="perfil">
+            <div className="perfildois">
               <img src={PerfilGuia2} alt="" className="imagemPerfil" />
             </div>
             <div className="cidade">

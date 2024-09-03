@@ -159,7 +159,7 @@ export const Container = styled.div`
     text-align: center;
     justify-content: center;
     background-color: #cccccc; /* Ajuste a cor de fundo conforme necessário */
-    color: #000;
+    color: #04136e;
     border-radius: 8px;
     border: none;
     cursor: pointer;
