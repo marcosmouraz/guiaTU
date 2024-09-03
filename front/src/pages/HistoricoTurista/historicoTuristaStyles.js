@@ -35,8 +35,8 @@ export const Container = styled.div`
   .frame {
     background-color: #e2dfdf;
     display: flex;
-    width: 50%;
-    height: 28vh;
+    width: 85%;
+    height: 40vh;
     border-radius: 10px;
     margin-top: 2rem;
   }
@@ -97,7 +97,7 @@ export const Container = styled.div`
 .frame2 {
     background-color: #e2dfdf;
     display: flex;
-    width: 50%;
+    width: 85%;
     height: 28vh;
     border-radius: 10px;
     margin-top: 2rem;
@@ -113,7 +113,6 @@ export const Container = styled.div`
 .right2{
   display: flex;
   /* margin-left: 2rem; */
-  padding-left: 22rem;
 
 }
 
