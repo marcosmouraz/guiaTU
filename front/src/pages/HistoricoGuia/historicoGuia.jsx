@@ -12,6 +12,9 @@ import PerfilCinco from "../../assets/perfilTurista4.svg";
 import Chat from "../../assets/vetorChat.svg";
 
 export default function HistoricoGuia() {
+
+  
+
   return (
     <>
       <Menu />

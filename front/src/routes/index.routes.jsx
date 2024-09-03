@@ -12,7 +12,6 @@ import TelaFiltro from "../pages/TelaFiltro/telafiltro";
 import TelaGuia from "../pages/TelaGuia/telaGuia";
 import HistoricoGuia from "../pages/HistoricoGuia/historicoGuia";
 import HistoricoTurista from "../pages/HistoricoTurista/historicoTurista";
-import TelaCampos from "../pages/TelaCampos/telacampos";
 import RotaPersonalizada from "../pages/RotaPersonalizada/rotaPersonalizada"
 
 
@@ -62,10 +61,6 @@ export const router = createBrowserRouter([
   {
     path: "/telafiltro",
     element: <TelaFiltro />,
-  },
-  {
-    path: "/telacampos",
-    element: <TelaCampos/>,
   },
   {
     path: "/historicoguia",

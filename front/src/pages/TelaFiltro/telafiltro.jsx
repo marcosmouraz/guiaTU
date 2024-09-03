@@ -10,10 +10,14 @@ import vetorTrilhas from "../../assets/vetorTrilhas.svg";
 import vetorUrbanas from "../../assets/vetorUrbanas.svg";
 import FrameRotas from "../../components/FrameRotas/framerotas";
 import { useNavigate } from "react-router-dom";
+import FrameCampos from "../../components/FrameCampos/framecampos";
+import { useState } from "react";
 
 export default function TelaFiltro() {
 
   const navigation = useNavigate();
+
+   const [Tab, setTab] = useState(0);
   
   return (
     <>
@@ -23,18 +27,18 @@ export default function TelaFiltro() {
         <div className="body">
           <button
             className="buttonSugestao"
-            onClick={() =>
-              navigation("/telacampos", {
-                state: {
-                  value: 100,
-                },
-              })
+            onClick={() => setTab(1)
             }
           >
             <img src={vetorCampos} alt="vetorcampo" />
             Campos
           </button>
-          <button className="buttonSugestao">
+          <button
+            className="buttonSugestao"
+            onClick={() => setTab(2)
+              
+            }
+          >
             <img src={vetorPraia} alt="vetorpraia" />
             Praias
           </button>
@@ -46,13 +50,18 @@ export default function TelaFiltro() {
             <img src={vetorTrilhas} alt="vetorTrilhas" />
             Trilhas e Cachoeiras
           </button>
-          <button className="buttonSugestao">
+          <button className="buttonSugestao" onClick={() => setTab(0)
+              
+            }>
             <img src={vetorUrbanas} alt="vetorUrbanas" />
             Urbanas
           </button>
         </div>
 
-        <FrameRotas />
+        {Tab === 0 && <FrameRotas />}
+        {Tab === 1 && <FrameCampos />}
+        
+
         <Footer />
       </Container>
     </>

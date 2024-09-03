@@ -2,7 +2,7 @@ import { Image } from "@phosphor-icons/react";
 import { Container } from "./cadParDoisStyles";
 
 
-export default function CadastroEmpreendedores2({ register, setTabForm }) {
+export default function CadastroEmpreendedores2({ register, setTabForm, setValue }) {
 
   // //////////////////////////////////////////////////////
 const checkCEP = (e) => {
@@ -12,12 +12,11 @@ const checkCEP = (e) => {
     .then((res) => res.json())
     .then((data) => {
       console.log(data);
-      // register({ name: 'address', value: data.logradouro });
-      setValue("rua", data.rua);
+      setValue("rua", data.logradouro);
       setValue("bairro", data.bairro);
-      setValue("municipio", data.municipio);
+      setValue("municipio", data.localidade);
+      setValue("pais", "Brasil");
       setValue("estado", data.estado);
-      setFocus("numero_estabelecimento");
     });
 };
 // ///////////////////////////////////////////////////////////
@@ -37,7 +36,7 @@ const checkCEP = (e) => {
               type="text"
               placeholder="CEP"
               {...register("cep")}
-              onBlur={checkCEP}
+              onBlur={(e) => checkCEP(e)}
             />
             <input
               className="rua"

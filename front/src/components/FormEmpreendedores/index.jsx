@@ -9,6 +9,7 @@ export default function FormEmpreendedor() {
     register,
     handleSubmit,
     watch,
+    setValue,
     formState: { errors },
   } = useForm();
 
@@ -54,9 +55,17 @@ export default function FormEmpreendedor() {
       ;
       <form onSubmit={handleSubmit(onSubmit)}>
         {tabForm === 0 ? (
-          <CadastroEmpreendedor1 register={register} setTabForm={setTabForm} />
+          <CadastroEmpreendedor1
+            register={register}
+            setTabForm={setTabForm}
+            setValue={setValue}
+          />
         ) : (
-          <CadastroEmpreendedor2 register={register} setTabForm={setTabForm} />
+          <CadastroEmpreendedor2
+            register={register}
+            setTabForm={setTabForm}
+            setValue={setValue}
+          />
         )}
       </form>
     </>

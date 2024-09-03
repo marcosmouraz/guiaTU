@@ -116,11 +116,10 @@ export default function FrameCampos() {
               </div>
               <div className="paragrafo">
                 <p>
-                  Explore a cidade das flores, a Suiça Pernambucana,
-                  conhecida por seu clima ameno e rica herança cultural.
-                  Garanhuns destaca-se por suas praças arborizadas,
-                  arquitetura histórica e festivais vibrantes, como o Festival
-                  de Inverno.
+                  Explore a cidade das flores, a Suiça Pernambucana, conhecida
+                  por seu clima ameno e rica herança cultural. Garanhuns
+                  destaca-se por suas praças arborizadas, arquitetura histórica
+                  e festivais vibrantes, como o Festival de Inverno.
                 </p>
               </div>
             </div>
@@ -152,7 +151,7 @@ export default function FrameCampos() {
         <div
           className="frame"
           onClick={() =>
-            navigation("/telaguia", {
+            navigation("/rotapersonalizada", {
               state: {
                 value: 100,
               },
