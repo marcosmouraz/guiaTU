@@ -186,7 +186,12 @@ export const Container = styled.div`
       }
     }
   }
-
+  .ondas{
+    background-color: #fff;
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+  }
   @media (max-width: 768px) {
     .main-content {
       flex-direction: column;
