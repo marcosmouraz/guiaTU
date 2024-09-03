@@ -37,30 +37,42 @@ export const Container = styled.div`
     margin-bottom: 1rem;
     white-space: nowrap;
     a {
-      text-decoration: none; /* Remove o sublinhado */
-      color: #04136f; /* Usa a cor do texto ao redor ou defina uma cor específica */
+      text-decoration: none;
+      color: #04136f;
+      padding: 10px 20px;
+      border-radius: 5px;
+      transition: background-color 0.3s, color 0.3s;
     }
 
     a:visited {
-      color: #04136f; /* Mantém a cor dos links visitados igual à dos não visitados */
+      color: #04136f;
+    }
+
+    .activeButton {
+      background-color: #f1f500;
+      color: #04136f;
     }
   }
-  .ativos {
-    color: #fbbc04;
-  }
 
-  .Frame1 {
+  .Frame1,
+  .Frame2 {
     display: flex;
     background-color: #e2dfdf;
     border-radius: 7px;
     gap: 20px;
     width: 100%;
     padding: 10px;
-    border: #fbbc04 solid;
     cursor: pointer;
     align-items: center;
     height: 25vh;
+    border: solid 2px #04136f; /* Borda azul padrão */
+    transition: border 0.3s;
   }
+
+  .selectedFrame {
+    border-color: #f1f500; /* Borda amarela quando selecionado */
+  }
+
   .textosFrame {
     display: flex;
     flex-direction: column;
@@ -88,7 +100,7 @@ export const Container = styled.div`
     }
   }
   .cardCidade {
-    display: flex; /* Remove espaços em branco em torno da imagem */
+    display: flex;
     align-items: center;
     img {
       height: 15vh;
@@ -103,18 +115,6 @@ export const Container = styled.div`
     padding-left: 10px;
     height: 20px;
   }
-  .Frame2 {
-    display: flex;
-    background-color: #e2dfdf;
-    border-radius: 7px;
-    gap: 20px;
-    padding: 10px;
-    border: #04136f solid;
-    cursor: pointer;
-    align-items: center;
-    height: 25vh;
-    width: 100%;
-  }
   .blocoRight {
     display: flex;
     flex-direction: column;
@@ -123,7 +123,7 @@ export const Container = styled.div`
   }
   .tituloRight {
     display: flex;
-    width: 65%;
+    width: 70%;
     padding-bottom: 10px;
     color: #fff;
     border-top-right-radius: 8px;
@@ -138,32 +138,29 @@ export const Container = styled.div`
     border-radius: 7px;
     padding: 5px;
     height: 80vh;
-    width: 65%;
+    width: 70%;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 20px;
   }
-  .chatUm {
-    display: flex;
-    align-items: center;
-    height: 12vh;
-    border-radius: 90px;
-    border: #04136f solid;
-    width: 95%;
-    gap: 8px;
-    cursor: pointer;
-  }
+  .chatUm,
   .chatSelecionado {
     display: flex;
     align-items: center;
     height: 12vh;
     border-radius: 90px;
-    border: #fbbc04 solid;
     width: 95%;
-    gap: 8px;
+    gap: 10px;
     cursor: pointer;
+    border: solid 2px transparent;
+    transition: border 0.3s;
   }
+
+  .selectedChat {
+    border-color: #f1f500;
+  }
+
   .fotoUm {
     img {
       height: 11vh;
@@ -204,12 +201,15 @@ export const Container = styled.div`
   .cancelar {
     font-size: 12px;
     a {
-      text-decoration: none; /* Remove o sublinhado */
-      color: #04136f; /* Usa a cor do texto ao redor ou defina uma cor específica */
+      text-decoration: none;
+      color: #04136f;
     }
 
     a:visited {
-      color: red; /* Mantém a cor dos links visitados igual à dos não visitados */
+      color: red;
     }
+  }
+  .status-desativado {
+    color: red;
   }
 `;

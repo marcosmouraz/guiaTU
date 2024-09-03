@@ -62,8 +62,10 @@ export default function Body() {
         >
           {data.map((iten) => (
             <SwiperSlide key={iten.id}>
-                <h2 className="textCarrossel">{iten.text}</h2>
-                <img className="imgCarrossel" src={iten.img} alt="" />
+              <h2 className="textCarrossel">{iten.text}</h2>
+              <div className="back">
+              </div>
+              <img className="imgCarrossel" src={iten.img} alt="" />
             </SwiperSlide>
           ))}
         </Swiper>
