@@ -6,6 +6,7 @@ export const Container = styled.div`
   height: 150vh;
   flex-direction: column;
   align-items: center;
+  font-family: "Outfit", system-ui;
 
   .titulo {
     display: flex;
@@ -44,7 +45,7 @@ export const Container = styled.div`
     padding: 10px;
     cursor: pointer;
     border-radius: 8px;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
 
     @media (max-width: 768px) {
       height: auto;
@@ -130,6 +131,7 @@ export const Container = styled.div`
     .paragrafo {
       display: flex;
       width: 95%;
+      font-family: Arial, Helvetica, sans-serif;
 
       @media (max-width: 768px) {
         width: 100%;
@@ -137,6 +139,7 @@ export const Container = styled.div`
     }
 
     .rota {
+      
       h2 {
         color: #04136f;
         font-size: 25px;
@@ -192,7 +195,7 @@ export const Container = styled.div`
     display: flex;
     justify-content: center;
     padding-bottom: 10px;
-    width: 50%;
+    width: 38%;
     white-space: nowrap;
 
     h1 {

@@ -6,7 +6,7 @@ export const Container = styled.div`
     justify-content: space-between;
     align-items: center;
     padding: 1vh 10%;
-    /* position: fixed; */
+    font-family: "Outfit", system-ui;
     z-index: 2;
   }
 
@@ -24,6 +24,7 @@ export const Container = styled.div`
   .dropdown {
     position: relative;
     display: inline-block;
+    font-family: "Outfit", system-ui;
   }
 
   /* Dropdown Content (Hidden by Default) */
@@ -36,6 +37,7 @@ export const Container = styled.div`
     z-index: 1;
     font-size: 18px;
     border-radius: 4px;
+    font-family: "Outfit", system-ui;
   }
 
   /* Links inside the dropdown */
@@ -67,6 +69,7 @@ export const Container = styled.div`
     z-index: 1;
     font-size: 18px;
     border-radius: 4px;
+    font-family: "Outfit", system-ui;
   }
 
   /* Links inside the dropdown */
@@ -100,6 +103,7 @@ export const Container = styled.div`
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;
     font-size: 18px;
+    font-family: "Outfit", system-ui;
     border-radius: 4px;
   }
 
@@ -133,6 +137,7 @@ export const Container = styled.div`
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 3;
     font-size: 18px;
+    font-family: "Outfit", system-ui;
     border-radius: 4px;
     cursor: pointer;
     width: 300px;
@@ -156,7 +161,6 @@ export const Container = styled.div`
     background-color: #04136f;
     padding: 20px;
     gap: 60px;
-    
   }
   .textos {
     display: flex;
@@ -194,6 +198,7 @@ export const Container = styled.div`
   /* Change the background color of the dropdown button when the dropdown content is shown */
   .dropdown:hover .dropbtn {
     background-color: #fff;
+    font-family: "Outfit", system-ui;
     color: #04136f;
     border-radius: 4px;
   }
@@ -207,6 +212,7 @@ export const Container = styled.div`
   .menu li button {
     color: #fff;
     font-size: 18px;
+    font-family: "Outfit", system-ui;
     text-decoration: none;
     transition: 0.2s;
     background-color: transparent;

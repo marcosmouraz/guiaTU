@@ -7,9 +7,9 @@ export const Container = styled.section`
   justify-content: center;
   align-items: center;
   padding-top: 1rem;
-  // padding-bottom: 1rem;
+  
   width: 100%;
-  margin: 0; /* Garante que não haja margens adicionais */
+  margin: 0; 
 `;
 
 export const Footerlist = styled.footer`

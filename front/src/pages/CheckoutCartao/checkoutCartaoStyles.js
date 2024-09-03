@@ -1,6 +1,6 @@
 import styled, { keyframes } from "styled-components";
 
-// Animação para girar o cartão
+
 const flipCard = keyframes`
   from {
     transform: rotateY(0deg);
@@ -10,7 +10,7 @@ const flipCard = keyframes`
   }
 `;
 
-// Animação para o modal
+
 const fadeIn = keyframes`
   from {
     opacity: 0;
@@ -21,6 +21,7 @@ const fadeIn = keyframes`
 `;
 
 export const Container = styled.div`
+  font-family: "Outfit", system-ui;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -32,7 +33,7 @@ export const FormWrapper = styled.div`
   display: flex;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   padding: 20px;
-  width: 80%;
+  width: 75%;
   border-radius: 8px;
   border: 2px solid #04136e;
   height: 90%;

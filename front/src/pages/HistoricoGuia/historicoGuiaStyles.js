@@ -4,6 +4,7 @@ export const Container = styled.div`
   display: flex;
   width: 100%;
   flex-direction: column;
+  font-family: "Outfit", system-ui;
 
   .titulopagina {
     display: flex;
@@ -33,7 +34,7 @@ export const Container = styled.div`
     width: 100%;
     justify-content: space-around;
     margin-top: 50px;
-    font-family: "Poppins", sans-serif;
+    font-family: "Outfit", system-ui;
     margin-bottom: 1rem;
     white-space: nowrap;
     a {
