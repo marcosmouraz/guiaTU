@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Container = styled.div`
   display: flex;
   width: 100%;
-  height: 140vh;
+  height: 144vh;
   flex-direction: column;
   align-items: center;
 
@@ -38,7 +38,7 @@ export const Container = styled.div`
     display: flex;
     background-color: #e2dfdf;
     flex-direction: column;
-    height: 30vh;
+    height: 35vh;
     align-items: center;
     justify-content: center;
     border-radius: 7px;
@@ -192,7 +192,7 @@ export const Container = styled.div`
     justify-content: center;
     padding-top: 30px;
     padding-bottom: 10px;
-    width: 50%;
+    width: 40%;
     white-space: nowrap;
 
     h1 {
