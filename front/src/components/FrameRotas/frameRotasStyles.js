@@ -6,6 +6,7 @@ export const Container = styled.div`
   height: 150vh;
   flex-direction: column;
   align-items: center;
+  font-family: "Outfit", system-ui;
 
   .titulo {
     display: flex;
@@ -102,7 +103,7 @@ export const Container = styled.div`
       width: 100%;
     }
   }
-  .cidade{
+  .cidade {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -140,6 +141,7 @@ export const Container = styled.div`
     .paragrafo {
       display: flex;
       width: 90%;
+      font-family: Arial, Helvetica, sans-serif;
 
       @media (max-width: 768px) {
         width: 100%;

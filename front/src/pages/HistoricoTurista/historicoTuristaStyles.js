@@ -6,6 +6,7 @@ export const Container = styled.div`
   height: 115vh;
   flex-direction: column;
   align-items: center;
+  font-family: "Outfit", system-ui;
 
   .titulopagina {
     color: #04136f;
@@ -16,10 +17,9 @@ export const Container = styled.div`
 
   .subtitulo {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     padding-top: 8rem;
     width: 50%;
-    font-family: "Poppins", sans-serif;
     font-size: 20px;
 
     a,
@@ -33,7 +33,8 @@ export const Container = styled.div`
       transition: background-color 0.3s ease;
       border-radius: 5px;
       font-size: 20px;
-      font-weight: 600;
+      font-family: "Outfit", system-ui;
+      font-weight: 700;
     }
 
     a:hover,
@@ -155,14 +156,14 @@ export const Container = styled.div`
   }
 
   .estrelas svg {
-    color: transparent; 
-    stroke: #000; 
-    stroke-width: 2px; 
+    color: transparent;
+    stroke: #000;
+    stroke-width: 2px;
     transition: fill 0.3s ease, stroke 0.3s ease;
   }
 
   .estrelas svg.active {
-    fill: #f1f500; 
-    stroke: #000; 
+    fill: #f1f500;
+    stroke: #000;
   }
 `;

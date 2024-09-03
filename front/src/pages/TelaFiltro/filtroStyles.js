@@ -8,6 +8,7 @@ export const Container = styled.div`
     gap: 1rem;
     margin-top: 1.5rem;
     white-space: nowrap;
+    font-family: "Outfit", system-ui;
 
     @media (max-width: 768px) {
       flex-direction: column;
@@ -24,7 +25,7 @@ export const Container = styled.div`
     border: 1px #afafaf solid;
     font-size: 28px;
     background-color: transparent;
-    font-family: "Poppins", sans-serif;
+    font-family: "Outfit", system-ui;
     cursor: pointer;
 
     @media (max-width: 768px) {

@@ -18,6 +18,7 @@ export const Section = styled.section`
 
 export const Container = styled.div`
   max-width: 100%;
+  font-family: "Outfit", system-ui;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -40,11 +41,14 @@ export const Container = styled.div`
   .textUm h2 {
     color: #d9d9d9;
     font-size: 40px;
+    font-family: "Outfit", system-ui;
   }
 
   .textUm h6 {
     color: #fff;
     font-weight: 300;
+    font-family: "Outfit", system-ui;
+
     font-size: 17px;
   }
 
@@ -75,7 +79,7 @@ export const Container = styled.div`
 
   .email.error,
   .senha.error {
-    border-color: #ff4d4d; 
+    border-color: #ff4d4d;
   }
 
   .esqueciSenha {
@@ -86,9 +90,11 @@ export const Container = styled.div`
     font-weight: lighter;
     font-size: 11px;
     text-align: right;
-    width: 30rem; 
+    font-family: "Outfit", system-ui;
+
+    width: 30rem;
     padding-right: 2%;
-    align-self: flex-end; 
+    align-self: flex-end;
   }
 
   .radios {
@@ -202,7 +208,7 @@ export const Container = styled.div`
   }
 
   .error {
-    color: #ff4d4d; 
+    color: #ff4d4d;
     font-size: 14px;
     margin-top: 10px;
     text-align: center;

@@ -15,6 +15,7 @@ export const Container = styled.body`
   height: 140vh;
   max-width: 100%;
   margin: 0 auto;
+  font-family: "Outfit", system-ui;
 
   .titulo {
     display: flex;

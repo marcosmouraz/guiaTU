@@ -12,6 +12,7 @@ export const Container = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  
   padding: 10px 0;
 
   @media (max-width: 768px) {
@@ -24,6 +25,8 @@ export const Container = styled.div`
 `;
 
 export const Section = styled.div`
+  font-family: "Outfit", system-ui;
+
   max-width: 100%;
   display: flex;
   flex-direction: column;
@@ -46,6 +49,8 @@ export const Section = styled.div`
   .bloco1 {
     width: 10%;
     h2 {
+      font-family: "Outfit", system-ui;
+
       font-size: 50px;
       color: #fff;
       text-align: left; /* Alinhando o texto à esquerda */
@@ -67,6 +72,8 @@ export const Section = styled.div`
     flex-direction: column;
     text-align: center;
     h1 {
+      font-family: "Outfit", system-ui;
+
       font-size: 50px;
     }
   }
@@ -76,6 +83,8 @@ export const Section = styled.div`
     width: 60%;
     align-items: center;
     gap: 2rem;
+    font-family: "Outfit", system-ui;
+
     button {
       background-color: darkblue;
       border: 2px solid yellow;
@@ -83,25 +92,24 @@ export const Section = styled.div`
       height: 3rem;
       width: 15rem;
       color: #fff;
+      font-family: "Outfit", system-ui;
+
       font-size: 18px;
       cursor: pointer;
       transition: background-color 0.3s ease, border-color 0.3s ease,
         color 0.3s ease;
 
-      /* Efeito de hover */
       &:hover {
         background-color: blue;
         border-color: orange;
         color: lightgrey;
       }
 
-      /* Efeito de focus (quando clicado) */
       &:focus {
         outline: none;
         border-color: orange;
       }
 
-      /* Efeito de active (quando clicado) */
       &:active {
         background-color: navy;
         border-color: red;
