@@ -5,10 +5,15 @@ import Menu from "../../components/Menu/menu";
 import { Container } from "./historicoTuristaStyles";
 import CardRecife from "../../assets/cardRecifeFrame.svg";
 import PerfilGuia2 from "../../assets/perfilGuia2.svg";
-import PerfilTurista from "../../assets/perfil_menu.svg"
+import PerfilTurista from "../../assets/perfil_menu.svg";
 
 export default function HistoricoTurista() {
   const [showFrame2, setShowFrame2] = useState(false);
+  const [rating, setRating] = useState(0); // Estado para armazenar a avaliação
+
+  const handleStarClick = (index) => {
+    setRating(index + 1); // Atualiza a avaliação com base na estrela clicada
+  };
 
   return (
     <>
@@ -103,11 +108,15 @@ export default function HistoricoTurista() {
               </div>
 
               <div className="estrelas">
-                <Star size={32} weight="thin" />
-                <Star size={32} weight="thin" />
-                <Star size={32} weight="thin" />
-                <Star size={32} weight="thin" />
-                <Star size={32} weight="thin" />
+                {[...Array(5)].map((_, index) => (
+                  <Star
+                    key={index}
+                    size={32}
+                    weight="fill"
+                    onClick={() => handleStarClick(index)}
+                    className={index < rating ? "active" : ""}
+                  />
+                ))}
               </div>
             </div>
 

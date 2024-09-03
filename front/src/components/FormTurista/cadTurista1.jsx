@@ -2,6 +2,21 @@
 import { UserFocus } from "phosphor-react";
 
 export default function CadastroTurista1({ register ,setTabForm }) {
+
+  const checkCEP = (e) => {
+    const cep = e.target.value.replace(/\D/g, "");
+    console.log(cep);
+    fetch(`https://viacep.com.br/ws/${cep}/json/`)
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+        setValue("rua", data.logradouro);
+        setValue("bairro", data.bairro);
+        setValue("municipio", data.localidade);
+        setValue("pais", "Brasil");
+        setValue("estado", data.estado);
+      });
+  };
   
   return (
 

@@ -38,13 +38,13 @@ export const Container = styled.div`
 
     a:hover,
     button:hover {
-      background-color: #f1f500; /* Amarelo quando em hover */
+      background-color: #f1f500;
       color: #04136f;
     }
 
     button.active,
     a.active {
-      background-color: #f1f500; /* Amarelo quando ativo */
+      background-color: #f1f500;
       color: #04136f;
     }
   }
@@ -56,6 +56,7 @@ export const Container = styled.div`
     height: 40vh;
     border-radius: 10px;
     padding-top: 1rem;
+    position: relative;
   }
 
   .cardcidade {
@@ -128,12 +129,15 @@ export const Container = styled.div`
     height: 40vh;
     border-radius: 10px;
     align-items: center;
+    position: relative;
   }
+
   .imgTurista {
     img {
       height: 75px;
     }
   }
+
   .elementos {
     display: flex;
     flex-direction: column;
@@ -144,7 +148,21 @@ export const Container = styled.div`
 
   .estrelas {
     display: flex;
+    gap: 5px;
     padding-top: 1.5rem;
     padding-left: 10px;
+    cursor: pointer;
+  }
+
+  .estrelas svg {
+    color: transparent; 
+    stroke: #000; 
+    stroke-width: 2px; 
+    transition: fill 0.3s ease, stroke 0.3s ease;
+  }
+
+  .estrelas svg.active {
+    fill: #f1f500; 
+    stroke: #000; 
   }
 `;
