@@ -4,20 +4,19 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 20px;
-  height: 110vh;
+  height: 108vh;
 
   .titulo {
-    margin-bottom: 80px;
-    margin-top: 30px;
     text-align: start;
     display: flex;
     width: 80%;
+    padding-bottom: 60px;
 
     h2 {
       font-size: 30px;
-      color: #04136F;
+      color: #04136f;
       font-weight: 700;
+      padding-top: 65px;
     }
   }
 
@@ -33,14 +32,14 @@ export const Container = styled.div`
     display: flex;
     flex-direction: column;
     font-family: "Outfit", system-ui;
-    flex: 2; /* Aumenta a largura da seção do formulário */
-    max-width: 600px; /* Aumenta o limite máximo de largura */
+    flex: 2;
+    max-width: 600px;
     margin-right: 20px;
     background-color: white;
-    padding: 30px; /* Aumenta o padding para preencher mais espaço */
+    padding: 30px;
     border-radius: 8px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-    
+
     .DadosPessoais {
       margin-bottom: 20px;
 
@@ -54,14 +53,13 @@ export const Container = styled.div`
       display: flex;
       flex-direction: column;
       width: 100%;
-     
 
       .inputContainer {
         display: flex;
         justify-content: space-between;
         gap: 20px;
         width: 100%;
-        
+
         .inputLeft,
         .inputRight {
           display: flex;
@@ -131,7 +129,7 @@ export const Container = styled.div`
 
         .buttonFinalizar {
           padding: 10px 20px;
-          background-color: #04136F;
+          background-color: #04136f;
           color: white;
           border: none;
           border-radius: 4px;
@@ -186,11 +184,23 @@ export const Container = styled.div`
       }
     }
   }
-  .ondas{
+  .ondas {
     background-color: #fff;
     width: 100%;
     position: absolute;
     z-index: -1;
+  }
+  .rosa {
+    background-color: transparent;
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+    padding-left: 41rem;
+    padding-top: 5rem;
+    img {
+      height: 90vh;
+      opacity: 80%;
+    }
   }
   @media (max-width: 768px) {
     .main-content {
@@ -252,4 +262,5 @@ export const ModalContent = styled.div`
       background-color: #0056b3;
     }
   }
+  
 `;

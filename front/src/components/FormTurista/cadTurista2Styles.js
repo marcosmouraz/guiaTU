@@ -1,12 +1,37 @@
 import styled from "styled-components";
 
 export const ContainerFormTab2 = styled.div`
-  height: 100vh;
+  height: 140vh;
   display: flex;
   justify-content: center;
+  width: 100%;
   align-items: center;
   font-family: "Outfit", system-ui;
 
+  .bloco {
+    display: flex;
+    flex-direction: column;
+    padding-top: 10rem;
+  }
+  .titulo {
+    display: flex;
+    width: 100%;
+    padding-right: 18rem;
+    padding-bottom: 1rem;
+    h2 {
+      font-size: 30px;
+      display: flex;
+      color: #04136f;
+      white-space: nowrap;
+    }
+  }
+  .all {
+    width: 100%;
+    display: flex;
+    padding-top: 8rem;
+    flex-direction: column;
+    font-family: "Outfit", system-ui;
+  }
   .formDois {
     display: flex;
     justify-content: center;
@@ -136,5 +161,17 @@ export const ContainerFormTab2 = styled.div`
   button:hover {
     background-color: #0056b3;
     gap: 50%;
+  }
+  .rosa {
+    background-color: transparent;
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+    padding-top: 23rem;
+    padding-right: 137.8rem;
+    img {
+      height: 90vh;
+      opacity: 80%;
+    }
   }
 `;

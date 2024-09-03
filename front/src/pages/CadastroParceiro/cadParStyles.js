@@ -1,9 +1,8 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  /* Use div em vez de body para compatibilidade com styled-components */
   width: 100%;
-  height: 136vh;
+  height: 130vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -13,9 +12,9 @@ export const Container = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 50%;
-    height: 35vh;
-    padding-right: 200px;
+    width: 100%;
+    padding-right: 100px;
+    padding-bottom: 2rem;
 
     h2 {
       font-size: 32px;
