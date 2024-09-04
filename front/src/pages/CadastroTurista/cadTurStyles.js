@@ -14,7 +14,6 @@ export const Container = styled.body`
     justify-content: center;
   }
   .titulo {
-    
     display: flex;
     padding-left: 10rem;
     h2 {
@@ -29,7 +28,6 @@ export const Container = styled.body`
     font-family: "Outfit", system-ui;
     padding-bottom: 2rem;
     padding-top: 8rem;
-    
   }
 
   /* Seção do formulário */
@@ -191,5 +189,32 @@ export const Container = styled.body`
       opacity: 80%;
     }
   }
+  /* //////////////////////////////////// */
+
+  /* CSS */
+  .alterafoto {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%; /* Ajuste conforme necessário */
+    height: 100%; /* Ajuste conforme necessário */
+    border: 2px solid #ddd; /* Borda opcional */
+    border-radius: 8px; /* Bordas arredondadas opcionais */
+    overflow: hidden; /* Garante que a imagem não saia do contêiner */
+    background-color: #f0f0f0; /* Cor de fundo opcional */
+  }
+
+  .alterafoto img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ajusta a imagem para cobrir o contêiner sem distorção */
+  }
+
+  .inputFoto {
+    display: none; /* Esconde o input file */
+  }
+  /* ///////////////////////////////////////////////////////// */
+
+ 
 `;
 

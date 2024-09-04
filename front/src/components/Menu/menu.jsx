@@ -1,11 +1,17 @@
 import { useNavigate } from "react-router-dom";
 import LogoMenu from "../../assets/logo guia tu menu.png";
 import { Container } from "./menuStyles";
-import { CaretDown, Info, ShoppingCart, User } from "@phosphor-icons/react";
-import FotoPerfil from "../../assets/perfil_menu.svg"
+import {
+  CaretDown,
+  Info,
+  ShoppingCart,
+  User,
+  UserCircle,
+} from "@phosphor-icons/react";
 import { jwtDecode } from "jwt-decode";
 import { useEffect, useState } from "react";
 import { api } from "../../service/api";
+
 
 export default function Menu() {
   const [ userId, setUserId ] = useState(null)
@@ -127,7 +133,13 @@ export default function Menu() {
                             <p>Olá, {user.nome}</p>
                           </div>
                           <div className="fotoPerfil">
-                            <img src={FotoPerfil} alt="" />
+                            <UserCircle
+                              size={75}
+                              color="#fafafa"
+                              style={{
+                                borderRadius: "50%",
+                              }}
+                            />
                           </div>
                         </div>
 
@@ -166,7 +178,13 @@ export default function Menu() {
                             <p>Olá, {user.nome}</p>
                           </div>
                           <div className="fotoPerfil">
-                            <img src={FotoPerfil} alt="" />
+                            <UserCircle
+                              size={75}
+                              color="#fafafa"
+                              style={{
+                                borderRadius: "50%",
+                              }}
+                            />
                           </div>
                         </div>
 

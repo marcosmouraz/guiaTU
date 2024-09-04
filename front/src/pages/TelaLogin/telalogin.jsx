@@ -40,13 +40,32 @@ export default function TelaLogin() {
       }
 
       localStorage.setItem("token", response.data.token);
-      navigation("/telafiltro");
+
+      // Mostrar alerta e redirecionar após o alerta ser fechado
+      window.alert("Usuário logado com sucesso!");
+      setTimeout(() => {
+        navigation("/");
+      }, 100); // Atraso de 100 milissegundos para garantir que o alerta tenha tempo para fechar
     } catch (error) {
       // Tratar erro de login
-      setError(
-        error.response?.data?.message ||
-          "Ocorreu um erro ao tentar fazer login."
-      );
+      if (error.response) {
+        // Verificar o status da resposta
+        if (
+          error.response.status === 401 ||
+          error.response.data.message?.includes("senha") ||
+          error.response.data.message?.includes("usuário")
+        ) {
+          setError("Usuário ou senha inválidos."); // Mensagem específica para erro de credenciais inválidas
+        } else {
+          // Verificar se existe uma mensagem específica na resposta
+          setError(
+            error.response.data.message ||
+              "Ocorreu um erro ao tentar fazer login."
+          );
+        }
+      } else {
+        setError("Ocorreu um erro ao tentar fazer login.");
+      }
     }
   }
 

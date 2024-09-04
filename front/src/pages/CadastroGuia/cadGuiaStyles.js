@@ -177,6 +177,7 @@ export const Container = styled.div`
         width: 120px;
         height: 120px;
         cursor: pointer;
+        overflow: hidden; /* Garante que a imagem não ultrapasse a borda */
 
         .vetor {
           color: #636363;
@@ -262,5 +263,12 @@ export const ModalContent = styled.div`
       background-color: #0056b3;
     }
   }
+  /* //////////////////////////////////// */
   
+
+  .fotoPreview {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ajusta a imagem para caber no contêiner */
+  }
 `;

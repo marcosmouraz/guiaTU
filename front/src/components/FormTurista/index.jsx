@@ -22,6 +22,7 @@ export default function FormTurista() {
         nome: data.nome,
         sobrenome: data.sobrenome,
         data_nascimento: formattedDate,
+        genero:data.genero,
         cpf: data.cpf,
         pais: data.pais,
         estado: data.estado,

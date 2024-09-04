@@ -1,5 +1,5 @@
 import React from "react";
-import "../../pages/CadastroParceiro/cadParStyles"; // Adicione a importação do arquivo CSS
+import "../../pages/CadastroParceiro/cadParStyles"; 
 
 export default function CadastroEmpreendedores({ register, setTabForm }) {
   return (

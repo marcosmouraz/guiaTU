@@ -1,11 +1,12 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { UserFocus } from "@phosphor-icons/react";
 import Footer from "../../components/Footer/footer";
 import Menu from "../../components/Menu/menu";
-import { Container, ModalOverlay, ModalContent } from "./cadGuiaStyles";
+import { Container } from "./cadGuiaStyles";
 import { useForm } from "react-hook-form";
 import { api } from "../../service/api";
-import RosaVentos from "../../assets/rosaVentos.svg"
+import RosaVentos from "../../assets/rosaVentos.svg";
 
 export default function CadastroGuia() {
   const {
@@ -14,8 +15,8 @@ export default function CadastroGuia() {
     formState: { errors },
     watch,
   } = useForm();
-  const [showModal, setShowModal] = useState(false);
-  const [modalMessage, setModalMessage] = useState("");
+  const navigate = useNavigate();
+  const [selectedImage, setSelectedImage] = useState(null);
 
   const onSubmit = async (data) => {
     const [day, month, year] = data.data_nascimento.split("/");
@@ -33,16 +34,37 @@ export default function CadastroGuia() {
         senha_hash: data.senha_hash,
         credencial: data.credencial,
       });
+
       localStorage.setItem("token", response.data.token);
-      setModalMessage("Cadastro realizado com sucesso!");
-      setShowModal(true);
+      alert("Cadastro realizado com sucesso!");
+      navigate("/"); // Redireciona para a página inicial
     } catch (error) {
-      setModalMessage("Erro ao realizar o cadastro. Tente novamente.");
-      setShowModal(true);
+      if (error.response && error.response.data) {
+        const { status, message } = error.response.data;
+        if (status === 409) {
+          alert(
+            message ||
+              "Usuário já existe. Tente novamente com um e-mail diferente."
+          );
+        } else if (status === 422) {
+          alert(message || "Erro ao realizar o cadastro. Tente novamente.");
+        } else {
+          alert("Erro ao realizar o cadastro. Tente novamente.");
+        }
+      } else {
+        alert("Erro de rede ou servidor. Tente novamente.");
+      }
     }
   };
 
   const isCheckboxChecked = watch("acceptTerms", false);
+
+  const handleImageChange = (event) => {
+    const file = event.target.files[0];
+    if (file) {
+      setSelectedImage(URL.createObjectURL(file));
+    }
+  };
 
   return (
     <>
@@ -62,6 +84,7 @@ export default function CadastroGuia() {
             </section>
 
             <form onSubmit={handleSubmit(onSubmit)}>
+              {/* Seus inputs existentes */}
               <div className="inputContainer">
                 <div className="inputLeft">
                   <input
@@ -150,6 +173,7 @@ export default function CadastroGuia() {
                 </div>
               </div>
 
+              {/* Checkbox de termos e condições */}
               <div className="checkbox">
                 <div className="ContentC">
                   <input
@@ -164,6 +188,10 @@ export default function CadastroGuia() {
                     <a href="">condições gerais</a>{" "}
                   </label>
                 </div>
+
+                {errors.acceptTerms && (
+                  <p className="error-text">{errors.acceptTerms.message}</p>
+                )}
 
                 <label className="inputtext">
                   Este site está protegido por reCAPTCHA e se aplicam à{" "}
@@ -187,11 +215,24 @@ export default function CadastroGuia() {
           <div className="imagemArea">
             <section className="inputfoto">
               <p className="p">Escolha sua Foto de Perfil</p>
-              <a href="">
-                <div className="alterafoto">
+              <input
+                type="file"
+                accept="image/*"
+                onChange={handleImageChange}
+                style={{ display: "none" }}
+                id="fileInput"
+              />
+              <label htmlFor="fileInput" className="alterafoto">
+                {selectedImage ? (
+                  <img
+                    src={selectedImage}
+                    alt="Imagem selecionada"
+                    className="selectedImage"
+                  />
+                ) : (
                   <UserFocus className="vetor" size={90} color="#636363" />
-                </div>
-              </a>
+                )}
+              </label>
             </section>
             <div className="rosa">
               <img src={RosaVentos} alt="" className="rosaventos" />
@@ -199,14 +240,6 @@ export default function CadastroGuia() {
           </div>
         </div>
 
-        {showModal && (
-          <ModalOverlay>
-            <ModalContent>
-              <p>{modalMessage}</p>
-              <button onClick={() => setShowModal(false)}>Fechar</button>
-            </ModalContent>
-          </ModalOverlay>
-        )}
         <div className="ondas">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
             <path

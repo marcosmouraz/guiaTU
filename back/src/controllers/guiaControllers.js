@@ -1,5 +1,5 @@
-const Guia = require("../model/Guia")
-const bcrypt = require("bcrypt")
+const Guia = require("../model/Guia");
+const bcrypt = require("bcrypt");
 
 module.exports = class guiaControllers {
   static async createGuia(request, response) {
@@ -16,6 +16,12 @@ module.exports = class guiaControllers {
     } = request.body;
 
     try {
+      // Verificar se o username já existe
+      const existingGuia = await Guia.findOne({ where: { username } });
+      if (existingGuia) {
+        return response.status(409).json({ message: "Usuário já existe" });
+      }
+
       const salt = await bcrypt.genSalt(12); // Gera o sal
       const encryptPass = await bcrypt.hash(senha_hash, salt); // Usa o sal para criar o hash da senha
 
@@ -35,7 +41,10 @@ module.exports = class guiaControllers {
         .status(201)
         .json({ message: "Guia cadastrado com SUCESSO!", guia: guia });
     } catch (error) {
-      response.status(422).json({ message: "ERROR AO CADASTRAR Guia", error });
+      console.error(error); // Para depuração
+      response
+        .status(422)
+        .json({ message: "Erro ao cadastrar guia", error: error.message });
     }
   }
 
@@ -45,7 +54,7 @@ module.exports = class guiaControllers {
     const guia = await Guia.findByPk(id);
 
     if (!guia) {
-      response.status(422).json({ message: "Guia não encontrado" });
+      response.status(404).json({ message: "Guia não encontrado" });
       return;
     }
 
