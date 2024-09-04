@@ -7,50 +7,44 @@ import {
   ShoppingCart,
   User,
   UserCircle,
-} from "@phosphor-icons/react";
+  List,
+} from "@phosphor-icons/react"; // Adicione o ícone List para o menu hamburguer
 import { jwtDecode } from "jwt-decode";
 import { useEffect, useState } from "react";
 import { api } from "../../service/api";
 
-
 export default function Menu() {
-  const [ userId, setUserId ] = useState(null)
-  const [userType, setUserType] = useState(null)
-  const [user, setUser] = useState({})
+  const [userId, setUserId] = useState(null);
+  const [userType, setUserType] = useState(null);
+  const [user, setUser] = useState({});
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false); // Estado para menu mobile
   const token = localStorage.getItem("token");
-
 
   useEffect(() => {
     const fetchUserId = async () => {
-    const token = localStorage.getItem('token')
+      const token = localStorage.getItem("token");
 
-      if(token) {
+      if (token) {
         try {
-        const decodedToken = jwtDecode(token);
-        const id = decodedToken.id
-        const type = decodedToken.type
-        
-        setUserType(type)
-        setUserId(id)
+          const decodedToken = jwtDecode(token);
+          const id = decodedToken.id;
+          const type = decodedToken.type;
+          setUserType(type);
+          setUserId(id);
         } catch (error) {
           console.error(error);
-          
         }
       }
-    }
+    };
 
-    fetchUserId()
-  }, [])
-  
+    fetchUserId();
+  }, []);
+
   useEffect(() => {
-    
-    if(userId){
-      console.log(userType);
-      
+    if (userId) {
       const fetchUserData = async () => {
-        
         try {
-          if(userType === "turista") {
+          if (userType === "turista") {
             const response = await api.get(`/turista/${userId}`);
             setUser(response.data.turista);
           } else if (userType === "guia") {
@@ -60,28 +54,29 @@ export default function Menu() {
             const response = await api.get(`/empreendedor/${userId}`);
             setUser(response.data.empreendedor);
           } else {
-            return console.log("Erro ao logar");
-            
+            console.log("Erro ao logar");
           }
-            
         } catch (error) {
           console.error(error);
-          
         }
-      }
+      };
 
       setTimeout(() => {
-        fetchUserData()
-      }, 2000)
+        fetchUserData();
+      }, 2000);
     }
-  },[userId])
+  }, [userId]);
 
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
-  function handleLogout(){
-    localStorage.removeItem('token')
-    navigate('/telalogin')
+  function handleLogout() {
+    localStorage.removeItem("token");
+    navigate("/telalogin");
   }
+
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
 
   return (
     <Container>
@@ -92,7 +87,11 @@ export default function Menu() {
           </a>
         </div>
 
-        <nav className="menu-desktop">
+        <div className="menu-toggle" onClick={toggleMobileMenu}>
+          <List size={32} color="#fff" /> {/* Menu hamburguer */}
+        </div>
+
+        <nav className={`menu-desktop ${isMobileMenuOpen ? "active" : ""}`}>
           <ul>
             <li className="dropdownContainer">
               <div className="dropdown">
@@ -123,7 +122,7 @@ export default function Menu() {
                 {userType === "guia" ? (
                   <li className="dropdownContainer">
                     <div className="dropdown">
-                      <button href="">
+                      <button>
                         <User size={20} color="#fafafa" />
                       </button>
                       <div className="dropdown-content4">
@@ -164,8 +163,6 @@ export default function Menu() {
                     </div>
                   </li>
                 ) : (
-                  //ate aqui é guia
-                  //daqui pra baixo é turista
                   <li className="dropdownContainer">
                     <div className="dropdown">
                       <button>
@@ -222,7 +219,7 @@ export default function Menu() {
             ) : (
               <li className="dropdownContainer">
                 <div className="dropdown">
-                  <button href="">
+                  <button>
                     <User size={20} color="#fafafa" />
                   </button>
                   <div className="dropdown-content3">
@@ -230,17 +227,16 @@ export default function Menu() {
                     <a href="/cadastroinicial">Cadastre-se</a>
                   </div>
                 </div>
-                  
               </li>
             )}
             <li>
-              <button href="">
+              <button>
                 <Info size={20} color="#fafafa" />
               </button>
             </li>
             <li>
               <a href="/telapagamento">
-                <button href="">
+                <button>
                   <ShoppingCart size={20} color="#fafafa" />
                 </button>
               </a>

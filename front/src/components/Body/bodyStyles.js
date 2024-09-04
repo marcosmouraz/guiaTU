@@ -16,30 +16,27 @@ export const Container = styled.section`
     font-family: Arial, Helvetica, sans-serif;
   }
 
-  .container {
-    margin: 0 auto;
-    padding: 0 20px;
-  }
-
   .card {
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    max-width: 310px;
+    max-width: calc(50% - 20px);
+    box-sizing: border-box;
+    margin-bottom: 20px; /* Adiciona espaço abaixo dos cards */
   }
-  
+
   .card h2 {
     padding-top: 15px;
     font-size: 25px;
-    white-space: nowrap;
+    white-space: normal; /* Permite quebra de linha */
   }
 
   .card p {
     padding-top: 10px;
     font-size: 20px;
-    white-space: nowrap;
+    white-space: normal; /* Permite quebra de linha */
   }
 
   img {
@@ -48,13 +45,18 @@ export const Container = styled.section`
     padding-bottom: 40px;
   }
 
+  #destinos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 30px;
+  }
+
   #destinos h1 {
     color: #04136e;
     font-family: "Poppins", sans-serif;
     display: flex;
-    justify-content: space-between;
-    padding-top: 30px;
-    padding-left: 1rem;
+    justify-content: center;
     font-size: 35px;
   }
 
@@ -71,10 +73,11 @@ export const Container = styled.section`
     flex: 0 0 auto;
     max-height: 200px;
   }
+
   .textCarrossel {
     position: relative;
     display: flex;
-    top: 21.5rem;
+    top: 23rem;
     padding-right: 2rem;
     font-size: 20px;
     left: 1rem;
@@ -84,7 +87,7 @@ export const Container = styled.section`
     z-index: 1;
     color: #04136e;
   }
-  
+
   .imgCarrossel {
     height: auto;
     width: 100%;
@@ -92,10 +95,11 @@ export const Container = styled.section`
     display: flex;
     padding-top: 1.5rem;
   }
+
   .back {
     background-color: #efb715;
     position: absolute;
-    top: 19.5rem;
+    top: 21rem;
     height: 13vh;
     border-radius: 0 0 10px 10px;
     width: 100%;
@@ -124,7 +128,7 @@ export const Container = styled.section`
   /* Mídia para responsividade */
   @media (max-width: 768px) {
     .card {
-      max-width: 90%;
+      max-width: calc(50% - 20px);
     }
 
     .card h2 {
@@ -152,6 +156,12 @@ export const Container = styled.section`
     .swiper-button-prev {
       width: 50px;
       height: 50px;
+    }
+
+    /* Ocultar carrossel e título em telas menores */
+    .swiper-container,
+    #destinos {
+      display: none;
     }
   }
 
@@ -193,6 +203,12 @@ export const Container = styled.section`
     .imagensDestinos img {
       max-height: none;
       width: 100%;
+    }
+
+    /* Ocultar carrossel e título em telas menores */
+    .swiper-container,
+    #destinos {
+      display: none;
     }
   }
 `;

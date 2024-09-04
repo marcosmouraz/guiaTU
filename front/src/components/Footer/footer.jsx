@@ -17,7 +17,7 @@ export default function Footer() {
   return (
     <Container>
       <Footerlist>
-        <ul className="bloco-footer">
+        <div className="bloco-guiatu">
           <h4>GuiaTÚ</h4>
           <div className="info-bloco">
             <li>
@@ -30,9 +30,9 @@ export default function Footer() {
               <a href="">Sustentabilidade</a>
             </li>
           </div>
-        </ul>
+        </div>
 
-        <ul className="bloco-footer">
+        <div className="bloco-inspiracao">
           <h4>Inspiração</h4>
           <div className="info-bloco">
             <li>
@@ -45,9 +45,9 @@ export default function Footer() {
               <a href="">Guias Nativos</a>
             </li>
           </div>
-        </ul>
+        </div>
 
-        <ul className="bloco-footer">
+        <div className="bloco-conosco">
           <h4>Trabalhe Conosco</h4>
           <div className="info-bloco">
             <li>
@@ -57,9 +57,9 @@ export default function Footer() {
               <a href="">Torne-se nosso parceiro</a>
             </li>
           </div>
-        </ul>
+        </div>
 
-        <ul className="bloco-footer">
+        <div className="bloco-footer">
           <h4>Ajuda</h4>
           <div className="info-bloco">
             <div className="ajuda">
@@ -70,9 +70,9 @@ export default function Footer() {
               </li>
             </div>
           </div>
-        </ul>
+        </div>
 
-        <ul className="bloco-footer">
+        <div className="bloco-footer">
           <h4>Baixe nosso APP</h4>
           <div className="info-bloco">
             <a href="">
@@ -88,9 +88,9 @@ export default function Footer() {
               </li>
             </a>
           </div>
-        </ul>
+        </div>
 
-        <ul className="redesSociais">
+        <div className="redesSociais">
           <h4>Siga-nos</h4>
           <div className="imgsg">
             <a href="">
@@ -106,9 +106,9 @@ export default function Footer() {
               <img src={Twitter} alt="" />
             </a>
           </div>
-        </ul>
+        </div>
 
-        <ul>
+        <div className="pagamentos">
           <h4>Formas de pagamento</h4>
           <div className="imgfp">
             <img src={Americanex} alt="" />
@@ -117,11 +117,13 @@ export default function Footer() {
             <img src={Visacar} alt="" />
             <img src={Applepay} alt="" />
           </div>
-        </ul>
+        </div>
 
-        <a className="imgcd">
-          <img src={Cadastur} alt="" />
-        </a>
+        <div className="logoCadastur">
+          <a className="imgcd">
+            <img src={Cadastur} alt="" />
+          </a>
+        </div>
       </Footerlist>
 
       <Copyright>

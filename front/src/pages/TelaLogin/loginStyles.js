@@ -1,5 +1,4 @@
 import styled from "styled-components";
-
 import Background from "../../assets/terminalmaritimo.svg";
 
 export const Section = styled.section`
@@ -14,6 +13,20 @@ export const Section = styled.section`
   justify-content: center;
   align-items: center;
   padding: 10px 0;
+
+  @media (max-width: 1200px) {
+    height: auto;
+  }
+
+  @media (max-width: 768px) {
+    height: auto;
+    padding: 20px 0;
+  }
+
+  @media (max-width: 480px) {
+    height: auto;
+    padding: 30px 0;
+  }
 `;
 
 export const Container = styled.div`
@@ -30,6 +43,23 @@ export const Container = styled.div`
   border-radius: 10px;
   backdrop-filter: blur(5px);
 
+  @media (max-width: 1200px) {
+    width: 40rem;
+  }
+
+  @media (max-width: 768px) {
+    width: 90%;
+    height: auto;
+    padding: 20px;
+  }
+
+  @media (max-width: 480px) {
+    width: 100%;
+    height: auto;
+    padding: 15px;
+    gap: 15px;
+  }
+
   .textUm {
     display: flex;
     flex-direction: column;
@@ -42,14 +72,29 @@ export const Container = styled.div`
     color: #d9d9d9;
     font-size: 40px;
     font-family: "Outfit", system-ui;
+
+    @media (max-width: 768px) {
+      font-size: 30px;
+    }
+
+    @media (max-width: 480px) {
+      font-size: 24px;
+    }
   }
 
   .textUm h6 {
     color: #fff;
     font-weight: 300;
     font-family: "Outfit", system-ui;
-
     font-size: 17px;
+
+    @media (max-width: 768px) {
+      font-size: 14px;
+    }
+
+    @media (max-width: 480px) {
+      font-size: 12px;
+    }
   }
 
   .inputs {
@@ -69,6 +114,15 @@ export const Container = styled.div`
     border-radius: 8px;
     padding: 1rem;
     border-color: #5f6368;
+
+    @media (max-width: 768px) {
+      height: 2.5rem;
+    }
+
+    @media (max-width: 480px) {
+      height: 2rem;
+      padding: 0.8rem;
+    }
   }
 
   .email::placeholder,
@@ -95,6 +149,15 @@ export const Container = styled.div`
     width: 30rem;
     padding-right: 2%;
     align-self: flex-end;
+
+    @media (max-width: 768px) {
+      width: 100%;
+      font-size: 10px;
+    }
+
+    @media (max-width: 480px) {
+      font-size: 9px;
+    }
   }
 
   .radios {
@@ -104,6 +167,17 @@ export const Container = styled.div`
     color: #d9d9d9;
     width: 100%;
     justify-content: center;
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+      gap: 2rem;
+      align-items: flex-start; /* Alinha à esquerda */
+      text-align: left; /* Garante que o texto dentro dos rádios também esteja alinhado à esquerda */
+    }
+
+    @media (max-width: 480px) {
+      gap: 1rem;
+    }
   }
 
   .linha {
@@ -116,6 +190,7 @@ export const Container = styled.div`
   .linha h5 {
     color: #d9d9d9;
     font-size: medium;
+    white-space: nowrap;
   }
 
   .linha hr {
@@ -128,18 +203,15 @@ export const Container = styled.div`
     justify-content: start;
     width: 60%;
     color: #d9d9d9;
+
+    @media (max-width: 768px) {
+      width: 100%;
+      text-align: left; /* Garante que o texto dentro do título dos rádios esteja alinhado à esquerda */
+    }
   }
 
-  .radioTu {
-    display: flex;
-    gap: 10px;
-  }
-
-  .radioGui {
-    display: flex;
-    gap: 10px;
-  }
-
+  .radioTu,
+  .radioGui,
   .radioEmp {
     display: flex;
     gap: 10px;
@@ -158,6 +230,14 @@ export const Container = styled.div`
     text-align: center;
     font-size: 17px;
     font-weight: 700;
+
+    @media (max-width: 768px) {
+      font-size: 15px;
+    }
+
+    @media (max-width: 480px) {
+      font-size: 14px;
+    }
   }
 
   .buttonEntrar:hover {
@@ -182,6 +262,10 @@ export const Container = styled.div`
     justify-content: center;
     align-items: center;
     gap: 20px;
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+    }
   }
 
   .cadastrarAgora {
@@ -194,6 +278,14 @@ export const Container = styled.div`
     font-weight: 100;
     font-size: 18px;
     color: #fff;
+
+    @media (max-width: 768px) {
+      font-size: 16px;
+    }
+
+    @media (max-width: 480px) {
+      font-size: 14px;
+    }
   }
 
   .cadastrarAgora h6 span {
