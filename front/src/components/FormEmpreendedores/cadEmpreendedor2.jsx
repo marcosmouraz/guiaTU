@@ -1,6 +1,7 @@
 import { Image } from "@phosphor-icons/react";
-import { Container } from "./cadParDoisStyles";
-
+import { UserFocus } from "phosphor-react";
+import React, { useState } from "react";
+import { ContainerEmpre2 } from "./cadParDoisStyles";
 
 export default function CadastroEmpreendedores2({ register, setTabForm, setValue }) {
 
@@ -19,102 +20,142 @@ const checkCEP = (e) => {
       setValue("estado", data.estado);
     });
 };
-// ///////////////////////////////////////////////////////////
+// //////////////////////////////////////////////////////////
+const [image, setImage] = useState(null);
+
+const handleImageChange = (e) => {
+  const file = e.target.files[0];
+  if (file) {
+    const reader = new FileReader();
+    reader.onloadend = () => {
+      setImage(reader.result);
+    };
+    reader.readAsDataURL(file);
+  }
+};
+// //////////////////////////////////////////////////////////
+const [showModal, setShowModal] = useState(false);
+
+const handleModal = () => {
+  setShowModal(!showModal);
+};
 
   return (
-    <Container>
-        <div className="inputs">
-          <div className="inputContainer">
-            <input
-              className="nomeestabelecimento"
-              type="text"
-              placeholder="Nome Estabelecimento"
-              {...register("nome_estabelecimento")}
-            />
-            <input
-              className="cep"
-              type="text"
-              placeholder="CEP"
-              {...register("cep")}
-              onBlur={(e) => checkCEP(e)}
-            />
-            <input
-              className="rua"
-              type="text"
-              placeholder="Rua"
-              {...register("rua")}
-            />
-            <input
-              className="numero"
-              type="text"
-              placeholder="Nº do estabelecimento"
-              {...register("numero_estabelecimento")}
-            />
+    <ContainerEmpre2>
+      <div className="titulo-form-dois">
+        <h2>
+          Olá Empreendedor, <br /> Cadastre seu negocio...
+        </h2>
+      </div>
+      <div className="formDois">
+        <div className="formSection">
+          <div className="dados-comerciais">
+            <h4>Dados comerciais</h4>
           </div>
-          <div className="inputContainer">
-            <input
-              className="bairro"
-              type="text"
-              placeholder="Bairro"
-              {...register("bairro")}
-            />
-            <input
-              className="municipio"
-              type="text"
-              placeholder="Municipio"
-              {...register("municipio")}
-            />
-            <input
-              className="cnpj"
-              type="text"
-              placeholder="CNPJ"
-              {...register("cnpj")}
-            />
-            <input
-              className="numerotelefone"
-              type="text"
-              placeholder="(DDD)+telefone "
-              {...register("telefone")}
-            />
+          <div className="inputs">
+            <div className="inputContainer">
+              <input
+                className="nome-estabelecimento"
+                type="text"
+                placeholder="Nome Estabelecimento"
+                {...register("nome_estabelecimento")}
+              />
+              <input
+                className="cep"
+                type="text"
+                placeholder="CEP"
+                {...register("cep")}
+                onBlur={(e) => checkCEP(e)}
+              />
+              <input
+                className="rua"
+                type="text"
+                placeholder="Rua"
+                {...register("rua")}
+              />
+              <input
+                className="numero"
+                type="text"
+                placeholder="Nº do estabelecimento"
+                {...register("numero_estabelecimento")}
+              />
+            </div>
+            <div className="inputContainer">
+              <input
+                className="bairro"
+                type="text"
+                placeholder="Bairro"
+                {...register("bairro")}
+              />
+              <input
+                className="municipio"
+                type="text"
+                placeholder="Municipio"
+                {...register("municipio")}
+              />
+              <input
+                className="cnpj"
+                type="text"
+                placeholder="CNPJ"
+                {...register("cnpj")}
+              />
+              <input
+                className="numerotelefone"
+                type="text"
+                placeholder="(DDD)+telefone "
+                {...register("telefone")}
+              />
+            </div>
+          </div>
+
+          <div className="buttonContainer">
+            <button onClick={() => setTabForm(0)} className="voltar">
+              Voltar
+            </button>
+            <button type="submit" className="buttonCadastrar">
+              Finalizar Cadastro
+            </button>
           </div>
         </div>
-
-      <div className="inputFoto">
-        <h5> Adicione fotos do seu estabelecimento, produto ou serviço: </h5>
       </div>
-
-      <div className="imagem">
-        <div className="alterafoto">
-          <a href="">
-            <Image className="vetor" size={90} color="#5a5858" weight="light" />
-          </a>
-        </div>
-      </div>
-
-      <div className="checkbox">
-        <div className="ContentC">
-          <input type="checkbox" name="" id="" />
-          <label className="custom-checkbox">
-            Aceito <a href="">política de privacidade</a> e{" "}
-            <a href="">condições gerais</a>{" "}
+      <div className="imagens">
+        <section className="foto-perfil">
+          <p className="p">Escolha sua Foto de Perfil</p>
+          <label htmlFor="fotoPerfil" className="alterafoto">
+            {image ? (
+              <img src={image} alt="Foto de Perfil" />
+            ) : (
+              <UserFocus className="vetor" size={90} color="#636363" />
+            )}
+            <input
+              type="file"
+              id="fotoPerfil"
+              name="fotoPerfil"
+              accept="image/*"
+              className="inputFoto"
+              onChange={handleImageChange}
+            />
           </label>
-        </div>
-
-        <label className="inputtext">
-          Este site está protegido por reCAPTCHA e se aplicam à{" "}
-          <a href="">política de privacidade</a> e aos <br />{" "}
-          <a href="">termos e serviços do Google</a>.
-        </label>
+        </section>
+        {/* <section className="foto-estabelecimento">
+          <p className="p">Escolha sua Foto de Perfil</p>
+          <label htmlFor="fotoPerfil" className="alterafoto">
+            {image ? (
+              <img src={image} alt="Foto de Perfil" />
+            ) : (
+              <UserFocus className="vetor" size={90} color="#636363" />
+            )}
+            <input
+              type="file"
+              id="fotoPerfil"
+              name="fotoPerfil"
+              accept="image/*"
+              className="inputFoto"
+              onChange={handleImageChange}
+            />
+          </label>
+        </section> */}
       </div>
-
-      <div className="buttonContainer">
-        <button onClick={() => setTabForm(0)} className="voltar">
-          Voltar
-        </button>
-        <button type="submit" className="buttonCadastrar">
-          Finalizar Cadastro
-        </button>
-      </div>
-    </Container>
+    </ContainerEmpre2>
   );
 }

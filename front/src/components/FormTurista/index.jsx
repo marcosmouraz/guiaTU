@@ -1,10 +1,13 @@
-import { useState } from "react";
 import { useForm } from "react-hook-form";
 import  CadastroTurista1  from "./cadTurista1";
 import  CadastroTurista2  from "./cadTurista2";
 import { api } from "../../service/api";
+import { useNavigate } from "react-router-dom";
 
 export default function FormTurista({tabForm, setTabForm}) {
+
+  const navigation = useNavigate();
+
   const {
     register,
     handleSubmit,
@@ -13,10 +16,13 @@ export default function FormTurista({tabForm, setTabForm}) {
   } = useForm();
 
   const onSubmit = async (data) => {
+    console.log(data);
+    
     const [day, month, year] = data.data_nascimento.split("/");
     const formattedDate = new Date(`${year}-${month}-${day}`)
     console.log(formattedDate);
-    
+
+
     await api
       .post("/turista/create", {
         nome: data.nome,
@@ -31,6 +37,7 @@ export default function FormTurista({tabForm, setTabForm}) {
       })
       .then((response) => {
         localStorage.setItem("token", response.data.token);
+        window.alert("Cadastro realizado com sucesso!");
         navigation("/telafiltro");
       })
       .catch((error) => {
@@ -38,15 +45,23 @@ export default function FormTurista({tabForm, setTabForm}) {
       });
   };
 
+
  
   return (
-      <form onSubmit={handleSubmit(onSubmit)}>
-        {tabForm === 0 ? (
-          <CadastroTurista1 register={register} setTabForm={setTabForm} />
-        ) : (
-          <CadastroTurista2 register={register} setTabForm={setTabForm} />
-        )}
-
-      </form>
+    <form onSubmit={handleSubmit(onSubmit)}>
+      {tabForm === 0 ? (
+        <CadastroTurista1
+          register={register}
+          setTabForm={setTabForm}
+          errors={errors}
+        />
+      ) : (
+        <CadastroTurista2
+          register={register}
+          setTabForm={setTabForm}
+          errors={errors}
+        />
+      )}
+    </form>
   );
 }

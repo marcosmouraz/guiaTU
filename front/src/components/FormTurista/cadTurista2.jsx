@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { ContainerFormTab2 } from "./cadTurista2Styles";
 
-export default function CadastroTurista2({ register, setTabForm }) {
+export default function CadastroTurista2({ errors, register, setTabForm }) {
   const [showModal, setShowModal] = useState(false);
 
   const handleModal = () => {
@@ -16,7 +16,6 @@ export default function CadastroTurista2({ register, setTabForm }) {
           Estamos concluindo seu cadastro ...
         </h2>
       </div>
-
       <div className="formDois">
         <div className="formsection">
           <div className="inputUm">
@@ -79,7 +78,7 @@ export default function CadastroTurista2({ register, setTabForm }) {
               Voltar
             </button>
             <button type="submit" className="enviar">
-              Enviar
+              Cadastrar
             </button>
           </div>
         </div>

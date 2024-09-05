@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import Background from "../../assets/cadinicial.svg";
 
-export const Container = styled.div`
+export const ContainerCadInicial = styled.div`
   background-image: url(${Background});
   background-position: center;
   background-repeat: no-repeat;

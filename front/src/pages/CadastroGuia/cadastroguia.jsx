@@ -38,6 +38,7 @@ export default function CadastroGuia() {
       });
 
       localStorage.setItem("token", response.data.token);
+      
       setIsSuccessModalOpen(true); // Abre o modal de sucesso
       setTimeout(() => navigate("/"), 2000); // Redireciona após 2 segundos
     } catch (error) {

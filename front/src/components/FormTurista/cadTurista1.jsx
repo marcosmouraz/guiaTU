@@ -1,11 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { UserFocus } from "phosphor-react";
 
-import { useForm, Controller } from "react-hook-form";
 
-export default function CadastroTurista1({ setTabForm }) {
+export default function CadastroTurista1({ register, setTabForm, errors }) {
   const [image, setImage] = useState(null);
-  const { register, handleSubmit, control, formState: { errors }, setValue } = useForm();
 
   const handleImageChange = (e) => {
     const file = e.target.files[0];
@@ -31,10 +29,6 @@ export default function CadastroTurista1({ setTabForm }) {
     setValue("data_nascimento", formatDate(e.target.value));
   };
 
-  const onSubmit = (data) => {
-    console.log(data);
-    // Adicione a lógica para o envio do formulário
-  };
 
   return (
     <section className="container-formulario-foto">
@@ -47,7 +41,6 @@ export default function CadastroTurista1({ setTabForm }) {
       </div>
       <div className="container-cad-turista1">
         <div className="formSection">
-          <form className="form" onSubmit={handleSubmit(onSubmit)}>
             <div className="inputColumn">
               <input
                 className={`nome`}
@@ -134,7 +127,6 @@ export default function CadastroTurista1({ setTabForm }) {
                 Próximo
               </button>
             </div>
-          </form>
         </div>
       </div>
       </div>

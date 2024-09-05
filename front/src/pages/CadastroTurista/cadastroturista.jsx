@@ -1,5 +1,5 @@
 import Menu from "../../components/Menu/menu";
-import { Container } from "./cadTurStyles";
+import { ContainerTur1 } from "./cadTurStyles";
 import Footer from "../../components/Footer/footer";
 import FormTurista from "../../components/FormTurista";
 import RosaDireita from "../../assets/rosaFrameUm.svg";
@@ -13,7 +13,7 @@ export default function CadastroTurista() {
   return (
     <>
       <Menu />
-      <Container>
+      <ContainerTur1>
         <div className="ondas">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
             <path
@@ -29,7 +29,7 @@ export default function CadastroTurista() {
         ) : (
           <img src={RosaEsquerda} alt="" className="rosaventos-esquerda" />
         )}
-      </Container>
+      </ContainerTur1>
       <Footer />
     </>
   );

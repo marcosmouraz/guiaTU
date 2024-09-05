@@ -1,13 +1,13 @@
 import { Link } from "react-router-dom";
 import Menu from "../../components/Menu/menu";
 import Footer from "../../components/Footer/footer";
-import { Container, Section } from "./cadinicialstyles";
+import { ContainerCadInicial, Section } from "./cadinicialstyles";
 
 export default function CadInicial() {
   return (
     <>
       <Menu />
-      <Container>
+      <ContainerCadInicial>
         <Section>
           <section className="blocoPrincipal">
             <div className="bloco1">
@@ -32,7 +32,7 @@ export default function CadInicial() {
             </div>
           </section>
         </Section>
-      </Container>
+      </ContainerCadInicial>
       <Footer />
     </>
   );

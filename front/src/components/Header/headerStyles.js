@@ -6,9 +6,10 @@ import Imagem4 from "../../assets/saobentoolinda.svg";
 import Imagem5 from "../../assets/ruadosol.svg";
 import Imagem6 from "../../assets/misericordia.svg";
 import Imagem7 from "../../assets/marcozero.svg";
+
 const backgroundChange = keyframes`
   0% {
-    background-image: url(${Imagem1}); /* ou URL externa */
+    background-image: url(${Imagem1});
   }
   16.67% {
     background-image: url(${Imagem2});
@@ -29,46 +30,47 @@ const backgroundChange = keyframes`
     background-image: url(${Imagem7});
   }
 `;
-  export const BackgroundContainer = styled.div`
-    width: 100%;
-    height: 100%;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    animation: ${backgroundChange} 60s infinite;
-  `;
+
+export const BackgroundContainer = styled.div`
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  animation: ${backgroundChange} 60s infinite;
+`;
+
 export const Container = styled.section`
   position: relative;
   width: 100%;
-  height: 90vh; /* Ajuste a altura conforme necessário */
+  height: 90vh;
   overflow: hidden;
 
   > h1 {
-    font-size: 400px;
+    font-size: 50px; /* Tamanho de fonte ajustado */
     position: absolute;
-    top: 80vh; /* Ajuste a posição conforme necessário */
+    top: 50%; /* Posicionamento mais centralizado */
     left: 50%;
     transform: translate(-50%, -50%);
-    color: white; /* Cor do texto */
+    color: white;
     padding: 10px;
     border-radius: 5px;
-    height: 100%;
     text-align: center;
-    z-index: 1; /* Garante que o texto apareça sobre a imagem */
+    z-index: 1;
     font-family: "Poppins", sans-serif;
     max-width: 100%;
-    white-space: nowrap; /* Impede a quebra de linha no título */
+    white-space: nowrap;
     overflow: hidden;
-    text-overflow: ellipsis; /* Adiciona reticências se o texto for muito longo */
+    text-overflow: ellipsis;
   }
 
   > .inputs {
     position: absolute;
-    top: 91%; /* Ajuste a posição conforme necessário */
+    top: 91%;
     left: 50%;
     width: 100%;
     transform: translate(-50%, -50%);
-    max-width: 1200px; /* Ajuste o max-width conforme necessário */
+    max-width: 1200px;
     display: flex;
     justify-content: center;
     gap: 10px;
@@ -76,58 +78,47 @@ export const Container = styled.section`
     padding: 0 10px;
   }
 
+  > .inputs select,
   > .inputs input,
   > .inputs button {
     padding: 15px;
     border-radius: 8px;
     font-size: 16px;
     border: none;
-    
-    max-width: 100%; /* Garante que os elementos não ultrapassem o max-width do container */
+    max-width: 100%;
   }
 
-  > .inputs #destino,
+  > .inputs select,
   > .inputs #data,
   > .inputs #nPessoas {
-    width: calc(30% - 10px); /* Ajuste a largura conforme necessário */
+    width: calc(30% - 10px);
   }
 
   > .inputs button {
-    width: calc(30% - 10px); /* Ajuste a largura conforme necessário */
+    width: calc(30% - 10px);
     background-color: #04136e;
     color: #fff;
     font-size: 16px;
-    cursor: pointer
+    cursor: pointer;
   }
 
   @media screen and (max-width: 1300px) {
-    > h1 {
-      font-size: 45px;
-    }
-
-    > .inputs #destino,
+    > .inputs select,
     > .inputs #data,
     > .inputs #nPessoas,
     > .inputs button {
-      width: calc(40% - 10px); /* Ajuste a largura para telas menores */
+      width: calc(40% - 10px);
     }
   }
 
   @media screen and (max-width: 768px) {
-    height: 50vh; /* Ajusta a altura para telas menores */
-  }
-  > h1 {
-    font-size: 70px;
-  }
+    height: 50vh;
 
-  > .inputs {
-    top: 91%;
-  }
-
-  > .inputs #destino,
-  > .inputs #data,
-  > .inputs #nPessoas,
-  > .inputs button {
-    width: calc(45% - 10px);
+    > .inputs select,
+    > .inputs #data,
+    > .inputs #nPessoas,
+    > .inputs button {
+      width: calc(45% - 10px);
+    }
   }
 `;

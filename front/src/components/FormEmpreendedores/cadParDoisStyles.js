@@ -1,131 +1,224 @@
 import styled from "styled-components";
 
-export const Container = styled.div`
+export const ContainerEmpre2 = styled.div`
   width: 100%;
-  height: 140vh;
-  max-width: 100%;
   display: flex;
+  justify-content: center;
   flex-direction: column;
   align-items: center;
+  position: relative;
+  font-family: "Outfit", system-ui;
 
+  .container-formulario-foto {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+  }
+
+  .box-titulo-formulario {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding-top: 60px;
+    padding-bottom: 20px;
+  }
+
+  .titulo-form-dois {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    h2 {
+      font-size: 30px;
+      display: flex;
+      color: #04136f;
+      white-space: nowrap;
+    }
+  }
   .titulo {
     display: flex;
-    align-items: center;
-    width: 51%;
-    height: 35vh;
-
+    justify-content: flex-start;
+    width: 100%;
     h2 {
-      font-size: 32px;
-      color: #04136e;
-      overflow-wrap: break-word;
+      font-size: 30px;
+      display: flex;
+      color: #04136f;
+      white-space: nowrap;
     }
   }
-
-  .inputFoto {
-    display: grid;
-    padding: 15px 0;
-    padding-bottom: 1rem;
-    align-items: center;
-    gap: 5px;
-    width: 51%;
-    flex-direction: column;
-    h5 {
-      font-weight: 200;
-    }
+  .formSection {
+    flex: 2; /* Aumenta a largura da seção do formulário */
+    max-width: 600px; /* Aumenta o limite máximo de largura */
+    background-color: white;
+    padding: 30px; /* Aumenta o padding para preencher mais espaço */
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    width: 530px;
+    padding-bottom: 41px;
+    margin-bottom: 18px;
   }
 
-  .imagem {
-    padding-left: 10rem;
+  .formSection h1 {
+    font-size: 28px; /* Aumenta o tamanho do título */
+    color: #333;
   }
-
-  .alterafoto {
-    border: #1e1e1e;
-    background-color: aliceblue;
-    border-style: groove;
-    border-radius: 10px;
-    transition: background-color 0.2s;
-  }
-
-  .alterafoto:hover {
-    border-color: #04136e;
-    background-color: #04136e;
-  }
-
-  .DadosEstabelecimento {
+  .dados-comerciais {
     display: flex;
-    height: 5vh;
-    width: 51%;
+    justify-content: start;
 
     h4 {
-      color: #04136e;
-      font-family: "Poppins", sans-serif;
-      font-weight: 600;
-      font-style: normal;
+      color: rgba(0, 0, 0, 0.6);
+      font-weight: bolder;
+      font-size: 20px;
     }
   }
 
-  .checkbox {
-    display: grid;
-    flex-direction: column;
-    align-items: center;
-    gap: 5px; /* Reduzido para compactar o espaço */
-    justify-content: center;
-    width: 62%;
-    padding-left: 3.5rem;
-    padding-top: 1rem;
-  }
-
-  .ContentC {
-    width: auto; /* Ajustado para que o conteúdo se ajuste */
+  .form {
     display: flex;
-    gap: 10px;
-    align-items: center; /* Alinhado verticalmente */
-  }
-
-  .ContentC input[type="checkbox"] {
-    width: 16px; /* Ajustado para um tamanho menor */
-    height: 16px; /* Ajustado para um tamanho menor */
-  }
-
-  .custom-checkbox {
-    font-size: 14px; /* Ajustado para um tamanho menor */
-    margin: 0; /* Remover margem para compactar */
-  }
-
-  .inputtext {
-    padding-right: 110px;
-    padding-bottom: 2rem;
-    font-size: 12px; /* Ajustado para um tamanho menor */
+    flex-direction: column;
   }
 
   .inputs {
     display: flex;
-    justify-items: center;
-    align-items: center;
-    gap: 1rem;
+    padding-bottom: 50px;
   }
 
   .inputContainer {
     display: flex;
     flex-direction: column;
     gap: 10px;
+    padding-top: 20px;
   }
 
-  .inputContainer input {
+  input {
+    width: 100%; /* Ajusta a largura para 100% do container pai */
+    max-width: 30rem;
+    height: 5vh;
+    border-style: groove;
+    border-radius: 4px;
+    padding: 0.5rem;
+    font-family: "Outfit", system-ui;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 18px; /* Aumenta o tamanho da fonte dos inputs */
+    transition: border-color 0.3s ease;
+  }
+
+  /* Seção de foto */
+  .imagens {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    background-color: yellow;
+
+    .foto-perfil {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .p {
+        margin-bottom: 10px;
+        font-size: 18px;
+        color: #333;
+      }
+
+      .alterafoto {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 2px dashed #ccc;
+        border-radius: 50%;
+        width: 120px;
+        height: 120px;
+        cursor: pointer;
+
+        .vetor {
+          color: #636363;
+        }
+      }
+    }
+  }
+
+  .alterafoto:hover {
+    border-color: #007bff;
+  }
+
+  .vetor {
+    color: #636363;
+    transition: color 0.3s ease;
+  }
+
+  .alterafoto:hover .vetor {
+    color: #007bff;
+  }
+
+  /* .checkContainer {
+    display: grid;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px; 
+    justify-content: center;
+  }
+  .checkbox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  } */
+  /* .inputscheckum {
+    display: flex;
+    gap: 10px;
+    align-items: center; 
+  } */
+
+  /* .ContentC input[type="checkbox"] {
+    width: 16px; 
+    height: 16px; 
+  } */
+  /* .checkbox {
+    display: flex;
+    align-items: center;
+  } */
+  /* .custom-checkbox {
+    font-size: 14px; 
+    gap: 50%;
+  } */
+
+  /* .inputtext {
+    padding-right: 110px;
+    padding-bottom: 2rem;
+    font-size: 12px; 
+  } */
+
+  /* .inputs {
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    gap: 1rem;
+  } */
+
+  /* .inputContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  } */
+
+  /* .inputContainer input {
     width: 150vw;
     max-width: 20rem;
     height: 5vh;
     border-style: groove;
     border-radius: 4px;
     padding: 0.5rem;
-  }
+  } */
 
   .buttonContainer {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 1rem;
-    padding: 2rem 0; /* Ajuste conforme necessário */
+    padding: 2rem 0;
   }
 
   .buttonCadastrar {
@@ -170,5 +263,4 @@ export const Container = styled.div`
       background-color: #999999; /* Ajuste a cor de fundo ao passar o mouse conforme necessário */
     }
   }
-  
 `;

@@ -1,10 +1,12 @@
-import { useState } from "react";
 import { useForm } from "react-hook-form";
 import CadastroEmpreendedor1 from "./cadEmpreendedor1";
 import CadastroEmpreendedor2 from "./cadEmpreendedor2";
 import { api } from "../../service/api";
+import { useNavigate } from "react-router-dom";
 
-export default function FormEmpreendedor() {
+export default function FormEmpreendedor({ tabForm, setTabForm }) {
+  const navigation = useNavigate();
+
   const {
     register,
     handleSubmit,
@@ -38,14 +40,13 @@ export default function FormEmpreendedor() {
       })
       .then((response) => {
         localStorage.setItem("token", response.data.token);
+        window.alert("Cadastro realizado com sucesso!");
         navigation("/telafiltro");
       })
       .catch((error) => {
         console.log(error.response.data.message);
       });
   };
-
-  const [tabForm, setTabForm] = useState(0);
 
   return (
     <>
@@ -56,12 +57,14 @@ export default function FormEmpreendedor() {
             register={register}
             setTabForm={setTabForm}
             setValue={setValue}
+            errors={errors}
           />
         ) : (
           <CadastroEmpreendedor2
             register={register}
             setTabForm={setTabForm}
             setValue={setValue}
+            errors={errors}
           />
         )}
       </form>

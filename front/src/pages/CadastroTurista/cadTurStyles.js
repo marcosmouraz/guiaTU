@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const Container = styled.body`
+export const ContainerTur1 = styled.body`
   width: 100%;
   display: flex;
   justify-content: center;
@@ -40,7 +40,7 @@ export const Container = styled.body`
     background-color: white;
     padding: 30px; /* Aumenta o padding para preencher mais espaço */
     border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
     width: 530px;
   }
 

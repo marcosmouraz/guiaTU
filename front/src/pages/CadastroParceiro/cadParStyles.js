@@ -1,95 +1,80 @@
 import styled from "styled-components";
 
-export const Container = styled.div`
+export const ContainerEmpre1 = styled.body`
   width: 100%;
-  height: 130vh;
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
+  position: relative;
   font-family: "Outfit", system-ui;
+  background-color: #636363;
 
+  .container-formulario-foto {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+  }
+  .box-titulo-formulario {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding-top: 60px;
+    padding-bottom: 20px;
+  }
   .titulo {
     display: flex;
-    align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     width: 100%;
-    padding-right: 100px;
-    padding-bottom: 2rem;
-
     h2 {
-      font-size: 32px;
-      color: #04136e;
-      overflow-wrap: break-word;
-      white-space: normal;
+      font-size: 30px;
+      display: flex;
+      color: #04136f;
+      white-space: nowrap;
     }
   }
-
-  .inputfoto {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    padding-bottom: 1rem;
-    text-align: center;
-    align-items: center;
-    gap: 5px;
-    padding-left: 500px;
-
-    .vetor {
-      border: #1e1e1e;
-      background-color: aliceblue;
-      border-style: groove;
-      border-radius: 10px;
-      transition: background-color 0.2s;
-    }
-
-    .vetor:hover {
-      border-color: #04136e;
-      background-color: #04136e;
-    }
-
-    .p {
-      color: #04136e;
-      font-size: 16px;
-      font-weight: 600;
-      width: 8rem;
-    }
+  .formSection {
+    flex: 2; /* Aumenta a largura da seção do formulário */
+    max-width: 600px; /* Aumenta o limite máximo de largura */
+    background-color: white;
+    padding: 30px; /* Aumenta o padding para preencher mais espaço */
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    width: 530px;
+    padding-bottom: 41px;
+    margin-bottom: 18px;
   }
 
+  .formSection h1 {
+    font-size: 28px; /* Aumenta o tamanho do título */
+    color: #333;
+  }
   .DadosPessoais {
     display: flex;
     justify-content: start;
 
     h4 {
       color: rgba(0, 0, 0, 0.6);
-      font-family: "Poppins", sans-serif;
       font-weight: bolder;
       font-size: 20px;
     }
   }
 
   .form {
-    height: 98%;
-    width: 100%;
-    margin-right: 20%;
-    background-color: white;
-    padding: 30px; /* Aumenta o padding para preencher mais espaço */
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-    font-family: "Outfit", system-ui;
+    display: flex;
+    flex-direction: column;
   }
 
   .inputs {
     display: flex;
-    justify-items: center;
-    align-items: center;
-    gap: 1rem;
+    padding-bottom: 50px;
   }
 
   .inputContainer {
     display: flex;
     flex-direction: column;
     gap: 10px;
-    padding-top: 6%;
+    padding-top: 20px;
   }
 
   input {
@@ -111,19 +96,16 @@ export const Container = styled.div`
     flex-direction: column;
     align-items: start;
     gap: 10px;
-    padding-bottom: 20px;
-    padding-top: 30px;
-   
 
     h5 {
-      font-weight: 700;
+      font-weight: 500;
     }
 
     ul {
       font-weight: normal;
       font-size: 13px;
       color: #1e1e1e;
-      padding-left: 3%;
+      padding-left: 20px;
     }
   }
 
@@ -131,7 +113,7 @@ export const Container = styled.div`
     display: flex;
     justify-content: center;
     width: 100%;
-    margin-top: 2rem; /* Ajuste o valor conforme necessário */
+    padding-top: 2rem; /* Ajuste o valor conforme necessário */
   }
 
   .buttonproximo {
@@ -140,92 +122,124 @@ export const Container = styled.div`
     border-radius: 8px;
     border: none;
     cursor: pointer;
+    width: 100%;
     transition: background-color 0.2s;
-    padding: 10px 2rem; /* Ajuste o padding conforme necessário */
+    padding: 10px 2rem;
     text-align: center;
-    font-size: 16px; /* Ajuste o tamanho da fonte conforme necessário */
+    font-size: 16px;
 
     &:hover {
       background-color: #3f58ee;
     }
   }
+  /* //////////////////////// */
 
-  /* Media Queries para telas menores */
-  @media (max-width: 1200px) {
-    .titulo {
-      width: 70%;
-      padding-right: 100px;
-    }
-
-    .inputfoto {
-      padding-left: 300px;
-    }
-
-    .form {
-      width: 650px;
-    }
-  }
-
-  @media (max-width: 992px) {
-    .titulo {
-      width: 90%;
-      padding-right: 50px;
-    }
+  /* Seção de foto */
+  .imagemArea {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 30%;
 
     .inputfoto {
-      padding-left: 150px;
-    }
-
-    .form {
-      width: 100%;
-      padding: 20px;
-    }
-  }
-
-  @media (max-width: 768px) {
-    height: auto;
-    .titulo {
-      width: 100%;
-      padding-right: 0;
-      height: auto;
       text-align: center;
-    }
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-bottom: 210px;
 
-    .inputfoto {
-      padding-left: 0;
-    }
+      .p {
+        margin-bottom: 10px;
+        font-size: 18px;
+        color: #333;
+      }
 
-    .form {
-      width: 100%;
-      padding: 15px;
-    }
+      .alterafoto {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 2px dashed #ccc;
+        border-radius: 50%;
+        width: 120px;
+        height: 120px;
+        cursor: pointer;
 
-    .detalhesSenha {
-      padding-right: 0;
-      h5 {
-        padding-right: 0;
+        .vetor {
+          color: #636363;
+        }
       }
     }
-
-    input {
-      max-width: 100%;
-      font-size: 16px;
-    }
   }
 
-  @media (max-width: 480px) {
-    .titulo h2 {
-      font-size: 24px;
+  .alterafoto:hover {
+    border-color: #007bff;
+  }
+
+  .vetor {
+    color: #636363;
+    transition: color 0.3s ease;
+  }
+
+  .alterafoto:hover .vetor {
+    color: #007bff;
+  }
+
+  /* Adaptação para telas menores */
+  @media (max-width: 768px) {
+    .container {
+      flex-direction: column;
     }
 
-    .inputfoto .p {
-      font-size: 14px;
-      width: auto;
+    .formSection {
+      margin-right: 0;
+      margin-bottom: 20px;
+      max-width: 100%;
     }
 
-    .buttonproximo {
-      font-size: 14px;
-      padding: 8px 1.5rem;
+    .imagemArea {
+      max-width: 100%;
+      align-items: center;
     }
+  }
+  .ondas {
+    background-color: #fff;
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+    top: 0;
+  }
+  .rosaventos-direita {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
+  .rosaventos-esquerda {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+  }
+  /* //////////////////////////////////// */
+
+  /* CSS */
+  .alterafoto {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%; /* Ajuste conforme necessário */
+    height: 100%; /* Ajuste conforme necessário */
+    border: 2px solid #ddd; /* Borda opcional */
+    border-radius: 8px; /* Bordas arredondadas opcionais */
+    overflow: hidden; /* Garante que a imagem não saia do contêiner */
+    background-color: #f0f0f0; /* Cor de fundo opcional */
+  }
+
+  .alterafoto img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ajusta a imagem para cobrir o contêiner sem distorção */
+  }
+
+  .inputFoto {
+    display: none; /* Esconde o input file */
   }
 `;
