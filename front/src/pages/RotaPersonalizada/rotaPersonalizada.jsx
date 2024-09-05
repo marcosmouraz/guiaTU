@@ -13,6 +13,54 @@ import styled from "styled-components";
 export default function RotaPersonalizada() {
   const mapRef = useRef(null);
   const navigate = useNavigate();
+  const location = useLocation();
+  const { value } = location.state || {};
+
+  const [valorTotal, setValorTotal] = useState(0);
+  const [showModal, setShowModal] = useState(false);
+  const [modalMessage, setModalMessage] = useState("");
+  const [pessoas, setPessoas] = useState(1);
+
+  const {
+    register,
+    control,
+    handleSubmit,
+    formState: { errors },
+  } = useForm({
+    defaultValues: {
+      partida: "",
+      destino: "",
+      inputs: [{ value: "" }],
+      calendario: "",
+    },
+  });
+
+  const { fields, append, remove } = useFieldArray({
+    control,
+    name: "inputs",
+  });
+
+  const onFormSubmit = (data) => {
+    if (
+      !data.partida ||
+      !data.destino ||
+      !data.calendario ||
+      !data.inputs.length
+    ) {
+      setModalMessage("Por favor, preencha todos os campos!");
+      setShowModal(true);
+      return;
+    }
+
+    const partida = 50;
+    const paradas = 50 * data.inputs.length;
+    const destino = 50;
+
+    const valorTotal = partida + paradas + destino;
+    setValorTotal(valorTotal);
+    setModalMessage("Reserva efetuada com sucesso!");
+    setShowModal(true);
+  };
 
   useEffect(() => {
     const marcoZero = [-8.0645, -34.8711];
@@ -57,58 +105,40 @@ export default function RotaPersonalizada() {
     };
   }, []);
 
-  const [valorTotal, setValorTotal] = useState(0);
-  const [showModal, setShowModal] = useState(false);
-  const [modalMessage, setModalMessage] = useState("");
-
-  const {
-    register,
-    control,
-    handleSubmit,
-    formState: { errors },
-  } = useForm({
-    defaultValues: {
-      partida: "",
-      destino: "",
-      inputs: [{ value: "" }],
-      calendario: "",
-    },
-  });
-
-  const { fields, append, remove } = useFieldArray({
-    control,
-    name: "inputs",
-  });
-
-  const onSubmit = (data) => {
-    if (
-      !data.partida ||
-      !data.destino ||
-      !data.calendario ||
-      !data.inputs.length
-    ) {
-      setModalMessage("Por favor, preencha todos os campos!");
-      setShowModal(true);
-      return;
-    }
-
-    const partida = 50;
-    const paradas = 50 * data.inputs.length;
-    const destino = 50;
-
-    const valorTotal = partida + paradas + destino;
-    setValorTotal(valorTotal);
-    setModalMessage("Reserva efetuada com sucesso!");
-    setShowModal(true);
-  };
-
-  const location = useLocation();
-  const { value } = location.state || {};
-
-  const [pessoas, setPessoas] = useState(1);
-
   const handleChange = (event) => {
     setPessoas(Number(event.target.value));
+  };
+
+  const onRouteSubmit = async (data) => {
+    try {
+      const response = await api.post("/rotaTur/create", {
+        partida: data.partida,
+        paradaUm: data.paradaUm,
+        paradaDois: data.paradaDois,
+        destino: data.destino,
+        valor: data.valor,
+        turista_id: data.turista_id, // Supondo que o turista_id seja enviado do front-end
+      });
+
+      alert("Rota turística cadastrada com sucesso!");
+      navigate("/"); // Redireciona para a página inicial
+    } catch (error) {
+      if (error.response && error.response.data) {
+        const { status, message } = error.response.data;
+        if (status === 409) {
+          alert(
+            message ||
+              "Erro: Rota já existe ou dados duplicados. Tente novamente."
+          );
+        } else if (status === 422) {
+          alert(message || "Erro de validação. Verifique os dados.");
+        } else {
+          alert("Erro ao realizar o cadastro. Tente novamente.");
+        }
+      } else {
+        alert("Erro de rede ou servidor. Tente novamente.");
+      }
+    }
   };
 
   return (
@@ -214,7 +244,7 @@ export default function RotaPersonalizada() {
               <div className="blocoMapa">
                 <div id="map" style={{ height: "350px", width: "100%" }}></div>
               </div>
-              <form className="form" onSubmit={handleSubmit(onSubmit)}>
+              <form className="form" onSubmit={handleSubmit(onFormSubmit)}>
                 <div className="buttonReservar">
                   <button type="submit">Reserve agora!</button>
                 </div>

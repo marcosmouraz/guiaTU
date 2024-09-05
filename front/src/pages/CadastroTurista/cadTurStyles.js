@@ -1,33 +1,35 @@
 import styled from "styled-components";
 
 export const Container = styled.body`
-  .blocos {
-    width: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+
+  .container-formulario-foto {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+  }
+  .box-titulo-formulario {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-  }
-  .blocoleft {
-    width: 100%;
-    display: flex;
-    font-family: "Outfit", system-ui;
-    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
   }
   .titulo {
     display: flex;
-    padding-left: 10rem;
+    justify-content: flex-start;
+    width: 100%;
     h2 {
       font-size: 30px;
       display: flex;
       color: #04136f;
       white-space: nowrap;
     }
-  }
-  .container {
-    display: flex;
-    font-family: "Outfit", system-ui;
-    padding-bottom: 2rem;
-    padding-top: 8rem;
   }
 
   /* Seção do formulário */
@@ -39,6 +41,7 @@ export const Container = styled.body`
     padding: 30px; /* Aumenta o padding para preencher mais espaço */
     border-radius: 8px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 530px;
   }
 
   .formSection h1 {
@@ -116,6 +119,7 @@ export const Container = styled.body`
       display: flex;
       flex-direction: column;
       align-items: center;
+      padding-bottom: 300px;
 
       .p {
         margin-bottom: 10px;
@@ -175,19 +179,17 @@ export const Container = styled.body`
     width: 100%;
     position: absolute;
     z-index: -1;
+    top: 0;
   }
-
-  .rosa {
-    background-color: transparent;
-    width: 100%;
+  .rosaventos-direita {
     position: absolute;
-    z-index: -1;
-    padding-left: 20.5rem;
-    padding-top: 11rem;
-    img {
-      height: 90vh;
-      opacity: 80%;
-    }
+    right: 0;
+    bottom: 0;
+  }
+  .rosaventos-esquerda {
+    position: absolute;
+    left: 0;
+    bottom: 0;
   }
   /* //////////////////////////////////// */
 
@@ -214,7 +216,5 @@ export const Container = styled.body`
     display: none; /* Esconde o input file */
   }
   /* ///////////////////////////////////////////////////////// */
-
- 
 `;
 

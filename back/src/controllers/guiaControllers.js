@@ -3,19 +3,19 @@ const bcrypt = require("bcrypt");
 
 module.exports = class guiaControllers {
   static async createGuia(request, response) {
-    const {
-      nome,
-      sobrenome,
-      data_nascimento,
-      cpf,
-      pais,
-      estado,
-      credencial,
-      username,
-      senha_hash,
-    } = request.body;
-
     try {
+      const {
+        nome,
+        sobrenome,
+        data_nascimento,
+        cpf,
+        pais,
+        estado,
+        credencial,
+        username,
+        senha_hash,
+      } = request.body;
+
       // Verificar se o username já existe
       const existingGuia = await Guia.findOne({ where: { username } });
       if (existingGuia) {
@@ -41,23 +41,30 @@ module.exports = class guiaControllers {
         .status(201)
         .json({ message: "Guia cadastrado com SUCESSO!", guia: guia });
     } catch (error) {
-      console.error(error); // Para depuração
-      response
-        .status(422)
-        .json({ message: "Erro ao cadastrar guia", error: error.message });
+      console.log(error);
+      return response
+        .status(500)
+        .json({ message: "Erro ao conectar ao servidor", error });
     }
   }
 
   static async getOneGuia(request, response) {
-    const { id } = request.params;
+    try {
+      const { id } = request.params;
 
-    const guia = await Guia.findByPk(id);
+      const guia = await Guia.findByPk(id);
 
-    if (!guia) {
-      response.status(404).json({ message: "Guia não encontrado" });
-      return;
+      if (!guia) {
+        response.status(404).json({ message: "Guia não encontrado" });
+        return;
+      }
+
+      response.status(200).json({ guia: guia });
+    } catch (error) {
+      console.log(error);
+      return response
+        .status(500)
+        .json({ message: "Erro ao conectar ao servidor", error });
     }
-
-    response.status(200).json({ guia: guia });
   }
 };

@@ -9,85 +9,105 @@ const bcrypt = require("bcrypt");
 
 module.exports = class authControllers {
   static async turistaLogin(request, response) {
-    const { username, senha_hash } = request.body;
+    try {
+      const { username, senha_hash } = request.body;
 
-    const turista = await Turista.findOne({ where: { username: username } });
+      const turista = await Turista.findOne({ where: { username: username } });
 
-    const validatePassword = await bcrypt.compare(
-      senha_hash,
-      turista.senha_hash
-    );
+      const validatePassword = await bcrypt.compare(
+        senha_hash,
+        turista.senha_hash
+      );
 
-    if (!validatePassword) {
-      response.status(422).json({ message: "E-mail ou senha invalido !" });
-      return;
+      if (!validatePassword) {
+        response.status(422).json({ message: "E-mail ou senha invalido !" });
+        return;
+      }
+
+      const token = jwt.sign(
+        {
+          id: turista.id,
+          type: "turista",
+        },
+        "secret"
+      );
+
+      response.status(200).json({ token: token });
+    } catch (error) {
+      console.log(error);
+      return response
+        .status(500)
+        .json({ message: "Erro ao conectar ao servidor", error });
     }
-
-    const token = jwt.sign(
-      {
-        id: turista.id,
-        type: "turista"
-      },
-      "secret"
-    );
-
-    response.status(200).json({ token: token });
   }
 
   static async empreendedoresLogin(request, response) {
-    const { username, senha_hash } = request.body;
+    try {
+      const { username, senha_hash } = request.body;
 
-    const empreendedores = await Empreendedores.findOne({
-      where: { username: username },
-    });
+      const empreendedores = await Empreendedores.findOne({
+        where: { username: username },
+      });
 
-    const validatePassword = await bcrypt.compare(
-      senha_hash,
-      empreendedores.senha_hash
-    );
+      const validatePassword = await bcrypt.compare(
+        senha_hash,
+        empreendedores.senha_hash
+      );
 
-    if (!validatePassword) {
-      response.status(422).json({ message: "E-mail ou senha invalido !" });
-      return;
+      if (!validatePassword) {
+        response.status(422).json({ message: "E-mail ou senha invalido !" });
+        return;
+      }
+
+      const token = jwt.sign(
+        {
+          id: empreendedores.id,
+          type: "empreendedor",
+        },
+        "secret"
+      );
+
+      response.status(200).json({ token: token });
+    } catch (error) {
+      console.log(error);
+      return response
+        .status(500)
+        .json({ message: "Erro ao conectar ao servidor", error });
     }
-
-    const token = jwt.sign(
-      {
-        id: empreendedores.id,
-        type: "empreendedor",
-      },
-      "secret"
-    );
-
-    response.status(200).json({ token: token });
   }
 
   static async guiaLogin(request, response) {
-    const { username, senha_hash } = request.body;
+    try {
+      const { username, senha_hash } = request.body;
 
-    const guias = await Guias.findOne({
-      where: { username: username },
-      
-    });
+      const guias = await Guias.findOne({
+        where: { username: username },
+      });
 
-    const validatePassword = await bcrypt.compare(
-      senha_hash,
-      guias.senha_hash
-    );
+      const validatePassword = await bcrypt.compare(
+        senha_hash,
+        guias.senha_hash
+      );
 
-    if (!validatePassword) {
-      response.status(422).json({ message: "E-mail ou senha invalido !" });
-      return;
+      if (!validatePassword) {
+        response.status(422).json({ message: "E-mail ou senha invalido !" });
+        return;
+      }
+
+      const token = jwt.sign(
+        {
+          id: guias.id,
+          type: "guia",
+        },
+        "secret"
+      );
+
+      response.status(200).json({ token: token });
+    } catch (error) {
+      console.log(error);
+      return response
+        .status(500)
+        .json({ message: "Erro ao conectar ao servidor", error });
     }
-
-    const token = jwt.sign(
-      {
-        id: guias.id,
-        type: "guia",
-      },
-      "secret"
-    );
-
-    response.status(200).json({ token: token });
   }
 };

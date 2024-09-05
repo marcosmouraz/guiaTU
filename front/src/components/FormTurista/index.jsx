@@ -4,7 +4,7 @@ import  CadastroTurista1  from "./cadTurista1";
 import  CadastroTurista2  from "./cadTurista2";
 import { api } from "../../service/api";
 
-export default function FormTurista() {
+export default function FormTurista({tabForm, setTabForm}) {
   const {
     register,
     handleSubmit,
@@ -38,10 +38,8 @@ export default function FormTurista() {
       });
   };
 
-  const [tabForm, setTabForm] = useState(0);
  
   return (
-    <>
       <form onSubmit={handleSubmit(onSubmit)}>
         {tabForm === 0 ? (
           <CadastroTurista1 register={register} setTabForm={setTabForm} />
@@ -50,6 +48,5 @@ export default function FormTurista() {
         )}
 
       </form>
-    </>
   );
 }

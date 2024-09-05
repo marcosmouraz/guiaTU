@@ -2,8 +2,13 @@ import Menu from "../../components/Menu/menu";
 import { Container } from "./cadTurStyles";
 import Footer from "../../components/Footer/footer";
 import FormTurista from "../../components/FormTurista";
+import RosaDireita from "../../assets/rosaFrameUm.svg";
+import { useState } from "react";
+import RosaEsquerda from "../../assets/rosaFrameDois.svg";
 
 export default function CadastroTurista() {
+
+  const [tabForm, setTabForm] = useState(0);
 
   return (
     <>
@@ -18,7 +23,12 @@ export default function CadastroTurista() {
             ></path>
           </svg>
         </div>
-        <FormTurista />
+        <FormTurista tabForm={tabForm} setTabForm={setTabForm} />
+        {tabForm === 0 ? (
+          <img src={RosaDireita} alt="" className="rosaventos-direita" />
+        ) : (
+          <img src={RosaEsquerda} alt="" className="rosaventos-esquerda" />
+        )}
       </Container>
       <Footer />
     </>

@@ -1,23 +1,20 @@
 import styled from "styled-components";
 
 export const ContainerFormTab2 = styled.div`
-  height: 140vh;
   display: flex;
   justify-content: center;
   width: 100%;
   align-items: center;
   font-family: "Outfit", system-ui;
+  flex-direction: column;
+  gap: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
 
-  .bloco {
+  .titulo-form-dois {
     display: flex;
-    flex-direction: column;
-    padding-top: 10rem;
-  }
-  .titulo {
-    display: flex;
+    justify-content: flex-start;
     width: 100%;
-    padding-right: 18rem;
-    padding-bottom: 1rem;
     h2 {
       font-size: 30px;
       display: flex;
@@ -25,23 +22,10 @@ export const ContainerFormTab2 = styled.div`
       white-space: nowrap;
     }
   }
-  .all {
-    width: 100%;
-    display: flex;
-    padding-top: 8rem;
-    flex-direction: column;
-    font-family: "Outfit", system-ui;
-  }
-  .formDois {
-    display: flex;
-    justify-content: center;
-    gap: 4rem;
-    margin-bottom: 2rem;
-  }
 
   .formsection {
     flex: 2; /* Aumenta a largura da seção do formulário */
-    max-width: 600px; /* Aumenta o limite máximo de largura */
+    max-width: 500px; /* Aumenta o limite máximo de largura */
     margin-right: 20px;
     background-color: white;
     padding: 30px; /* Aumenta o padding para preencher mais espaço */
@@ -173,5 +157,41 @@ export const ContainerFormTab2 = styled.div`
       height: 90vh;
       opacity: 80%;
     }
+  }
+  /* ////////////////// */
+
+  .modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+
+  .modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    width: 400px;
+    text-align: center;
+  }
+
+  .close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 30px;
+    cursor: pointer;
+  }
+
+  .clickable-span {
+    color: blue;
+    text-decoration: underline;
+    cursor: pointer;
   }
 `;
