@@ -1,22 +1,35 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
+  width: 100%;
   display: flex;
-  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
   align-items: center;
-  height: 108vh;
-
-  .titulo {
-    text-align: start;
+  position: relative;
+  /* background-color: red; */
+  .container-formulario-foto {
     display: flex;
-    width: 80%;
-    padding-bottom: 60px;
-
+    gap: 20px;
+    align-items: center;
+  }
+  .box-titulo-formulario{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  .titulo {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
     h2 {
       font-size: 30px;
+      display: flex;
       color: #04136f;
-      font-weight: 700;
-      padding-top: 65px;
+      white-space: nowrap;
     }
   }
 
@@ -40,15 +53,7 @@ export const Container = styled.div`
     border-radius: 8px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
 
-    .DadosPessoais {
-      margin-bottom: 20px;
-
-      h4 {
-        font-size: 20px;
-        color: #333;
-      }
-    }
-
+  
     form {
       display: flex;
       flex-direction: column;
@@ -154,13 +159,14 @@ export const Container = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 40%;
+    width: 30%;
 
     .inputfoto {
       text-align: center;
       display: flex;
       flex-direction: column;
       align-items: center;
+      padding-bottom: 215px;
 
       .p {
         margin-bottom: 10px;
@@ -177,7 +183,6 @@ export const Container = styled.div`
         width: 120px;
         height: 120px;
         cursor: pointer;
-        overflow: hidden; /* Garante que a imagem não ultrapasse a borda */
 
         .vetor {
           color: #636363;
@@ -185,23 +190,30 @@ export const Container = styled.div`
       }
     }
   }
+
+  .alterafoto:hover {
+    border-color: #007bff;
+  }
+
+  .vetor {
+    color: #636363;
+    transition: color 0.3s ease;
+  }
+
+  .alterafoto:hover .vetor {
+    color: #007bff;
+  }
   .ondas {
     background-color: #fff;
     width: 100%;
     position: absolute;
     z-index: -1;
+    top: 0;
   }
-  .rosa {
-    background-color: transparent;
-    width: 100%;
+  .rosaventos-direita {
     position: absolute;
-    z-index: -1;
-    padding-left: 41rem;
-    padding-top: 5rem;
-    img {
-      height: 90vh;
-      opacity: 80%;
-    }
+    right: 0;
+    bottom: 0;
   }
   @media (max-width: 768px) {
     .main-content {
@@ -222,6 +234,27 @@ export const Container = styled.div`
         width: 100%;
       }
     }
+  }
+  .alterafoto {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%; /* Ajuste conforme necessário */
+    height: 100%; /* Ajuste conforme necessário */
+    border: 2px solid #ddd; /* Borda opcional */
+    border-radius: 8px; /* Bordas arredondadas opcionais */
+    overflow: hidden; /* Garante que a imagem não saia do contêiner */
+    background-color: #f0f0f0; /* Cor de fundo opcional */
+  }
+
+  .alterafoto img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ajusta a imagem para cobrir o contêiner sem distorção */
+  }
+
+  .inputFoto {
+    display: none; /* Esconde o input file */
   }
 `;
 
@@ -264,11 +297,49 @@ export const ModalContent = styled.div`
     }
   }
   /* //////////////////////////////////// */
-  
-
   .fotoPreview {
     width: 100%;
     height: 100%;
     object-fit: cover; /* Ajusta a imagem para caber no contêiner */
   }
+  
+  .modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: red;
+  padding: 20px;
+  border-radius: 8px;
+  width: 80%;
+  max-width: 600px;
+  position: relative;
+}
+
+.modal-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: transparent;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.privacy-policy-link {
+  color: #007bff;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+  
 `;

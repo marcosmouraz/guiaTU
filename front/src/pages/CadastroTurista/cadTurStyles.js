@@ -216,5 +216,7 @@ export const Container = styled.body`
     display: none; /* Esconde o input file */
   }
   /* ///////////////////////////////////////////////////////// */
+
+
 `;
 
