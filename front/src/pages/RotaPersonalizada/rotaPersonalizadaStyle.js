@@ -5,7 +5,20 @@ export const Container = styled.div`
   width: 100%;
   height: 100vh;
   /* flex-direction: column; */
-
+  .ondas{
+    background-color: #fff;
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+    top: 0;
+  }
+  .rosaventos-direita {
+    position: absolute;
+    left: 83%;
+    top: 55%;
+    z-index: -1;
+    height: 60vh;
+  }
   .blocoFora {
     display: flex;
     align-items: center;
@@ -18,17 +31,18 @@ export const Container = styled.div`
   .titulo {
     color: #04136f;
     display: flex;
-    padding-top: 5rem;
+    padding-top: 6rem;
     justify-content: start;
     padding-left: 10rem;
     padding-bottom: 3rem;
     width: 100%;
 
     @media (max-width: 768px) {
-      padding-left: 2rem;
-      padding-top: 3rem;
-      padding-bottom: 1rem;
-      font-size: 1.5rem;
+      padding: 10px 30px;
+      padding-top: 10rem;
+      padding-bottom: 2rem;
+      font-size: larger;
+      margin: auto 0;
     }
   }
 
@@ -261,4 +275,5 @@ export const Container = styled.div`
       }
     }
   }
+  
 `;
