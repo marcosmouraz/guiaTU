@@ -77,7 +77,7 @@ export const Container = styled.section`
   .textCarrossel {
     position: relative;
     display: flex;
-    top: 23rem;
+    top: 32rem;
     padding-right: 2rem;
     font-size: 20px;
     left: 1rem;
@@ -99,7 +99,7 @@ export const Container = styled.section`
   .back {
     background-color: #efb715;
     position: absolute;
-    top: 21rem;
+    top: 30rem;
     height: 13vh;
     border-radius: 0 0 10px 10px;
     width: 100%;
