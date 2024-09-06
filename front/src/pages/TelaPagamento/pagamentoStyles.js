@@ -12,7 +12,7 @@ const flipCard = keyframes`
 
 export const Container = styled.body`
   width: 100%;
-  height: 140vh;
+  height: 100vh;
   font-family: "Outfit", system-ui;
   position: relative;
 
@@ -51,7 +51,7 @@ export const Container = styled.body`
     display: flex;
     color: #04136e;
     font-size: 30px;
-    margin-top: 7rem;
+    padding-top: 4rem;
     gap: 10px;
     text-align: center;
   }

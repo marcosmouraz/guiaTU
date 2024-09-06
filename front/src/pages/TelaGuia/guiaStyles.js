@@ -98,7 +98,7 @@ export const Container = styled.body`
   .body {
     display: flex;
     justify-content: center;
-    gap: 7rem;
+    gap: 10rem;
     align-items: center;
     margin-top: 5rem;
   }

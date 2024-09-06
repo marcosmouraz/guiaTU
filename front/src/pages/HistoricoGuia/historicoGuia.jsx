@@ -82,7 +82,6 @@ export default function HistoricoGuia() {
           <h2>Gerenciador de passeios</h2>
         </div>
         <div className="blocos">
-          <button>CRIAR NOVO PASSEIO</button>
 
           <div className="blocoLeft">
             <div className="buttonPasseios">
