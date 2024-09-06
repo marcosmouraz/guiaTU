@@ -13,39 +13,72 @@ const flipCard = keyframes`
 export const Container = styled.body`
   width: 100%;
   height: 140vh;
-  max-width: 100%;
-  margin: 0 auto;
   font-family: "Outfit", system-ui;
+  position: relative;
 
+  .ondas {
+    background-color: #fff;
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+    top: 0;
+  }
+  .container-titulo-checkbox-botaoconluir {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    margin: 0 auto;
+  }
+
+  .titulo-checkbox-botaopagar {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    padding-top: 20px;
+  }
+
+  .titulo-paragrafo {
+    display: flex;
+    flex-direction: column;
+    color: #04136e;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 6%;
+  }
   .titulo {
     display: flex;
     color: #04136e;
-    font-size: 18px;
-    width: 70%;
+    font-size: 30px;
     margin-top: 7rem;
-    gap: 8px;
-    justify-content: center;
+    gap: 10px;
+    text-align: center;
   }
-
   .paragrafo {
-    margin-top: 10px;
     display: flex;
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 200;
-    width: 65%;
-    justify-content: center;
+    text-align: center;
   }
 
   .header {
-    width: 100%;
     display: flex;
+    flex-direction: column;
     justify-content: center; /* Centraliza o conteúdo da seção .header */
-    position: relative;
+    gap: 20px;
+    max-width: 600px; /* Aumenta o limite máximo de largura */
+    margin-right: 20px;
+    background-color: #f4f1f1;
+    padding: 30px; /* Aumenta o padding para preencher mais espaço */
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    width: 530px;
   }
 
   .opcoes {
     display: flex;
-    margin-top: 4rem;
+    margin-top: 20%;
     flex-direction: column; /* Organiza as opções em uma coluna */
     gap: 25px; /* Espaço entre as opções */
     width: 50%;
@@ -62,14 +95,13 @@ export const Container = styled.body`
   .cartaoSalvo {
     display: flex;
     flex-direction: column; /* Coloca o label e o texto do cartão em colunas */
-    align-items: flex-start; /* Alinha os elementos à esquerda */
-    margin-left: 15rem;
+    align-items: flex-start;
+    gap: 5px;
   }
 
   .radioLabel {
     display: flex;
     align-items: center; /* Alinha o rádio e o label no centro verticalmente */
-    margin-top: 50px;
   }
 
   .radioLabel input[type="radio"] {
@@ -78,7 +110,13 @@ export const Container = styled.body`
 
   .cartaoUtilizado {
     margin-left: 24px; /* Indenta o texto para alinhar com o label */
-    margin-top: 8px; /* Espaçamento entre o label e o texto do cartão */
+    margin-top: 3px; /* Espaçamento entre o label e o texto do cartão */
+    .numerocartao {
+      position: relative;
+      top: 6px;
+      left: 10px;
+      font-size: 12px;
+    }
   }
 
   .opcoes input[type="radio"] {
@@ -88,25 +126,28 @@ export const Container = styled.body`
   .pix input[type="radio"] {
     margin-right: 10px;
   }
-  .novoCartao {
-    input {
-      background-color: #04136e;
-      color: #fff;
-      padding: 10px;
-      font-size: 14px;
-      font-weight: 600;
-      border-radius: 4px;
-      border: none;
-      cursor: pointer;
-      transition: background-color 0.3s, color 0.3s;
-    }
+  .botao-cart {
+    display: flex;
+    justify-content: center;
+    padding-top: 10%;
   }
+  .novoCartao input {
+    background-color: #04136e;
+    color: #fff;
+    padding: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+  }
+
   .novoCartao input:hover {
     background-color: yellow; /* Cor de fundo quando o mouse passa sobre o botão (amarelo escuro) */
     color: #04136e; /* Cor da fonte quando o mouse passa sobre o botão (azul) */
   }
   .linhas {
-    margin-top: 20px; /* Espaço acima da linha, se necessário */
     margin-bottom: 20px; /* Espaço abaixo da linha, se necessário */
     width: 100%; /* Certifique-se de que a linha ocupa toda a largura disponível */
   }
@@ -119,23 +160,42 @@ export const Container = styled.body`
   .body {
     width: 100%;
     display: flex;
+    flex-direction: column;
     justify-content: center; /* Centraliza o conteúdo da seção .header */
+    position: relative;
   }
   .textos {
-    width: 43%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20%;
+    width: 100%;
     h2 {
       font-size: 20px;
       font-weight: 600;
     }
-    p {
-      font-size: 12px;
+    .cifrao {
+      color: #04136e;
+      font-size: large;
+      font-weight: bolder;
+      position: relative;
+      right: 50px;
     }
   }
   .lock {
     display: flex;
     align-items: center;
-    gap: 4px;
+    justify-content: center;
     padding-top: 10px;
+    position: relative;
+    right: 6%;
+    gap: 5px;
+    p {
+      display: flex;
+      text-align: center;
+      font-size: 10px;
+      gap: 5px;
+    }
   }
   .footer {
     width: 100%;
@@ -144,9 +204,15 @@ export const Container = styled.body`
   }
   .concluir {
     padding-top: 3rem;
-    width: 100%;
+    width: 30%;
     display: flex;
     justify-content: center;
+    background-color: #04136e;
+    color: #fff;
+    padding: 10px;
+    /* font-weight: 600; */
+    border-radius: 4px;
+    border: none;
 
     input {
       background-color: #04136e;
@@ -158,7 +224,7 @@ export const Container = styled.body`
       border: none;
       cursor: pointer;
       transition: background-color 0.3s, color 0.3s;
-      width: 20%;
+      width: 100%;
     }
   }
 `;
@@ -192,7 +258,7 @@ export const ModalContent = styled.div`
   text-align: center;
   max-width: 500px;
   width: 100%;
-  img{
+  img {
     height: 45vh;
   }
 `;
@@ -210,5 +276,4 @@ export const ModalButton = styled.button`
   &:hover {
     background-color: #0056b3;
   }
-  
 `;
