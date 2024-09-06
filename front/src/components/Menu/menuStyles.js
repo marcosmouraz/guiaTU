@@ -103,10 +103,6 @@ export const Container = styled.div`
     color: #04136f;
   }
 
-  .dropdown-content4 {
-    display: block;
-  }
-
   .dropdownUser {
     padding-right: 10px;
   }

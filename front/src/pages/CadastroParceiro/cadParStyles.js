@@ -7,7 +7,6 @@ export const ContainerEmpre1 = styled.body`
   align-items: center;
   position: relative;
   font-family: "Outfit", system-ui;
-  background-color: #636363;
 
   .container-formulario-foto {
     display: flex;

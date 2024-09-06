@@ -63,7 +63,8 @@ export default function RotaPersonalizada() {
   };
 
   useEffect(() => {
-    const marcoZero = [-8.0645, -34.8711];
+    const marcoZero = [-8.063028, -34.872414];
+    const pracaArsenal = [-8.050788, -34.877033];
     const mercadoCultura = [-8.0539, -34.8823];
 
     if (mapRef.current === null) {
@@ -76,7 +77,11 @@ export default function RotaPersonalizada() {
       }).addTo(map);
 
       const routingControl = L.Routing.control({
-        waypoints: [L.latLng(marcoZero), L.latLng(mercadoCultura)],
+        waypoints: [
+          L.latLng(marcoZero),
+          L.latLng(pracaArsenal),
+          L.latLng(mercadoCultura),
+        ],
         routeWhileDragging: true,
       }).addTo(map);
 
@@ -120,8 +125,8 @@ export default function RotaPersonalizada() {
         turista_id: data.turista_id, // Supondo que o turista_id seja enviado do front-end
       });
 
-      alert("Rota turística cadastrada com sucesso!");
-      navigate("/"); // Redireciona para a página inicial
+      alert("Passeio reservado com sucesso!");
+      navigate("/historicoturista"); // Redireciona para a página inicial
     } catch (error) {
       if (error.response && error.response.data) {
         const { status, message } = error.response.data;

@@ -10,7 +10,7 @@ export default function Header() {
     const loadCidades = async () => {
       try {
         const response = await fetch(
-          `https://servicodados.ibge.gov.br/api/v1/localidades/estados/pe/distritos`
+          `https://brasilapi.com.br/api/ibge/municipios/v1/pe`
         );
         const dados = await response.json();
         setCidades(dados);
@@ -29,9 +29,9 @@ export default function Header() {
       <section className="inputs">
         <select name="city" id="city" placeholder="Cidade">
           <option value="0">Selecione a cidade</option>
-          {cidades.map((cidade) => (
-            <option key={cidade.id} value={cidade.id}>
-              {cidade.nome}
+          {cidades.map((city) => (
+            <option key={city.id} value={city.id}>
+              {city.nome}
             </option>
           ))}
         </select>

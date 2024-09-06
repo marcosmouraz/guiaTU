@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import { Container } from "./bodyStyles";
 import {
   CalendarCheck,
@@ -6,14 +7,13 @@ import {
   UserCircleCheck,
 } from "@phosphor-icons/react";
 
-
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination, Scrollbar} from "swiper/modules";
+import { Navigation, Pagination, Scrollbar } from "swiper/modules";
 
 const data = [
   { id: 1, img: "/bonitope.svg", text: "Bonito - PE" },
@@ -24,6 +24,14 @@ const data = [
 ];
 
 export default function Body() {
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+
+  useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth <= 768);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   return (
     <Container>
       <section className="cards">
@@ -49,26 +57,27 @@ export default function Body() {
         </div>
       </section>
 
-      <section className="container">
+      <section className={`container ${isMobile ? "hidden-carousel" : ""}`}>
         <div id="destinos">
           <h1>Destinos mais procurados</h1>
         </div>
 
-        <Swiper
-          modules={[Navigation, Pagination, Scrollbar]}
-          slidesPerView={4}
-          navigation
-          pagination={{ clickable: true }}
-        >
-          {data.map((iten) => (
-            <SwiperSlide key={iten.id}>
-              <h2 className="textCarrossel">{iten.text}</h2>
-              <div className="back">
-              </div>
-              <img className="imgCarrossel" src={iten.img} alt="" />
-            </SwiperSlide>
-          ))}
-        </Swiper>
+        {!isMobile && (
+          <Swiper
+            modules={[Navigation, Pagination, Scrollbar]}
+            slidesPerView={4}
+            navigation
+            pagination={{ clickable: true }}
+          >
+            {data.map((iten) => (
+              <SwiperSlide key={iten.id}>
+                <h2 className="textCarrossel">{iten.text}</h2>
+                <div className="back"></div>
+                <img className="imgCarrossel" src={iten.img} alt="" />
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        )}
       </section>
     </Container>
   );

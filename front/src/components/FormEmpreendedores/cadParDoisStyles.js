@@ -109,7 +109,6 @@ export const ContainerEmpre2 = styled.div`
     flex-direction: column;
     align-items: center;
     width: 50%;
-    background-color: yellow;
 
     .foto-perfil {
       text-align: center;
