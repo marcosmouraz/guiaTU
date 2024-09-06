@@ -211,11 +211,13 @@ export const ContainerEmpre1 = styled.body`
     position: absolute;
     right: 0;
     bottom: 0;
+    z-index: -1;
   }
   .rosaventos-esquerda {
     position: absolute;
     left: 0;
     bottom: 0;
+    z-index: -1;
   }
   /* //////////////////////////////////// */
 

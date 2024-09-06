@@ -47,80 +47,99 @@ const handleModal = () => {
           Olá Empreendedor, <br /> Cadastre seu negocio...
         </h2>
       </div>
-      <div className="formDois">
-        <div className="formSection">
-          <div className="dados-comerciais">
-            <h4>Dados comerciais</h4>
-          </div>
-          <div className="inputs">
-            <div className="inputContainer">
-              <input
-                className="nome-estabelecimento"
-                type="text"
-                placeholder="Nome Estabelecimento"
-                {...register("nome_estabelecimento")}
-              />
-              <input
-                className="cep"
-                type="text"
-                placeholder="CEP"
-                {...register("cep")}
-                onBlur={(e) => checkCEP(e)}
-              />
-              <input
-                className="rua"
-                type="text"
-                placeholder="Rua"
-                {...register("rua")}
-              />
-              <input
-                className="numero"
-                type="text"
-                placeholder="Nº do estabelecimento"
-                {...register("numero_estabelecimento")}
-              />
+      <section className="container-form-foto">
+        <div className="formDois">
+          <div className="formSection">
+            <div className="dados-comerciais">
+              <h4>Dados comerciais</h4>
             </div>
-            <div className="inputContainer">
-              <input
-                className="bairro"
-                type="text"
-                placeholder="Bairro"
-                {...register("bairro")}
-              />
-              <input
-                className="municipio"
-                type="text"
-                placeholder="Municipio"
-                {...register("municipio")}
-              />
-              <input
-                className="cnpj"
-                type="text"
-                placeholder="CNPJ"
-                {...register("cnpj")}
-              />
-              <input
-                className="numerotelefone"
-                type="text"
-                placeholder="(DDD)+telefone "
-                {...register("telefone")}
-              />
+            <div className="inputs">
+              <div className="inputContainer">
+                <input
+                  className="nome-estabelecimento"
+                  type="text"
+                  placeholder="Nome Estabelecimento"
+                  {...register("nome_estabelecimento")}
+                />
+                <input
+                  className="cep"
+                  type="text"
+                  placeholder="CEP"
+                  {...register("cep")}
+                  onBlur={(e) => checkCEP(e)}
+                />
+                <input
+                  className="rua"
+                  type="text"
+                  placeholder="Rua"
+                  {...register("rua")}
+                />
+                <input
+                  className="numero"
+                  type="text"
+                  placeholder="Nº do estabelecimento"
+                  {...register("numero_estabelecimento")}
+                />
+              </div>
+              <div className="inputContainer">
+                <input
+                  className="bairro"
+                  type="text"
+                  placeholder="Bairro"
+                  {...register("bairro")}
+                />
+                <input
+                  className="municipio"
+                  type="text"
+                  placeholder="Municipio"
+                  {...register("municipio")}
+                />
+                <input
+                  className="cnpj"
+                  type="text"
+                  placeholder="CNPJ"
+                  {...register("cnpj")}
+                />
+                <input
+                  className="numerotelefone"
+                  type="text"
+                  placeholder="(DDD)+telefone "
+                  {...register("telefone")}
+                />
+              </div>
             </div>
-          </div>
 
-          <div className="buttonContainer">
-            <button onClick={() => setTabForm(0)} className="voltar">
-              Voltar
-            </button>
-            <button type="submit" className="buttonCadastrar">
-              Finalizar Cadastro
-            </button>
+            <div className="buttonContainer">
+              <button onClick={() => setTabForm(0)} className="voltar">
+                Voltar
+              </button>
+              <button type="submit" className="buttonCadastrar">
+                Finalizar Cadastro
+              </button>
+            </div>
           </div>
         </div>
-      </div>
-      <div className="imagens">
-        <section className="foto-perfil">
-          <p className="p">Escolha sua Foto de Perfil</p>
+        <div className="imagens">
+          <section className="foto-perfil">
+            <p className="p">Adicione uma foto de Perfil</p>
+            <label htmlFor="fotoPerfil" className="alterafoto">
+              {image ? (
+                <img src={image} alt="Foto de Perfil" />
+              ) : (
+                <UserFocus className="vetor" size={90} color="#636363" />
+              )}
+              <input
+                type="file"
+                id="fotoPerfil"
+                name="fotoPerfil"
+                accept="image/*"
+                className="inputFoto"
+                onChange={handleImageChange}
+              />
+            </label>
+          </section>
+          <section className="foto-estabelecimento">
+          <p className="p">Adicione foto do seu negocio</p>
           <label htmlFor="fotoPerfil" className="alterafoto">
             {image ? (
               <img src={image} alt="Foto de Perfil" />
@@ -137,25 +156,8 @@ const handleModal = () => {
             />
           </label>
         </section>
-        {/* <section className="foto-estabelecimento">
-          <p className="p">Escolha sua Foto de Perfil</p>
-          <label htmlFor="fotoPerfil" className="alterafoto">
-            {image ? (
-              <img src={image} alt="Foto de Perfil" />
-            ) : (
-              <UserFocus className="vetor" size={90} color="#636363" />
-            )}
-            <input
-              type="file"
-              id="fotoPerfil"
-              name="fotoPerfil"
-              accept="image/*"
-              className="inputFoto"
-              onChange={handleImageChange}
-            />
-          </label>
-        </section> */}
-      </div>
+        </div>
+      </section>
     </ContainerEmpre2>
   );
 }

@@ -15,11 +15,11 @@ export const ContainerEmpre2 = styled.div`
     align-items: center;
   }
 
-  .box-titulo-formulario {
+  .formDois {
     display: flex;
     align-items: center;
     gap: 20px;
-    padding-top: 60px;
+    padding-top: 30px;
     padding-bottom: 20px;
   }
 
@@ -27,6 +27,7 @@ export const ContainerEmpre2 = styled.div`
     display: flex;
     justify-content: flex-start;
     width: 100%;
+    padding-top: 70px;
     h2 {
       font-size: 30px;
       display: flex;
@@ -109,6 +110,8 @@ export const ContainerEmpre2 = styled.div`
     flex-direction: column;
     align-items: center;
     width: 50%;
+    gap: 50px;
+    padding-top: 50px;
 
     .foto-perfil {
       text-align: center;
@@ -152,65 +155,43 @@ export const ContainerEmpre2 = styled.div`
     color: #007bff;
   }
 
-  /* .checkContainer {
-    display: grid;
+  /* ///////// */
+
+  .imagens {
+    display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 5px; 
-    justify-content: center;
+    width: 50%;
+    gap: 50px;
+
+    .foto-estabelecimento {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .p {
+        margin-bottom: 10px;
+        font-size: 18px;
+        color: #333;
+      }
+
+      .alterafoto {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 2px dashed #ccc;
+        border-radius: 50%;
+        width: 120px;
+        height: 120px;
+        cursor: pointer;
+
+        .vetor {
+          color: #636363;
+        }
+      }
+    }
   }
-  .checkbox {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-  } */
-  /* .inputscheckum {
-    display: flex;
-    gap: 10px;
-    align-items: center; 
-  } */
-
-  /* .ContentC input[type="checkbox"] {
-    width: 16px; 
-    height: 16px; 
-  } */
-  /* .checkbox {
-    display: flex;
-    align-items: center;
-  } */
-  /* .custom-checkbox {
-    font-size: 14px; 
-    gap: 50%;
-  } */
-
-  /* .inputtext {
-    padding-right: 110px;
-    padding-bottom: 2rem;
-    font-size: 12px; 
-  } */
-
-  /* .inputs {
-    display: flex;
-    justify-items: center;
-    align-items: center;
-    gap: 1rem;
-  } */
-
-  /* .inputContainer {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  } */
-
-  /* .inputContainer input {
-    width: 150vw;
-    max-width: 20rem;
-    height: 5vh;
-    border-style: groove;
-    border-radius: 4px;
-    padding: 0.5rem;
-  } */
 
   .buttonContainer {
     display: flex;
@@ -261,5 +242,11 @@ export const ContainerEmpre2 = styled.div`
     &:hover {
       background-color: #999999; /* Ajuste a cor de fundo ao passar o mouse conforme necessário */
     }
+  }
+  .container-form-foto {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    width: 100%;
   }
 `;
